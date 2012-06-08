@@ -141,7 +141,7 @@ Very long property values - such as complex collections of gradients or shadows 
 #### Misc
 
 * Use lowercase hex values, e.g., `#aaa`.
-* Use single or quotes consistently. Preference is for double quotes, e.g., `content: ""` or `input[type="checkout"]`.
+* Use single or double quotes consistently. Preference is for double quotes, e.g., `content: ""` or `input[type="checkout"]`.
 * _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
 
 ### Preprocessors: additional format considerations
