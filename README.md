@@ -148,8 +148,8 @@ Very long property values - such as complex collections of gradients or shadows 
 
 Different CSS preprocessors have different features, functionality, and syntax. Your conventions should be extended to accomodate the particularities of any preprocessor in use. The following guidelines are in reference to Sass.
 
-* Avoid excessively deep rule nesting. This prevents overly specific CSS selectors.
-* Avoid excessively large numbers of nested rules. Break them up when readability starts to be affected.
+* Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep. This prevents overly specific CSS selectors.
+* Avoid large numbers of nested rules. Break them up when readability starts to be affected. Preference to avoid nesting that spreads over more than 20 lines.
 * Always place `@extend` statements on the first lines of a declaration block.
 * Where possible, group `@include` statements at the top of a declaration block, after any `@extend` statements.
 * Consider prefixing custom functions with `x-` or another namespace. This helps to avoid any potential to confuse your function with a native CSS function, or to clash with functions from libraries.
