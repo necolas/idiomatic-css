@@ -26,7 +26,7 @@ Only one style should exist across the entire source of your project. Always be 
 
 * _Never_ mix spaces and tabs for indentation.
 * Choose between soft indents (spaces) or real tabs. Stick to your choice without fail. (Preference: spaces)
-* Choose the number of characters used per indentation level. (Perference: 4 spaces)
+* If using spaces, choose the number of characters used per indentation level. (Preference: 4 spaces)
 
 Tip: configure your editor to "show invisibles". This will allow you to eliminate end of line whitespace, eliminate unintended blank line whitespace, and avoid polluting commits.
 
@@ -110,7 +110,7 @@ The chosen code format must ensure that code is: easy to read; easy to clearly c
 
 #### Declaration order
 
-Declarations should be ordered in accordance with a single principle. Although alphabetical ordering is sometimes used, perference is for related properties to be grouped together and for structurally important properties (e.g. positioning and box-model) to be declared prior to typographic, background, and color properties.
+Declarations should be ordered in accordance with a single principle. Although alphabetical ordering is sometimes used, preference is for related properties to be grouped together and for structurally important properties (e.g. positioning and box-model) to be declared prior to typographic, background, and color properties.
 
 ```css
 .selector {
