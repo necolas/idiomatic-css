@@ -1,5 +1,9 @@
 # Principles of writing consistent, idiomatic CSS
 
+The following document outlines a reasonable style guide for CSS development. It is not meant to be prescriptive and I do not wish to impose my style preferences on other people's code. However, these guidelines do strongly encourage the use of existing, common, sensible patterns.
+
+This is a living document and new ideas are always welcome. Please contribute.
+
 ## Table of contents
 
 1. [General principles](#1-general-principles)
@@ -11,12 +15,14 @@
 7. [Organization](#7-organization)
 8. [Build and deployment](#8-build-and-deployment)
 
+[Acknowledgements](#acknowledgements)
+
 ## 1. General principles
 
 > "Part of being a good steward to a successful project is realizing that writing code for yourself is a Bad Idea™. If thousands of people are using your code, then write your code for maximum clarity, not your personal preference of how to get clever within the spec." - Idan Gazit
 
 * All code in any code-base should look like a single person typed it, no matter how many people contributed.
-* This document outlines the practices that I seek to adhere to in all code that I originally author.
+* Strictly enforce the agreed upon style.
 * If in doubt use existing, common patterns.
 
 
@@ -273,6 +279,11 @@ Code organization is an important part of any CSS code base, and crucial for lar
 * If using a preprocessor, abstract common code into variables for color, typography, etc.
 
 
-## 8. Build & deployment
+## 8. Build and deployment
 
 Projects should always attempt to include some generic means by which source can be linted, tested, compressed, and versioned in preparation for production use. For this task, [grunt](https://github.com/cowboy/grunt) by Ben Alman is an excellent tool.
+
+
+## Acknowledgements
+
+Thanks to everyone who has contributed to [idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a source of inspiration, quotations, and guidelines.
