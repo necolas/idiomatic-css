@@ -9,6 +9,12 @@ Ovo je "živi" dokument i nove ideje su uvek dobrodošle. Molimo Vas da
 doprinesete.
 
 
+## Prevodi
+
+* [Engleski](https://github.com/necolas/idiomatic-css)
+* [Italijanski](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
+
+
 ## Sadržaj
 
 1. [Generalni principi](#general-principles)
