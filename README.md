@@ -206,7 +206,7 @@ be used; one example is shown below.
 ### Preprocessors: additional format considerations
 
 Different CSS preprocessors have different features, functionality, and syntax.
-Your conventions should be extended to accomodate the particularities of any
+Your conventions should be extended to accommodate the particularities of any
 preprocessor in use. The following guidelines are in reference to Sass.
 
 * Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
@@ -238,7 +238,7 @@ preprocessor in use. The following guidelines are in reference to Sass.
 
 You are not a human code compiler/compressor, so don't try to be one.
 
-Use clear and thoughtful names for HTML classes. Pick an understanderable and
+Use clear and thoughtful names for HTML classes. Pick an understandable and
 consistent naming pattern that makes sense both within HTML files and CSS
 files.
 
