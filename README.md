@@ -134,7 +134,7 @@ Declarations should be ordered in accordance with a single principle. Although a
 
 #### Exceptions and slight deviations
 
-Large blocks of single-line declarations can use a slightly different, single-line format. In this case, a space should be included after the opening brace and before the closing brace (see the complete example below).
+Large blocks of single-line declarations can use a slightly different, single-line format. In this case, a space should be included after the opening brace and before the closing brace.
 
 ```css
 .selector-1 { width: 10%; }
@@ -204,7 +204,7 @@ Use clear and thoughtful names for HTML classes. Pick an understanderable and co
 
 An example of various conventions.
 
-```scss
+```css
 /* =====================================================================
    Grid layout
    ===================================================================== */
@@ -219,36 +219,34 @@ An example of various conventions.
  */
 
 .grid {
-    @include box-sizing(border-box);
     overflow: visible;
     height: 100%;
-    // Prevent inline-block cells wrapping
+    /* Prevent inline-block cells wrapping */
     white-space: nowrap;
-    // Remove inter-cell whitespace
+    /* Remove inter-cell whitespace */
     font-size: 0;
 }
 
 .cell {
-    @include box-sizing(border-box);
-    @include transition(box-shadow, 0.25s, ease-in-out, 0s);
+    box-sizing: border-box;
     position: relative;
     overflow: hidden;
     width: 20%;
     height: 100%;
-    // Set the inter-cell spacing
-    padding: 0 $grid-gutter;
+    /* Set the inter-cell spacing */
+    padding: 0 10px;
     border: 2px solid #333;
     vertical-align: top;
-    // Reset white-space
+    /* Reset white-space */
     white-space: normal;
-    // Reset font-size
-    font-size: $fontsize-default;
+    /* Reset font-size */
+    font-size: 16px;
+}
 
-    /* Cell states */
+/* Cell states */
 
-    &.is-animating {
-        background-color: $cell-highlight-color
-    }
+.cell.is-animating {
+    background-color: #fffdec;
 }
 
 /* Cell dimensions
