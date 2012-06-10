@@ -1,8 +1,12 @@
 # Principles of writing consistent, idiomatic CSS
 
-The following document outlines a reasonable style guide for CSS development. It is not meant to be prescriptive and I do not wish to impose my style preferences on other people's code. However, these guidelines do strongly encourage the use of existing, common, sensible patterns.
+The following document outlines a reasonable style guide for CSS development.
+It is not meant to be prescriptive and I do not wish to impose my style
+preferences on other people's code. However, these guidelines do strongly
+encourage the use of existing, common, sensible patterns.
 
-This is a living document and new ideas are always welcome. Please contribute.
+This is a living document and new ideas are always welcome. Please
+contribute.
 
 ## Table of contents
 
@@ -19,27 +23,39 @@ This is a living document and new ideas are always welcome. Please contribute.
 
 ## 1. General principles
 
-> "Part of being a good steward to a successful project is realizing that writing code for yourself is a Bad Idea™. If thousands of people are using your code, then write your code for maximum clarity, not your personal preference of how to get clever within the spec." - Idan Gazit
+> "Part of being a good steward to a successful project is realizing that
+> writing code for yourself is a Bad Idea™. If thousands of people are using
+> your code, then write your code for maximum clarity, not your personal
+> preference of how to get clever within the spec." - Idan Gazit
 
-* All code in any code-base should look like a single person typed it, no matter how many people contributed.
+* All code in any code-base should look like a single person typed it, no
+  matter how many people contributed.
 * Strictly enforce the agreed upon style.
 * If in doubt use existing, common patterns.
 
 
 ## 2. Whitespace
 
-Only one style should exist across the entire source of your project. Always be consistent in your use of whitespace. Use whitespace to improve readability.
+Only one style should exist across the entire source of your project. Always be
+consistent in your use of whitespace. Use whitespace to improve readability.
 
 * _Never_ mix spaces and tabs for indentation.
-* Choose between soft indents (spaces) or real tabs. Stick to your choice without fail. (Preference: spaces)
-* If using spaces, choose the number of characters used per indentation level. (Preference: 4 spaces)
+* Choose between soft indents (spaces) or real tabs. Stick to your choice
+  without fail. (Preference: spaces)
+* If using spaces, choose the number of characters used per indentation level.
+  (Preference: 4 spaces)
 
-Tip: configure your editor to "show invisibles". This will allow you to eliminate end of line whitespace, eliminate unintended blank line whitespace, and avoid polluting commits.
+Tip: configure your editor to "show invisibles". This will allow you to
+eliminate end of line whitespace, eliminate unintended blank line whitespace,
+and avoid polluting commits.
 
 
 ## 3. Comments
 
-Well commented code is extremely important. Take time to describe components, how they work, their limitations, and the way they are constructed. Don't leave others in the team guessing as to the purpose of uncommon or non-obvious code.
+Well commented code is extremely important. Take time to describe components,
+how they work, their limitations, and the way they are constructed. Don't leave
+others in the team guessing as to the purpose of uncommon or non-obvious
+code.
 
 Comment style should be simple and consistent within a single code base.
 
@@ -49,17 +65,18 @@ Comment style should be simple and consistent within a single code base.
 * Make liberal use of comments to break CSS code into discrete sections.
 * Use "sentence case" comments and consistent text indentation.
 
-Tip: configure your editor to provide you with shortcuts to output agreed-upon comment patterns.
+Tip: configure your editor to provide you with shortcuts to output agreed-upon
+comment patterns.
 
 #### CSS example:
 
 ```css
-/* ====================================================================
+/* ==========================================================================
    Section comment block
-   ==================================================================== */
+   ========================================================================== */
 
 /* Sub-section comment block
-   ==================================================================== */
+   ========================================================================== */
 
 /*
  * Group comment block.
@@ -72,12 +89,12 @@ Tip: configure your editor to provide you with shortcuts to output agreed-upon c
 #### SCSS example:
 
 ```scss
-// ====================================================================
+// ==========================================================================
 // Section comment block
-// ====================================================================
+// ==========================================================================
 
 // Sub-section comment block
-// ====================================================================
+// ==========================================================================
 
 //
 // Group comment block
@@ -90,15 +107,19 @@ Tip: configure your editor to provide you with shortcuts to output agreed-upon c
 
 ## 4. Format
 
-The chosen code format must ensure that code is: easy to read; easy to clearly comment; minimizes the chance of accidentally introducing errors; and results in useful diffs and blames.
+The chosen code format must ensure that code is: easy to read; easy to clearly
+comment; minimizes the chance of accidentally introducing errors; and results
+in useful diffs and blames.
 
 1. One discrete selector per line in multi-selector rulesets.
 2. A single space before the opening brace of a ruleset.
 3. One declaration per line in a declaration block.
 4. One level of indentation for each declaration.
 5. A single space after the colon of a declaration.
-6. Always include a semi-colon at the end of the last declaration in a declaration block.
-7. Place the closing brace of a ruleset in the same column as the first character of the ruleset.
+6. Always include a semi-colon at the end of the last declaration in a
+   declaration block.
+7. Place the closing brace of a ruleset in the same column as the first
+   character of the ruleset.
 8. Separate each ruleset by a blank line.
 
 ```css
@@ -116,7 +137,11 @@ The chosen code format must ensure that code is: easy to read; easy to clearly c
 
 #### Declaration order
 
-Declarations should be ordered in accordance with a single principle. Although alphabetical ordering is sometimes used, preference is for related properties to be grouped together and for structurally important properties (e.g. positioning and box-model) to be declared prior to typographic, background, and color properties.
+Declarations should be ordered in accordance with a single principle. Although
+alphabetical ordering is sometimes used, preference is for related properties
+to be grouped together and for structurally important properties (e.g.
+positioning and box-model) to be declared prior to typographic, background, and
+color properties.
 
 ```css
 .selector {
@@ -134,7 +159,9 @@ Declarations should be ordered in accordance with a single principle. Although a
 
 #### Exceptions and slight deviations
 
-Large blocks of single-line declarations can use a slightly different, single-line format. In this case, a space should be included after the opening brace and before the closing brace.
+Large blocks of single declarations can use a slightly different, single-line
+format. In this case, a space should be included after the opening brace and
+before the closing brace.
 
 ```css
 .selector-1 { width: 10%; }
@@ -142,23 +169,35 @@ Large blocks of single-line declarations can use a slightly different, single-li
 .selector-3 { width: 30%; }
 ```
 
-Very long property values - such as complex collections of gradients or shadows - can themselves be arranged across multiple lines in an effort to improve readability and produce more useful diffs.
+Very long property values - such as complex collections of gradients or shadows
+- can themselves be arranged across multiple lines in an effort to improve
+readability and produce more useful diffs.
 
 #### Misc
 
 * Use lowercase hex values, e.g., `#aaa`.
-* Use single or double quotes consistently. Preference is for double quotes, e.g., `content: ""` or `input[type="checkout"]`.
+* Use single or double quotes consistently. Preference is for double quotes,
+  e.g., `content: ""` or `input[type="checkout"]`.
 * _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
 
 ### Preprocessors: additional format considerations
 
-Different CSS preprocessors have different features, functionality, and syntax. Your conventions should be extended to accomodate the particularities of any preprocessor in use. The following guidelines are in reference to Sass.
+Different CSS preprocessors have different features, functionality, and syntax.
+Your conventions should be extended to accomodate the particularities of any
+preprocessor in use. The following guidelines are in reference to Sass.
 
-* Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep. This prevents overly specific CSS selectors.
-* Avoid large numbers of nested rules. Break them up when readability starts to be affected. Preference to avoid nesting that spreads over more than 20 lines.
-* Always place `@extend` statements on the first lines of a declaration block.
-* Where possible, group `@include` statements at the top of a declaration block, after any `@extend` statements.
-* Consider prefixing custom functions with `x-` or another namespace. This helps to avoid any potential to confuse your function with a native CSS function, or to clash with functions from libraries.
+* Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
+  This prevents overly specific CSS selectors.
+* Avoid large numbers of nested rules. Break them up when readability starts to
+  be affected. Preference to avoid nesting that spreads over more than 20
+  lines.
+* Always place `@extend` statements on the first lines of a declaration
+  block.
+* Where possible, group `@include` statements at the top of a declaration
+  block, after any `@extend` statements.
+* Consider prefixing custom functions with `x-` or another namespace. This
+  helps to avoid any potential to confuse your function with a native CSS
+  function, or to clash with functions from libraries.
 
 ```scss
 .selector-1 {
@@ -175,7 +214,9 @@ Different CSS preprocessors have different features, functionality, and syntax. 
 
 You are not a human code compiler/compressor, so don't try to be one.
 
-Use clear and thoughtful names for HTML classes. Pick an understanderable and consistent naming pattern that makes sense both within HTML files and CSS files.
+Use clear and thoughtful names for HTML classes. Pick an understanderable and
+consistent naming pattern that makes sense both within HTML files and CSS
+files.
 
 ```css
 /* Example of code with bad names */
@@ -205,9 +246,9 @@ Use clear and thoughtful names for HTML classes. Pick an understanderable and co
 An example of various conventions.
 
 ```css
-/* =====================================================================
+/* ==========================================================================
    Grid layout
-   ===================================================================== */
+   ========================================================================== */
 
 /*
  * Example HTML:
@@ -250,7 +291,7 @@ An example of various conventions.
 }
 
 /* Cell dimensions
-   ===================================================================== */
+   ========================================================================== */
 
 .cell-1 { width: 10%; }
 .cell-2 { width: 20%; }
@@ -259,7 +300,7 @@ An example of various conventions.
 .cell-5 { width: 50%; }
 
 /* Cell modifiers
-   ===================================================================== */
+   ========================================================================== */
 
 .cell--detail,
 .cell--important {
@@ -270,18 +311,26 @@ An example of various conventions.
 
 ## 7. Organization
 
-Code organization is an important part of any CSS code base, and crucial for large code bases.
+Code organization is an important part of any CSS code base, and crucial for
+large code bases.
 
 * Logically separate distinct pieces of code.
-* Use separate files (concatenated by a build step) to help break up code for distinct components.
-* If using a preprocessor, abstract common code into variables for color, typography, etc.
+* Use separate files (concatenated by a build step) to help break up code for
+  distinct components.
+* If using a preprocessor, abstract common code into variables for color,
+  typography, etc.
 
 
 ## 8. Build and deployment
 
-Projects should always attempt to include some generic means by which source can be linted, tested, compressed, and versioned in preparation for production use. For this task, [grunt](https://github.com/cowboy/grunt) by Ben Alman is an excellent tool.
+Projects should always attempt to include some generic means by which source
+can be linted, tested, compressed, and versioned in preparation for production
+use. For this task, [grunt](https://github.com/cowboy/grunt) by Ben Alman is an
+excellent tool.
 
 
 ## Acknowledgements
 
-Thanks to everyone who has contributed to [idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a source of inspiration, quotations, and guidelines.
+Thanks to everyone who has contributed to
+[idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a source of
+inspiration, quotations, and guidelines.
