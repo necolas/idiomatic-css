@@ -8,19 +8,22 @@ encourage the use of existing, common, sensible patterns.
 This is a living document and new ideas are always welcome. Please
 contribute.
 
+
 ## Table of contents
 
-1. [General principles](#1-general-principles)
-2. [Whitespace](#2-whitespace)
-3. [Comments](#3-comments)
-4. [Format](#4-format)
-5. [Naming](#5-naming)
-6. [Practical example](#6-practical-example)
-7. [Organization](#7-organization)
-8. [Build and deployment](#8-build-and-deployment)
+1. [General principles](#general-principles)
+2. [Whitespace](#whitespace)
+3. [Comments](#comments)
+4. [Format](#format)
+5. [Naming](#naming)
+6. [Practical example](#example)
+7. [Organization](#organization)
+8. [Build and deployment](#build-and-deployment)
 
 [Acknowledgements](#acknowledgements)
 
+
+<a name="general-principles"></a>
 ## 1. General principles
 
 > "Part of being a good steward to a successful project is realizing that
@@ -34,6 +37,7 @@ contribute.
 * If in doubt use existing, common patterns.
 
 
+<a name="whitespace"></a>
 ## 2. Whitespace
 
 Only one style should exist across the entire source of your project. Always be
@@ -50,6 +54,7 @@ eliminate end of line whitespace, eliminate unintended blank line whitespace,
 and avoid polluting commits.
 
 
+<a name="comments"></a>
 ## 3. Comments
 
 Well commented code is extremely important. Take time to describe components,
@@ -105,6 +110,7 @@ comment patterns.
 ```
 
 
+<a name="format"></a>
 ## 4. Format
 
 The chosen code format must ensure that code is: easy to read; easy to clearly
@@ -210,6 +216,7 @@ preprocessor in use. The following guidelines are in reference to Sass.
 ```
 
 
+<a name="naming"></a>
 ## 5. Naming
 
 You are not a human code compiler/compressor, so don't try to be one.
@@ -241,6 +248,7 @@ files.
 ```
 
 
+<a name="example"></a>
 ## 6. Practical example
 
 An example of various conventions.
@@ -309,6 +317,7 @@ An example of various conventions.
 ```
 
 
+<a name="organization"></a>
 ## 7. Organization
 
 Code organization is an important part of any CSS code base, and crucial for
@@ -321,6 +330,7 @@ large code bases.
   typography, etc.
 
 
+<a name="build-and-deployment"></a>
 ## 8. Build and deployment
 
 Projects should always attempt to include some generic means by which source
@@ -329,6 +339,7 @@ use. For this task, [grunt](https://github.com/cowboy/grunt) by Ben Alman is an
 excellent tool.
 
 
+<a name="acknowledgements"></a>
 ## Acknowledgements
 
 Thanks to everyone who has contributed to
