@@ -143,11 +143,10 @@ in useful diffs and blames.
 
 #### Declaration order
 
-Declarations should be ordered in accordance with a single principle. Although
-alphabetical ordering is sometimes used, preference is for related properties
-to be grouped together and for structurally important properties (e.g.
-positioning and box-model) to be declared prior to typographic, background, and
-color properties.
+Declarations should be ordered in accordance with a single principle. My
+preference is for related properties to be grouped together and for
+structurally important properties (e.g. positioning and box-model) to be
+declared prior to typographic, background, and color properties.
 
 ```css
 .selector {
@@ -163,6 +162,11 @@ color properties.
 }
 ```
 
+Alphabetical ordering is also popular, but the drawback is that it separates
+related properties. For example, position offsets are no longer grouped
+together and box-model properties can end up spread throughout a declaration
+block.
+
 #### Exceptions and slight deviations
 
 Large blocks of single declarations can use a slightly different, single-line
@@ -175,15 +179,28 @@ before the closing brace.
 .selector-3 { width: 30%; }
 ```
 
-Very long property values - such as complex collections of gradients or shadows
-- can themselves be arranged across multiple lines in an effort to improve
-readability and produce more useful diffs.
+Long, comma separated property values - such as collections of gradients or
+shadows - can be arranged across multiple lines in an effort to improve
+readability and produce more useful diffs. There are various formats that could
+be used; one example is shown below.
+
+```css
+.selector {
+    box-shadow:
+        1px 1px 1px #000,
+        2px 2px 1px 1px #ccc inset;
+    background-image:
+        linear-gradient(#fff, #ccc),
+        linear-gradient(#f3c, #4ec);
+}
+```
 
 #### Misc
 
 * Use lowercase hex values, e.g., `#aaa`.
 * Use single or double quotes consistently. Preference is for double quotes,
-  e.g., `content: ""` or `input[type="checkout"]`.
+  e.g., `content: ""`.
+* Always quote attribute values in selectors, e.g., `input[type="checkout"]`.
 * _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
 
 ### Preprocessors: additional format considerations
