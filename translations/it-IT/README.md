@@ -17,7 +17,7 @@ Questo è un documento in continua evoluzione e nuove idee sono le benvenute. Pe
 3. [Commenti](#comments)
 4. [Formato](#format)
 5. [Nomenclatura](#naming)
-6. [Esempio pratico](#practical-example)
+6. [Esempio pratico](#example)
 7. [Organizzazione](#organization)
 8. [Generazione e distribuzione](#build-and-deployment)
 
