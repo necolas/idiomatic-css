@@ -9,6 +9,11 @@ This is a living document and new ideas are always welcome. Please
 contribute.
 
 
+## Translations
+
+* [Italian](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
+
+
 ## Table of contents
 
 1. [General principles](#general-principles)

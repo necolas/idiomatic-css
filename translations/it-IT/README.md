@@ -4,19 +4,27 @@ Il seguente documento espone una ragionevole guida di stile per lo sviluppo in C
 
 Questo è un documento in continua evoluzione e nuove idee sono le benvenute. Per favore contribuite.
 
+
+## Traduzioni
+
+* [Inglese](https://github.com/necolas/idiomatic-css)
+
+
 ## Tavola dei contenuti
 
-1. [Princìpi generali](#1-general-principles)
-2. [Spazio vuoto](#2-whitespace)
-3. [Commenti](#3-comments)
-4. [Formato](#4-format)
-5. [Nomenclatura](#5-nomenclatura)
-6. [Esempio pratico](#6-practical-example)
-7. [Organizzazione](#7-organization)
-8. [Generazione e distribuzione](#8-build-and-deployment)
+1. [Princìpi generali](#general-principles)
+2. [Spazio vuoto](#whitespace)
+3. [Commenti](#comments)
+4. [Formato](#format)
+5. [Nomenclatura](#naming)
+6. [Esempio pratico](#practical-example)
+7. [Organizzazione](#organization)
+8. [Generazione e distribuzione](#build-and-deployment)
 
 [Ringraziamenti](#acknowledgments)
 
+
+<a name="general-principles"></a>
 ## 1. Princìpi generali
 
 > "Parte dell'essere un buon amministratore per un progetto di successo è capire che la scrittura di codice per sé stessi è una Cattiva Idea™. Se migliaia di persone usano il tuo codice, allora scrivi il tuo codice in modo che abbia la massima chiarezza, e non seguendo i tuoi gusti personali su come renderlo chiaro all'interno delle specifiche" - Idan Gazit
@@ -26,6 +34,7 @@ Questo è un documento in continua evoluzione e nuove idee sono le benvenute. Pe
 * Se nel dubbio, usare modelli comuni ed esistenti.
 
 
+<a name="whitespace"></a>
 # 2. Spazio vuoto
 
 Dovrebbe esistere solo uno stile in tutto il sorgente del vostro progetto. Siate sempre consistenti nell'uso dello spazio vuoto. Usate questo spazio per migliorare la leggibilità.
@@ -37,6 +46,7 @@ Dovrebbe esistere solo uno stile in tutto il sorgente del vostro progetto. Siate
 Suggerimento: configurate il vostro editor in modo da "visualizzare i caratteri invisibili". Questo vi permetterà di eliminare spazi vuoti di fine linea, eliminare linee vuote ed evitare commit pasticciati.
 
 
+<a name="comments"></a>
 ## 3. Commenti
 
 Un codice ben commentato è estremamente importante. Prendete tempo per descrivere i componenti, come funzionano, i loro limiti, ed il modo in cui sono costruiti. Non mettete altri nel team nella situazione di dover cercare di immaginare lo scopo di codice non comune o poco chiaro.
@@ -88,6 +98,7 @@ Suggerimento: configurate il vostro editor così che vi fornisca delle scorciato
 ```
 
 
+<a name="format"></a>
 ## 4. Formato
 
 Il formato del codice scelto deve far sì che il codice: sia facile da leggere; sia facile da commentare in modo chiaro; minimizzi la possibilità di introdurre accidentalmente errori; risulti in utili diff e blame.
@@ -116,7 +127,7 @@ Il formato del codice scelto deve far sì che il codice: sia facile da leggere; 
 
 #### Ordine di dichiarazione
 
-Le dichiarazioni dovrebbero essere ordinate seguendo un unico principio. Sebbene l'ordinazione alfabetica venga a volte usata, la preferenza è quella di raggruppare insieme proprietà correlate ed ordinare proprietà strutturalmente importanti (come il posizionamento e il box-model) prima delle proprietà tipografiche, dello sfondo e del colore di primo piano.
+Le dichiarazioni dovrebbero essere ordinate seguendo un unico principio. Le mie preferenze sono per il raggruppamento delle proprietà in relazione tra di loro e per la dichiarazione delle proprietà strutturalmente importanti (es., posizionamento e box-model) prima delle proprietà tipografiche, dello sfondo e del colore.
 
 ```css
 .selector {
@@ -132,9 +143,11 @@ Le dichiarazioni dovrebbero essere ordinate seguendo un unico principio. Sebbene
 }
 ```
 
+Popolare è anche l'ordinamento alfabetico, ma lo svantaggio è che così facendo si vanno a separare le proprietà in relazione tra di loro. Ad esempio, gli offset di posizionamento non sono più raggruppati, e le proprietà del box-model possono finire spalmate lungo tutto il blocco dichiarativo.
+
 #### Eccezioni e piccole deviazioni
 
-Grossi blocchi di dichiarazioni da una sola linea, possono usare un formato a linea singola leggermente differente. In questo caso, uno spazio dovrebbe essere messo dopo la parentesi graffa di apertura e prima della parentesi graffa di chiusura (vedere il seguente esempio completo).
+Grossi blocchi di dichiarazioni da una sola linea, possono usare un formato leggermente differente, a linea singola. In questo caso, uno spazio dovrebbe essere messo dopo la parentesi graffa di apertura e prima di quella di chiusura.
 
 ```css
 .selector-1 { width: 10%; }
@@ -142,17 +155,29 @@ Grossi blocchi di dichiarazioni da una sola linea, possono usare un formato a li
 .selector-3 { width: 30%; }
 ```
 
-Valori di proprietà molto lunghi - come una complessa collezione di sfumature o ombre - possono essere suddivisi su più linee nel tentativo di migliorare la leggibilità e produrre diff più utili.
+Valori di proprietà lunghi e separati da virgole - come una collezione di sfumature o ombre - possono essere suddivisi su più linee nel tentativo di migliorare la leggibilità e produrre diff più utili. Ci sono vari formati che potrebbero essere usati; di seguito ne viene mostrato un esempio.
+
+```css
+.selector {
+    box-shadow:
+        1px 1px 1px #000,
+        2px 2px 1px 1px #ccc inset;
+    background-image:
+        linear-gradient(#fff, #ccc),
+        linear-gradient(#f3c, #4ec);
+}
+```
 
 #### Varie
 
-* Usate valori esadecimali con lettere minuscole, es. `#aaa`.
-* Usate in modo consistente gli apici singoli o doppi. La preferenza è per i doppi apici, es. `content: ""` o `input[type="checkout"]`.
-* _Dove permesso_, evitate di specificare l'unità di misura per i valori pari a zero, es. `margin: 0`.
+* Usate valori esadecimali con lettere minuscole, es., `#aaa`.
+* Usate in modo consistente gli apici singoli o doppi. La preferenza è per i doppi apici, es., `content: ""`.
+* Racchiudete sempre tra apici i valori degli attributi nei selettori, es., `input[type="checkout"]`.
+* _Dove permesso_, evitate di specificare l'unità di misura per i valori pari a zero, es., `margin: 0`.
 
 ### Preprocessori: considerazioni aggiuntive sul formato
 
-Preprocessori differenti hanno differenti caratteristiche, funzionalità e sintassi. Le vostre convenzioni dovrebbero essere estese per venire incontro alle particolarità del preprocessore utilizzato. Le seguenti linee guida fanno riferimento a Sass.
+Preprocessori CSS differenti hanno differenti caratteristiche, funzionalità e sintassi. Le vostre convenzioni dovrebbero essere estese per venire incontro alle particolarità del preprocessore utilizzato. Le seguenti linee guida fanno riferimento a Sass.
 
 * Limitate la nidificazione ad 1 livello di profondità. Riarrangiate qualsiasi livello di nidificazione che sia più di 2 livelli di profondità. Questo previene selettori CSS eccessivamente specifici.
 * Evitate di usare un numero elevato di regole nidificate. Spezzettatele in più parti quando vedete che la leggibilità inizia ad essere compromessa. La preferenza è di evitare nidificazioni che coinvolgano piùdi 20 linee.
@@ -171,6 +196,7 @@ Preprocessori differenti hanno differenti caratteristiche, funzionalità e sinta
 ```
 
 
+<a name="naming"></a>
 ## 5. Nomenclatura
 
 Non siete dei compilatori/compressori umani di codice, perciò non provate ad esserlo.
@@ -200,17 +226,18 @@ Usate nomi chiari ed esplicativi per le classi HTML. Scegliete un modello di nom
 ```
 
 
+<a name="example"></a>
 ## 6. Esempio pratico
 
 Un esempio di varie convenzioni.
 
-```scss
-/* =====================================================================
+```css
+/* ==========================================================================
    Grid layout
-   ===================================================================== */
+   ========================================================================== */
 
 /*
- * HTML d'esempio:
+ * Example HTML:
  *
  * <div class="grid">
  *     <div class="cell cell-5"></div>
@@ -219,40 +246,38 @@ Un esempio di varie convenzioni.
  */
 
 .grid {
-    @include box-sizing(border-box);
     overflow: visible;
     height: 100%;
-    // Previene il ritorno a capo nelle celle con inline-block
+    /* Prevent inline-block cells wrapping */
     white-space: nowrap;
-    // Rimuove lo spazio vuoto tra le celle
+    /* Remove inter-cell whitespace */
     font-size: 0;
 }
 
 .cell {
-    @include box-sizing(border-box);
-    @include transition(box-shadow, 0.25s, ease-in-out, 0s);
+    box-sizing: border-box;
     position: relative;
     overflow: hidden;
     width: 20%;
     height: 100%;
-    // Imposta lo spazio tra le celle
-    padding: 0 $grid-gutter;
+    /* Set the inter-cell spacing */
+    padding: 0 10px;
     border: 2px solid #333;
     vertical-align: top;
-    // Reimposta white-space
+    /* Reset white-space */
     white-space: normal;
-    // Reimposta font-size
-    font-size: $fontsize-default;
-
-    /* Stati della cella */
-
-    &.is-animating {
-        background-color: $cell-highlight-color
-    }
+    /* Reset font-size */
+    font-size: 16px;
 }
 
-/* Dimensioni cella
-   ===================================================================== */
+/* Cell states */
+
+.cell.is-animating {
+    background-color: #fffdec;
+}
+
+/* Cell dimensions
+   ========================================================================== */
 
 .cell-1 { width: 10%; }
 .cell-2 { width: 20%; }
@@ -260,8 +285,8 @@ Un esempio di varie convenzioni.
 .cell-4 { width: 40%; }
 .cell-5 { width: 50%; }
 
-/* Modificatori cella
-   ===================================================================== */
+/* Cell modifiers
+   ========================================================================== */
 
 .cell--detail,
 .cell--important {
@@ -270,6 +295,7 @@ Un esempio di varie convenzioni.
 ```
 
 
+<a name="organization"></a>
 ## 7. Organizzazione
 
 L'organizzazione del codice è una parte importante di ogni base di codice CSS, ed è cruciale per basi di codice ampie.
@@ -279,11 +305,13 @@ L'organizzazione del codice è una parte importante di ogni base di codice CSS, 
 * Se usate un preprocessore, astraete in variabili il codice comune per colore, tipografia, ecc.
 
 
+<a name="build-and-deployment"></a>
 ## 8. Generazione e distribuzione
 
 I progetti dovrebbero sempre cercare di includere un qualche meccanismo grazie al quale possano essere verificati (linted), testati, e versionati in preparazione per l'uso in produzione. Per questo lavoro, [grunt](https://github.com/cowboy/grunt) di Ben Alman è un eccellente strumento.
 
 
+<a name="acknowledgments"></a>
 ## Ringraziamenti
 
 Grazie a tutti coloro che hanno contribuito a [idiomatic.js](https://github.com/rwldrn/idiomatic.js). È stato una fonte di ispirazione, citazioni e linee guida.
