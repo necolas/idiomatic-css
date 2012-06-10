@@ -152,7 +152,7 @@ Very long property values - such as complex collections of gradients or shadows 
 
 ### Preprocessors: additional format considerations
 
-Different CSS preprocessors have different features, functionality, and syntax. Your conventions should be extended to accomodate the particularities of any preprocessor in use. The following guidelines are in reference to Sass.
+Different CSS preprocessors have different features, functionality, and syntax. Your conventions should be extended to accommodate the particularities of any preprocessor in use. The following guidelines are in reference to Sass.
 
 * Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep. This prevents overly specific CSS selectors.
 * Avoid large numbers of nested rules. Break them up when readability starts to be affected. Preference to avoid nesting that spreads over more than 20 lines.
