@@ -13,6 +13,7 @@ Per favore contribuite.
 ## Traduzioni
 
 * [Inglese](https://github.com/necolas/idiomatic-css)
+* [Portoghese](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
 * [Serbo](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
 
 
