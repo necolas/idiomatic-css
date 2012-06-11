@@ -45,18 +45,18 @@ contribua.
 <a name="whitespace"></a>
 ## 2. Espaços em branco
 
-Only one style should exist across the entire source of your project. Always be
-consistent in your use of whitespace. Use whitespace to improve readability.
+Apenas um estilo deve existir em todo o projeto. Seja sempre
+consistente na utilização de espaços em branco. Use espaços em branco para melhorar a legibilidade.
 
-* _Never_ mix spaces and tabs for indentation.
-* Choose between soft indents (spaces) or real tabs. Stick to your choice
-  without fail. (Preference: spaces)
-* If using spaces, choose the number of characters used per indentation level.
-  (Preference: 4 spaces)
+* _Nunca_ misture espaços e tabs para indentação.
+* Escolha entre indentação suave (espaços) ou tabulação. Atenha-se à sua escolha
+  sem falhar. (Preferência: espaços)
+* Se usar espaços, escolha o número de caracteres usados por nível de indentação.
+  (Preferência: 4 espaços)
 
-Tip: configure your editor to "show invisibles". This will allow you to
-eliminate end of line whitespace, eliminate unintended blank line whitespace,
-and avoid polluting commits.
+Dica: configure seu editor para "mostrar invisíveis". Isso irá permitir que você
+elimine espaços em branco da quebra de linha, elimine espaços em branco de linhas vazias sem indentação,
+e evite commits poluídos.
 
 
 <a name="comments"></a>
