@@ -62,56 +62,55 @@ e evite commits poluídos.
 <a name="comments"></a>
 ## 3. Comentários
 
-Well commented code is extremely important. Take time to describe components,
-how they work, their limitations, and the way they are constructed. Don't leave
-others in the team guessing as to the purpose of uncommon or non-obvious
-code.
+Código bem comentado é extremamente importante. Tire tempo para descrever componentes,
+como eles funcionam, suas limitações, e o modo como são construídos. Não deixe
+outros no time adivinharem o propósito de códigos incomuns ou não óbvios.
 
-Comment style should be simple and consistent within a single code base.
+Estilo de comentário deve ser simples e consistente dentro de uma única base de código.
 
-* Place comments on a new line above their subject.
-* Avoid end of line comments.
-* Keep line-length to a sensible maximum, e.g., 80 columns.
-* Make liberal use of comments to break CSS code into discrete sections.
-* Use "sentence case" comments and consistent text indentation.
+* Coloque comentários em uma nova linha acima do seu assunto.
+* Evite comentários no fim da linha.
+* Mantenha o comprimento da linha a um máximo sensível, por exemplo, 80 colunas.
+* Faça o uso liberal de comentários para quebrar o código CSS em seções distintas.
+* Use comentários com iniciais maiúsculase indentação de texto consistente.
 
-Tip: configure your editor to provide you with shortcuts to output agreed-upon
-comment patterns.
+Dica: configure seu editor para lhe prover com atalhos a geração do padrão 
+de comentários acordado.
 
-#### CSS example:
+#### exemplo com CSS:
 
 ```css
 /* ==========================================================================
-   Section comment block
+   Bloco de comentário de seção
    ========================================================================== */
 
-/* Sub-section comment block
+/* Bloco de comentário de sub-seção
    ========================================================================== */
 
 /*
- * Group comment block.
- * Ideal for multi-line explanations and documentation.
+ * Bloco de comentário de grupo
+ * Ideal para explicações em múltiplas linhas e documentação.
  */
 
-/* Basic comment */
+/* Comentário básico */
 ```
 
-#### SCSS example:
+#### exemplo com SCSS:
 
 ```scss
 // ==========================================================================
-// Section comment block
+// Bloco de comentário de seção
 // ==========================================================================
 
-// Sub-section comment block
+// Bloco de comentário de sub-seção
 // ==========================================================================
 
 //
-// Group comment block
-// Ideal for multi-line explanations and documentation.
+// Bloco de comentário de grupo
+// Ideal para explicações em múltiplas linhas e documentação.
 //
 
-// Basic comment
+// Comentário básico
 ```
 
 
