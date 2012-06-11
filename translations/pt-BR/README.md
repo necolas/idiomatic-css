@@ -336,14 +336,14 @@ Um exemplo de várias convenções.
 <a name="organization"></a>
 ## 7. Organização
 
-Code organization is an important part of any CSS code base, and crucial for
-large code bases.
+Organização de código é uma importante parte de qualquer base de código CSS, e crucial para
+grandes bases de código.
 
-* Logically separate distinct pieces of code.
-* Use separate files (concatenated by a build step) to help break up code for
-  distinct components.
-* If using a preprocessor, abstract common code into variables for color,
-  typography, etc.
+* Separar logicamente distintas partes do código.
+* Usar arquivos separados (concatenados por um passo de build) para ajudar a dividir código para
+  componentes distintos.
+* Se estiver usando um pré-processador, abstrair partes comuns de código em variáveis para cor,
+  tipografia, etc.
 
 
 <a name="build-and-deployment"></a>
