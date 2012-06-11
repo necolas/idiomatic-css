@@ -349,10 +349,9 @@ grandes bases de código.
 <a name="build-and-deployment"></a>
 ## 8. Build e deploy
 
-Projects should always attempt to include some generic means by which source
-can be linted, tested, compressed, and versioned in preparation for production
-use. For this task, [grunt](https://github.com/cowboy/grunt) by Ben Alman is an
-excellent tool.
+Os projetos devem sempre tentar incluir alguns meios genéricos pelos quais sua fonte
+possa ser avaliada, testada, comprimida e versionada em preparação para uso em produção. 
+Para essa tarefa, o [grunt](https://github.com/cowboy/grunt) por Ben Alman é uma excelente ferramenta.
 
 
 <a name="acknowledgements"></a>
