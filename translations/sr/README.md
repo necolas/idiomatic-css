@@ -13,6 +13,7 @@ doprinesete.
 
 * [Engleski](https://github.com/necolas/idiomatic-css)
 * [Italijanski](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
+* [Turski](https://github.com/necolas/idiomatic-css/tree/master/translations/tr_TR)
 
 
 ## Sadržaj
