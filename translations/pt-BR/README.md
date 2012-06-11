@@ -358,6 +358,6 @@ excellent tool.
 <a name="acknowledgements"></a>
 ## Agradecimentos
 
-Thanks to everyone who has contributed to
-[idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a source of
-inspiration, quotations, and guidelines.
+Obrigado a todos que contribuiram para
+[idiomatic.js](https://github.com/rwldrn/idiomatic.js). Foi uma fonte de 
+inspiração, citações e diretrizes.
