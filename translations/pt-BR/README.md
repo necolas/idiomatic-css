@@ -40,7 +40,7 @@ contribua.
 * Todo código em qualquer aplicação deve parecer como se tivesse sido escrito por uma única pessoa, 
   independentemente de quantas pessoas tenham contribuído.
 * Faça cumprir rigorosamente o estilo acordado.
-* Em caso de dúvida, utilizar existentes e comuns padrões.
+* Em caso de dúvida, utilizar padrões existentes e comuns.
 
 <a name="whitespace"></a>
 ## 2. Espaços em branco
@@ -55,7 +55,7 @@ consistente na utilização de espaços em branco. Use espaços em branco para m
   (Preferência: 4 espaços)
 
 Dica: configure seu editor para "mostrar invisíveis". Isso irá permitir que você
-elimine espaços em branco da quebra de linha, elimine espaços em branco de linhas vazias sem indentação,
+elimine espaços em branco da quebra de linha, elimine espaços em branco de linhas vazias sem indentação
 e evite commits poluídos.
 
 
@@ -72,7 +72,7 @@ Estilo de comentário deve ser simples e consistente dentro de uma única base d
 * Evite comentários no fim da linha.
 * Mantenha o comprimento da linha a um máximo sensível, por exemplo, 80 colunas.
 * Faça o uso liberal de comentários para quebrar o código CSS em seções distintas.
-* Use comentários com iniciais maiúsculase indentação de texto consistente.
+* Use comentários com iniciais maiúsculas e indentação de texto consistente.
 
 Dica: configure seu editor para lhe prover com atalhos a geração do padrão 
 de comentários acordado.
@@ -172,7 +172,7 @@ e propriedades do box-model podem acabar propagando ao longo de um bloco de decl
 
 #### Exceções e ligeiros desvios
 
-Grandes blocos de declarações individuais podem ser um pouco diferente, formatação
+Grandes blocos de declarações individuais podem atuar de forma diferente, através da formatação
 de linha única. Nesse caso, um espaço deve ser considerado depois da abertura das chaves e
 antes do fechamento das chaves.
 
@@ -228,7 +228,7 @@ pré-processador em uso. As seguintes diretrizes são em referência ao Sass.
     @include clearfix();
     @include box-sizing(border-box);
     width: x-grid-unit(1);
-    // outras declarações
+    // other declarations
 }
 ```
 
@@ -340,7 +340,7 @@ Organização de código é uma importante parte de qualquer base de código CSS
 grandes bases de código.
 
 * Separar logicamente distintas partes do código.
-* Usar arquivos separados (concatenados por um passo de build) para ajudar a dividir código para
+* Usar arquivos separados (concatenados por um processo de build) para ajudar a dividir código para
   componentes distintos.
 * Se estiver usando um pré-processador, abstrair partes comuns de código em variáveis para cor,
   tipografia, etc.
