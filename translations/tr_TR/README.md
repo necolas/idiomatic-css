@@ -13,6 +13,7 @@ bulunun.
 
 * [İngilizce](https://github.com/necolas/idiomatic-css)
 * [İtalyanca](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
+* [Portekizce](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
 * [Sırpça](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
 
 
