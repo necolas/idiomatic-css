@@ -1,50 +1,49 @@
-# Principles of writing consistent, idiomatic CSS
+# Princípios para escrever CSS de forma consistente e idiomática
 
-The following document outlines a reasonable style guide for CSS development.
-It is not meant to be prescriptive and I do not wish to impose my style
-preferences on other people's code. However, these guidelines do strongly
-encourage the use of existing, common, sensible patterns.
+O documento a seguir descreve um sensato guia de estilo para desenvolvimento CSS.
+Não pretendo ser prescritivo e não quero impor as minhas preferências
+de estilo no código de outras pessoas. Entretanto, estas orientações incentivam
+fortemente o uso de existentes, comuns e sensatos padrões.
 
-This is a living document and new ideas are always welcome. Please
-contribute.
+Esse é um documento vivo e novas ideias são sempre bem-vindas. Por favor
+contribua.
+
+## Traduções
+
+* [Inglês](https://github.com/necolas/idiomatic-css/)
+* [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
+* [Sérvio](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
 
 
-## Translations
+## Índice
 
-* [Italian](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [Serbian](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
+1. [Princípios gerais](#general-principles)
+2. [Espaços em branco](#whitespace)
+3. [Comentários](#comments)
+4. [Formatação](#format)
+5. [Nomeando](#naming)
+6. [Exemplo prático](#example)
+7. [Organização](#organization)
+8. [Build e deploy](#build-and-deployment)
 
-
-## Table of contents
-
-1. [General principles](#general-principles)
-2. [Whitespace](#whitespace)
-3. [Comments](#comments)
-4. [Format](#format)
-5. [Naming](#naming)
-6. [Practical example](#example)
-7. [Organization](#organization)
-8. [Build and deployment](#build-and-deployment)
-
-[Acknowledgements](#acknowledgements)
+[Agradecimentos](#acknowledgements)
 
 
 <a name="general-principles"></a>
-## 1. General principles
+## 1. Princípios gerais
 
-> "Part of being a good steward to a successful project is realizing that
-> writing code for yourself is a Bad Idea™. If thousands of people are using
-> your code, then write your code for maximum clarity, not your personal
-> preference of how to get clever within the spec." - Idan Gazit
+> "Parte de ser um bom gestor de um projeto bem sucedido é perceber que
+> escrever código para si mesmo é uma Má Ideia™. Se milhares de pessoas estão usando
+> o seu código, então escreva-o com máxima clareza, não sob a sua preferência
+> pessoal de como ser esperto com a especificação." - Idan Gazit
 
-* All code in any code-base should look like a single person typed it, no
-  matter how many people contributed.
-* Strictly enforce the agreed upon style.
-* If in doubt use existing, common patterns.
-
+* Todo código em qualquer aplicação deve parecer como se tivesse sido escrito por uma única pessoa, 
+  independentemente de quantas pessoas tenham contribuído.
+* Faça cumprir rigorosamente o estilo acordado.
+* Em caso de dúvida, utilizar existentes e comuns padrões.
 
 <a name="whitespace"></a>
-## 2. Whitespace
+## 2. Espaços em branco
 
 Only one style should exist across the entire source of your project. Always be
 consistent in your use of whitespace. Use whitespace to improve readability.
@@ -61,7 +60,7 @@ and avoid polluting commits.
 
 
 <a name="comments"></a>
-## 3. Comments
+## 3. Comentários
 
 Well commented code is extremely important. Take time to describe components,
 how they work, their limitations, and the way they are constructed. Don't leave
@@ -117,7 +116,7 @@ comment patterns.
 
 
 <a name="format"></a>
-## 4. Format
+## 4. Formatação
 
 The chosen code format must ensure that code is: easy to read; easy to clearly
 comment; minimizes the chance of accidentally introducing errors; and results
@@ -240,7 +239,7 @@ preprocessor in use. The following guidelines are in reference to Sass.
 
 
 <a name="naming"></a>
-## 5. Naming
+## 5. Nomeando
 
 You are not a human code compiler/compressor, so don't try to be one.
 
@@ -272,7 +271,7 @@ files.
 
 
 <a name="example"></a>
-## 6. Practical example
+## 6. Exemplo prático
 
 An example of various conventions.
 
@@ -341,7 +340,7 @@ An example of various conventions.
 
 
 <a name="organization"></a>
-## 7. Organization
+## 7. Organização
 
 Code organization is an important part of any CSS code base, and crucial for
 large code bases.
@@ -354,7 +353,7 @@ large code bases.
 
 
 <a name="build-and-deployment"></a>
-## 8. Build and deployment
+## 8. Build e deploy
 
 Projects should always attempt to include some generic means by which source
 can be linted, tested, compressed, and versioned in preparation for production
@@ -363,7 +362,7 @@ excellent tool.
 
 
 <a name="acknowledgements"></a>
-## Acknowledgements
+## Agradecimentos
 
 Thanks to everyone who has contributed to
 [idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a source of
