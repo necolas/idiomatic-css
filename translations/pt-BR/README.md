@@ -228,7 +228,7 @@ pré-processador em uso. As seguintes diretrizes são em referência ao Sass.
     @include clearfix();
     @include box-sizing(border-box);
     width: x-grid-unit(1);
-    // other declarations
+    // outras declarações
 }
 ```
 
@@ -236,14 +236,13 @@ pré-processador em uso. As seguintes diretrizes são em referência ao Sass.
 <a name="naming"></a>
 ## 5. Nomeando
 
-You are not a human code compiler/compressor, so don't try to be one.
+Você não é um compilador/compressor de código humano, então não tente ser.
 
-Use clear and thoughtful names for HTML classes. Pick an understandable and
-consistent naming pattern that makes sense both within HTML files and CSS
-files.
+Use nomes claros e previdentes para classes HTML. Escolha um padrão de nomes
+compreensível e consistente que faça sentido para arquivos HTML e arquivos CSS.
 
 ```css
-/* Example of code with bad names */
+/* Exemplo de código com nomes ruins */
 
 .s-scr {
     overflow: auto;
@@ -253,7 +252,7 @@ files.
     background: #000;
 }
 
-/* Example of code with better names */
+/* Exemplo de código com bons nomes */
 
 .is-scrollable {
     overflow: auto;
@@ -268,7 +267,7 @@ files.
 <a name="example"></a>
 ## 6. Exemplo prático
 
-An example of various conventions.
+Um exemplo de várias convenções.
 
 ```css
 /* ==========================================================================
@@ -276,7 +275,7 @@ An example of various conventions.
    ========================================================================== */
 
 /*
- * Example HTML:
+ * Exemplo de HTML:
  *
  * <div class="grid">
  *     <div class="cell cell-5"></div>
