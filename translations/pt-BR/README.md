@@ -117,20 +117,20 @@ de comentários acordado.
 <a name="format"></a>
 ## 4. Formatação
 
-The chosen code format must ensure that code is: easy to read; easy to clearly
-comment; minimizes the chance of accidentally introducing errors; and results
-in useful diffs and blames.
+O formato de código escolhido deve garantir que o código seja: fácil de ler; 
+fácil de comentar claramente; minimize a chance de introduzir erros acidentalmente; e resulte
+em úteis visualizações de diferença.
 
-1. One discrete selector per line in multi-selector rulesets.
-2. A single space before the opening brace of a ruleset.
-3. One declaration per line in a declaration block.
-4. One level of indentation for each declaration.
-5. A single space after the colon of a declaration.
-6. Always include a semi-colon at the end of the last declaration in a
-   declaration block.
-7. Place the closing brace of a ruleset in the same column as the first
-   character of the ruleset.
-8. Separate each ruleset by a blank line.
+1. Um seletor discreto por linha em um conjunto de regras com multi-seletores.
+2. Um único espaço antes da abertura das chaves em um conjunto de regras.
+3. Uma única declaração por linha em um bloco de declarativo.
+4. Um nível de indentação para cada declaração.
+5. Um único espaço depois dos dois pontos de uma declaração.
+6. Sempre inclua um ponto-e-vírgula no fim da última declaração em um
+   bloco declarativo.
+7. Coloque o fechamento das chaves na mesma coluna que o primeiro
+   caracter do conjunto de regras.
+8. Separe cada conjunto de regras por uma linha em branco.
 
 ```css
 .selector-1,
@@ -145,12 +145,12 @@ in useful diffs and blames.
 }
 ```
 
-#### Declaration order
+#### Ordem de declaração
 
-Declarations should be ordered in accordance with a single principle. My
-preference is for related properties to be grouped together and for
-structurally important properties (e.g. positioning and box-model) to be
-declared prior to typographic, background, and color properties.
+Declarações devem ser ordenadas segundo um único princípio. Minha
+preferência é por propriedades relacionadas para serem agrupadas e por
+propriedades estruturalmente importantes (por exemplo, posicionamento e box-model) para serem
+declaradas antes de propriedades tipográficas, fundo ou cor.
 
 ```css
 .selector {
@@ -166,16 +166,15 @@ declared prior to typographic, background, and color properties.
 }
 ```
 
-Alphabetical ordering is also popular, but the drawback is that it separates
-related properties. For example, position offsets are no longer grouped
-together and box-model properties can end up spread throughout a declaration
-block.
+Ordenação alfabética também é popular, mas a desvantagem é que ela separa
+as propriedades relacionadas. Por exemplo, deslocamentos de posição não são mais agrupados
+e propriedades do box-model podem acabar propagando ao longo de um bloco de declaração.
 
-#### Exceptions and slight deviations
+#### Exceções e ligeiros desvios
 
-Large blocks of single declarations can use a slightly different, single-line
-format. In this case, a space should be included after the opening brace and
-before the closing brace.
+Grandes blocos de declarações individuais podem ser um pouco diferente, formatação
+de linha única. Nesse caso, um espaço deve ser considerado depois da abertura das chaves e
+antes do fechamento das chaves.
 
 ```css
 .selector-1 { width: 10%; }
@@ -183,10 +182,9 @@ before the closing brace.
 .selector-3 { width: 30%; }
 ```
 
-Long, comma separated property values - such as collections of gradients or
-shadows - can be arranged across multiple lines in an effort to improve
-readability and produce more useful diffs. There are various formats that could
-be used; one example is shown below.
+Longos valores de propriedades separados por vírgula - como coleções de degradês ou sombras - podem ser organizados em várias linhas em um esforço para melhorar a
+legibilidade e produz visualizações de diferença mais úteis. Existem vários formatos que poderiam
+ser usados; um exemplo é mostrado abaixo.
 
 ```css
 .selector {
@@ -199,32 +197,30 @@ be used; one example is shown below.
 }
 ```
 
-#### Misc
+#### Miscelânea
 
-* Use lowercase hex values, e.g., `#aaa`.
-* Use single or double quotes consistently. Preference is for double quotes,
-  e.g., `content: ""`.
-* Always quote attribute values in selectors, e.g., `input[type="checkout"]`.
-* _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
+* Use valores hexadecimais em letras minúsculas, por exemplo: `#aaa`.
+* Use aspas simples ou duplas de forma consistente. Preferência por aspas duplas,
+  por exemplo: `content: ""`.
+* Sempre coloque aspas em valores de atributos nos seletores, por exemplo: `input[type="checkout"]`.
+* _Onde perimitido_, evite especificar unidades para valores-zero, por exemplo: `margin: 0`.
 
-### Preprocessors: additional format considerations
+### Pré-processadores: considerações de formatação adicionais
 
-Different CSS preprocessors have different features, functionality, and syntax.
-Your conventions should be extended to accommodate the particularities of any
-preprocessor in use. The following guidelines are in reference to Sass.
+Diferentes pré-processadores de CSS possuem diferentes características, funcionalidades e sintaxe.
+Suas convenções devem ser extendidas para acomodar as particularidades de qualquer 
+pré-processador em uso. As seguintes diretrizes são em referência ao Sass.
 
-* Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
-  This prevents overly specific CSS selectors.
-* Avoid large numbers of nested rules. Break them up when readability starts to
-  be affected. Preference to avoid nesting that spreads over more than 20
-  lines.
-* Always place `@extend` statements on the first lines of a declaration
-  block.
-* Where possible, group `@include` statements at the top of a declaration
-  block, after any `@extend` statements.
-* Consider prefixing custom functions with `x-` or another namespace. This
-  helps to avoid any potential to confuse your function with a native CSS
-  function, or to clash with functions from libraries.
+* Limite o aninhamento a 1 nível de profundidade. Reavalie qualquer aninhamento que tenha mais de 2 níveis
+  de profundidade. Isso impede que existam seletores CSS muito específicos.
+* Evite um grande número de regras aninhadas. Quebre-os para quando a legibilidade começar 
+  a ser afetada. Preferência por evitar aninhamentos que se espalhem por mais de 20 linhas.
+* Sempre coloque as declarações `@extend` nas primeiras linhas de um bloco declarativo.
+* Quando possível, agrupe declarações `@include` no topo de blocos declarativos,
+  depois de qualquer declaração `@extend`.
+* Considere funções customizadas para prefixos com `x-` ou qualquer namespace. Isso
+  ajuda a evitar qualquer potencial confusão na sua função com a função de CSS
+  nativo ou de colidir com funções de bibliotecas.
 
 ```scss
 .selector-1 {
