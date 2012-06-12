@@ -208,9 +208,9 @@ Verschillende CSS preprocessors hebben verschillende kenmerken, functionaliteit 
 <a name="naming"></a>
 ## 5. Naamgeving
 
-U bent geen menselijke code compiler/compressor, probeer dit dan ook niet te zijn.
+U bent geen menselijke code compiler/compressor; probeer dit dan ook niet te zijn.
 
-Gebruik duidelijke en doordachte namen voor HTML classes. Kies een begrijpelijk en consistent patroon voor naamgeving dat zowel in de HTML als CSS bestanden voor zich spreekt.
+Gebruik duidelijke en doordachte namen voor HTML classes. Kies een begrijpelijk en consistent patroon voor naamgeving dat zowel in de HTML- als CSS-bestanden voor zich spreekt.
 
 ```css
 /* voorbeeld van code met slechte naamgeving */
