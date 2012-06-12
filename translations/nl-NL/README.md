@@ -11,7 +11,7 @@ Dit is een levend document en nieuwe ideeën zijn altijd welkom. Draag alstublie
 * [Portuguese](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
 * [Serbian](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
 * [Turkish](https://github.com/necolas/idiomatic-css/tree/master/translations/tr_TR)
-* [Dutch](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)
+* [Dutch](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)f
 
 
 ## Inhoudsopgave
@@ -111,7 +111,7 @@ Tip: Stel uw tekstverwerker in met toetscombinaties om de afgesproken algemene p
 <a name="format"></a>
 ## 4. Opmaak
 
-De gekozen code-opmaak moet verzekeren dat de code: makkelijk te lezen- en te becommentariëren is Dit verminderd de kans op de onbedoelde introductie van fouten en resulteert in bruikbare diffs en blames.
+De gekozen code-opmaak moet verzekeren dat de code: makkelijk te lezen- en te becommentariëren is. Dit verminderd de kans op de onbedoelde introductie van fouten en resulteert in bruikbare diffs en blames.
 
 1. Eén aparte selector per regel en in multi-selector rulesets.
 2. Eén afzonderlijke spatie voor de openings-accolade van een ruleset.
