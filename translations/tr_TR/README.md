@@ -39,11 +39,11 @@ bulunun.
 > kodunun kullanıyorlarsa, o zaman kodunu, şartnameler dahilinde nasıl akıllılık yapacağın
 > kişisel seçimlere göre değil maksimum açıklık için yaz." - Idan Gazit
 
-
-* Herhangi bir kod tababındaki tüm kod, la. kişi katkıda bulunumuş olursa olsun
-* sanki tek bir kişi tarafından yazılmış gibi görünmelidir.
-* Üzerinde anlaşılan stili katı bir şekilde uygula.
-* Eğer süphen varsa varolan yaygın yönergeleri uygula.
+* Herhangi bir kod tababındaki tüm kod, kaç kişi katkıda bulunumuş olursa olsun
+  sanki tek bir kişi tarafından yazılmış gibi görünmelidir.
+* Strictly enforce the agreed upon style.
+* Karar verilen stili katı bir şekilde uygula.
+* Eğer şüphen varsa yaygın olarak kullanılan yönergeleri uygula
 
 
 <a name="whitespace"></a>
@@ -71,7 +71,7 @@ kişileri yaygın veya açık olmayan kodu tahmin etmek zorunda bırakma.
 
 Açıklama stili basit ve tek bir kod tabanı içinde tutarlı olmalıdır.
 
-* Açıklamaları iligili öznelerinin üzeirnde yeni satıra koy.
+* Açıklamaları iligili öznelerinin üzerinde yeni satıra koy.
 * Satır sonu açıklamalarından kaçın.
 * Satır uzunluğunu makul bir uzunlukta tut. Ör: 80 sütun.
 * CSS kodu farklı aralıklarda kısımlara bölmek için açıklamaları özgürce kullan.
@@ -120,7 +120,7 @@ Açıklama stili basit ve tek bir kod tabanı içinde tutarlı olmalıdır.
 ## 4. Format (Biçem)
 
 Seçilen kod formatı (biçemi) kodun; kolay okunabildiğinden, kolay açıklanabilir (yorumlamanabilir)
-olduğundan, kazara hataların oluşmasını minimuma indirdiğinden ve faydalı "diff" ve 
+olduğundan, kazara hataların oluşmasını minimuma indirdiğinden ve faydalı "diff" ve
 hatalar ürettiğinden emin olmalıdır.
 
 1. Çoklu seçicilerin olduğu kural setlerinde her satırda tek bir seçici.
@@ -183,7 +183,7 @@ Bu açılış parantezinden sonra ve kapanış parantezinden önce bir boşluk o
 
 Virgülle ayrılmış uzun özellik değerleri - gradient ve gölgeler gibi - okunabilirliği
 arttırmak ve daha faydalı "diff"ler yaratmak için birden fazla satıra yayılabilirler.
-Bunun için kullanılabilecek çeşitli biçemler var. 
+Bunun için kullanılabilecek çeşitli biçemler var.
 Bir örnek aşağıda;
 
 ```css
@@ -205,7 +205,7 @@ Bir örnek aşağıda;
 * Seçicilerdeki özellik değerlerini her zaman tırnak içine alın, ör., `input[type="checkout"]`.
 * _Mümkün olduğu durumlarda_, sıfır değerler için ünite kullanmayın, ör., `margin: 0`.
 
-### Preprocessors (Önderleyiciler) : dikkate alınacak ek formatlar (biçem) 
+### Preprocessors (Önderleyiciler) : dikkate alınacak ek formatlar (biçem)
 
 Farklı CSS önderleyicileri farklı özelliklere, işlevselliğe ve sözdizimine (syntax) sahipler.
 Kurallarınız kullanılmakta olan önderleyecinin özellikleri ile uyum sağlayacak şekilde olmalıdır.
@@ -213,7 +213,7 @@ Aşağıdaki yönergeler Sass'ı referans alarak verilmiştir.
 
 * Gömmeyi (nesting) sadece 1 bölüm olacak şekilde sınırla. İki seviyeden fazla olan bütün gömmeleri
   gözden geçir. Bu aşırı spesifik CSS seçicilerini engeller.
-* Yüksek sayıdaki gömme kurallarını engellemeye çalış. Okunabilirlik etkilenmeye başladıkça bunları 
+* Yüksek sayıdaki gömme kurallarını engellemeye çalış. Okunabilirlik etkilenmeye başladıkça bunları
   küçük parçalara böl. Tercih 20 satırı aşan gömmelerin önüne geçmek.
 * `@extend` ifadelerini deklarasyon bloğunun ilk satırına koy.
 * Mümkün oldukça `@include` ifadelerini deklarasyon bloğunun tepesine `@extend` ifadelerinden
@@ -238,7 +238,7 @@ Aşağıdaki yönergeler Sass'ı referans alarak verilmiştir.
 Sen bir insan kod derleyicisi/sıkıştırıcı değilsin, dolayısı ile olmaya da çalışma.
 
 HTML sınıfları için açık ve iyi düşünülmüş isimler kullan. He HTML hem de CSS dosyalarında
-anlamı olan tutarlı bir isimlendirme şekli seç. 
+anlamı olan tutarlı bir isimlendirme şekli seç.
 
 ```css
 /* Kötü isim örnekleri kodu */
@@ -335,7 +335,7 @@ anlamı olan tutarlı bir isimlendirme şekli seç.
 <a name="organization"></a>
 ## 7. Organizasyon
 
-Kod organizsayonu bütün CSS kod tabanları için önemlidir ve büyük kod tabanları içinse 
+Kod organizsayonu bütün CSS kod tabanları için önemlidir ve büyük kod tabanları içinse
 kritik önem taşır.
 
 * Kodun farklı bölümlerini mantıksal bir şekilde ayır.
