@@ -52,7 +52,7 @@ bulunun.
 Projenin tüm kaynağında sadece tek bir stil hüküm sürmelidir. Beyaz alan kullanımında 
 her zaman tutarlı ol. Beyaz alanları okunabilirliği artırmak için kullan.
 
-* _Asla girintiler için boşluk ve tabları karıştırma.
+* _Asla_ girintiler için boşluk ve tabları karıştırma.
 * Yumuşak girintiler (boşluklar) veya gerçek tablar arasında bir seçim yap.
   Seçimine sadık kal. (Tercih: boşluklar)
 * Eğer boşluk kullanıyorsan girinti bölümü için kullanılan karakter saysını seç.
