@@ -307,7 +307,7 @@ Een voorbeeld van verschillende conventies.
 <a name="organization"></a>
 ## 7. Ordening
 
-Code organisatie is een belangrijk onderdeel van elke CSS codebase en cruciaal voor grotere codebases.
+Code-organisatie is een belangrijk onderdeel van elke CSS codebase en cruciaal voor grotere codebases.
 
 * Verdeel logisch afzonderlijke code onderdelen.
 * Gebruik afzonderlijke bestanden (samengevoegd door een build proces) om code voor aparte componenten op te breken.
