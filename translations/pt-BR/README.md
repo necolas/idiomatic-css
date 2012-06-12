@@ -214,7 +214,7 @@ vários formatos que poderiam ser usados; um exemplo é mostrado abaixo.
   duplas, por exemplo: `content: ""`.
 * Sempre coloque aspas em valores de atributos nos seletores, por exemplo:
   `input[type="checkout"]`.
-* _Onde perimitido_, evite especificar unidades para valores-zero, por exemplo:
+* _Onde permitido_, evite especificar unidades para valores-zero, por exemplo:
   `margin: 0`.
 
 ### Pré-processadores: considerações de formatação adicionais
