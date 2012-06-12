@@ -14,6 +14,7 @@ doprinesete.
 * [Engleski](https://github.com/necolas/idiomatic-css)
 * [Portuguese](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
 * [Italijanski](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
+* [Turski](https://github.com/necolas/idiomatic-css/tree/master/translations/tr_TR)
 
 
 ## Sadržaj
