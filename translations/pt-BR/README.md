@@ -14,6 +14,7 @@ contribua.
 * [Inglês](https://github.com/necolas/idiomatic-css/)
 * [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
 * [Sérvio](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
+* [Spanish](https://github.com/necolas/idiomatic-css/tree/master/translations/es-ES)
 
 
 ## Índice

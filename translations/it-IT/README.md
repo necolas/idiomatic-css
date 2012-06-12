@@ -15,6 +15,7 @@ Per favore contribuite.
 * [Inglese](https://github.com/necolas/idiomatic-css)
 * [Portoghese](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
 * [Serbo](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
+* [Spanish](https://github.com/necolas/idiomatic-css/tree/master/translations/es-ES)
 
 
 ## Tavola dei contenuti

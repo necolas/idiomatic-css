@@ -15,6 +15,7 @@ Este es un documento vivo y las nuevas ideas son siempre bienvenidas. Aportad po
 * [Serbian](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
 * [Spanish](https://github.com/necolas/idiomatic-css/tree/master/translations/es-ES)
 
+
 ## Tabla de contenido
 
 1. [Principios generales](#general-principles)
