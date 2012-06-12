@@ -1,6 +1,6 @@
 # Principes voor het schrijven van consistente, idiomatische CSS
 
-Het volgende document schetst een logische stijlgids voor CSS ontwikkeling. Het is niet voorschrijvend bedoelt en ik wens niet om mijn stijlvoorkeuren op te dringen aan andermans code. Deze richtlijnen zijn echter een sterke aanmoedigen voor het gebruik van bestaande, algemene, verstandige patronen.
+Het volgende document schetst een logische stijlgids voor CSS ontwikkeling. Het is niet normatief bedoelt en ik wens niet om mijn stijlvoorkeuren op te dringen aan andermans code. Deze richtlijnen zijn echter een sterke aanmoedigen voor het gebruik van bestaande, algemene, verstandige patronen.
 
 Dit is een levend document en nieuwe ideeën zijn altijd welkom. Draag alstublieft bij!
 
@@ -38,7 +38,7 @@ Dit is een levend document en nieuwe ideeën zijn altijd welkom. Draag alstublie
 > specificatie." - Idan Gazit
 
 
-* Alle code in elke code-base zou getyped moeten lijken door een enkel persoon, ongeacht hoeveel personen een bijdrage leverden.
+* Alle code in elke codebase zou getyped moeten lijken door een enkel persoon, ongeacht hoeveel personen een bijdrage leverden.
 * Dwing de afgesproken stijl streng af.
 * Gebruik bij twijfel bestaande, algemene patronen.
 
@@ -66,7 +66,7 @@ De stijl van commentaar binnen broncode zou simpel en consistent moeten zijn.
 * Vermijd commentaar aan het einde van een regel.
 * Houdt regellengte tot een verstandig maximum: b.v. 80 kolommen.
 * Maak ruim gebruik van commentaar om CSS code op te breken in aparte secties.
-* Gebruik "standaard kapitalen" commentaar en consistente inspringing van tekst.
+* Gebruik "standaard kapitalen" commentaar en het consistent inspringen van tekst.
 
 Tip: Stel uw tekstverwerker in met toetscombinaties om de afgesproken algemene patronen te genereren.
 
@@ -78,7 +78,7 @@ Tip: Stel uw tekstverwerker in met toetscombinaties om de afgesproken algemene p
    Sectie commentaar blok
    ========================================================================== */
 
-/* Sub-sectie commentaar blok
+/* Subsectie commentaar blok
    ========================================================================== */
 
 /*
@@ -96,7 +96,7 @@ Tip: Stel uw tekstverwerker in met toetscombinaties om de afgesproken algemene p
 // Sectie commentaar blok
 // ==========================================================================
 
-// Sub-sectie commentaar blok
+// Subsectie commentaar blok
 // ==========================================================================
 
 //
@@ -164,7 +164,7 @@ Grote blokken alleenstaande declaraties kunnen een enigszins andere, enkele-rege
 .selector-3 { width: 30%; }
 ```
 
-Lange, kommagescheiden eigenschapswaarden - zoals sets aan verlopen of schaduwen - kunnen gerangschikt kunnen worden over meerdere regels om de leesbaarheid en beter bruikbare diffs te bevorderen. Er zijn verschillende opmaakstijlen die gebruikt zouden kunnen worden; een voorbeeld is hieronder getoond.
+Lange, kommagescheiden eigenschapwaarden - zoals sets aan verlopen of schaduwen - kunnen gerangschikt kunnen worden over meerdere regels om de leesbaarheid en beter bruikbare diffs te bevorderen. Er zijn verschillende opmaakstijlen die gebruikt zouden kunnen worden; een voorbeeld is hieronder getoond.
 
 ```css
 .selector {
@@ -182,16 +182,16 @@ Lange, kommagescheiden eigenschapswaarden - zoals sets aan verlopen of schaduwen
 * Gebruik onderkast hex waarden, b.v., `#aaa`.
 * Gebruik consistent enkele of dubbele aanhalingstekens. Dubbele aanhalingstekens hebben de voorkeur, b.v. `content: ""`.
 * Gebruik altijd aanhalingstekens bij attribuutwaarden in selectors, b.v. `input[type="checkout"]`.
-* Vermijd, _indien toegestaan_, specifieke eenheden voor nul-waarden b.v. `margin: 0`.
+* Vermijd, _indien toegestaan_, specifieke eenheden voor nulwaarden b.v. `margin: 0`.
 
 ### Preprocessors: extra opmaak overwegingen
 
 Verschillende CSS preprocessors hebben verschillende kenmerken, functionaliteit en syntaxis. Uw conventies zouden moeten worden afgestemd op de unieke kenmerken van de gebruikte preprocessors. De volgende richtlijnen hebben betrekking op Sass.
 
-* Beperk geneste regels tot 1 niveau diep. Bekijk sets dieper dan 2 niveau's opnieuw. Dit voorkomt te specifieke CSS selectors.
+* Beperk geneste regels tot 1 niveau diep. Bekijk sets dieper dan 2 niveaus opnieuw. Dit voorkomt te specifieke CSS selectors.
 * Voorkom grote aantallen geneste regels. Splits ze wanneer de leesbaarheid verminderd. De voorkeur is om geneste regels van meer dan 20 regels te vermijden.
 * Plaats `@extend` statements altijd op de eerste regel van een declaratie blok.
-* Groupeer `@include` statements waar mogelijk bovenaan een declaratie blok, na mogelijke `@extend` statements.
+* Groepeer `@include` statements waar mogelijk bovenaan een declaratie blok, na mogelijke `@extend` statements.
 * Overweeg een voorvoegsel van `x-` of een andere namespace voor eigen functies. Dit voorkomt mogelijke verwarring van uw functies met een CSS-eigen functie of een conflict met functies van andere libraries.
 
 ```scss
@@ -236,13 +236,13 @@ Gebruik duidelijke en doordachte namen voor HTML classes. Kies een begrijpelijk 
 
 
 <a name="example"></a>
-## 6. Practisch voorbeeld
+## 6. Praktisch voorbeeld
 
 Een voorbeeld van verschillende conventies.
 
 ```css
 /* ==========================================================================
-   Grid layout
+   Grid lay-out
    ========================================================================== */
 
 /*
@@ -307,7 +307,7 @@ Een voorbeeld van verschillende conventies.
 <a name="organization"></a>
 ## 7. Ordening
 
-Code organisatie is een belangrijk onderdeel van elke CSS code base en cruciaal voor grotere code bases.
+Code organisatie is een belangrijk onderdeel van elke CSS codebase en cruciaal voor grotere codebases.
 
 * Verdeel logisch afzonderlijke code onderdelen.
 * Gebruik afzonderlijke bestanden (samengevoegd door een build proces) om code voor aparte componenten op te breken.
