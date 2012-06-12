@@ -38,7 +38,7 @@ Dit is een levend document en nieuwe ideeën zijn altijd welkom. Draag alstublie
 > specificatie." - Idan Gazit
 
 
-* Alle code in elke codebase zou getyped moeten lijken door een enkel persoon, ongeacht hoeveel personen een bijdrage leverden.
+* Alle code in elke codebase zou getypt moeten lijken door een enkel persoon, ongeacht hoeveel personen een bijdrage leverden.
 * Dwing de afgesproken stijl streng af.
 * Gebruik bij twijfel bestaande, algemene patronen.
 
@@ -65,42 +65,42 @@ De stijl van commentaar binnen broncode zou simpel en consistent moeten zijn.
 * Plaats commentaar op een nieuwe regel boven het onderwerp.
 * Vermijd commentaar aan het einde van een regel.
 * Houdt regellengte tot een verstandig maximum: b.v. 80 kolommen.
-* Maak ruim gebruik van commentaar om CSS code op te breken in aparte secties.
-* Gebruik "standaard kapitalen" commentaar en het consistent inspringen van tekst.
+* Maak ruim gebruik van commentaar om CSS-code op te breken in aparte secties.
+* Gebruik "standaard kapitalen"-commentaar en het consistent inspringen van tekst.
 
 Tip: Stel uw tekstverwerker in met toetscombinaties om de afgesproken algemene patronen te genereren.
 
 
-#### CSS voorbeeld:
+#### CSS-voorbeeld:
 
 ```css
 /* ==========================================================================
-   Sectie commentaar blok
+   Sectie commentaarblok
    ========================================================================== */
 
-/* Subsectie commentaar blok
+/* Subsectie commentaarblok
    ========================================================================== */
 
 /*
- * Groep commentaar blok.
+ * Groep commentaarblok.
  * Ideaal voor uitleg over meerdere regels en documentatie.
  */
 
 /* Standaard commentaar */
 ```
 
-#### SCSS voorbeeld:
+#### SCSS-voorbeeld:
 
 ```scss
 // ==========================================================================
-// Sectie commentaar blok
+// Sectie commentaarblok
 // ==========================================================================
 
-// Subsectie commentaar blok
+// Subsectie commentaarblok
 // ==========================================================================
 
 //
-// Groep commentaar blok
+// Groep commentaarblok
 // Ideaal voor uitleg over meerdere regels en documentatie.
 //
 
@@ -111,14 +111,14 @@ Tip: Stel uw tekstverwerker in met toetscombinaties om de afgesproken algemene p
 <a name="format"></a>
 ## 4. Opmaak
 
-De gekozen code opmaak moet verzekeren dat de code: makkelijk te lezen- en te becommentariëren is, verminderd de kans op de onbedoelde introductie van fouten en resulteert in bruikbare diffs en blames.
+De gekozen code-opmaak moet verzekeren dat de code: makkelijk te lezen- en te becommentariëren is Dit verminderd de kans op de onbedoelde introductie van fouten en resulteert in bruikbare diffs en blames.
 
 1. Eén aparte selector per regel en in multi-selector rulesets.
 2. Eén afzonderlijke spatie voor de openings-accolade van een ruleset.
-3. Eén declaratie per regel in een declaratie blok.
+3. Eén declaratie per regel in een declaratieblok.
 4. Eén inspringniveau voor elke declaratie.
 5. Eén afzonderlijke spatie na de dubbele punt van een declaratie.
-6. Voeg altijd een puntkomma aan het eind van de laatste declaratie in een declaratie blok.
+6. Voeg altijd een puntkomma aan het eind van de laatste declaratie in een declaratieblok.
 7. Plaats de afsluitende accolade van een ruleset in dezelfde kolom als het eerste karakter van de ruleset.
 8. Scheidt elke ruleset door een witregel.
 
@@ -152,11 +152,11 @@ Declaraties dienen geordend te worden overeenkomstig een enkel principe. Mijn vo
     background: #000;
 }
 ```
-Alfabetische volgorde is ook populair, maar het nadeel is dat dit gerelateerde eigenschappen afzondert. Bijvoorbeeld: positie afstanden zijn niet langer gegroepeerd en box-model eigenschappen kunnen door het hele declaratie blok verspreid worden. 
+Alfabetische volgorde is ook populair, maar het nadeel is dat dit gerelateerde eigenschappen afzondert. Bijvoorbeeld: positie-afstanden zijn niet langer gegroepeerd en box-modeleigenschappen kunnen door het hele declaratieblok verspreid worden. 
 
 #### Uitzonderingen en kleine afwijkingen
 
-Grote blokken alleenstaande declaraties kunnen een enigszins andere, enkele-regel opmaak gebruiken. In dit geval zou een spatie toegevoegd kunnen worden na de openingsaccolade en voor de sluitende accolade.
+Grote blokken alleenstaande declaraties kunnen een enigszins andere, enkele-regel-opmaak gebruiken. In dit geval zou een spatie toegevoegd kunnen worden na de openingsaccolade en voor de sluitende accolade.
 
 ```css
 .selector-1 { width: 10%; }
@@ -184,14 +184,14 @@ Lange, kommagescheiden eigenschapwaarden - zoals sets aan verlopen of schaduwen 
 * Gebruik altijd aanhalingstekens bij attribuutwaarden in selectors, b.v. `input[type="checkout"]`.
 * Vermijd, _indien toegestaan_, specifieke eenheden voor nulwaarden b.v. `margin: 0`.
 
-### Preprocessors: extra opmaak overwegingen
+### Preprocessors: extra opmaakoverwegingen
 
 Verschillende CSS preprocessors hebben verschillende kenmerken, functionaliteit en syntaxis. Uw conventies zouden moeten worden afgestemd op de unieke kenmerken van de gebruikte preprocessors. De volgende richtlijnen hebben betrekking op Sass.
 
-* Beperk geneste regels tot 1 niveau diep. Bekijk sets dieper dan 2 niveaus opnieuw. Dit voorkomt te specifieke CSS selectors.
+* Beperk geneste regels tot 1 niveau diep. Bekijk sets dieper dan 2 niveaus opnieuw. Dit voorkomt te specifieke CSS-selectors.
 * Voorkom grote aantallen geneste regels. Splits ze wanneer de leesbaarheid verminderd. De voorkeur is om geneste regels van meer dan 20 regels te vermijden.
-* Plaats `@extend` statements altijd op de eerste regel van een declaratie blok.
-* Groepeer `@include` statements waar mogelijk bovenaan een declaratie blok, na mogelijke `@extend` statements.
+* Plaats `@extend`-statements altijd op de eerste regel van een declaratieblok.
+* Groepeer `@include`-statements waar mogelijk bovenaan een declaratieblok, na mogelijke `@extend`-statements.
 * Overweeg een voorvoegsel van `x-` of een andere namespace voor eigen functies. Dit voorkomt mogelijke verwarring van uw functies met een CSS-eigen functie of een conflict met functies van andere libraries.
 
 ```scss
@@ -208,7 +208,7 @@ Verschillende CSS preprocessors hebben verschillende kenmerken, functionaliteit 
 <a name="naming"></a>
 ## 5. Naamgeving
 
-U bent geen menselijke code compiler/compressor; probeer dit dan ook niet te zijn.
+U bent geen menselijke codecompiler/compressor; probeer dit dan ook niet te zijn.
 
 Gebruik duidelijke en doordachte namen voor HTML classes. Kies een begrijpelijk en consistent patroon voor naamgeving dat zowel in de HTML- als CSS-bestanden voor zich spreekt.
 
@@ -285,7 +285,7 @@ Een voorbeeld van verschillende conventies.
     background-color: #fffdec;
 }
 
-/* Cel afmetingen
+/* Celafmetingen
    ========================================================================== */
 
 .cell-1 { width: 10%; }
@@ -294,7 +294,7 @@ Een voorbeeld van verschillende conventies.
 .cell-4 { width: 40%; }
 .cell-5 { width: 50%; }
 
-/* Cel aanpassingen
+/* Celaanpassingen
    ========================================================================== */
 
 .cell--detail,
@@ -309,8 +309,8 @@ Een voorbeeld van verschillende conventies.
 
 Code-organisatie is een belangrijk onderdeel van elke CSS codebase en cruciaal voor grotere codebases.
 
-* Verdeel logisch afzonderlijke code onderdelen.
-* Gebruik afzonderlijke bestanden (samengevoegd door een build proces) om code voor aparte componenten op te breken.
+* Verdeel logisch afzonderlijke codeonderdelen.
+* Gebruik afzonderlijke bestanden (samengevoegd door een buildproces) om code voor aparte componenten op te breken.
 * Abstraheer algemene code in variabelen voor kleur, typografie enz. als gebruik gemaakt wordt van een preprocessor.
 
 
