@@ -14,7 +14,7 @@ contribute.
 * [Italian](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
 * [Portuguese](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
 * [Serbian](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
-
+* [Spanish](https://github.com/necolas/idiomatic-css/tree/master/translations/es-ES)
 
 ## Table of contents
 
