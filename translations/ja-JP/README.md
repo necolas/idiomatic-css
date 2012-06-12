@@ -1,13 +1,5 @@
 # 一貫性のあるCSSらしいCSSを書くための原則
 
-The following document outlines a reasonable style guide for CSS development.
-It is not meant to be prescriptive and I do not wish to impose my style
-preferences on other people's code. However, these guidelines do strongly
-encourage the use of existing, common, sensible patterns.
-
-This is a living document and new ideas are always welcome. Please
-contribute.
-
 以下の文書はCSS開発のための合理的なスタイルガイドの骨子です。  
 規範になるべきものではないし、私自身のスタイルの好みを他者のコードに押し付けるつもりは一切ありません。しかし、これらのガイドラインは現存する一般的で分別のあるパターンを利用することを推奨します。
 
