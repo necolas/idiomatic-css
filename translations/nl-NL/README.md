@@ -1,6 +1,6 @@
 # Principes voor het schrijven van consistente, idiomatische CSS
 
-Het volgende document schetst een logische stijlgids voor het ontwikkelen van CSS. Het is niet normatief bedoeld en ik wens niet mijn stijlvoorkeuren op te dringen aan andermans code. Deze richtlijnen zijn echter een sterke aanmoediging voor het gebruik van bestaande, algemene, verstandige patronen.
+Het volgende document schetst een logische stijlgids voor het schrijven van CSS. Het is niet normatief bedoeld en ik wens niet mijn stijlvoorkeuren op te dringen aan andermans code. Deze richtlijnen zijn echter een sterke aanmoediging voor het gebruik van bestaande, algemene, verstandige patronen.
 
 Dit is een levend document en nieuwe ideeën zijn altijd welkom. Draag alstublieft bij!
 
