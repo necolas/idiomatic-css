@@ -5,7 +5,7 @@
 
 このドキュメントは常に変わっていくものなので、新しいアイデアを常に求めています。ぜひアイデア等を投稿してください。
 
-##### [Idiomatic CSS in English (Original)](https://github.com/necolas/idiomatic-css/)
+##### [一貫性のあるCSSらしいCSSを書くための原則の英語版はこちらから](https://github.com/necolas/idiomatic-css/)
 
 ## 目次
 
