@@ -7,11 +7,7 @@ Dit is een document in ontwikkeling en nieuwe ideeën zijn altijd welkom. Draag 
 
 ## Vertalingen
 
-* [Italian](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [Portuguese](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
-* [Serbian](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
-* [Turkish](https://github.com/necolas/idiomatic-css/tree/master/translations/tr_TR)
-* [Dutch](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)
+Andere vertalingen zijn te vinden in het [originele Engelse Idiomatic CSS document](https://github.com/necolas/idiomatic-css).
 
 
 ## Inhoudsopgave
