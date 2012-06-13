@@ -9,7 +9,7 @@ Ovo je "živi" dokument i nove ideje su uvek dobrodošle. Molimo Vas da
 doprinesete.
 
 
-[Idiomatic CSS in English (Original)](https://github.com/necolas/idiomatic-css)
+[Idiomatski CSS na Engleskom(original)](https://github.com/necolas/idiomatic-css)
 
 
 ## Sadržaj
