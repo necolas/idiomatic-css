@@ -5,11 +5,7 @@
 
 このドキュメントは常に変わっていくものなので、新しいアイデアを常に求めています。ぜひアイデア等を投稿してください。
 
-## 翻訳
-
-* [イタリア語](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [セルビア語](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
-* [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
+##### [Idiomatic CSS in English (Original)](https://github.com/necolas/idiomatic-css/)
 
 ## 目次
 
