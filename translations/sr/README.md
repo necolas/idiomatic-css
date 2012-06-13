@@ -8,12 +8,7 @@ zajedničkih, razumnih šema.
 Ovo je "živi" dokument i nove ideje su uvek dobrodošle. Molimo Vas da
 doprinesete.
 
-
-## Prevodi
-
-* [Engleski](https://github.com/necolas/idiomatic-css)
-* [Portuguese](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
-* [Italijanski](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
+[Idiomatski CSS na Engleskom (Original)](https://github.com/necolas/idiomatic-css)
 
 
 ## Sadržaj
