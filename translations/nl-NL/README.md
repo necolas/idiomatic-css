@@ -2,7 +2,7 @@
 
 Het volgende document schetst een logische stijlgids voor het schrijven van CSS. Het is niet normatief bedoeld en ik wens niet mijn stijlvoorkeuren op te dringen aan andermans code. Deze richtlijnen zijn echter een sterke aanmoediging voor het gebruik van bestaande, algemene, verstandige patronen.
 
-Dit is een levend document en nieuwe ideeën zijn altijd welkom. Draag alstublieft bij!
+Dit is een document in ontwikkeling en nieuwe ideeën zijn altijd welkom. Draag alstublieft bij!
 
 
 ## Vertalingen
@@ -111,7 +111,7 @@ Tip: Stel uw tekstverwerker in met toetscombinaties om de afgesproken algemene p
 <a name="format"></a>
 ## 4. Opmaak
 
-De gekozen code-opmaak moet verzekeren dat de code: makkelijk te lezen- en te becommentariëren is. Dit verminderd de kans op de onbedoelde introductie van fouten en resulteert in bruikbare diffs en blames.
+De gekozen code-opmaak moet verzekeren dat de code: makkelijk te lezen en te becommentariëren is. Dit vermindert de kans op de onbedoelde introductie van fouten en resulteert in bruikbare diffs en blames.
 
 1. Eén aparte selector per regel en in multi-selector rulesets.
 2. Eén afzonderlijke spatie voor de openings-accolade van een ruleset.
@@ -186,7 +186,7 @@ Lange, kommagescheiden eigenschapwaarden - zoals sets aan verlopen of schaduwen 
 
 ### Preprocessors: extra opmaakoverwegingen
 
-Verschillende CSS preprocessors hebben verschillende kenmerken, functionaliteit en syntaxis. Uw conventies zouden moeten worden afgestemd op de unieke kenmerken van de gebruikte preprocessors. De volgende richtlijnen hebben betrekking op Sass.
+Verschillende CSS preprocessors hebben verschillende kenmerken, functionaliteit en syntaxis. Uw conventies zullen moeten worden afgestemd op de unieke kenmerken van de gebruikte preprocessors. De volgende richtlijnen hebben betrekking op Sass.
 
 * Beperk geneste regels tot 1 niveau diep. Bekijk sets dieper dan 2 niveaus opnieuw. Dit voorkomt te specifieke CSS-selectors.
 * Voorkom grote aantallen geneste regels. Splits ze wanneer de leesbaarheid verminderd. De voorkeur is om geneste regels van meer dan 20 regels te vermijden.
