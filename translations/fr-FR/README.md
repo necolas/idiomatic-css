@@ -111,7 +111,7 @@ de commentaire décidé.
 ```
 
 
-<a name="formatage”></a>
+<a name="formatage””></a>
 ## 4. Formatage
 
 Le formatage de code choisi doit assurer qu’il soit : facile à lire ; facile
