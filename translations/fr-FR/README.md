@@ -6,7 +6,7 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 
 ## Traductions
 
-* [Anglais](https://github.com/necolas/idiomatic-css)
+* [Anglais (VO)](https://github.com/necolas/idiomatic-css)
 * [Italian](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
 * [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
 * [Português (Brasil)](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
