@@ -126,16 +126,16 @@ The chosen code format must ensure that code is: easy to read; easy to clearly
 comment; minimizes the chance of accidentally introducing errors; and results
 in useful diffs and blames.
 
-1. One discrete selector per line in multi-selector rulesets.
-2. A single space before the opening brace of a ruleset.
-3. One declaration per line in a declaration block.
-4. One level of indentation for each declaration.
-5. A single space after the colon of a declaration.
-6. Always include a semi-colon at the end of the last declaration in a
-   declaration block.
-7. Place the closing brace of a ruleset in the same column as the first
-   character of the ruleset.
-8. Separate each ruleset by a blank line.
+- One discrete selector per line in multi-selector rulesets.
+- A single space before the opening brace of a ruleset.
+- One declaration per line in a declaration block.
+- One level of indentation for each declaration.
+- A single space after the colon of a declaration.
+- Always include a semi-colon at the end of the last declaration in a
+  declaration block.
+- Place the closing brace of a ruleset in the same column as the first
+  character of the ruleset.
+- Separate each ruleset by a blank line.
 
 ```css
 .selector-1,
