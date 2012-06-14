@@ -26,7 +26,7 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 
 [Remerciements](#remerciements)
 
-<a name=“principes-generaux”></a>
+<a name="principes-generaux"></a>
 ## 1. Principes généraux
 
 > « Une des parties pour être un bon administrateur à un projet est de
@@ -40,7 +40,7 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 * Adhérez strictement au style choisi.
 * Si en doute, utilisez des conventions existantes et/ou communes.
 
-<a name=“espacement”></a>
+<a name="espacement"></a>
 ## 2. Espacement
 
 Il n’y a qu’un style qui doit exister au long du code de votre projet. Soyez toujours
@@ -56,7 +56,7 @@ Conseil : configurez votre éditeur afin montrer les invisibles (ou « show invi
 Ceci va vous aider à éliminer les espaces de fin de lignes, éliminer les lignes vide
 non renfoncées et éviter de polluer les « commits. »
 
-<a name=“commentaires”></a>
+<a name="commentaires"></a>
 ## 3. Commentaires
 
 Du code bien commenté est extrêmement important. Prenez du temps pour décrire les
@@ -111,7 +111,7 @@ de commentaire décidé.
 ```
 
 
-<a name=“formatage”></a>
+<a name="formatage"></a>
 ## 4. Formatage
 
 Le formatage de code choisi doit assurer qu’il soit : facile à lire ; facile
@@ -232,7 +232,7 @@ de tout préprocesseur en utilisation.
 }
 ```
 
-<a name=“noms”></a>
+<a name="noms"></a>
 ## 5. Noms
 
 Vous n’êtes pas un compilateur/compresseur de code humain et n’essayez pas d’en être un.
@@ -263,7 +263,7 @@ code CSS.
 }
 ```
 
-<a name=“exemple”></a>
+<a name="exemple"></a>
 ## 6. Exemple Pratique
 
 Un exemple de plusieurs conventions.
@@ -351,7 +351,7 @@ le code peut être implémenté avec JSLint, testé, compressé et versionné en
 préparation à la production. Pour cette tâche, [grunt](https://github.com/cowboy/grunt)
 par Ben Alman est une utilité excellente.
 
-<a name=“remerciements”></a>
+<a name="remerciements"></a>
 ## Remerciements
 
 Merci à tous qui ont contribué à [idiomatic.js](https://github.com/rwldrn/idiomatic.js).
