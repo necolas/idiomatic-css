@@ -19,7 +19,7 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 2. [Espacement](#espacement)
 3. [Commentaires](#commentaires)
 4. [Formatage](#formatage)
-5. [Noms](#Noms)
+5. [Noms](#noms)
 6. [Exemple pratique](#exemple)
 7. [Organisation](#organisation)
 8. [Création et déploiement](#creation-et-deploiement)
@@ -111,7 +111,7 @@ de commentaire décidé.
 ```
 
 
-<a name="formatage””></a>
+<a name=“formatage”></a>
 ## 4. Formatage
 
 Le formatage de code choisi doit assurer qu’il soit : facile à lire ; facile
