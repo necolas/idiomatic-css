@@ -129,15 +129,15 @@ minimisées ; et qu’il entraîne des différences et des blâmes utiles.
 8. Séparez chaque condition par une ligne vide.
 
 ```css
-.selecteur-1,  
-.selecteur-2,  
-.selecteur-3 {  
-    -webkit-box-sizing: border-box;  
-    -moz-box-sizing: border-box;  
-    box-sizing: border-box;  
-    display: block;  
-    color: #333;  
-    background: #fff;  
+.selecteur-1,
+.selecteur-2,
+.selecteur-3 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    color: #333;
+    background: #fff;
 }
 ```
 
