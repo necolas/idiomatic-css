@@ -16,7 +16,7 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 ## Table des matières
 
 1. [Principes généraux](#principes-generaux)
-2. [Espacement](#espacement)
+2. [Espacement et retraits](#espacement)
 3. [Commentaires](#commentaires)
 4. [Formatage](#formatage)
 5. [Noms](#noms)
@@ -36,12 +36,12 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 > personnelle pour devenir malin dans le “spec.” » - Idan Gazit
 
 * Tout le code dans un projet doit avoir l’air d’avoir été écrit
-  par une seule et même personne, n’importe le nombre de gens y ayant contribué.
+  par une seule et même personne, quel que soit le nombre de gens y ayant contribué.
 * Adhérez strictement au style choisi.
-* Si en doute, utilisez des conventions existantes et/ou communes.
+* Dans le doute, utilisez des conventions existantes et/ou communes.
 
 <a name="espacement"></a>
-## 2. Espacement
+## 2. Espacement et retrait
 
 Il n’y a qu’un style qui doit exister au long du code de votre projet. Soyez toujours
 consistent dans votre espacement. Utilisez cet espacement pour améliorer la lecture.
