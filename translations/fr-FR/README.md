@@ -15,14 +15,22 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 
 ## Table des matières
 
-1. [Principes généraux](#principes-généraux)
+1. [Principes généraux](#principes-generaux)
 2. [Espacement](#espacement)
 3. [Commentaires](#commentaires)
 4. [Format](#format)
 5. [Appellation](#appellation)
 6. [Exemple pratique](#exemple)
 7. [Organisation](#organisation)
-8. [Création et déploiement](#création-et-déploiement)
+8. [Création et déploiement](#creation-et-deploiement)
 
 [Remerciements](#remerciements)
 
+<a name=“principes-generaux></a>
+## 1. Principes généraux
+
+> « Une des parties pour être un bon administrateur à un projet est de
+> réaliser qu’écrire du code pour vous-même est une mauvaise idée (Bad Idea™).
+> Si des milliers de gens utilisent votre code, essayez d’écrire votre
+> code avec un maximum de clarté, et non pas par une préférence
+> personnelle pour devenir malin dans le “spec.” » - Idan Gazit
