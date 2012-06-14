@@ -1,4 +1,4 @@
-# Principes d’écriture consistante, idiomatic CSS
+# Principes d’écriture consistante et idiomatique de CSS
 
 Le document suivant met en place un guide de développement de CSS raisonnable. Il n’est pas destiné à être suivi à la lettre et je ne veux pas imposer mais préférences de style sur le code des autres. Cependant ce guide encourage tout-de-même l’utilisation de conventions existantes, communes et raisonnables.
 
