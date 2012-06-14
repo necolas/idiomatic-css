@@ -18,7 +18,7 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 1. [Principes généraux](#principes-generaux)
 2. [Espacement](#espacement)
 3. [Commentaires](#commentaires)
-4. [Format](#format)
+4. [Formatage](#formatage)
 5. [Appellation](#appellation)
 6. [Exemple pratique](#exemple)
 7. [Organisation](#organisation)
@@ -111,10 +111,10 @@ de commentaire décidé.
 ```
 
 
-<a name="format"></a>
-## 4. Format
+<a name="formatage”></a>
+## 4. Formatage
 
-Le format de code choisi doit assurer qu’il soit : facile à lire ; facile
+Le formatage de code choisi doit assurer qu’il soit : facile à lire ; facile
 à commenter ; que les chances  d’introduction accidentelle d’erreurs soit
 minimisées ; et qu’il entraîne des différences et des blâmes utiles.
 
@@ -167,5 +167,67 @@ les propriétés apparentées. Par exemple, les décalages de position ne sont
 plus regroupées et les propriétés de boîte-modèle peuvent se trouver répandues
 au travers du bloc de déclaration.
 
-#### Exceptions et déviations
+#### Exceptions et légères déviations
 
+De longs blocs de déclarations d’une ligne peuvent utiliser un style unilinéaire,
+légèrement différent. Dans ce cas un espace doit être inclus après la parenthèse
+d’ouverture et avant la parenthèse de fermeture.
+
+```css
+.selecteur-1 { width: 10%; }
+.selecteur-2 { width: 20%; }
+.selecteur-3 { width: 30%; }
+```
+
+Les longues valeurs de propriétés séparées par des virgules – tels que les gradients
+ou les ombres – peuvent être arrangées sur plusieurs lignes dans un effort visant à
+améliorer la lecture et les différences. Il y a plusieurs formats qui peuvent être
+utilisés ; un exemple est montré en-dessous.
+
+```css
+.selecteur {
+    box-shadow:
+        1px 1px 1px #000,
+        2px 2px 1px 1px #ccc inset;
+    background-image:
+        linear-gradient(#fff, #ccc),
+        linear-gradient(#f3c, #4ec);
+}
+```
+
+#### Divers
+
+* Utilisez des valeurs hexadécimales en minuscules, ex. `aaa`.
+* Utilisez des guillemets simples (‘) ou doubles (“) avec consistance. Je préfère
+  les doubles guillemets, ex. `content: “”`.
+* Utilisez toujours des guillemets dans les valeurs des attributs,
+  ex. `input[type=“checkout”]`.
+* _Lorsque valable_, évitez des unités pour des valeurs nulles, ex. `margin: 0`.
+
+### Préprocesseurs : considérations additionnelles de formatage
+
+Différents préprocessurs CSS ont de différentes caractéristiques, fonctionnalités
+et syntaxe. Vos conventions doivent être étendues pour convenir les particularités
+de tout préprocesseur en utilisation.
+
+* Limitez le niveau de renfoncement à 1. Réévaluer toute imbriquation à plus de 2
+  niveaux de profondeur. Ceci prévient l’utilisation de sélecteurs CSS trop spécifiques.
+* Évitez de grands nombres de règles imbriquées. Divisez les quand la lecture est
+  affectée. Préférence d’éviter toute imbrication de plus de 20 lignes.
+* Placez toujours des déclarations `@extend` sur la première ligne d’un bloc de
+  déclarations.
+* Lorsque possible, groupez les déclarations `@include` en haut des blocs de
+  déclaration, au-dessous de toute déclaration `@extend`.
+* Considérez préfixer les fonctions personnelles avec `x-` ou un autre préfix, afin
+  d’éviter toute confusion potentielle entre votre fonction et une fonction CSS native,
+  ou toute confrontation avec des fonctions de bibliothèques de code.
+
+```scss
+.selecteur-1 {
+    @extend .autre-règles;
+    @include clearfix();
+    @include box-sizing(border-box);
+    width: x-grid-unit(1);
+    // autres déclarations
+}
+```
