@@ -107,8 +107,8 @@ de commentaire décidé.
 // Idéal pour les explications sur plusieurs lignes
 //
 
-// Commentaire de base```
-```
+// Commentaire de base
+``````
 
 
 <a name="formatage”></a>
