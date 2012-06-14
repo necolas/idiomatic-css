@@ -19,7 +19,7 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 2. [Espacement](#espacement)
 3. [Commentaires](#commentaires)
 4. [Formatage](#formatage)
-5. [Appellation](#appellation)
+5. [Noms](#Noms)
 6. [Exemple pratique](#exemple)
 7. [Organisation](#organisation)
 8. [Création et déploiement](#creation-et-deploiement)
@@ -210,7 +210,7 @@ Différents préprocessurs CSS ont de différentes caractéristiques, fonctionna
 et syntaxe. Vos conventions doivent être étendues pour convenir les particularités
 de tout préprocesseur en utilisation.
 
-* Limitez le niveau de renfoncement à 1. Réévaluer toute imbriquation à plus de 2
+* Limitez le niveau de renfoncement à 1. Réévaluer toute imbrication à plus de 2
   niveaux de profondeur. Ceci prévient l’utilisation de sélecteurs CSS trop spécifiques.
 * Évitez de grands nombres de règles imbriquées. Divisez les quand la lecture est
   affectée. Préférence d’éviter toute imbrication de plus de 20 lignes.
@@ -231,3 +231,118 @@ de tout préprocesseur en utilisation.
     // autres déclarations
 }
 ```
+
+<a name=“noms”></a>
+## 5. Noms
+
+Vous n’êtes pas un compilateur/compresseur de code humain et n’essayez pas d’en être un.
+
+Utilisez des noms claires et sensés pour les classes HTML. Choisissez une convention
+consistante et compréhensible de chois des noms qui est logique dans le code HTML et le
+code CSS.
+
+```css
+/* Exemple de code mal nommé */
+
+.def {
+    overflow: auto;
+}
+
+.cc {
+    background: #000;
+}
+
+/* Exemple de code mieux nommé */
+
+.defile {
+    overflow: auto;
+}
+
+.colonne-corps {
+    background: #000;
+}
+```
+
+<a name=“exemple”></a>
+## 6. Exemple Pratique
+
+Un exemple de plusieurs conventions.
+
+```css
+/* ==========================================================================
+   Présentation en grille
+   ========================================================================== */
+
+/*
+ * Exemple HTML:
+ *
+ * <div class=“grille”>
+ *     <div class="cellule cellule-5”></div>
+ *     <div class="cellule cellule-5”></div>
+ * </div>
+ */
+
+.grille {
+    overflow: visible;
+    height: 100%;
+    /* Prévient les cellules inline-block de créer une nouvelle ligne */
+    white-space: nowrap;
+    /* Retire l’espace intercellulaire */
+    font-size: 0;
+}
+
+.cellule {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    width: 20%;
+    height: 100%;
+    /* Créé l’espace intercellulaire */
+    padding: 0 10px;
+    border: 2px solid #333;
+    vertical-align: top;
+    /* Remet l’espace blanc */
+    white-space: normal;
+    /* Remet la taille de la police */
+    font-size: 16px;
+}
+
+/* Etats des cellules */
+
+.cellule.est-animee {
+    background-color: #fffdec;
+}
+
+/* Dimensions des cellules
+   ========================================================================== */
+
+.cellule-1 { width: 10%; }
+.cellule-2 { width: 20%; }
+.cellule-3 { width: 30%; }
+.cellule-4 { width: 40%; }
+.cellule-5 { width: 50%; }
+
+/* Modificateurs des cellules
+   ========================================================================== */
+
+.cellule--detail,
+.cellule--important {
+    border-width: 4px;
+}
+```
+
+<a name="organisation"></a>
+## 7. Organisation
+
+L’organisation du code est aussi important que tout autre élément dans un projet
+CSS, et est cruciale pour les gros projets.
+
+* Séparez logiquement les parties distinctes du code.
+* Utilisez des fichiers séparés (enchainez les) pour aider à séparer le code en
+  composantes distinctes.
+* Si vous utilisez un préprocesseur, abstraites le code commun en des variables
+  pour la couleur, la typographie,...
+
+<a name=“creation-et-deploiement></a>
+## 8. Création et déploiement
+
