@@ -7,12 +7,7 @@ Il n'est pas destiné à être normatif et je ne souhaite pas imposer mes préf�
 Ceci est un document évolutif et les nouvelles idées sont toujours les bienvenues. 
 Merci de contribuer.
 
-## Traductions
-
-* [French] (https://github.com/necolas/idiomatic-css/tree/master/translations/fr-FR)
-* [Italian](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [Serbian](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
-
+##### [Idiomatic CSS in English (Original)](https://github.com/necolas/idiomatic-css/)
 
 ## Table des matières
 
@@ -135,10 +130,7 @@ in useful diffs and blames.
 
 #### Ordre des déclarations
 
-Declarations should be ordered in accordance with a single principle. My
-preference is for related properties to be grouped together and for
-structurally important properties (e.g. positioning and box-model) to be
-declared prior to typographic, background, and color properties.
+Les déclarations doivent être organisés selon un principe simple de votre choix. Personnellement, je préfère regrouper les propriétés ayant des relations directes. Dans ce sens, j'aime bien aussi déclarer les groupes de propriétés définissant la structure (ex: positionnement, dimensionnement…) avant la typographie, le fond et les couleurs.
 
 ```css
 .selector {
@@ -154,16 +146,12 @@ declared prior to typographic, background, and color properties.
 }
 ```
 
-Alphabetical ordering is also popular, but the drawback is that it separates
-related properties. For example, position offsets are no longer grouped
-together and box-model properties can end up spread throughout a declaration
-block.
+L'odre alphabétique est aussi très utilisé, mais le principale défault est que l'on sépare les propriétés ayant des relations.
+Par exemple, la position et dimensions d'un bloc sera complètement éclaté dans tout le bloc de déclaration.
 
 #### Exceptions et légèrs écarts
 
-Large blocks of single declarations can use a slightly different, single-line
-format. In this case, a space should be included after the opening brace and
-before the closing brace.
+Lorsque nous avons affaire à un lot de blocs contenant une seul déclaration à chaque fois, nous pouvons utiliser un format différent utilisant une ligne: un espace devrait être inclu avant et après les accolades ouvrantes et fermantes.
 
 ```css
 .selector-1 { width: 10%; }
@@ -189,30 +177,21 @@ be used; one example is shown below.
 
 #### En vrac
 
-* Use lowercase hex values, e.g., `#aaa`.
-* Use single or double quotes consistently. Preference is for double quotes,
-  e.g., `content: ""`.
-* Always quote attribute values in selectors, e.g., `input[type="checkout"]`.
-* _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
+* Utilisez des valeurs hexa en minuscules, ex: `#aaa`.
+* Utilisez des simple ou double quotes de manières consistantes. Petite préférence pour les doubles quotes, ex: `content: ""`.
+* Utilisez toujours des quotes autour des attributs dans les sélecteurs, ex: `input[type="checkout"]`.
+* _Dès que c'est possible_, ne pas specifier d'unité pour les valeurs égales à 0, ex: `margin: 0`.
 
-### Pre processeurs: considérations additionnelles pour le format
+### Pré-processeurs: considérations additionnelles pour le format
 
-Different CSS preprocessors have different features, functionality, and syntax.
-Your conventions should be extended to accommodate the particularities of any
-preprocessor in use. The following guidelines are in reference to Sass.
+Les différents pré-processeurs CSS existant offrent des fonctionnalités et des syntaxes différentes. Vos conventions doivent être enrichies pour s'accomoder aux particularités du pré-processeur utilisé.
+Les règles suivantes sont adaptés à Sass
 
-* Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
-  This prevents overly specific CSS selectors.
-* Avoid large numbers of nested rules. Break them up when readability starts to
-  be affected. Preference to avoid nesting that spreads over more than 20
-  lines.
-* Always place `@extend` statements on the first lines of a declaration
-  block.
-* Where possible, group `@include` statements at the top of a declaration
-  block, after any `@extend` statements.
-* Consider prefixing custom functions with `x-` or another namespace. This
-  helps to avoid any potential to confuse your function with a native CSS
-  function, or to clash with functions from libraries.
+* Limitez l'imbrication à 1 niveau de profondeur. Réévaluer les cas contenant plus de 2 niveaux de profondeur. Cela évitera d'avoir des sélecteurs CSS trop spécifique.
+* Evitez d'avoir un grand nombre de règles imbriqués. N'hésitez pas à faire des séparations pour améliorer la lisibilité. Evitez donc d'avoir plus de 20 lignes de règles imbriqués.
+* Placez toujours les `@extend` au début des déclarations.
+* Lorsque c'est possible, groupez les `@include` juste après les éventuelles `@extend`.
+* Pour vos fonctions, préfixez les avec un espace de nom comme personnalisé (ex: `x-`). Cela permet d'éviter des confusions avec le language des CSS natif, ainsi que d'éventuelles conflit avec des librairies.
 
 ```scss
 .selector-1 {
