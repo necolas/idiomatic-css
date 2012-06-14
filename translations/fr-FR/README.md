@@ -35,7 +35,7 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 > code avec un maximum de clarté, et non pas par une préférence
 > personnelle pour devenir malin dans le “spec.” » - Idan Gazit
 
-* Tout le code dans toute base de code doit avoir l’air d’avoir été écrit
+* Tout le code dans un projet doit avoir l’air d’avoir été écrit
   par une seule et même personne, n’importe le nombre de gens y ayant contribué.
 * Adhérez strictement au style choisi.
 * Si en doute, utilisez des conventions existantes et/ou communes.
