@@ -108,7 +108,7 @@ de commentaire décidé.
 //
 
 // Commentaire de base
-``````
+```
 
 
 <a name="formatage”></a>
