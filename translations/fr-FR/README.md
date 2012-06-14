@@ -85,8 +85,8 @@ de commentaire décidé.
    ========================================================================== */
 
 /*
- * Bloc de commentaire groupé
- * Idéal pour les explications sur plusieurs lignes
+ * Bloc de commentaire groupe
+ * Ideal pour les explications sur plusieurs lignes
  */
 
 /* Commentaire de base */
@@ -103,8 +103,8 @@ de commentaire décidé.
 // ==========================================================================
 
 //
-// Bloc de commentaire groupé
-// Idéal pour les explications sur plusieurs lignes
+// Bloc de commentaire groupe
+// Ideal pour les explications sur plusieurs lignes
 //
 
 // Commentaire de base
@@ -224,11 +224,11 @@ de tout préprocesseur en utilisation.
 
 ```scss
 .selecteur-1 {
-    @extend .autre-règles;
+    @extend .autre-regles;
     @include clearfix();
     @include box-sizing(border-box);
     width: x-grid-unit(1);
-    // autres déclarations
+    // autres declarations
 }
 ```
 
@@ -242,7 +242,7 @@ consistante et compréhensible de chois des noms qui est logique dans le code HT
 code CSS.
 
 ```css
-/* Exemple de code mal nommé */
+/* Exemple de code mal nomme */
 
 .def {
     overflow: auto;
@@ -252,7 +252,7 @@ code CSS.
     background: #000;
 }
 
-/* Exemple de code mieux nommé */
+/* Exemple de code mieux nomme */
 
 .defile {
     overflow: auto;
@@ -270,7 +270,7 @@ Un exemple de plusieurs conventions.
 
 ```css
 /* ==========================================================================
-   Présentation en grille
+   Presentation en grille
    ========================================================================== */
 
 /*
@@ -285,7 +285,7 @@ Un exemple de plusieurs conventions.
 .grille {
     overflow: visible;
     height: 100%;
-    /* Prévient les cellules inline-block de créer une nouvelle ligne */
+    /* Previent les cellules inline-block de creer une nouvelle ligne */
     white-space: nowrap;
     /* Retire l’espace intercellulaire */
     font-size: 0;
@@ -297,7 +297,7 @@ Un exemple de plusieurs conventions.
     overflow: hidden;
     width: 20%;
     height: 100%;
-    /* Créé l’espace intercellulaire */
+    /* Cree l’espace intercellulaire */
     padding: 0 10px;
     border: 2px solid #333;
     vertical-align: top;
@@ -343,7 +343,7 @@ CSS, et est cruciale pour les gros projets.
 * Si vous utilisez un préprocesseur, abstraites le code commun en des variables
   pour la couleur, la typographie,...
 
-<a name=“creation-et-deploiement></a>
+<a name=“creation-et-deploiement”></a>
 ## 8. Création et déploiement
 
 Un projet doit toujours essayer d’inclure une convention générique par laquelle
