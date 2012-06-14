@@ -346,3 +346,13 @@ CSS, et est cruciale pour les gros projets.
 <a name=“creation-et-deploiement></a>
 ## 8. Création et déploiement
 
+Un projet doit toujours essayer d’inclure une convention générique par laquelle
+le code peut être implémenté avec JSLint, testé, compressé et versionné en
+préparation à la production. Pour cette tâche, [grunt](https://github.com/cowboy/grunt)
+par Ben Alman est une utilité excellente.
+
+<a name=“remerciements”></a>
+## Remerciements
+
+Merci à tous qui ont contribué à [idiomatic.js](https://github.com/rwldrn/idiomatic.js).
+C’était une source d’inspiration, de dictons et de guides.
