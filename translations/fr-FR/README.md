@@ -2,7 +2,7 @@
 
 Le document suivant met en place un guide de développement de CSS raisonnable. Il n’est pas destiné à être suivi à la lettre et je ne veux pas imposer mais préférences de style sur le code des autres. Cependant ce guide encourage tout-de-même l’utilisation de conventions existantes, communes et raisonnables.
 
-Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contribuez s’il-vous-plaît.
+Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contribuez y s’il-vous-plaît.
 
 * [Idiomatic CSS in English (Original)](https://github.com/necolas/idiomatic-css)
 
