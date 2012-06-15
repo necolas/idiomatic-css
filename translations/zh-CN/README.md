@@ -124,24 +124,114 @@
 <a name="naming"></a>
 ## 5. 命名
 
-(占位)
+不要试着把自己当作编译器或者预处理器，因此命名的时候尽量采用清晰的，有意义的名字。另外，对于
+html文件和css文件中的代码，尽量采用一致的命名规则。
+
+
+```css
+/* 没有意义是命名  */
+.s-scr {
+    overflow: auto;
+}
+.cb {
+    background: #000;
+}
+
+/* 比较有意义的命名方式 */
+.is-scrollable {
+    overflow: auto;
+}
+.column-body {
+    background: #000;
+}
+```
 
 <a name="example"></a>
 ## 6. 实例
 
-(占位)
+下面是含有上述约定的示例代码：
+
+```css
+/* ==========================================================================
+   Grid layout
+   ========================================================================== */
+
+/*
+ * Example HTML:
+ *
+ * <div class="grid">
+ *     <div class="cell cell-5"></div>
+ *     <div class="cell cell-5"></div>
+ * </div>
+ */
+
+.grid {
+    overflow: visible;
+    height: 100%;
+    /* Prevent inline-block cells wrapping */
+    white-space: nowrap;
+    /* Remove inter-cell whitespace */
+    font-size: 0;
+}
+
+.cell {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    width: 20%;
+    height: 100%;
+    /* Set the inter-cell spacing */
+    padding: 0 10px;
+    border: 2px solid #333;
+    vertical-align: top;
+    /* Reset white-space */
+    white-space: normal;
+    /* Reset font-size */
+    font-size: 16px;
+}
+
+/* Cell states */
+
+.cell.is-animating {
+    background-color: #fffdec;
+}
+
+/* Cell dimensions
+   ========================================================================== */
+
+.cell-1 { width: 10%; }
+.cell-2 { width: 20%; }
+.cell-3 { width: 30%; }
+.cell-4 { width: 40%; }
+.cell-5 { width: 50%; }
+
+/* Cell modifiers
+   ========================================================================== */
+
+.cell--detail,
+.cell--important {
+    border-width: 4px;
+}
+```
 
 <a name="organization"></a>
 ## 7. 代码组织
 
-(占位)
+对于css代码库来说，如何组织代码文件是很重要的，尤其对于那些很大的代码库显得更加重要。这里介绍
+几个组织代码的建议：
+
+* 逻辑上对不同的代码进行分离
+* 不同的组件(component)的css尽量用不同的css文件（可以在build阶段用工具合并到一起）
+* 如果用到了预处理器（比如less），把一些公共的样式代码抽象成变量，例如颜色，字体等等。
+
 
 <a name="build-and-deployment"></a>
 ## 8. 构建及部署
 
-(占位)
+任何一个项目，都应该有一个build的过程，在这个阶段我们可以通过工具对代码进行检测，测试，压缩等等，还
+可以为生产环境准备好带有版本号的代码。在这里我推荐一下[grunt](https://github.com/cowboy/grunt)这个工具，我感觉它很不错。
 
 <a name="acknowledgements"></a>
 ## 致谢
 
-(占位)
+感谢所有对[idiomatic.js](https://github.com/rwldrn/idiomatic.js)作出贡献的网友。
