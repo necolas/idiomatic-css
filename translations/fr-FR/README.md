@@ -39,10 +39,10 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 Il n’y a qu’un style qui doit exister au long du code de votre projet. Soyez toujours
 consistent dans votre façon d'indenter. Utilisez cet espacement pour améliorer la lecture.
 
-* Ne _jamais_ mélanger des espaces et des tabulations pour le renfoncement.
+* Ne _jamais_ mélanger des espaces et des tabulations pour l'indentation.
 * Choisissez entre des tabulations douces (espaces) ou des vrais tabulations. Soyez consistent
   sans exception. (Préférence : espaces)
-* Si vous utilisez des espaces, choisissez le nombre de caractères de renfoncement par
+* Si vous utilisez des espaces, choisissez le nombre de caractères de retrait par
   niveau. (Préférence : 4 espaces)
 
 Conseil : configurez votre éditeur afin montrer les invisibles (ou « show invisibles »).
@@ -62,7 +62,7 @@ Le style des commentaires doit être simple et consistant dans une base de code.
 * Évitez les commentaires de fin de ligne.
 * Garder la longueur des lignes sous un maximum raisonnable, ex. 80 colonnes.
 * Utilisez les commentaires de façon libérale pour diviser le code CSS en sections discrètes.
-* Utilisez des commentaires de « cas de phrases » et un renfoncement de texte consistent.
+* Utilisez des commentaires de « cas de phrases » et une indentation consistante.
 
 Conseil : configurez votre éditeur afin de créer des raccourcis pour produire le style
 de commentaire décidé.
@@ -114,7 +114,7 @@ minimisées ; et qu’il entraîne des différences et des blâmes utiles.
 1. Un sélecteur discret par ligne dans des conditions de sélecteurs multiples.
 2. Un seul espace avant la parenthèse « { » d’une condition.
 3. Une déclaration par ligne dans un bloc de déclarations.
-4. Un niveau de renfoncement par déclaration.
+4. Un niveau de retrait par déclaration.
 5. Un seul espace après les deux-points d’une déclaration.
 6. Ajoutez toujours un point-virgule à la fin de la dernière déclaration d’un bloc.
 7. Placez la parenthèse « } » dans la même colonne que le premier caractère
@@ -203,7 +203,7 @@ Différents préprocessurs CSS ont de différentes caractéristiques, fonctionna
 et syntaxe. Vos conventions doivent être étendues pour convenir les particularités
 de tout préprocesseur en utilisation.
 
-* Limitez le niveau de renfoncement à 1. Réévaluer toute imbrication à plus de 2
+* Limitez le niveau de retrait à 1. Réévaluer toute imbrication à plus de 2
   niveaux de profondeur. Ceci prévient l’utilisation de sélecteurs CSS trop spécifiques.
 * Évitez de grands nombres de règles imbriquées. Divisez les quand la lecture est
   affectée. Préférence d’éviter toute imbrication de plus de 20 lignes.
