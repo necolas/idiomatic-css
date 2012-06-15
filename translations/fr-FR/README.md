@@ -22,11 +22,10 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 <a name="principes-generaux"></a>
 ## 1. Principes généraux
 
-> « Pour être un bon administrateur à un projet, un des atouts est de
-> réaliser qu’écrire du code pour vous-même est une mauvaise idée (Bad Idea™).
-> Si des milliers de gens utilisent votre code, essayez d’écrire votre
-> code avec un maximum de clarté, et non pas par une préférence
-> personnelle pour devenir malin dans le “spec.” » - Idan Gazit
+> « Une des clef pour bien administer un projet est de réaliser qu'écire
+> du code pour soi-même est une mauvaise idée. Si des milliers de gens
+> utilisent votre code, essayez d'écrire votre code le plus clairement
+> possible, et de ne pas essayer de "faire le malin" avec une syntaxe exotique. » - Idan Gazit
 
 * Le code d'un projet doit avoir l’air d’avoir été écrit
   par une seule et même personne, quel que soit le nombre de gens y ayant contribué.
