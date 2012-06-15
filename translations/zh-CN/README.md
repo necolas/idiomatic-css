@@ -106,6 +106,19 @@
 7. 规则集的右大括号保持与该规则集的第一个字符在同一列。
 8. 每个规则集之间保留一个空行。
 
+```css
+.selector-1,
+.selector-2,
+.selector-3 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    color: #333;
+    background: #fff;
+}
+```
+
 (占位)
 
 <a name="naming"></a>
