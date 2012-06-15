@@ -199,8 +199,8 @@ utilisés ; un exemple est montré en-dessous.
 
 ### Préprocesseurs : considérations additionnelles de formatage
 
-Différents préprocessurs CSS ont de différentes caractéristiques, fonctionnalités
-et syntaxe. Vos conventions doivent être étendues pour convenir les particularités
+Les différents pré-processeurs CSS existant offrent des fonctionnalités et des syntaxes
+différentes. Vos conventions doivent être adaptées pour convenir aux particularités
 de tout préprocesseur en utilisation.
 
 * Limitez le niveau de retrait à 1. Réévaluer toute imbrication à plus de 2
