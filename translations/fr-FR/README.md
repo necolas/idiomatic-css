@@ -4,14 +4,7 @@ Le document suivant met en place un guide de développement de CSS raisonnable. 
 
 Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contribuez s’il-vous-plaît.
 
-## Traductions
-
-* [Anglais (VO)](https://github.com/necolas/idiomatic-css)
-* [Italian](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
-* [Português (Brasil)](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
-* [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
-* [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
+* [Idiomatic CSS in English (Original)](https://github.com/necolas/idiomatic-css)
 
 ## Table des matières
 
@@ -29,13 +22,13 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 <a name="principes-generaux"></a>
 ## 1. Principes généraux
 
-> « Une des parties pour être un bon administrateur à un projet est de
+> « Pour être un bon administrateur à un projet, un des atouts est de
 > réaliser qu’écrire du code pour vous-même est une mauvaise idée (Bad Idea™).
 > Si des milliers de gens utilisent votre code, essayez d’écrire votre
 > code avec un maximum de clarté, et non pas par une préférence
 > personnelle pour devenir malin dans le “spec.” » - Idan Gazit
 
-* Tout le code dans un projet doit avoir l’air d’avoir été écrit
+* Le code d'un projet doit avoir l’air d’avoir été écrit
   par une seule et même personne, quel que soit le nombre de gens y ayant contribué.
 * Adhérez strictement au style choisi.
 * Dans le doute, utilisez des conventions existantes et/ou communes.
@@ -44,7 +37,7 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 ## 2. Espacement et retrait
 
 Il n’y a qu’un style qui doit exister au long du code de votre projet. Soyez toujours
-consistent dans votre espacement. Utilisez cet espacement pour améliorer la lecture.
+consistent dans votre façon d'indenter. Utilisez cet espacement pour améliorer la lecture.
 
 * Ne _jamais_ mélanger des espaces et des tabulations pour le renfoncement.
 * Choisissez entre des tabulations douces (espaces) ou des vrais tabulations. Soyez consistent
@@ -144,8 +137,8 @@ minimisées ; et qu’il entraîne des différences et des blâmes utiles.
 #### Ordre de déclaration
 
 Les déclarations doivent toujours être ordonnées selon un seul principe.
-Ma préférence est de garder les propriétés proches ensemble et pour les
-propriétés de structure importantes (c-à-d position et boîte-modèle) d’être
+Je préfère garder les propriétés proches ensemble et pour les
+propriétés de structure importantes (c-à-d position et « box-model ») d’être
 déclarées avant la typographie, l’arrière-plan et es propriétés de couleur.
 
 ```css
