@@ -9,7 +9,7 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 ## Table des matières
 
 1. [Principes généraux](#principes-generaux)
-2. [Espacement et retraits](#espacement)
+2. [Indentation](#indentation)
 3. [Commentaires](#commentaires)
 4. [Formatage](#formatage)
 5. [Noms](#noms)
@@ -27,13 +27,13 @@ Ceci est un document vivant et de nouvelles idées sont les bien-venues. Contrib
 > utilisent votre code, essayez d'écrire votre code le plus clairement
 > possible, et de ne pas essayer de "faire le malin" avec une syntaxe exotique. » - Idan Gazit
 
-* Le code d'un projet doit avoir l’air d’avoir été écrit
+* L'ensemble du code d'un projet doit avoir l’air d’avoir été écrit
   par une seule et même personne, quel que soit le nombre de gens y ayant contribué.
 * Adhérez strictement au style choisi.
 * Dans le doute, utilisez des conventions existantes et/ou communes.
 
-<a name="espacement"></a>
-## 2. Espacement et retrait
+<a name="indentation"></a>
+## 2. Indentation
 
 Il n’y a qu’un style qui doit exister au long du code de votre projet. Soyez toujours
 consistent dans votre façon d'indenter. Utilisez cet espacement pour améliorer la lecture.
