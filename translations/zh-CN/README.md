@@ -129,7 +129,7 @@ html文件和css文件中的代码，尽量采用一致的命名规则。
 
 
 ```css
-/* Example of code with bad names */
+/* 没有意义是命名  */
 .s-scr {
     overflow: auto;
 }
@@ -137,7 +137,7 @@ html文件和css文件中的代码，尽量采用一致的命名规则。
     background: #000;
 }
 
-/* Example of code with better names */
+/* 比较有意义的命名方式 */
 .is-scrollable {
     overflow: auto;
 }
@@ -149,7 +149,7 @@ html文件和css文件中的代码，尽量采用一致的命名规则。
 <a name="example"></a>
 ## 6. 实例
 
-下面是含有上述所说约定的示例代码：
+下面是含有上述约定的示例代码：
 
 ```css
 /* ==========================================================================
@@ -229,9 +229,9 @@ html文件和css文件中的代码，尽量采用一致的命名规则。
 ## 8. 构建及部署
 
 任何一个项目，都应该有一个build的过程，在这个阶段我们可以通过工具对代码进行检测，测试，压缩等等，还
-可以为生产环境准备好带有版本号的代码。在这里我推荐一下`grunt`这个工具，我感觉它很棒。
+可以为生产环境准备好带有版本号的代码。在这里我推荐一下[grunt](https://github.com/cowboy/grunt)这个工具，我感觉它很不错。
 
 <a name="acknowledgements"></a>
 ## 致谢
 
-(占位)
+感谢所有对[idiomatic.js](https://github.com/rwldrn/idiomatic.js)作出贡献的网友。
