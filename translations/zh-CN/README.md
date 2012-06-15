@@ -187,6 +187,7 @@
     width: x-grid-unit(1);
     // other declarations
 }
+```
 
 <a name="naming"></a>
 ## 5. 命名
