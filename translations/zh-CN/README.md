@@ -1,6 +1,9 @@
 # 编写统一、符合习惯的CSS的原则
 
-(占位)
+以下文档将提供一个合理的风格指导，用于CSS开发。
+这个文档并不是规范，我也不希望将自己的风格喜好强加在其他人身上。但是这个指导手册确实强烈鼓励使用现有的、通用的、合理的模式。
+
+这个文档将持续更新，欢迎提出新的想法。还请多多贡献。
 
 [Principles of writing consistent, idiomatic CSS（原版）](https://github.com/necolas/idiomatic-css)
 
