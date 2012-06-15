@@ -199,7 +199,7 @@ utilisés ; un exemple est montré en-dessous.
 
 ### Préprocesseurs : considérations additionnelles de formatage
 
-Les différents pré-processeurs CSS existant offrent des fonctionnalités et des syntaxes
+Les différents préprocesseurs CSS existant offrent des fonctionnalités et des syntaxes
 différentes. Vos conventions doivent être adaptées pour convenir aux particularités
 de tout préprocesseur en utilisation.
 
