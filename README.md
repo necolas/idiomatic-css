@@ -252,6 +252,23 @@ Use clear and thoughtful names for HTML classes. Pick an understandable and
 consistent naming pattern that makes sense both within HTML files and CSS
 files.
 
+For class names and IDs declerations, use dash-separated-lowercase-words, use full words and don't be cheap on letters count.
+It is also better to try and use names that describes the logical usage of the class rather than it's properties (as these may change).
+For Example, avoid:
+
+```css
+.font-16px{
+  ...
+}
+```
+and prefer:
+```css
+.large-font{
+  ...
+}
+```
+
+
 ```css
 /* Example of code with bad names */
 
