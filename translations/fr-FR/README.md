@@ -7,7 +7,8 @@ Il n'est pas destiné à être normatif et je ne souhaite pas imposer mes préf�
 Ceci est un document évolutif et les nouvelles idées sont toujours les bienvenues.
 Merci de bien vouloir contribuer.
 
-[Version originale en anglais](https://github.com/necolas/idiomatic-css/)
+#### Version Originale
+[Anglais](https://github.com/necolas/idiomatic-css/)
 
 ## Table des matières
 
@@ -34,20 +35,20 @@ Merci de bien vouloir contribuer.
 <a name="indentation"></a>
 ## 2. Indentation
 
-Une seule manière d'indenter devrait être utilisée sur l'emsemble du code source de votre projet. Soyez toujours constant dans votre façon d'indenter. Utilisez des espaces pour améliorer la lisibilité.
+Une seule manière d'indenter devrait être utilisée sur l'ensemble du code source de votre projet. Soyez toujours constant dans votre façon d'indenter. Utilisez des espaces pour améliorer la lisibilité.
 
 * Ne mélangez _jamais_ les espaces et les tabulations pour l'indentation.
 * Choisissez entre des espaces ou de vraies tabulations. Tenez vous en à votre choix sans y déroger. (Préference: espaces)
 * Si vous utilisez les espaces, choisissez le nombre de caractères utilisés pour chaque niveau d'indentation. (Préference: 4 espaces)
 
-Astuce : Configurez votre éditeur afin qu'il affiche les "caractères invisibles". Cela vous permettra de supprimer les espaces en fin de ligne, et les sauts de ligne non intentionnelles et évitera de polluer vos commits.
+Astuce : Configurez votre éditeur afin qu'il affiche les "caractères invisibles". Cela vous permettra de supprimer les espaces en fin de ligne, les sauts de ligne non intentionnels et évitera de polluer vos commits.
 
 <a name="commentaires"></a>
 ## 3. Commentaires
 
 Bien commenter son code est important. Prenez le temps de décrire vos modules, comment ils fonctionnent, leurs limites, et la manière dont ils sont conçus. Ne laissez pas les autres membres de l'équipe deviner le but d'une partie inhabituelle de code difficile à comprendre.
 
-La façon de commenter soit être simple et similaire dans toute base de code.
+La façon de commenter doit être simple et similaire dans toute base de code.
 
 * Placez les commentaires sur une nouvelle ligne au-dessus de leur sujet,
 * Evitez les commentaires en fin de ligne,
@@ -87,7 +88,7 @@ Astuce: Paramétrez votre éditeur pour qu'il vous fournisse des raccourcis clav
 
 //
 // Groupe de bloc de commentaires.
-// Parfait pour les explications sur plusieurs lignes 
+// Parfait pour les explications sur plusieurs lignes
 // et la documentation
 
 // Commentaire simple
@@ -100,7 +101,7 @@ Astuce: Paramétrez votre éditeur pour qu'il vous fournisse des raccourcis clav
 Le formatage de code choisi doit assurer une bonne lisibilité, des commentaires clairs, une réduction des probabilités d'insertion accidentelle d'erreurs, et la production de fichiers diff et de résolution des problèmes pratiques.
 
 1. Un seul sélecteur par ligne dans les régles à plusieurs sélecteurs,
-2. Une seule espace avant la parenthèse ouvrante d'une règle,
+2. Une seul espace avant la parenthèse ouvrante d'une règle,
 3. Une déclaration par ligne dans un bloc de déclarations,
 5. Un seul espace après les deux points d'une déclaration,
 6. Ajoutez toujours un point-virgule à la fin de la dernière déclaration d’un bloc,
@@ -122,7 +123,7 @@ Le formatage de code choisi doit assurer une bonne lisibilité, des commentaires
 
 #### Ordre des déclarations
 
-L'ordre des déclarations doit toujours obeir à la même règle. Je préfère regrouper les règles connexes ensemble et déclarer les propriétés importantes relatives à la structure (c-a-d le positionnement et le modèle de boîte) avant les règles typographiques, l'arrière-plan et les couleurs.
+L'ordre des déclarations doit toujours obeir à la même règle. Je préfère regrouper les règles connexes ensemble et déclarer les propriétés importantes relatives à la structure (c-à-d le positionnement et le modèle de boîte) avant les règles typographiques, l'arrière-plan et les couleurs.
 
 ```css
 .selecteur {
@@ -150,7 +151,7 @@ De gros blocs de déclarations uniques peuvent utiliser un format légèrement d
 .selecteur-3 { width: 30%; }
 ```
 
-Les longues valeurs de propriétés séparées par des virgules - comme des ensembles de dégradés et d'ombre - peuvent être  agencées sur plusieurs lignes de manière à améliorer la lisibilité et produire des fichiers diff plus utiles. Il existe plusieurs formats que l'on peut utiliser; un exemple vous est donné ci-dessous :
+Les longues valeurs de propriétés séparées par des virgules - comme des ensembles de dégradés et d'ombre - peuvent être agencées sur plusieurs lignes de manière à améliorer la lisibilité et produire des fichiers diff plus utiles. Il existe plusieurs formats que l'on peut utiliser; un exemple vous est donné ci-dessous :
 
 ```css
 .selecteur {
@@ -165,20 +166,20 @@ Les longues valeurs de propriétés séparées par des virgules - comme des ense
 
 #### Divers
 
-* Utilisez des minuscudes pour les valeurs héxadécimales, exemple : `#aaa`.
-* Utilisez toujours le même type de guillemets. Ma préférence va aux guillemets double, exemple : `content: ""`.
-* Utilisez toujours des guillemets pour les valeurs dans les sélecteurs, exemple :  `input[type="checkout"]`.
-* _Lorsque c'est valable_, évitez de spécifier les unités par les valeurs nulles, exemple : `margin: 0`.
+* Utilisez des minuscudes pour les valeurs héxadécimales, exemple : `#aaa`,
+* Utilisez toujours le même type de guillemets. Ma préférence va aux double guillemets, exemple : `content: ""`,
+* Utilisez toujours des guillemets pour les valeurs dans les sélecteurs, exemple :  `input[type="checkout"]`,
+* _Lorsque c'est valable_, évitez de spécifier les unités pour les valeurs nulles, exemple : `margin: 0`.
 
 ### Préprocesseurs: considérations additionnelles pour le formatage
 
-Les différents préprocesseurs CSS offrent des possiblités, des fonctionnalités et une syntaxe différentes. Vos conventions doivent être étendues pour s'adapter aux particularités des préproceseurus que vous utilisez. Les conventions suivanted font référence à Sass.
+Les différents préprocesseurs CSS offrent des possiblités, des fonctionnalités et une syntaxe différentes. Vos conventions doivent être étendues pour s'adapter aux particularités des préprocesseurs que vous utilisez. Les conventions suivantes font référence à Sass.
 
-* Limiter l'imbrication à un niveau de profondeur. Réexaminez toute imbricatin supérieure à deux niveaux de profondeur.
-  Cela évité des sélecteurs CSS trop spécifiques.
-* Evitez d'imbriquez un trop grand nombre de règles, Séparez les lorsque cela nuit à la lisibilité. Je préfère éviter les imbrications qui dépassent les 20 lignes.
-* Placez toujours les déclarations "@extend" en début de bloc.
-* Si possible, regroupez tous les "@include" en début de bloc juste après les déclarations "@extend"
+* Limiter l'imbrication à un niveau de profondeur. Réexaminez toute imbrication supérieure à deux niveaux de profondeur.
+  Cela évité des sélecteurs CSS trop spécifiques,
+* Evitez d'imbriquez un trop grand nombre de règles, séparez les lorsque cela nuit à la lisibilité. Je préfère éviter les imbrications qui dépassent les 20 lignes,
+* Placez toujours les déclarations "@extend" en début de bloc,
+* Si possible, regroupez tous les "@include" en début de bloc juste après les déclarations "@extend",
 * Pensez à préfixer vos propres fonctions avec `x-` ou un autre espace de nom. Cela permet d'éviter potentiellement de confondre votre fonction avec une fonction native CSS, ou les conflits avec les fonctions de bibliothèques.
 
 ```scss
@@ -296,16 +297,16 @@ Un exemple de plusieurs conventions.
 
 L'organisation du code est une partie importante de n'importe quelle base de code CSS et cruciale pour les grosses bases de code.
 
-* Séparer de manière logique les différentes parties de code.
-* Utilisez des fichiers distincts (concatenés au cours de l'étape de compilation) pour aider à morceler le code en différents composants.
+* Séparer de manière logique les différentes parties de code,
+* Utilisez des fichiers distincts (concatenés au cours de l'étape de compilation) pour aider à découper le code en différents composants,
 * Si vous utilisez un préprocesseur, stockez le code récurrent dans des variables pour la couleur, la typographie, etc.
 
 
 <a name="compilation-et-deploiement"></a>
 ## 8. Compilation et déploiement
 
-Les projets devraient toujours essayer de mentionner des façons génériques grâce auxquelles le code source peut être validé, testé, compressé, et versionné en préparation à l'utilisation en production.
- Pour cela, [grunt](https://github.com/cowboy/grunt) de Ben Alman est un excellent outil.
+Les projets devraient toujours essayer de mentionner des façons génériques grâce auxquelles le code source peut être validé, testé, compressé et versionné en préparation à l'utilisation en production.
+Pour cela, [grunt](https://github.com/cowboy/grunt) de Ben Alman est un excellent outil.
 
 
 <a name="remerciements"></a>
