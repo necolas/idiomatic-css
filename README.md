@@ -20,6 +20,7 @@ contribute.
 * [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
 * [Русский](https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU)
 
+
 ## Table of contents
 
 1. [General principles](#general-principles)
