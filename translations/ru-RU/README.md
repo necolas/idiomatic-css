@@ -21,6 +21,7 @@
 * [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
 * [Русский](https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU)
 
+
 ## Содержание
 
 1. [Общие принципы](#general-principles)
