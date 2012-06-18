@@ -101,11 +101,11 @@ Astuce: Paramétrez votre éditeur pour qu'il vous fournisse des raccourcis clav
 Le formatage de code choisi doit assurer une bonne lisibilité, des commentaires clairs, une réduction des probabilités d'insertion accidentelle d'erreurs, et la production de fichiers diff et de résolution des problèmes pratiques.
 
 1. Un seul sélecteur par ligne dans les régles à plusieurs sélecteurs,
-2. Une seul espace avant la parenthèse ouvrante d'une règle,
+2. Une seul espace avant l'accolade ouvrante d'une règle,
 3. Une déclaration par ligne dans un bloc de déclarations,
 5. Un seul espace après les deux points d'une déclaration,
 6. Ajoutez toujours un point-virgule à la fin de la dernière déclaration d’un bloc,
-7. Fermez la parenthèse d'une règle au même niveau que le premier caractère de la règle,
+7. Fermez l'accolade d'une règle au même niveau que le premier caractère de la règle,
 8. Sautez une ligne entre chaque règle.
 
 ```css
@@ -143,7 +143,7 @@ L'ordre alphabétique est également très utilisé, mais le problème est qu'il
 
 #### Exceptions et légèrs écarts
 
-De gros blocs de déclarations uniques peuvent utiliser un format légèrement différent, à savoir d'être regroupées sur une seule ligne. Dans ce cas, il faut insérer un espace après la parenthèse ouvrante et avant la parenthèse fermante.
+De gros blocs de déclarations uniques peuvent utiliser un format légèrement différent, à savoir d'être regroupées sur une seule ligne. Dans ce cas, il faut insérer un espace après l'accolade ouvrante et avant l'accolade fermante.
 
 ```css
 .selecteur-1 { width: 10%; }
