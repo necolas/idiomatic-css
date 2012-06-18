@@ -26,7 +26,7 @@ Merci de bien vouloir contribuer.
 <a name="principes-generaux"></a>
 ## 1. Principes généraux
 
-> Une des clef d'une bonne gestion de projet est de réaliser qu'écrire du code pour soi-même est une mauvaise idée™. Si des milliers de personnes sont amenées à utiliser votre code, alors écrivez votre code en visant un maximum de clarté, et non en fonction de croyances personnelles comme quoi la lecture de spécifications rendrait plus intelligent." - Idan Gazit
+> Une des clefs d'une bonne gestion de projet est de réaliser qu'écrire du code pour soi-même est une mauvaise idée™. Si des milliers de personnes sont amenées à utiliser votre code, alors écrivez votre code en visant un maximum de clarté, et non en fonction de croyances personnelles comme quoi la lecture de spécifications rendrait plus intelligent." - Idan Gazit
 
 * Tout code présent dans n'importe quelle base de code doit avoir l'air d'avoir été écrit par une seule personne, peu importe le nombre de gens qui y ont contribué.
 * Appliquez les conventions de style de manière stricte.
@@ -166,8 +166,8 @@ Les longues valeurs de propriétés séparées par des virgules - comme des ense
 
 #### Divers
 
-* Utilisez des minuscudes pour les valeurs héxadécimales, exemple : `#aaa`,
-* Utilisez toujours le même type de guillemets. Ma préférence va aux double guillemets, exemple : `content: ""`,
+* Utilisez des minuscules pour les valeurs héxadécimales, exemple : `#aaa`,
+* Utilisez toujours le même type de guillemets. Ma préférence va aux doubles guillemets, exemple : `content: ""`,
 * Utilisez toujours des guillemets pour les valeurs dans les sélecteurs, exemple :  `input[type="checkout"]`,
 * _Lorsque c'est valable_, évitez de spécifier les unités pour les valeurs nulles, exemple : `margin: 0`.
 
