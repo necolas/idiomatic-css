@@ -15,7 +15,7 @@ Merci de bien vouloir contribuer.
 1. [Principes généraux](#principes-generaux)
 2. [Indentation](#indentation)
 3. [Commentaires](#commentaires)
-4. [Formatage](#formatage)
+4. [Format](#format)
 5. [Nommage](#nommage)
 6. [Exemple pratique](#exemple)
 7. [Organisation](#organisation)
@@ -95,7 +95,7 @@ Astuce: Paramétrez votre éditeur pour qu'il vous fournisse des raccourcis clav
 ```
 
 
-<a name="formatage"></a>
+<a name="format"></a>
 ## 4. Format
 
 Le format de code choisi doit assurer: une bonne lisibilité, des commentaires clairs, une réduction des probabilités d'insertion accidentelle d'erreurs, et la production de fichiers diff et de résolution des problèmes pratiques.
@@ -169,7 +169,7 @@ Les longues valeurs de propriétés, séparées par des virgules - comme des ens
 * Utilisez des minuscules pour les valeurs héxadécimales, exemple : `#aaa`,
 * Utilisez toujours le même type de guillemets. Ma préférence va aux doubles guillemets, exemple : `content: ""`,
 * Utilisez toujours des guillemets pour les valeurs dans les sélecteurs, exemple :  `input[type="checkout"]`,
-* _Lorsque c'est authorisé_, évitez de spécifier les unités pour les valeurs nulles, exemple : `margin: 0`.
+* _Lorsque c'est autorisé_, évitez de spécifier les unités pour les valeurs nulles, exemple : `margin: 0`.
 
 ### Préprocesseurs: considérations additionnelles pour le formatage
 
