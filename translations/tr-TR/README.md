@@ -79,40 +79,34 @@ Açıklama stili basit ve tek bir kod tabanı içinde tutarlı olmalıdır.
 İpucu: Editörünü karar vediğin açıklama bloklarının çıktısını verecek şekilde
 ayarla.
 
-#### CSS örneği:
+#### Örnek:
 
 ```css
 /* ==========================================================================
    Kısım açıklama bloğu
    ========================================================================== */
 
-/* Alt-kısım açıklama bloğu
+/* Alt kısım açıklama bloğu
    ========================================================================== */
 
-/*
- * Grup açıklama bloğu
- * Birden fazla satır açıklamalar ve dökümantasyon için ideal.
+/**
+ * Doxygen stili açıklama formatı ile kısa açıklama
+ *
+ * Uzun tanımın ilk cümlesi burada başlar ve bu satırdan devam eder
+ * ve sonunda bu paragrafın sonunda biter.
+ *
+ * Uzun tanımlar daha detaylı açıklamalar ve dökümantasyon için idealdir.
+ * Örnek HTML, URL ve gerekli görülen her hangi başka bir bilgiyi 
+ * içerebilir.
+ *
+ * @tag Bu 'tag' adında bir etiketir.
+ *
+ * @todo Bu yapılacaklar ifadesi daha sonra başka bir tarihte tamamlanacak bir
+ *   işi belirtir. 80 karakter sonunda yeni satıra geçer ve takip eden satırlar
+ *   2 boşlık içeriden başlar.
  */
 
-/* Basit açıklama / yorum */
-```
-
-#### SCSS örneği:
-
-```scss
-// ==========================================================================
-// Kısım açıklama bloğu
-// ==========================================================================
-
-// Alt-kısım açıklama bloğu
-// ==========================================================================
-
-//
-// Grup açıklama bloğu
-// Birden fazla satır açıklamalar ve dökümantasyon için ideal.
-//
-
-// Basit açıklama / yorum
+/* Basit açıklama */
 ```
 
 
@@ -128,11 +122,13 @@ indirdiğinden ve faydalı "diff" ve hatalar ürettiğinden emin olmalıdır.
 3. Her deklarasyon bloğunda her satırda tek bir deklarasyon.
 4. Her bir deklarasyon için bir girinti seviyesi.
 5. Deklarasyondaki iki noktadan sonra tek bir boşluk.
-6. Her deklarayon bloğundaki son deklarasyondan sonra mutlaka bir noktalı
+6. Eğer özellikler veya fonksiyonların virgülle ayrılan değerleri varsa,
+   her bir virgülden sonra bir boşluk koy.
+7. Her deklarayon bloğundaki son deklarasyondan sonra mutlaka bir noktalı
    virgül kullan
-7. Bir kural setinin sonundaki parantezi o kural setindeki ilk karakter ile
+8. Bir kural setinin sonundaki parantezi o kural setindeki ilk karakter ile
    aynı sütuna koy.
-8. Her kural setini boş bir satır ile ayır.
+9. Her kural setini boş bir satır ile ayır.
 
 ```css
 .selector-1,
@@ -142,8 +138,10 @@ indirdiğinden ve faydalı "diff" ve hatalar ürettiğinden emin olmalıdır.
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
+    font-family: helvetica, arial, sans-serif;
     color: #333;
     background: #fff;
+    background: linear-gradient(#fff, #bbb);
 }
 ```
 

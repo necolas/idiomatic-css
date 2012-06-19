@@ -11,11 +11,7 @@ contribute.
 
 ## Translations
 
-<<<<<<< HEAD
-* [Italian](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [Serbian](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
-* [Turkish](https://github.com/necolas/idiomatic-css/tree/master/translations/tr_TR)
-=======
+* [Français](https://github.com/necolas/idiomatic-css/tree/master/translations/fr-FR)
 * [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
 * [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
 * [한국어](https://github.com/necolas/idiomatic-css/tree/master/translations/ko-KR)
@@ -25,7 +21,6 @@ contribute.
 * [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
 * [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
 * [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
->>>>>>> upstream/master
 
 
 ## Table of contents
@@ -92,7 +87,7 @@ Comment style should be simple and consistent within a single code base.
 Tip: configure your editor to provide you with shortcuts to output agreed-upon
 comment patterns.
 
-#### CSS example:
+#### Example:
 
 ```css
 /* ==========================================================================
@@ -102,30 +97,24 @@ comment patterns.
 /* Sub-section comment block
    ========================================================================== */
 
-/*
- * Group comment block.
- * Ideal for multi-line explanations and documentation.
+/**
+ * Short description using Doxygen-style comment format
+ *
+ * Long description first sentence starts here and continues on this line for a
+ * while finally concluding here at the end of this paragraph.
+ *
+ * The long description is ideal for more detailed explanations and
+ * documentation. It can include example HTML, URLs, or any other information
+ * that is deemed necessary or useful.
+ *
+ * @tag This is a tag named 'tag'
+ *
+ * @todo This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
  */
 
 /* Basic comment */
-```
-
-#### SCSS example:
-
-```scss
-// ==========================================================================
-// Section comment block
-// ==========================================================================
-
-// Sub-section comment block
-// ==========================================================================
-
-//
-// Group comment block
-// Ideal for multi-line explanations and documentation.
-//
-
-// Basic comment
 ```
 
 
@@ -141,11 +130,13 @@ in useful diffs and blames.
 3. One declaration per line in a declaration block.
 4. One level of indentation for each declaration.
 5. A single space after the colon of a declaration.
-6. Always include a semi-colon at the end of the last declaration in a
+6. Where properties or functions can have multiple comma-separated values,
+   include a space after each comma.
+7. Always include a semi-colon at the end of the last declaration in a
    declaration block.
-7. Place the closing brace of a ruleset in the same column as the first
+8. Place the closing brace of a ruleset in the same column as the first
    character of the ruleset.
-8. Separate each ruleset by a blank line.
+9. Separate each ruleset by a blank line.
 
 ```css
 .selector-1,
@@ -155,8 +146,10 @@ in useful diffs and blames.
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
+    font-family: helvetica, arial, sans-serif;
     color: #333;
     background: #fff;
+    background: linear-gradient(#fff, #bbb);
 }
 ```
 
@@ -198,7 +191,7 @@ before the closing brace.
 .selector-3 { width: 30%; }
 ```
 
-Long, comma separated property values - such as collections of gradients or
+Long, comma-separated property values - such as collections of gradients or
 shadows - can be arranged across multiple lines in an effort to improve
 readability and produce more useful diffs. There are various formats that could
 be used; one example is shown below.
@@ -294,7 +287,7 @@ An example of various conventions.
    Grid layout
    ========================================================================== */
 
-/*
+/**
  * Example HTML:
  *
  * <div class="grid">
