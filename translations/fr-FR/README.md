@@ -1,8 +1,8 @@
-# Principes d'écriture pour des CSS consistents et idiomatiques
+# Principes d'écriture pour des CSS cohérents et idiomatiques
 
-Le présent document liste des recommandations sensées pour le développement CSS.
+Le présent document liste des recommandations raisonnables pour le développement CSS.
 
-Il n'est pas destiné à être normatif et je ne souhaite pas imposer mes préférences en matière de code à tout le monde. Toutefois, ces lignes directrices encouragent fortement le fait d'utiliser des conventions existantes, communes et sensées.
+Il n'est pas destiné à être normatif et je ne souhaite pas imposer mes préférences en matière de code à tout le monde. Toutefois, ces lignes directrices encouragent fortement l'utilisation de conventions existantes, communes et judicieuses.
 
 Ceci est un document évolutif et les nouvelles idées sont toujours les bienvenues.
 Merci de bien vouloir contribuer.
@@ -15,7 +15,7 @@ Merci de bien vouloir contribuer.
 1. [Principes généraux](#principes-generaux)
 2. [Indentation](#indentation)
 3. [Commentaires](#commentaires)
-4. [Formatage](#formatage)
+4. [Format](#format)
 5. [Nommage](#nommage)
 6. [Exemple pratique](#exemple)
 7. [Organisation](#organisation)
@@ -38,15 +38,15 @@ Merci de bien vouloir contribuer.
 Une seule manière d'indenter devrait être utilisée sur l'ensemble du code source de votre projet. Soyez toujours constant dans votre façon d'indenter. Utilisez des espaces pour améliorer la lisibilité.
 
 * Ne mélangez _jamais_ les espaces et les tabulations pour l'indentation.
-* Choisissez entre des espaces ou de vraies tabulations. Tenez vous en à votre choix sans y déroger. (Préference: espaces)
-* Si vous utilisez les espaces, choisissez le nombre de caractères utilisés pour chaque niveau d'indentation. (Préference: 4 espaces)
+* Choisissez entre des espaces ou de vraies tabulations. Tenez-vous en à votre choix sans y déroger. (Préference: espaces)
+* Si vous utilisez les espaces, choisissez le nombre de caractères utilisé pour chaque niveau d'indentation. (Préference: 4 espaces)
 
-Astuce : Configurez votre éditeur afin qu'il affiche les "caractères invisibles". Cela vous permettra de supprimer les espaces en fin de ligne, les sauts de ligne non intentionnels et évitera de polluer vos commits.
+Astuce : Configurez votre éditeur afin qu'il affiche les "caractères invisibles". Cela vous permettra de supprimer les espaces en fin de ligne, les espaces dans les lignes vides et évitera de polluer vos commits.
 
 <a name="commentaires"></a>
 ## 3. Commentaires
 
-Bien commenter son code est important. Prenez le temps de décrire vos modules, comment ils fonctionnent, leurs limites, et la manière dont ils sont conçus. Ne laissez pas les autres membres de l'équipe deviner le but d'une partie inhabituelle de code difficile à comprendre.
+Bien commenter son code est extrêmement important. Prenez le temps de décrire les composants, comment ils fonctionnent, leurs limites, et la manière dont ils sont conçus. Ne laissez pas les autres membres de l'équipe deviner le but d'un code inhabituel ou non trivial.
 
 La façon de commenter doit être simple et similaire dans toute base de code.
 
@@ -54,7 +54,7 @@ La façon de commenter doit être simple et similaire dans toute base de code.
 * Evitez les commentaires en fin de ligne,
 * Gardez une longueur de ligne de taille raisonsable, par exemple 80 caractères,
 * Utilisez les commentaires comme bon vous semble pour diviser le code CSS en parties distinctes,
-* Rédigez correctement vos commentaires et gardez une indentation constante pour le texte.
+* Rédigez vos commentaires avec des majuscules et des minuscules et gardez une indentation constante pour le texte.
 
 Astuce: Paramétrez votre éditeur pour qu'il vous fournisse des raccourcis claviers qui produisent des commentaires conventionnels.
 
@@ -95,10 +95,10 @@ Astuce: Paramétrez votre éditeur pour qu'il vous fournisse des raccourcis clav
 ```
 
 
-<a name="formatage"></a>
-## 4. Formatage
+<a name="format"></a>
+## 4. Format
 
-Le formatage de code choisi doit assurer une bonne lisibilité, des commentaires clairs, une réduction des probabilités d'insertion accidentelle d'erreurs, et la production de fichiers diff et de résolution des problèmes pratiques.
+Le format de code choisi doit assurer: une bonne lisibilité, des commentaires clairs, une réduction des probabilités d'insertion accidentelle d'erreurs, et la production de fichiers diff et de résolution des problèmes pratiques.
 
 1. Un seul sélecteur par ligne dans les régles à plusieurs sélecteurs,
 2. Une seul espace avant l'accolade ouvrante d'une règle,
@@ -143,7 +143,7 @@ L'ordre alphabétique est également très utilisé, mais le problème est qu'il
 
 #### Exceptions et légèrs écarts
 
-De gros blocs de déclarations uniques peuvent utiliser un format légèrement différent, à savoir d'être regroupées sur une seule ligne. Dans ce cas, il faut insérer un espace après l'accolade ouvrante et avant l'accolade fermante.
+De gros blocs de déclarations uniques peuvent utiliser un format légèrement différent, regroupées sur une seule ligne. Dans ce cas, il faut insérer un espace après l'accolade ouvrante et avant l'accolade fermante.
 
 ```css
 .selecteur-1 { width: 10%; }
@@ -151,7 +151,7 @@ De gros blocs de déclarations uniques peuvent utiliser un format légèrement d
 .selecteur-3 { width: 30%; }
 ```
 
-Les longues valeurs de propriétés séparées par des virgules - comme des ensembles de dégradés et d'ombre - peuvent être agencées sur plusieurs lignes de manière à améliorer la lisibilité et produire des fichiers diff plus utiles. Il existe plusieurs formats que l'on peut utiliser; un exemple vous est donné ci-dessous :
+Les longues valeurs de propriétés, séparées par des virgules - comme des ensembles de dégradés et d'ombres - peuvent être agencées sur plusieurs lignes de manière à améliorer la lisibilité et produire des fichiers diff plus utiles. Divers formats peuvent alors être utilisés; un exemple est donné ci-dessous.
 
 ```css
 .selecteur {
@@ -169,18 +169,18 @@ Les longues valeurs de propriétés séparées par des virgules - comme des ense
 * Utilisez des minuscules pour les valeurs héxadécimales, exemple : `#aaa`,
 * Utilisez toujours le même type de guillemets. Ma préférence va aux doubles guillemets, exemple : `content: ""`,
 * Utilisez toujours des guillemets pour les valeurs dans les sélecteurs, exemple :  `input[type="checkout"]`,
-* _Lorsque c'est valable_, évitez de spécifier les unités pour les valeurs nulles, exemple : `margin: 0`.
+* _Lorsque c'est autorisé_, évitez de spécifier les unités pour les valeurs nulles, exemple : `margin: 0`.
 
 ### Préprocesseurs: considérations additionnelles pour le formatage
 
 Les différents préprocesseurs CSS offrent des possiblités, des fonctionnalités et une syntaxe différentes. Vos conventions doivent être étendues pour s'adapter aux particularités des préprocesseurs que vous utilisez. Les conventions suivantes font référence à Sass.
 
 * Limiter l'imbrication à un niveau de profondeur. Réexaminez toute imbrication supérieure à deux niveaux de profondeur.
-  Cela évité des sélecteurs CSS trop spécifiques,
-* Evitez d'imbriquez un trop grand nombre de règles, séparez les lorsque cela nuit à la lisibilité. Je préfère éviter les imbrications qui dépassent les 20 lignes,
+  Cela évite des sélecteurs CSS trop spécifiques,
+* Evitez d'imbriquer un trop grand nombre de règles, séparez les lorsque cela nuit à la lisibilité. Je préfère éviter les imbrications qui dépassent les 20 lignes,
 * Placez toujours les déclarations "@extend" en début de bloc,
-* Si possible, regroupez tous les "@include" en début de bloc juste après les déclarations "@extend",
-* Pensez à préfixer vos propres fonctions avec `x-` ou un autre espace de nom. Cela permet d'éviter potentiellement de confondre votre fonction avec une fonction native CSS, ou les conflits avec les fonctions de bibliothèques.
+* Si possible, regroupez toutes les déclarations "@include" en début de bloc juste après les déclarations "@extend",
+* Pensez à préfixer vos propres fonctions avec `x-` ou un autre espace de nom. Cela permet d'éviter potentiellement de confondre votre fonction avec une fonction native CSS, ou les conflits avec des fonctions provenant de bibliothèques.
 
 ```scss
 .selecteur-1 {
@@ -226,7 +226,7 @@ Utilisez des noms clairs et réfléchis pour les classes HTML. Choisissez un mod
 <a name="exemple"></a>
 ## 6. Exemple pratique
 
-Un exemple de plusieurs conventions.
+Un exemple de divers conventions.
 
 ```css
 /* ==========================================================================
@@ -295,7 +295,7 @@ Un exemple de plusieurs conventions.
 <a name="organisation"></a>
 ## 7. Organisation
 
-L'organisation du code est une partie importante de n'importe quelle base de code CSS et cruciale pour les grosses bases de code.
+L'organisation du code est une partie importante de n'importe quelle base de code CSS et est cruciale pour les grosses bases de code.
 
 * Séparer de manière logique les différentes parties de code,
 * Utilisez des fichiers distincts (concatenés au cours de l'étape de compilation) pour aider à découper le code en différents composants,
