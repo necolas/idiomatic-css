@@ -9,7 +9,7 @@
 внесите свой вклад.
 
 
-* [Принципы написания однородного CSS на английском языке (Original)](https://github.com/necolas/idiomatic-css)
+* [«Принципы написания однородного CSS» на английском языке (Original)](https://github.com/necolas/idiomatic-css)
 
 
 ## Содержание
