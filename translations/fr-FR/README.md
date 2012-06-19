@@ -5,10 +5,10 @@ Le présent document liste des recommandations raisonnables pour le développeme
 Il n'est pas destiné à être normatif et je ne souhaite pas imposer mes préférences en matière de code à tout le monde. Toutefois, ces lignes directrices encouragent fortement l'utilisation de conventions existantes, communes et judicieuses.
 
 Ceci est un document évolutif et les nouvelles idées sont toujours les bienvenues.
+
 Merci de bien vouloir contribuer.
 
-#### Version Originale
-[Anglais](https://github.com/necolas/idiomatic-css/)
+[Document original en anglais](https://github.com/necolas/idiomatic-css/)
 
 ## Table des matières
 
@@ -26,20 +26,20 @@ Merci de bien vouloir contribuer.
 <a name="principes-generaux"></a>
 ## 1. Principes généraux
 
-> Une des clefs d'une bonne gestion de projet est de réaliser qu'écrire du code pour soi-même est une mauvaise idée™. Si des milliers de personnes sont amenées à utiliser votre code, alors écrivez votre code en visant un maximum de clarté, et non en fonction de croyances personnelles comme quoi la lecture de spécifications rendrait plus intelligent." - Idan Gazit
+> Une des clefs d'une bonne gestion de projet est de réaliser qu'écrire du code pour soi-même est une mauvaise idée™. Si des milliers de personnes sont amenées à utiliser votre code, alors écrivez votre code en visant un maximum de clarté, et non en fonction de croyances personnelles comme la lecture de spécifications qui rendrait plus intelligent." - Idan Gazit
 
-* Tout code présent dans n'importe quelle base de code doit avoir l'air d'avoir été écrit par une seule personne, peu importe le nombre de gens qui y ont contribué.
-* Appliquez les conventions de style de manière stricte.
+* Tout code présent dans n'importe quelle base de code doit avoir l'air d'avoir été écrit par une seule personne, peu importe le nombre de gens qui y ont contribué,
+* Appliquez les conventions de style de manière stricte,
 * En cas de doute, utilisez des conventions existantes et communes.
 
 <a name="indentation"></a>
 ## 2. Indentation
 
-Une seule manière d'indenter devrait être utilisée sur l'ensemble du code source de votre projet. Soyez toujours constant dans votre façon d'indenter. Utilisez des espaces pour améliorer la lisibilité.
+Une seule manière d‘indenter devrait être utilisée sur l'ensemble du code source de votre projet. Soyez toujours constant dans votre façon d‘indenter. Utilisez des espaces pour améliorer la lisibilité.
 
 * Ne mélangez _jamais_ les espaces et les tabulations pour l'indentation.
-* Choisissez entre des espaces ou de vraies tabulations. Tenez-vous en à votre choix sans y déroger. (Préference: espaces)
-* Si vous utilisez les espaces, choisissez le nombre de caractères utilisé pour chaque niveau d'indentation. (Préference: 4 espaces)
+* Choisissez entre des espaces ou de vraies tabulations. Tenez-vous en à votre choix sans y déroger. (Préference : espaces)
+* Si vous utilisez les espaces, choisissez le nombre de caractères utilisé pour chaque niveau d'indentation. (Préference : 4 espaces)
 
 Astuce : Configurez votre éditeur afin qu'il affiche les "caractères invisibles". Cela vous permettra de supprimer les espaces en fin de ligne, les espaces dans les lignes vides et évitera de polluer vos commits.
 
@@ -52,11 +52,11 @@ La façon de commenter doit être simple et similaire dans toute base de code.
 
 * Placez les commentaires sur une nouvelle ligne au-dessus de leur sujet,
 * Evitez les commentaires en fin de ligne,
-* Gardez une longueur de ligne de taille raisonsable, par exemple 80 caractères,
+* Gardez une longueur de ligne de taille raisonnable, par exemple 80 caractères,
 * Utilisez les commentaires comme bon vous semble pour diviser le code CSS en parties distinctes,
 * Rédigez vos commentaires avec des majuscules et des minuscules et gardez une indentation constante pour le texte.
 
-Astuce: Paramétrez votre éditeur pour qu'il vous fournisse des raccourcis claviers qui produisent des commentaires conventionnels.
+Astuce: Paramètrez votre éditeur pour qu'il vous fournisse des raccourcis claviers qui produisent des commentaires conventionnels.
 
 #### Exemple en CSS :
 
@@ -100,7 +100,7 @@ Astuce: Paramétrez votre éditeur pour qu'il vous fournisse des raccourcis clav
 
 Le format de code choisi doit assurer: une bonne lisibilité, des commentaires clairs, une réduction des probabilités d'insertion accidentelle d'erreurs, et la production de fichiers diff et de résolution des problèmes pratiques.
 
-1. Un seul sélecteur par ligne dans les régles à plusieurs sélecteurs,
+1. Un seul sélecteur par ligne dans les règles contenant plusieurs sélecteurs,
 2. Une seul espace avant l'accolade ouvrante d'une règle,
 3. Une déclaration par ligne dans un bloc de déclarations,
 5. Un seul espace après les deux points d'une déclaration,
@@ -123,7 +123,7 @@ Le format de code choisi doit assurer: une bonne lisibilité, des commentaires c
 
 #### Ordre des déclarations
 
-L'ordre des déclarations doit toujours obeir à la même règle. Je préfère regrouper les règles connexes ensemble et déclarer les propriétés importantes relatives à la structure (c-à-d le positionnement et le modèle de boîte) avant les règles typographiques, l'arrière-plan et les couleurs.
+L'ordre des déclarations doit toujours obéir à la même règle. Je préfère regrouper les règles connexes ensemble et déclarer les propriétés importantes relatives à la structure (c-à-d le positionnement et le modèle de boîte) avant les règles typographiques, l'arrière-plan et les couleurs.
 
 ```css
 .selecteur {
@@ -151,7 +151,7 @@ De gros blocs de déclarations uniques peuvent utiliser un format légèrement d
 .selecteur-3 { width: 30%; }
 ```
 
-Les longues valeurs de propriétés, séparées par des virgules - comme des ensembles de dégradés et d'ombres - peuvent être agencées sur plusieurs lignes de manière à améliorer la lisibilité et produire des fichiers diff plus utiles. Divers formats peuvent alors être utilisés; un exemple est donné ci-dessous.
+Les longues valeurs de propriétés, séparées par des virgules - comme des ensembles de dégradés et d'ombres - peuvent être agencées sur plusieurs lignes de manière à améliorer la lisibilité et produire des fichiers diff plus utiles. Divers formats peuvent alors être utilisés comme le montre l'exemple donné ci-dessous :
 
 ```css
 .selecteur {
@@ -166,17 +166,17 @@ Les longues valeurs de propriétés, séparées par des virgules - comme des ens
 
 #### Divers
 
-* Utilisez des minuscules pour les valeurs héxadécimales, exemple : `#aaa`,
+* Utilisez des minuscules pour les valeurs hexadécimales, exemple : `#aaa`,
 * Utilisez toujours le même type de guillemets. Ma préférence va aux doubles guillemets, exemple : `content: ""`,
 * Utilisez toujours des guillemets pour les valeurs dans les sélecteurs, exemple :  `input[type="checkout"]`,
 * _Lorsque c'est autorisé_, évitez de spécifier les unités pour les valeurs nulles, exemple : `margin: 0`.
 
 ### Préprocesseurs: considérations additionnelles pour le formatage
 
-Les différents préprocesseurs CSS offrent des possiblités, des fonctionnalités et une syntaxe différentes. Vos conventions doivent être étendues pour s'adapter aux particularités des préprocesseurs que vous utilisez. Les conventions suivantes font référence à Sass.
+Les différents préprocesseurs CSS offrent des possibilités, des fonctionnalités et une syntaxe différentes. Vos conventions doivent être étendues pour s'adapter aux particularités des préprocesseurs que vous utilisez. Les conventions suivantes font référence à Sass.
 
 * Limiter l'imbrication à un niveau de profondeur. Réexaminez toute imbrication supérieure à deux niveaux de profondeur.
-  Cela évite des sélecteurs CSS trop spécifiques,
+Cela évite des sélecteurs CSS trop spécifiques,
 * Evitez d'imbriquer un trop grand nombre de règles, séparez les lorsque cela nuit à la lisibilité. Je préfère éviter les imbrications qui dépassent les 20 lignes,
 * Placez toujours les déclarations "@extend" en début de bloc,
 * Si possible, regroupez toutes les déclarations "@include" en début de bloc juste après les déclarations "@extend",
@@ -198,7 +198,7 @@ Les différents préprocesseurs CSS offrent des possiblités, des fonctionnalit�
 
 Vous n'êtes pas un compilateur/compresseur de code humain, alors ne prétendez pas en être un.
 
-Utilisez des noms clairs et réfléchis pour les classes HTML. Choisissez un modèle de nommage consistent et compréhensif qui a du sens à la fois dans les fichiers HTML et dans les fichiers CSS.
+Utilisez des noms clairs et réfléchis pour les classes HTML. Choisissez un modèle de nommage cohérent et compréhensif qui a du sens à la fois dans les fichiers HTML et dans les fichiers CSS.
 
 ```css
 /* Exemple de code mal nommé */
@@ -295,10 +295,10 @@ Un exemple de divers conventions.
 <a name="organisation"></a>
 ## 7. Organisation
 
-L'organisation du code est une partie importante de n'importe quelle base de code CSS et est cruciale pour les grosses bases de code.
+L'organisation du code est une partie importante de n'importe quelle base de code CSS et devient cruciale pour les grosses bases de code.
 
-* Séparer de manière logique les différentes parties de code,
-* Utilisez des fichiers distincts (concatenés au cours de l'étape de compilation) pour aider à découper le code en différents composants,
+* Séparez de manière logique les différentes parties de code,
+* Utilisez des fichiers distincts (concaténés au cours de l'étape de compilation) pour aider à découper le code en différents composants,
 * Si vous utilisez un préprocesseur, stockez le code récurrent dans des variables pour la couleur, la typographie, etc.
 
 
