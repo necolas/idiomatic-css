@@ -101,9 +101,9 @@ Astuce: Paramétrez votre éditeur pour qu'il vous fournisse des raccourcis clav
 Le formatage de code choisi doit assurer une bonne lisibilité, des commentaires clairs, une réduction des probabilités d'insertion accidentelle d'erreurs, et la production de fichiers diff et de résolution des problèmes pratiques.
 
 1. Un seul sélecteur par ligne dans les régles à plusieurs sélecteurs,
-2. Une seul espace avant l'accolade ouvrante d'une règle,
+2. Un espace avant l'accolade ouvrante d'une règle,
 3. Une déclaration par ligne dans un bloc de déclarations,
-5. Un seul espace après les deux points d'une déclaration,
+5. Un espace après les deux points d'une déclaration,
 6. Ajoutez toujours un point-virgule à la fin de la dernière déclaration d’un bloc,
 7. Fermez l'accolade d'une règle au même niveau que le premier caractère de la règle,
 8. Sautez une ligne entre chaque règle.
