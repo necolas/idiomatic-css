@@ -4,11 +4,11 @@ Le présent document liste des recommandations raisonnables pour le développeme
 
 Il n'est pas destiné à être normatif et je ne souhaite pas imposer mes préférences en matière de code à tout le monde. Toutefois, ces lignes directrices encouragent fortement l'utilisation de conventions existantes, communes et judicieuses.
 
-Ceci est un document évolutif et les nouvelles idées sont toujours les bienvenues.
+Ceci est un document évolutif et les nouvelles idées sont toujours les bienvenues. Merci de bien vouloir contribuer.
 
-Merci de bien vouloir contribuer.
 
 [Document original en anglais](https://github.com/necolas/idiomatic-css/)
+
 
 ## Table des matières
 
@@ -23,6 +23,7 @@ Merci de bien vouloir contribuer.
 
 [Remerciements](#remerciements)
 
+
 <a name="principes-generaux"></a>
 ## 1. Principes généraux
 
@@ -31,6 +32,7 @@ Merci de bien vouloir contribuer.
 * Tout code présent dans n'importe quelle base de code doit avoir l'air d'avoir été écrit par une seule personne, peu importe le nombre de gens qui y ont contribué,
 * Appliquez les conventions de style de manière stricte,
 * En cas de doute, utilisez des conventions existantes et communes.
+
 
 <a name="indentation"></a>
 ## 2. Indentation
@@ -42,6 +44,7 @@ Une seule manière d‘indenter devrait être utilisée sur l'ensemble du code s
 * Si vous utilisez les espaces, choisissez le nombre de caractères utilisé pour chaque niveau d'indentation. (Préference : 4 espaces)
 
 Astuce : Configurez votre éditeur afin qu'il affiche les "caractères invisibles". Cela vous permettra de supprimer les espaces en fin de ligne, les espaces dans les lignes vides et évitera de polluer vos commits.
+
 
 <a name="commentaires"></a>
 ## 3. Commentaires
@@ -211,7 +214,7 @@ Utilisez des noms clairs et réfléchis pour les classes HTML. Choisissez un mod
     background: #000;
 }
 
-/* Exemple de code bien nommé */
+/* Exemple de code mieux nommé */
 
 .is-scrollable {
     overflow: auto;
@@ -267,7 +270,7 @@ Un exemple de divers conventions.
     font-size: 16px;
 }
 
-/* Etats des cellules */
+/* États des cellules */
 
 .cell.is-animating {
     background-color: #fffdec;
@@ -282,7 +285,7 @@ Un exemple de divers conventions.
 .cell-4 { width: 40%; }
 .cell-5 { width: 50%; }
 
-/* Styles de cellule
+/* Modificateurs de cellule
    ========================================================================== */
 
 .cell--detail,
