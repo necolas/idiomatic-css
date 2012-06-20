@@ -9,32 +9,32 @@ Ceci est un document évolutif et les nouvelles idées sont toujours les bienven
 
 Merci de bien vouloir contribuer.
 
-[Document original en anglais](https://github.com/necolas/idiomatic-css/)
+[Idiomatic CSS en anglais](https://github.com/necolas/idiomatic-css/)
 
 
 ## Table des matières
 
-1. [Principes généraux](#principes-generaux)
-2. [Indentation](#indentation)
-3. [Commentaires](#commentaires)
+1. [Principes généraux](#general-principles)
+2. [Indentation](#whitespace)
+3. [Commentaires](#comments)
 4. [Format](#format)
-5. [Nommage](#nommage)
-6. [Exemple pratique](#exemple)
-7. [Organisation](#organisation)
-8. [Compilation et déploiement](#compilation-et-deploiement)
+5. [Nommage](#naming)
+6. [Exemple pratique](#example)
+7. [Organisation](#organization)
+8. [Compilation et déploiement](#build-and-deployment)
 
-[Remerciements](#remerciements)
+[Remerciements](#acknowledgements)
 
-<a name="principes-generaux"></a>
+<a name="general-principles"></a>
 ## 1. Principes généraux
 
-> Une des clefs d'une bonne gestion de projet est de réaliser qu'écrire du code pour soi-même est une mauvaise idée™. Si des milliers de personnes sont amenées à utiliser votre code, alors écrivez votre code en visant un maximum de clarté, et non en fonction de croyances personnelles comme la lecture de spécifications qui rendrait plus intelligent." - Idan Gazit
+> Une des clefs d'une bonne gestion de projet est de réaliser qu'écrire du code pour soi-même est une MAUVAISE IDÉE™. Si des milliers de personnes sont amenées à utiliser votre code, alors écrivez votre code en visant un maximum de clarté, et non en fonction de croyances personnelles comme la lecture de spécifications qui rendrait plus intelligent." - Idan Gazit
 
 * Tout code présent dans n'importe quelle base de code doit avoir l'air d'avoir été écrit par une seule personne, peu importe le nombre de gens qui y ont contribué,
 * Appliquez les conventions de style de manière stricte,
 * En cas de doute, utilisez des conventions existantes et communes.
 
-<a name="indentation"></a>
+<a name="whitespace"></a>
 ## 2. Indentation
 
 Une seule manière d‘indenter devrait être utilisée sur l'ensemble du code source de votre projet. Soyez toujours constant dans votre façon d‘indenter. Utilisez des espaces pour améliorer la lisibilité.
@@ -45,7 +45,7 @@ Une seule manière d‘indenter devrait être utilisée sur l'ensemble du code s
 
 Astuce : Configurez votre éditeur afin qu'il affiche les "caractères invisibles". Cela vous permettra de supprimer les espaces en fin de ligne, les espaces dans les lignes vides et évitera de polluer vos commits.
 
-<a name="commentaires"></a>
+<a name="comments"></a>
 ## 3. Commentaires
 
 Bien commenter son code est extrêmement important. Prenez le temps de décrire les composants, comment ils fonctionnent, leurs limites, et la manière dont ils sont conçus. Ne laissez pas les autres membres de l'équipe deviner le but d'un code inhabituel ou non trivial.
@@ -197,7 +197,7 @@ Cela évite des sélecteurs CSS trop spécifiques,
 ```
 
 
-<a name="nommage"></a>
+<a name="naming"></a>
 ## 5. Nommage
 
 Vous n'êtes pas un compilateur/compresseur de code humain, alors ne prétendez pas en être un.
@@ -227,7 +227,7 @@ Utilisez des noms clairs et réfléchis pour les classes HTML. Choisissez un mod
 ```
 
 
-<a name="exemple"></a>
+<a name="example"></a>
 ## 6. Exemple pratique
 
 Un exemple de divers conventions.
@@ -296,7 +296,7 @@ Un exemple de divers conventions.
 ```
 
 
-<a name="organisation"></a>
+<a name="organization"></a>
 ## 7. Organisation
 
 L'organisation du code est une partie importante de n'importe quelle base de code CSS et devient cruciale pour les grosses bases de code.
@@ -306,14 +306,14 @@ L'organisation du code est une partie importante de n'importe quelle base de cod
 * Si vous utilisez un préprocesseur, stockez le code récurrent dans des variables pour la couleur, la typographie, etc.
 
 
-<a name="compilation-et-deploiement"></a>
+<a name="build-and-deployment"></a>
 ## 8. Compilation et déploiement
 
 Les projets devraient toujours essayer de mentionner des façons génériques grâce auxquelles le code source peut être validé, testé, compressé et versionné en préparation à l'utilisation en production.
 Pour cela, [grunt](https://github.com/cowboy/grunt) de Ben Alman est un excellent outil.
 
 
-<a name="remerciements"></a>
+<a name="acknowledgements"></a>
 ## Remerciements
 
 Merci à tous ceux qui ont contribué à [idiomatic.js](https://github.com/rwldrn/idiomatic.js). Cela a été une source d'inspiration, de citations et de conventions.
