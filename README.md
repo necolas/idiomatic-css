@@ -87,7 +87,7 @@ Comment style should be simple and consistent within a single code base.
 Tip: configure your editor to provide you with shortcuts to output agreed-upon
 comment patterns.
 
-#### CSS example:
+#### Example:
 
 ```css
 /* ==========================================================================
@@ -97,30 +97,24 @@ comment patterns.
 /* Sub-section comment block
    ========================================================================== */
 
-/*
- * Group comment block.
- * Ideal for multi-line explanations and documentation.
+/**
+ * Short description using Doxygen-style comment format
+ *
+ * Long description first sentence starts here and continues on this line for a
+ * while finally concluding here at the end of this paragraph.
+ *
+ * The long description is ideal for more detailed explanations and
+ * documentation. It can include example HTML, URLs, or any other information
+ * that is deemed necessary or useful.
+ *
+ * @tag This is a tag named 'tag'
+ *
+ * @todo This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
  */
 
 /* Basic comment */
-```
-
-#### SCSS example:
-
-```scss
-// ==========================================================================
-// Section comment block
-// ==========================================================================
-
-// Sub-section comment block
-// ==========================================================================
-
-//
-// Group comment block
-// Ideal for multi-line explanations and documentation.
-//
-
-// Basic comment
 ```
 
 
@@ -289,7 +283,7 @@ An example of various conventions.
    Grid layout
    ========================================================================== */
 
-/*
+/**
  * Example HTML:
  *
  * <div class="grid">
