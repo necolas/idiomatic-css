@@ -130,11 +130,13 @@ in useful diffs and blames.
 3. One declaration per line in a declaration block.
 4. One level of indentation for each declaration.
 5. A single space after the colon of a declaration.
-6. Always include a semi-colon at the end of the last declaration in a
+6. Where properties or functions can have multiple comma-separated values,
+   include a space after each comma.
+7. Always include a semi-colon at the end of the last declaration in a
    declaration block.
-7. Place the closing brace of a ruleset in the same column as the first
+8. Place the closing brace of a ruleset in the same column as the first
    character of the ruleset.
-8. Separate each ruleset by a blank line.
+9. Separate each ruleset by a blank line.
 
 ```css
 .selector-1,
@@ -144,8 +146,10 @@ in useful diffs and blames.
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
+    font-family: helvetica, arial, sans-serif;
     color: #333;
     background: #fff;
+    background: linear-gradient(#fff, #bbb);
 }
 ```
 
@@ -187,7 +191,7 @@ before the closing brace.
 .selector-3 { width: 30%; }
 ```
 
-Long, comma separated property values - such as collections of gradients or
+Long, comma-separated property values - such as collections of gradients or
 shadows - can be arranged across multiple lines in an effort to improve
 readability and produce more useful diffs. There are various formats that could
 be used; one example is shown below.
