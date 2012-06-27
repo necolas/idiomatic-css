@@ -8,37 +8,24 @@ diese Richtlinien zum Einsatz von bestehenden, üblichen, sinnvollen Mustern.
 Dies ist ein lebendiges Dokument, und neue Ideen sind immer willkommen. Bitte
 trage bei.
 
-
-## Übersetzungen
-
-* [English original](https://github.com/necolas/idiomatic-css)
-* [Français](https://github.com/necolas/idiomatic-css/tree/master/translations/fr-FR)
-* [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
-* [한국어](https://github.com/necolas/idiomatic-css/tree/master/translations/ko-KR)
-* [Nederlands](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)
-* [Português (Brasil)](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
-* [Русский](https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU)
-* [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
-* [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
-* [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
+[Idiomatic CSS auf englisch](https://github.com/necolas/idiomatic-css/)
 
 
 ## Inhaltsverzeichnis
 
-1. [Allgemeine Grundlagen](#allgemeine-grundlagen)
-2. [Leerraum](#leerraum)
-3. [Kommentare](#kommentare)
-4. [Formatierung](#formatierung)
-5. [Benennung](#benennung)
-6. [Praktisches Beispiel](#praktisches-beispiel)
-7. [Organisierung](#organisierung)
-8. [Bauen und Einsetzen](#bauen-und-einsetzen)
+1. [Allgemeine Grundlagen](#general-principles)
+2. [Leerraum](#whitespace)
+3. [Kommentare](#comments)
+4. [Formatierung](#format)
+5. [Benennung](#naming)
+6. [Praktisches Beispiel](#example)
+7. [Organisierung](#organization)
+8. [Bauen und Einsetzen](#build-and-deployment)
 
-[Danksagung](#danksagung)
+[Danksagung](#acknowledgements)
 
 
-<a name="allgemeine-grundlagen"></a>
+<a name="general-principles"></a>
 ## 1. Allgemeine Grundlagen
 
 > „Ein Teil der Aufgabe eines guten Verwalters eines erfolgreichen Projekts
@@ -53,7 +40,7 @@ trage bei.
 * Im Zweifel verwende bestehende, übliche Muster.
 
 
-<a name="leerraum"></a>
+<a name="whitespace"></a>
 ## 2. Leerraum
 
 Nur ein Stil soll in den vollständigen Quellen deines Projekts existieren.
@@ -71,7 +58,7 @@ erlaubt dir, Leerzeichen am Zeilenende zu entfernen, unbeabsichtigte Leerzeichen
 in leeren Zeilen und Commits zu verschmutzen.
 
 
-<a name="kommentare"></a>
+<a name="comments"></a>
 ## 3. Kommentare
 
 Gut kommentierter Code ist extrem wichtig. Nimm dir Zeit, Komponenten zu beschreiben,
@@ -123,7 +110,7 @@ ausgemachten Kommentar-Mustern anbietet.
 ```
 
 
-<a name="formatierung"></a>
+<a name="format"></a>
 ## 4. Formatierung
 
 Die gewählte Codeformatierung muss gewährleisten, dass der Code: leicht zu lesen
@@ -254,7 +241,7 @@ Richtlinien beziehen sich auf Sass.
 ```
 
 
-<a name="benennung"></a>
+<a name="naming"></a>
 ## 5. Benennung
 
 Du bist kein menschlicher Code-Compiler/-Kompressor, also versuche nicht, einer
@@ -287,7 +274,7 @@ sinnvoll ist.
 ```
 
 
-<a name="praktisches-beispiel"></a>
+<a name="example"></a>
 ## 6. Praktisches Beispiel
 
 Ein Beispiel verschiedener Konventionen.
@@ -356,7 +343,7 @@ Ein Beispiel verschiedener Konventionen.
 ```
 
 
-<a name="organisierung"></a>
+<a name="organization"></a>
 ## 7. Organisierung
 
 Code-Organisation ist ein wichtiger Teil jeder CSS-Code-Basis und wesentlich
@@ -369,7 +356,7 @@ für große Projekte.
   für Farbe, Typografie usw. aus.
 
 
-<a name="bauen-und-einsetzen"></a>
+<a name="build-and-deployment"></a>
 ## 8. Bauen und Einsetzen
 
 Projekte sollen stets versuchen, generische Methoden zu verwenden, um
@@ -378,7 +365,7 @@ versionieren. Für diesen Zweck bietet sich [grunt](https://github.com/cowboy/gr
 von Ben Alman als exzellentes Werkzeug an.
 
 
-<a name="danksagung"></a>
+<a name="acknowledgements"></a>
 ## Danksagung
 
 Danke an alle, die zu [idiomatic.js](https://github.com/rwldrn/idiomatic.js)
