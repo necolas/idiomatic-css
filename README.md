@@ -168,28 +168,42 @@ in useful diffs and blames.
 #### Declaration order
 
 Declarations should be ordered in accordance with a single principle. My
-preference is for related properties to be grouped together and for
-structurally important properties (e.g. positioning and box-model) to be
-declared prior to typographic, background, and color properties.
+preference is for structurally important properties (e.g. positioning and
+box-model) to be declared prior to all others.
 
 ```css
 .selector {
-    position: relative;
-    display: block;
-    width: 50%;
+    /* Positioning */
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Display & Box Model */
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100px;
     height: 100px;
     padding: 10px;
-    border: 0;
+    border: 10px solid #333;
     margin: 10px;
-    color: #fff
+
+    /* Other */
     background: #000;
+    color: #fff
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: right;
 }
 ```
 
-Alphabetical ordering is also popular, but the drawback is that it separates
-related properties. For example, position offsets are no longer grouped
-together and box-model properties can end up spread throughout a declaration
-block.
+Strict alphabetical ordering is also relatively popular, but the drawback is
+that it separates related properties. For example, position offsets are no
+longer grouped together and box-model properties can end up spread throughout a
+declaration block.
 
 #### Exceptions and slight deviations
 
@@ -210,12 +224,12 @@ be used; one example is shown below.
 
 ```css
 .selector {
-    box-shadow:
-        1px 1px 1px #000,
-        2px 2px 1px 1px #ccc inset;
     background-image:
         linear-gradient(#fff, #ccc),
         linear-gradient(#f3c, #4ec);
+    box-shadow:
+        1px 1px 1px #000,
+        2px 2px 1px 1px #ccc inset;
 }
 ```
 
@@ -308,9 +322,10 @@ An example of various conventions.
 }
 
 .cell {
-    box-sizing: border-box;
     position: relative;
+    display: inline-block;
     overflow: hidden;
+    box-sizing: border-box;
     width: 20%;
     height: 100%;
     /* Set the inter-cell spacing */
