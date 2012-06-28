@@ -206,7 +206,7 @@ satıra yayılabilirler. Bunun için kullanılabilecek çeşitli biçemler var. 
 * Tek veya çift tırnağı tutarlı kullanın. Tercih çift tırnaktan yana, ör.,
   `content: ""`.
 * Seçicilerdeki özellik değerlerini her zaman tırnak içine alın, ör.,
-  `input[type="checkout"]`.
+  `input[type="checkbox"]`.
 * _Mümkün olduğu durumlarda_, sıfır değerler için ünite kullanmayın, ör.,
   `margin: 0`.
 

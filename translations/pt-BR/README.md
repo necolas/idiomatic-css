@@ -208,7 +208,7 @@ vários formatos que poderiam ser usados; um exemplo é mostrado abaixo.
 * Use aspas simples ou duplas de forma consistente. Preferência por aspas
   duplas, por exemplo: `content: ""`.
 * Sempre coloque aspas em valores de atributos nos seletores, por exemplo:
-  `input[type="checkout"]`.
+  `input[type="checkbox"]`.
 * _Onde permitido_, evite especificar unidades para valores-zero, por exemplo:
   `margin: 0`.
 

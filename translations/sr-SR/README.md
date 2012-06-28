@@ -208,7 +208,7 @@ razni formati koji bi mogli biti korišćeni, jedan primer je prikazan ispod.
 * Koristite jedan ili dupli apostrof konzistentno. Preferencija je da se
   koriste dupli apostrofi, npr `content: ""`.
 * Vrednosti atributa u selektorima uvek stavljajte između apostrofa, npr
-  `input[type="checkout"]`.
+  `input[type="checkbox"]`.
 * _Gde je moguće_ izbegavajte specifiranje jedinica za nula vrednosti, npr
   `margin: 0`.
 

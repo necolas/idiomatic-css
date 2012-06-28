@@ -214,7 +214,7 @@ ci-dessous :
 * Utilisez toujours le même type de guillemets. Ma préférence va aux doubles
   guillemets, exemple : `content: ""` ;
 * Utilisez toujours des guillemets pour les valeurs dans les sélecteurs,
-  exemple :  `input[type="checkout"]` ;
+  exemple :  `input[type="checkbox"]` ;
 * _Lorsque c'est autorisé_, évitez de spécifier les unités pour les valeurs
   nulles, exemple : `margin: 0`.
 
