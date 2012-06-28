@@ -46,17 +46,19 @@ contribute.
 > your code, then write your code for maximum clarity, not your personal
 > preference of how to get clever within the spec." - Idan Gazit
 
+* You are not a human code compiler/compressor, so don't try to be one.
 * All code in any code-base should look like a single person typed it, no
   matter how many people contributed.
 * Strictly enforce the agreed upon style.
-* If in doubt use existing, common patterns.
+* If in doubt when deciding upon a style, use existing, common patterns.
 
 
 <a name="whitespace"></a>
 ## 2. Whitespace
 
-Only one style should exist across the entire source of your project. Always be
-consistent in your use of whitespace. Use whitespace to improve readability.
+Only one style should exist across the entire source of your code-base. Always
+be consistent in your use of whitespace. Use whitespace to improve
+readability.
 
 * _Never_ mix spaces and tabs for indentation.
 * Choose between soft indents (spaces) or real tabs. Stick to your choice
@@ -67,6 +69,10 @@ consistent in your use of whitespace. Use whitespace to improve readability.
 Tip: configure your editor to "show invisibles". This will allow you to
 eliminate end of line whitespace, eliminate unintended blank line whitespace,
 and avoid polluting commits.
+
+Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to
+help maintain the basic whitespace conventions that have been agreed for your
+code-base.
 
 
 <a name="comments"></a>
@@ -126,23 +132,28 @@ The chosen code format must ensure that code is: easy to read; easy to clearly
 comment; minimizes the chance of accidentally introducing errors; and results
 in useful diffs and blames.
 
-1. One discrete selector per line in multi-selector rulesets.
-2. A single space before the opening brace of a ruleset.
-3. One declaration per line in a declaration block.
-4. One level of indentation for each declaration.
-5. A single space after the colon of a declaration.
-6. Where properties or functions can have multiple comma-separated values,
-   include a space after each comma.
-7. Always include a semi-colon at the end of the last declaration in a
-   declaration block.
-8. Place the closing brace of a ruleset in the same column as the first
-   character of the ruleset.
-9. Separate each ruleset by a blank line.
+* Use one discrete selector per line in multi-selector rulesets.
+* Include a single space before the opening brace of a ruleset.
+* Include one declaration per line in a declaration block.
+* Use one level of indentation for each declaration.
+* Include single space after the colon of a declaration.
+* Use lowercase and shorthand hex values, e.g., `#aaa`.
+* Use single or double quotes consistently. Preference is for double quotes,
+  e.g., `content: ""`.
+* Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
+* _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
+* Include a space after each comma in comma-separated property or function
+  values.
+* Include a semi-colon at the end of the last declaration in a declaration
+  block.
+* Place the closing brace of a ruleset in the same column as the first
+  character of the ruleset.
+* Separate each ruleset by a blank line.
 
 ```css
 .selector-1,
 .selector-2,
-.selector-3 {
+.selector-3[type="text"] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -150,7 +161,7 @@ in useful diffs and blames.
     font-family: helvetica, arial, sans-serif;
     color: #333;
     background: #fff;
-    background: linear-gradient(#fff, #bbb);
+    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
 }
 ```
 
@@ -208,14 +219,6 @@ be used; one example is shown below.
 }
 ```
 
-#### Misc
-
-* Use lowercase hex values, e.g., `#aaa`.
-* Use single or double quotes consistently. Preference is for double quotes,
-  e.g., `content: ""`.
-* Always quote attribute values in selectors, e.g., `input[type="checkout"]`.
-* _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
-
 ### Preprocessors: additional format considerations
 
 Different CSS preprocessors have different features, functionality, and syntax.
@@ -248,8 +251,6 @@ preprocessor in use. The following guidelines are in reference to Sass.
 
 <a name="naming"></a>
 ## 5. Naming
-
-You are not a human code compiler/compressor, so don't try to be one.
 
 Use clear and thoughtful names for HTML classes. Pick an understandable and
 consistent naming pattern that makes sense both within HTML files and CSS
