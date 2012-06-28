@@ -266,9 +266,17 @@ preprocessor in use. The following guidelines are in reference to Sass.
 <a name="naming"></a>
 ## 5. Naming
 
-Use clear and thoughtful names for HTML classes. Pick an understandable and
-consistent naming pattern that makes sense both within HTML files and CSS
-files.
+Naming is hard, but very important. It's a crucial part of the process of
+developing a maintainable code base, and ensuring that you have a relatively
+scalable interface between your HTML and CSS.
+
+* Avoid _systematic_ use of abbreviated class names. Don't make things
+  difficult to understand.
+* Use clear, thoughtful, and appropriate names for _HTML classes_.
+* Pick an understandable and consistent naming pattern that makes sense both
+  within HTML files and CSS files.
+* Selectors for components should uses class names; avoid the use of generic
+  tags and unique ids.
 
 ```css
 /* Example of code with bad names */
