@@ -1,9 +1,9 @@
 # Principper for at skrive konsistent, idiomatisk CSS
 
-Dette dokument skitserer en fornuftig style guide til CSS udvikling.
-Det er ikke ment som en <<prescriptive>> og jeg ønsker ikke at presse min måde at
+Dette dokument skitserer en række fornuftige og logiske retningslinjer til CSS udvikling.
+Det er ikke ment som et asolut regelsæt og jeg ønsker ikke at presse min måde at
 skrive CSS på ned over andres kode. Ikke desto mindre så indbyder disse principper
-til at benytte allerede eksisterende, fornuftige og logiske kodemønstre.
+til at benytte allerede eksisterende og logiske kodemønstre.
 
 Dette dokument er levende og nye tilføjelser og idéer er altid velkomne.
 
