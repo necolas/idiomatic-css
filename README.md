@@ -19,7 +19,7 @@ contribute.
 * [Nederlands](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)
 * [Português (Brasil)](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
 * [Русский](https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU)
-* [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
+* [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr-SR)
 * [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
 * [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
 
