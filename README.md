@@ -21,18 +21,18 @@ contribute.
 7. [Organization](#organization)
 8. [Build and deployment](#build-and-deployment)
 
-[Acknowledgements](#acknowledgements)
-[Translations](#translations)
+- [Acknowledgements](#acknowledgements)
+- [Translations](#translations)
 
 
 
 <a name='general-principles'></a>
 ## 1. General Principles
 
-> 'Part of being a good steward to a successful project is realizing that
+> “Part of being a good steward to a successful project is realizing that
 > writing code for yourself is a Bad Idea™. If thousands of people are using
 > your code, then write your code for maximum clarity, not your personal
-> preference of how to get clever within the spec.' — Idan Gazit.
+> preference of how to get clever within the spec.” — Idan Gazit.
 
 * You are not a human code compiler/compressor, so don't try to be one.
 * All code in any code-base should look like a single person typed it, no
