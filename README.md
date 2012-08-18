@@ -2,7 +2,7 @@
 
 The following document outlines a reasonable style guide for CSS development.
 It is not meant to be prescriptive and we do not wish to impose our style
-preferences on other people's code. However, these guidelines do strongly
+preferences on other people’s code. However, these guidelines do strongly
 encourage the use of existing, common, sensible patterns.
 
 This is a living document and new ideas are always welcome. Please
@@ -12,17 +12,16 @@ contribute.
 
 ## Table of contents
 
-1. [General principles](#general-principles)
+1. [General Principles](#general-principles)
 2. [Whitespace](#whitespace)
 3. [Comments](#comments)
 4. [Format](#format)
 5. [Naming](#naming)
-6. [Practical example](#example)
+6. [Practical Example](#example)
 7. [Organization](#organization)
-8. [Build and deployment](#build-and-deployment)
+8. [Build & Deployment](#build-and-deployment)
 
-- [Acknowledgements](#acknowledgements)
-- [Translations](#translations)
+[Acknowledgements](#acknowledgements), [Translations](#translations) & [Contributors](#contributors).
 
 
 
@@ -34,7 +33,7 @@ contribute.
 > your code, then write your code for maximum clarity, not your personal
 > preference of how to get clever within the spec.” — Idan Gazit.
 
-* You are not a human code compiler/compressor, so don't try to be one.
+* You are not a human code compiler/compressor, so don’t try to be one.
 * All code in any code-base should look like a single person typed it, no
   matter how many people contributed.
 * Strictly enforce the agreed upon style.
@@ -49,11 +48,11 @@ readability.
 
 * _Never_ mix spaces and tabs for indentation.
 * Choose between soft indents (spaces) or real tabs. Stick to your choice
-  without fail. (Preference: spaces)
+  without fail. __Preference: spaces__.
 * If using spaces, choose the number of characters used per indentation level.
-  (Preference: 2 spaces)
+  __Preference: 2 spaces__.
 
-Tip: configure your editor to 'show invisibles'. This will allow you to
+Tip: configure your editor to “show invisibles”. This will allow you to
 eliminate end of line whitespace, eliminate unintended blank line whitespace,
 and avoid polluting commits.
 
@@ -66,7 +65,7 @@ code-base.
 ## 3. Comments
 
 Well commented code is extremely important. Take time to describe components,
-how they work, their limitations, and the way they are constructed. Don't leave
+how they work, their limitations, and the way they are constructed. Don’t leave
 others in the team guessing as to the purpose of uncommon or non-obvious
 code.
 
@@ -76,7 +75,7 @@ Comment style should be simple and consistent within a single code base.
 * Avoid end of line comments.
 * Keep line-length to a sensible maximum, e.g., 80 columns.
 * Make liberal use of comments to break CSS code into discrete sections.
-* Use 'sentence case' comments and consistent text indentation.
+* Use “sentence case” comments and consistent text indentation.
 
 Tip: configure your editor to provide you with shortcuts to output agreed-upon
 comment patterns.
@@ -110,7 +109,7 @@ The long description is ideal for more detailed explanations and
 documentation. It can include example HTML, URLs, or any other information
 that is deemed necessary or useful.
 
-@element This is a element named 'element'.
+@element This is a element named “element”.
 
 @todo This is a todo statement that describes an atomic task to be completed
 at a later date. It wraps after 80 characters and following lines are
@@ -121,6 +120,7 @@ indented by 2 spaces.
 
 /* Basic comment. */
 ```
+
 
 
 <a name='format'></a>
@@ -135,8 +135,8 @@ in useful diffs and blames.
 * Include one declaration per line in a declaration block.
 * Use one level of indentation for each declaration.
 * Include single space after the colon of a declaration.
-* Use lowercase and shorthand hex values, e.g., `#aaa`.
-* Use single or double quotes consistently. Preference is for double quotes,
+* Use lowercase and shorthand hex values _when possible_, e.g., `#fff`.
+* Use single or double quotes consistently. Preference is for single quotes,
   e.g., `content: ''`.
 * Quote attribute values in selectors, e.g., `input[type='checkbox']`.
 * _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
@@ -152,18 +152,19 @@ in useful diffs and blames.
 .selector-1,
 .selector-2,
 .selector-3[type='text'] {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    display: block;
-    font-family: helvetica, arial, sans-serif;
-    color: #333;
-    background: #fff;
-    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-family: helvetica, arial, sans-serif;
+  color: #333;
+  background: #fff;
+  background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
 }
 ```
 
-#### Declaration order
+
+#### Declaration Order
 
 Declarations should be ordered in accordance with a single principle. My
 preference is for structurally important properties (e.g. positioning and
@@ -171,30 +172,30 @@ box-model) to be declared prior to all others.
 
 ```css
 .selector {
-    /* Positioning */
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  /* Positioning */
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-    /* Display & Box Model */
-    display: inline-block;
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    border: 10px solid #333;
-    margin: 10px;
+  /* Display & Box Model */
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 10px solid #333;
+  margin: 10px;
 
-    /* Other */
-    background: #000;
-    color: #fff
-    font-family: sans-serif;
-    font-size: 16px;
-    text-align: right;
+  /* Other */
+  background: #000;
+  color: #fff
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: right;
 }
 ```
 
@@ -202,6 +203,8 @@ Strict alphabetical ordering is also relatively popular, but the drawback is
 that it separates related properties. For example, position offsets are no
 longer grouped together and box-model properties can end up spread throughout a
 declaration block.
+
+
 
 #### Exceptions and slight deviations
 
@@ -222,14 +225,15 @@ be used; one example is shown below.
 
 ```css
 .selector {
-    background-image:
-        linear-gradient(#fff, #ccc),
-        linear-gradient(#f3c, #4ec);
-    box-shadow:
-        1px 1px 1px #000,
-        2px 2px 1px 1px #ccc inset;
+  background-image:
+    linear-gradient(#fff, #ccc),
+    linear-gradient(#f3c, #4ec);
+  box-shadow:
+    1px 1px 1px #000,
+    2px 2px 1px 1px #ccc inset;
 }
 ```
+
 
 ### Preprocessors: additional format considerations
 
@@ -252,23 +256,24 @@ preprocessor in use. The following guidelines are in reference to Sass.
 
 ```scss
 .selector-1 {
-    @extend .other-rule;
-    @include clearfix();
-    @include box-sizing(border-box);
-    width: x-grid-unit(1);
-    // other declarations
+  @extend .other-rule;
+  @include clearfix();
+  @include box-sizing(border-box);
+  width: x-grid-unit(1);
+  // other declarations.
 }
 ```
+
 
 
 <a name='naming'></a>
 ## 5. Naming
 
-Naming is hard, but very important. It's a crucial part of the process of
+Naming is hard, but very important. It’s a crucial part of the process of
 developing a maintainable code base, and ensuring that you have a relatively
 scalable interface between your HTML and CSS.
 
-* Avoid _systematic_ use of abbreviated class names. Don't make things
+* Avoid _systematic_ use of abbreviated class names. Don’t make things
   difficult to understand.
 * Use clear, thoughtful, and appropriate names for _HTML classes_.
 * Pick an understandable and consistent naming pattern that makes sense both
@@ -280,23 +285,24 @@ scalable interface between your HTML and CSS.
 /* Example of code with bad names */
 
 .s-scr {
-    overflow: auto;
+  overflow: auto;
 }
 
-.cb {
-    background: #000;
+.c1 {
+  background: #000;
 }
 
 /* Example of code with better names */
 
 .is-scrollable {
-    overflow: auto;
+  overflow: auto;
 }
 
-.column-body {
-    background: #000;
+.column-1 {
+  background: #000;
 }
 ```
+
 
 
 <a name='example'></a>
@@ -305,53 +311,57 @@ scalable interface between your HTML and CSS.
 An example of various conventions.
 
 ```css
-/* ==========================================================================
-   Grid layout
-   ========================================================================== */
 
-/**
- * Example HTML:
- *
- * <div class='grid'>
- *     <div class='cell cell-5'></div>
- *     <div class='cell cell-5'></div>
- * </div>
- */
+/* ====================================================================== */
+/* ===== Grid Layout ==================================================== */
+/* ====================================================================== */
+
+/*
+
+Example HTML:
+
+<div class='grid'>
+  <div class='cell cell-5'></div>
+  <div class='cell cell-5'></div>
+</div>
+
+*/
 
 .grid {
-    overflow: visible;
-    height: 100%;
-    /* Prevent inline-block cells wrapping */
-    white-space: nowrap;
-    /* Remove inter-cell whitespace */
-    font-size: 0;
+  overflow: visible;
+  height: 100%;
+  /* Prevent inline-block cells wrapping */
+  white-space: nowrap;
+  /* Remove inter-cell whitespace */
+  font-size: 0;
 }
 
 .cell {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 20%;
-    height: 100%;
-    /* Set the inter-cell spacing */
-    padding: 0 10px;
-    border: 2px solid #333;
-    vertical-align: top;
-    /* Reset white-space */
-    white-space: normal;
-    /* Reset font-size */
-    font-size: 16px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 20%;
+  height: 100%;
+  /* Set the inter-cell spacing */
+  padding: 0 10px;
+  border: 2px solid #333;
+  vertical-align: top;
+  /* Reset white-space */
+  white-space: normal;
+  /* Reset font-size */
+  font-size: 16px;
 }
 
 /* Cell states */
 
 .cell.is-animating {
-    background-color: #fffdec;
+  background-color: #fffdec;
 }
 
-/* Cell dimensions
-   ========================================================================== */
+/* ============================================================ */
+/* ----- > Cell Dimensions ------------------------------------ */
+/* ============================================================ */
 
 .cell-1 { width: 10%; }
 .cell-2 { width: 20%; }
@@ -359,14 +369,18 @@ An example of various conventions.
 .cell-4 { width: 40%; }
 .cell-5 { width: 50%; }
 
-/* Cell modifiers
-   ========================================================================== */
+
+/* ============================================================ */
+/* ----- > Cell Modifiers ------------------------------------- */
+/* ============================================================ */
 
 .cell--detail,
 .cell--important {
-    border-width: 4px;
+  border-width: 4px;
 }
+
 ```
+
 
 
 <a name='organization'></a>
@@ -382,6 +396,7 @@ large code bases.
   typography, etc.
 
 
+
 <a name='build-and-deployment'></a>
 ## 8. Build and deployment
 
@@ -389,6 +404,7 @@ Projects should always attempt to include some generic means by which source
 can be linted, tested, compressed, and versioned in preparation for production
 use. For this task, [grunt](https://github.com/cowboy/grunt) by Ben Alman is an
 excellent tool.
+
 
 
 <a name='acknowledgements'></a>
@@ -414,3 +430,8 @@ inspiration, quotations, and guidelines.
 * [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
 * [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
 * [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
+
+
+
+<a name='contributors'></a>
+## Contributors
