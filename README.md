@@ -14,9 +14,9 @@ contribute.
 2. [Whitespaces](#whitespaces)
 3. [Comments](#comments)
 4. [Format](#format)
- 1. [Declaration Order](#declaration-order)
- 2. [Exceptions & Slight Deviations](#exceptions)
- 3. [Preprocessors: Additional Format Considerations](#preprocessors)
+  1. [Declaration Order](#declaration-order)
+  2. [Exceptions & Slight Deviations](#exceptions)
+  3. [Preprocessors: Additional Format Considerations](#preprocessors)
 5. [Naming](#naming)
 6. [Practical Example](#example)
 7. [Organization](#organization)
@@ -50,9 +50,9 @@ readability.
 
 * _Never_ mix spaces and tabs for indentation.
 * Choose between soft indents (spaces) or real tabs. Stick to your choice
-  without fail. __Preference: spaces__.
+  without fail. _Preference: spaces_.
 * If using spaces, choose the number of characters used per indentation level.
-  __Preference: 2 spaces__.
+  _Preference: 2 spaces_.
 
 Tip: configure your editor to “show invisibles”. This will allow you to
 eliminate end of line whitespace, eliminate unintended blank line whitespace,
@@ -144,8 +144,7 @@ in useful diffs and blames.
 * Use one level of indentation for each declaration.
 * Include single space after the colon of a declaration.
 * Use lowercase and shorthand hex values _when possible_, e.g., `#fff`.
-* Use single or double quotes consistently. Preference is for single quotes,
-  e.g., `content: ''`.
+* Use single or double quotes consistently. _Preference: single quotes_.
 * Quote attribute values in selectors, e.g., `input[type='checkbox']`.
 * _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
 * Include a space after each comma in comma-separated property or function
