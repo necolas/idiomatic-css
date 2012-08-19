@@ -8,17 +8,15 @@ encourage the use of existing, common, sensible patterns.
 This is a living document and new ideas are always welcome. Please
 contribute.
 
-
-
 ## Table of contents
 
 1. [General Principles](#general-principles)
 2. [Whitespaces](#whitespaces)
 3. [Comments](#comments)
 4. [Format](#format)
-  1. Declaration Order
-  2. Exceptions & Slight Deviations
-  3. Preprocessors: Additional Format Considerations
+1. Declaration Order(#declaration-order)
+2. Exceptions & Slight Deviations(#exceptions)
+3. Preprocessors: Additional Format Considerations(#preprocessors)
 5. [Naming](#naming)
 6. [Practical Example](#example)
 7. [Organization](#organization)
@@ -103,7 +101,6 @@ comment patterns.
 /* ----- >>> 4th Level Comment Block ------ */
 /* ---------------------------------------- */
 
-
 /*
 
 Long description first sentence starts here and continues on this line for a
@@ -128,7 +125,6 @@ at a later date. It wraps after 80 characters and following lines are
 indented by 2 spaces, e.g., “TODO: Finish this style guide before 2022.”.
 
 */
-
 
 /* Basic comment. */
 ```
@@ -175,7 +171,7 @@ in useful diffs and blames.
 }
 ```
 
-
+<a name='declaration-order'></a>
 #### 4.1. Declaration Order
 
 Declarations should be ordered in accordance with a single principle. My
@@ -217,7 +213,7 @@ longer grouped together and box-model properties can end up spread throughout a
 declaration block.
 
 
-
+<a name='exceptions'></a>
 #### 4.2. Exceptions & Slight Deviations
 
 Large blocks of single declarations can use a slightly different, single-line
@@ -246,7 +242,7 @@ be used; one example is shown below.
 }
 ```
 
-
+<a name='preprocessors'></a>
 ### 4.3. Preprocessors: Additional Format Considerations
 
 Different CSS preprocessors have different features, functionality, and syntax.
