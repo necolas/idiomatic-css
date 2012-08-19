@@ -13,15 +13,19 @@ contribute.
 ## Table of contents
 
 1. [General Principles](#general-principles)
-2. [Whitespace](#whitespace)
+2. [Whitespaces](#whitespaces)
 3. [Comments](#comments)
 4. [Format](#format)
+  1. Declaration Order
+  2. Exceptions & Slight Deviations
+  3. Preprocessors: Additional Format Considerations
 5. [Naming](#naming)
 6. [Practical Example](#example)
 7. [Organization](#organization)
 8. [Build & Deployment](#build-and-deployment)
 
-[Acknowledgements](#acknowledgements), [Translations](#translations) & [Contributors](#contributors).
+[Acknowledgements](#acknowledgements), [Translations](#translations) &
+[Contributors](#contributors).
 
 
 
@@ -39,8 +43,8 @@ contribute.
 * Strictly enforce the agreed upon style.
 * If in doubt when deciding upon a style, use existing, common patterns.
 
-<a name='whitespace'></a>
-## 2. Whitespace
+<a name='whitespaces'></a>
+## 2. Whitespaces
 
 Only one style should exist across the entire source of your code-base. Always
 be consistent in your use of whitespace. Use whitespace to improve
@@ -109,11 +113,19 @@ The long description is ideal for more detailed explanations and
 documentation. It can include example HTML, URLs, or any other information
 that is deemed necessary or useful.
 
-@element This is a element named “element”.
+“<element>”: This is an element named “element”, e.g., “<body>”.
 
-@todo This is a todo statement that describes an atomic task to be completed
+“#id”: This is an id named “id”, e.g., “#header”.
+
+“.class”: This is a class named “class”, e.g., “.column-12”.
+
+“:property”: This is a property named “property”, e.g., “:padding-top”.
+
+“'value'”: This is a value, e.g., “'3.1416em'”.
+
+“TODO”: This is a todo statement that describes an atomic task to be completed
 at a later date. It wraps after 80 characters and following lines are
-indented by 2 spaces.
+indented by 2 spaces, e.g., “TODO: Finish this style guide before 2022.”.
 
 */
 
@@ -164,7 +176,7 @@ in useful diffs and blames.
 ```
 
 
-#### Declaration Order
+#### 4.1. Declaration Order
 
 Declarations should be ordered in accordance with a single principle. My
 preference is for structurally important properties (e.g. positioning and
@@ -206,7 +218,7 @@ declaration block.
 
 
 
-#### Exceptions and slight deviations
+#### 4.2. Exceptions & Slight Deviations
 
 Large blocks of single declarations can use a slightly different, single-line
 format. In this case, a space should be included after the opening brace and
@@ -235,7 +247,7 @@ be used; one example is shown below.
 ```
 
 
-### Preprocessors: additional format considerations
+### 4.3. Preprocessors: Additional Format Considerations
 
 Different CSS preprocessors have different features, functionality, and syntax.
 Your conventions should be extended to accommodate the particularities of any
@@ -306,7 +318,7 @@ scalable interface between your HTML and CSS.
 
 
 <a name='example'></a>
-## 6. Practical example
+## 6. Practical Example
 
 An example of various conventions.
 
@@ -398,7 +410,7 @@ large code bases.
 
 
 <a name='build-and-deployment'></a>
-## 8. Build and deployment
+## 8. Build & Deployment
 
 Projects should always attempt to include some generic means by which source
 can be linted, tested, compressed, and versioned in preparation for production
