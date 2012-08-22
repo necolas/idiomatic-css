@@ -121,7 +121,7 @@ Here are some code examples:
 
 /*
 This is a single paragraph comment, it has only two lines of text, but it could
-have more, like three, four, six, or event seven if you like writing.
+have more, like three, four, five, or event six if you like writing.
 */
 
 /* Basic comment. */
