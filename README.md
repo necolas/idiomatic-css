@@ -22,8 +22,7 @@ contribute.
 7. [Organization](#organization)
 8. [Build & Deployment](#build-and-deployment)
 
-[Acknowledgements](#acknowledgements), [Translations](#translations) &
-[Contributors](#contributors).
+[Translations](#translations) & [Acknowledgements](#acknowledgements)
 
 
 
@@ -49,7 +48,7 @@ be consistent in your use of whitespace. Use whitespace to improve
 readability.
 
 * _Never_ mix spaces and tabs for indentation.
-* Choose between soft indents (spaces) or real tabs. Stick to your choice
+* Choose between soft indents —spaces— or real tabs. Stick to your choice
   without fail. _Preference: spaces_.
 * If using spaces, choose the number of characters used per indentation level.
   _Preference: 2 spaces_.
@@ -58,7 +57,7 @@ Tip: configure your editor to “show invisibles”. This will allow you to
 eliminate end of line whitespace, eliminate unintended blank line whitespace,
 and avoid polluting commits.
 
-Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to
+Tip: use an [EditorConfig](http://editorconfig.org/) file —or equivalent— to
 help maintain the basic whitespace conventions that have been agreed for your
 code-base.
 
@@ -77,7 +76,7 @@ Comment style should be simple and consistent within a single code base.
 * Avoid end of line comments.
 * Keep line-length to a sensible maximum, e.g., 80 columns.
 * Make liberal use of comments to break CSS code into discrete sections.
-* Use “sentence case” comments and consistent text indentation.
+* Use “sentence case” —unless is a title section— comments and consistent text indentation.
 
 Tip: configure your editor to provide you with shortcuts to output agreed-upon
 comment patterns.
@@ -86,23 +85,22 @@ comment patterns.
 
 ```css
 /* ====================================================================== */
-/* ===== 1st Level Comment Block ======================================== */
+/* ===== 1st Section Title ============================================== */
 /* ====================================================================== */
 
 /* ============================================================ */
-/* ----- > 2nd Level Comment Block ---------------------------- */
+/* ----- > 2nd Section Title ---------------------------------- */
 /* ============================================================ */
 
 /* -------------------------------------------------- */
-/* ----- >> 3rd Level Comment Block ----------------- */
+/* ----- >> 3rd Section Title ----------------------- */
 /* -------------------------------------------------- */
 
 /* ---------------------------------------- */
-/* ----- >>> 4th Level Comment Block ------ */
+/* ----- >>> 4th Section Title ------------ */
 /* ---------------------------------------- */
 
 /*
-
 Long description first sentence starts here and continues on this line for a
 while finally concluding here at the end of this paragraph.
 
@@ -110,20 +108,20 @@ The long description is ideal for more detailed explanations and
 documentation. It can include example HTML, URLs, or any other information
 that is deemed necessary or useful.
 
-“<element>”: This is an element named “element”, e.g., “<body>”.
+Here are some code examples:
+* “<element>”: This is an element named “element”, e.g., “<body>”.
+* “#id”: This is an id named “id”, e.g., “#header”.
+* “.class”: This is a class named “class”, e.g., “.column-12”.
+* “:property”: This is a property named “property”, e.g., “:padding-top”.
+* “'value'”: This is a value, e.g., “'3.1416em'”.
+* “TODO”: This is a todo statement that describes an atomic task to be completed
+  at a later date. It wraps after 80 characters and following lines are
+  indented by 2 spaces, e.g., “TODO: Finish this style guide before 2022.”.
+*/
 
-“#id”: This is an id named “id”, e.g., “#header”.
-
-“.class”: This is a class named “class”, e.g., “.column-12”.
-
-“:property”: This is a property named “property”, e.g., “:padding-top”.
-
-“'value'”: This is a value, e.g., “'3.1416em'”.
-
-“TODO”: This is a todo statement that describes an atomic task to be completed
-at a later date. It wraps after 80 characters and following lines are
-indented by 2 spaces, e.g., “TODO: Finish this style guide before 2022.”.
-
+/*
+This is a single paragraph comment, it has only two lines of text, but it could
+have more, like three, four, six, or event seven if you like writing.
 */
 
 /* Basic comment. */
@@ -146,6 +144,7 @@ in useful diffs and blames.
 * Use lowercase and shorthand hex values _when possible_, e.g., `#fff`.
 * Use single or double quotes consistently. _Preference: single quotes_.
 * Quote attribute values in selectors, e.g., `input[type='checkbox']`.
+* Don’t use quotes in URL values, e.g., `url(images/logotype.png)`.
 * _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
 * Include a space after each comma in comma-separated property or function
   values.
@@ -173,43 +172,117 @@ in useful diffs and blames.
 <a name='declaration-order'></a>
 #### 4.1. Declaration Order
 
-Declarations should be ordered in accordance with a single principle. My
-preference is for structurally important properties (e.g. positioning and
-box-model) to be declared prior to all others.
+Declarations should be ordered in accordance with a single principle.
+There are three main ways: alphabetical, grouped by type or by length.
+The preference is to group by type. Here we offer a list of preference order,
+but you could do it in a more simpler way, declaring structurally important
+properties —e.g. positioning and box-model— before to all others.
+
+Note that in the bellow list, only are listed the short-hand declarations or
+just a name pattern followed by “-*”. The following declarations can be placed
+in any order, nevertheless, always use the same logic.
 
 ```css
 .selector {
-  /* Positioning */
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 
-  /* Display & Box Model */
-  display: inline-block;
-  overflow: hidden;
-  box-sizing: border-box;
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-  border: 10px solid #333;
-  margin: 10px;
+  /* Generated content */
+  content: value;
+  counter-*: value;
+  quotes: value;
 
-  /* Other */
-  background: #000;
-  color: #fff
-  font-family: sans-serif;
-  font-size: 16px;
-  text-align: right;
+  /* Dimensions, paddings, margins & box display */
+  width: value;
+  height: value;
+  min-*: value;
+  max-*: value;
+  padding-*: value;
+  margin-*: value;
+  display: value;
+  visibility: value;
+  clip: value;
+  overflow-*: value;
+  z-index: value;
+
+  /* Flexible box */
+  box-*: value;
+
+  /* Grid & columns */
+  grid-*: value;
+  column-*: value;
+  columns: value;
+
+  /* Position & float behavior */
+  position: value;
+  top: value;
+  right: value;
+  bottom: value;
+  left: value;
+  float: value;
+  clear: value;
+
+  /* Lists & tables */
+  list-*: value;
+  border-collapse: value;
+  border-spacing: value;
+  caption-side: value;
+  empty-cells: value;
+  table-layout: value;
+
+  /* User interface */
+  appearance: value;
+  box-sizing: value;
+  box-shadow: value;
+  icon: value;
+  nav-*: value;
+  resize: value;
+  cursor: value;
+  opacity: value;
+
+  /* Typography */
+  font-*: value;
+  text-*: value;
+  letter-spacing: value;
+  line-height: value;
+  white-space: value;
+  word-*: value;
+  direction: value;
+  color: value;
+
+  /* Animations, transitions & transformations */
+  animation-*: value;
+  rotation: value;
+  transform-*: value;
+  perspective-*: value;
+  backface-visibility: value;
+  transition-*: value;
+  rotation-*: value;
+
+  /* Background, borders, outline & box style */
+  background-*: value;
+  border-*: value;
+  outline-*: value;
+  opacity: value;
+  box-shadow: value;
+
+  /* Others */
+  color-profile: value;
+  page-*: value;
+
+  /* Appendix: vendor prefixes */
+  -webkit-*: value;
+  -khtml-*: value;
+  -epub-*: value;
+  -moz-*: value;
+  -ms-*: value;
+  -o-*: value;
+
 }
 ```
 
-Strict alphabetical ordering is also relatively popular, but the drawback is
-that it separates related properties. For example, position offsets are no
-longer grouped together and box-model properties can end up spread throughout a
-declaration block.
+Strict alphabetical ordering or bye length are also relatively popular, but the
+drawback is that separates related properties. For example, position offsets
+are no longer grouped together and box-model properties can end up spread
+throughout a declaration block.
 
 
 <a name='exceptions'></a>
@@ -228,15 +301,17 @@ before the closing brace.
 Long, comma-separated property values - such as collections of gradients or
 shadows - can be arranged across multiple lines in an effort to improve
 readability and produce more useful diffs. There are various formats that could
-be used; one example is shown below.
+be used; two examples are shown below.
 
 ```css
-.selector {
+.selector-1 {
   background-image:
     linear-gradient(#fff, #ccc),
     linear-gradient(#f3c, #4ec);
-  box-shadow:
-    1px 1px 1px #000,
+}
+
+.selector-2 {
+  box-shadow: 1px 1px 1px #000,
     2px 2px 1px 1px #ccc inset;
 }
 ```
@@ -248,11 +323,11 @@ Different CSS preprocessors have different features, functionality, and syntax.
 Your conventions should be extended to accommodate the particularities of any
 preprocessor in use. The following guidelines are in reference to Sass.
 
-* Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
+* Limit nesting to 1 level deep —or 2 if you are targeting a pseudo-class or
+  a pseudo-element with “&”—. Reassess any nesting more than 2 levels deep.
   This prevents overly specific CSS selectors.
-* Avoid large numbers of nested rules. Break them up when readability starts to
-  be affected. Preference to avoid nesting that spreads over more than 20
-  lines.
+* Avoid large numbers of nested rules. Break them up when readability starts
+  to be affected.
 * Always place `@extend` statements on the first lines of a declaration
   block.
 * Where possible, group `@include` statements at the top of a declaration
@@ -267,7 +342,7 @@ preprocessor in use. The following guidelines are in reference to Sass.
   @include clearfix();
   @include box-sizing(border-box);
   width: x-grid-unit(1);
-  // other declarations.
+  // Other declarations.
 }
 ```
 
@@ -397,7 +472,7 @@ Code organization is an important part of any CSS code base, and crucial for
 large code bases.
 
 * Logically separate distinct pieces of code.
-* Use separate files (concatenated by a build step) to help break up code for
+* Use separate files —concatenated by a build step— to help break up code for
   distinct components.
 * If using a preprocessor, abstract common code into variables for color,
   typography, etc.
@@ -411,15 +486,6 @@ Projects should always attempt to include some generic means by which source
 can be linted, tested, compressed, and versioned in preparation for production
 use. For this task, [grunt](https://github.com/cowboy/grunt) by Ben Alman is an
 excellent tool.
-
-
-
-<a name='acknowledgements'></a>
-## Acknowledgements
-
-Thanks to everyone who has contributed to
-[idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a source of
-inspiration, quotations, and guidelines.
 
 
 
@@ -440,5 +506,10 @@ inspiration, quotations, and guidelines.
 
 
 
-<a name='contributors'></a>
-## Contributors
+<a name='acknowledgements'></a>
+## Acknowledgements
+
+Thanks to everyone who has contributed to
+[idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a source of
+inspiration, quotations, and guidelines. Also thanks to the translators
+and contributors of this document.
