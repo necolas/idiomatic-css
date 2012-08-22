@@ -411,10 +411,10 @@ Example HTML:
 .grid {
   height: 100%;
   overflow: visible;
-  /* Prevent inline-block cells wrapping */
-  white-space: nowrap;
   /* Remove inter-cell whitespace */
   font-size: 0;
+  /* Prevent inline-block cells wrapping */
+    white-space: nowrap;
 }
 
 .cell {
