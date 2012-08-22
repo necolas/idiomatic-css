@@ -197,6 +197,7 @@ in any order, nevertheless, always use the same logic.
   max-*: value;
   padding-*: value;
   margin-*: value;
+  box-sizing: value;
   display: value;
   visibility: value;
   clip: value;
@@ -211,7 +212,7 @@ in any order, nevertheless, always use the same logic.
   column-*: value;
   columns: value;
 
-  /* Position & float behavior */
+  /* Position, float behavior & vertical align */
   position: value;
   top: value;
   right: value;
@@ -219,6 +220,7 @@ in any order, nevertheless, always use the same logic.
   left: value;
   float: value;
   clear: value;
+  vertical-align: value;
 
   /* Lists & tables */
   list-*: value;
@@ -230,7 +232,6 @@ in any order, nevertheless, always use the same logic.
 
   /* User interface */
   appearance: value;
-  box-sizing: value;
   box-shadow: value;
   icon: value;
   nav-*: value;
@@ -261,8 +262,6 @@ in any order, nevertheless, always use the same logic.
   background-*: value;
   border-*: value;
   outline-*: value;
-  opacity: value;
-  box-shadow: value;
 
   /* Others */
   color-profile: value;
@@ -410,8 +409,8 @@ Example HTML:
 */
 
 .grid {
-  overflow: visible;
   height: 100%;
+  overflow: visible;
   /* Prevent inline-block cells wrapping */
   white-space: nowrap;
   /* Remove inter-cell whitespace */
@@ -419,20 +418,21 @@ Example HTML:
 }
 
 .cell {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  box-sizing: border-box;
   width: 20%;
   height: 100%;
   /* Set the inter-cell spacing */
   padding: 0 10px;
-  border: 2px solid #333;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
   vertical-align: top;
-  /* Reset white-space */
-  white-space: normal;
   /* Reset font-size */
   font-size: 16px;
+  /* Reset white-space */
+    white-space: normal;
+  border: 2px solid #333;
+
 }
 
 /* Cell states */
