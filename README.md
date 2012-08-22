@@ -414,7 +414,7 @@ Example HTML:
   /* Remove inter-cell whitespace */
   font-size: 0;
   /* Prevent inline-block cells wrapping */
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .cell {
