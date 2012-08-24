@@ -2,7 +2,7 @@
 
 Tohle je příručka stylu (_style guide_) pro psaní CSS. Neberte ji jako nařizující, nechci jiným lidem vnucovat styl psaní kódu podle svých preferencí. Následující zásady ale silně podporují využívání existujících vzorů jež považuji za obvyklé a rozumné.
 
-Na dokumentu se pracuje a nové nápady jsou vždy vítány. Přispějte jimi prosím.
+Na dokumentu se pracuje a nové nápady vítám. Přispějte jimi prosím.
 
 
 [Idiomatic CSS anglicky](https://github.com/necolas/idiomatic-css/)
@@ -37,7 +37,7 @@ Na dokumentu se pracuje a nové nápady jsou vždy vítány. Přispějte jimi pr
 * V případě pochybností o dohodnutém stylu, použijte existující obecné vzory.
 
 
-<a name="whitespace"></a>
+<a id="whitespace"></a>
 ## 2. Bílá mezera
 
 V kódu vašeho projektu by měl existovat jen jediný styl užívání bílé mezery (_whitespace_). Zlepšujte s její pomocí čitelnost.
@@ -97,6 +97,7 @@ Tip: Nastavte si editor tak, abyste dohodnuté komentářové vzory měli vždy 
 /* Jednoduchy komentar */
 ```
 
+_(Pozn. překl. – Komentáře v kódu je lepší jednotně psát bez diakritiky. Hlavně proto, že velká část českých vývojářů píše kód pomocí anglické klávesnice.)_
 
 <a name="format"></a>
 ## 4. Formát
@@ -264,8 +265,6 @@ Pojmenovávání je těžké, ale velice důležité. Je to stěžejní část p
 <a name="example"></a>
 ## 6. Praktická ukázka
 
-An example of various conventions.
-
 ```css
 /* ==========================================================================
    Mrizkovy layout
@@ -346,7 +345,7 @@ Uspořádání (organizace větších celků) je důležitá vlastnost každé C
 <a name="build-and-deployment"></a>
 ## 8. Build a deploy
 
-Vždy byste se měli pokusit na projektu nasadit nějaké nástroje pomocí kterých může být kód projektu zkontrolován pomocí lint analýzy, zkomprimován a verzován během přípravy pro produkční použití. Pro tenhle účel je vynikajícím nástrojem [grunt](https://github.com/cowboy/grunt) Bena Almana.
+Určitě byste se měli pokusit na projektu nasadit nějaké nástroje pomocí kterých můžete kód projektu prověřit lint analýzou, zkomprimovat a verzovat během přípravy pro produkční použití. Pro tenhle účel existuje vynikající nástroj [grunt](https://github.com/cowboy/grunt) od Bena Almana.
 
 
 <a name="acknowledgements"></a>
