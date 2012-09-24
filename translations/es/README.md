@@ -10,11 +10,7 @@ contribuya.
 
 ## Traducciones
 
-* [Inglés](https://github.com/necolas/idiomatic-css/)
-* [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [Portugués](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
-* [Serbio](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
-
+* [Inglés (Original)](https://github.com/necolas/idiomatic-css/)
 
 ## Tabla de contenido
 
@@ -61,6 +57,10 @@ Consejo: configure su editor para que "muestre los caracteres invisibles". Esto 
 eliminar los espacios en blanco al final de las líneas, eliminar espacios en blanco
 de líneas en blanco y evitar commits con basura.
 
+Consejo: Utilice el editor [EditorConfig](http://editorconfig.org/) (o algún equivalente) 
+para ayudarse a mantener las convenciones básicas que han sido acordadas en su proyecto.
+
+
 <a name="comments"></a>
 ## 3. Comentarios
 
@@ -91,29 +91,24 @@ comunes.
    ========================================================================== */
 
 /*
- * Bloque de comentario de grupo.
- * Ideal para documentación y explicaciones de múltiples líneas.
+ * Pequeña descripción utilizando el formato de comentario Doxygen.
+ *
+ * La primer oración de una descripción larga comienza aquí y continúa en 
+ * esta linea durante un tiempo para finalmente terminar aquí al final de
+ * este párrafo.
+ *
+ * Las descripciones largas son ideales para explicaciones de mayor detalle
+ * y documentación. Pueden incluir ejemplos de HTML, URLs o cualquier otro
+ * tipo de información que es considerada necesaria o útil.
+ *
+ * @tag Esto es una etiqueta llamada 'tag'
+ * 
+ * @todo Esto es una declaración 'todo' ("a realizar") que describe una tarea
+ *   atómica (específica) a realizar posteriormente. Continua luego de 80 caracteres
+ *   por lo que las lineas consecutivas son indentadas con dos espacios adicionales.
  */
 
 /* Comentario básico */
-```
-
-#### Ejemplo de SCSS:
-
-```scss
-// ==========================================================================
-// Bloque de comentario de sección
-// ==========================================================================
-
-// Bloque de comentario de sub-sección
-// ==========================================================================
-
-//
-// Bloque de comentario de grupo.
-// Ideal para documentación y explicaciones de múltiples líneas.
-//
-
-// Comentario básico
 ```
 
 
@@ -124,48 +119,69 @@ El formato del código elegido debe asegurarse de que el código: es fácil de l
 es fácil de comentar claramente, minimiza las posibilidades de introducir errores
 accidentalmente, y facilita el hallazgo de diferencias y responsabilidades.
 
-1. Un selector discreto por línea en un conjunto de reglas con multi selectores.
-2. Un solo espacio antes de la llave de apertura en un conjunto de reglas.
-3. Una declaración por línea en un bloque de declaraciones.
-4. Un nivel de indentación para cada declaración.
-5. Un solo espacio luego de los dos puntos en una declaración.
-6. Siempre incluya un punto y coma al final de la línea de la última declaración
+* Utilice un selector discreto por línea en un conjunto de reglas con multi selectores.
+* Incluya un solo espacio antes de la llave de apertura en un conjunto de reglas.
+* Incluya una declaración por línea en un bloque de declaraciones.
+* Utilice un nivel de indentación para cada declaración.
+* Incluya un solo espacio luego de los dos puntos en una declaración.
+* Utilice minúsculas y valores hexadecimales abreviados, ejemplo `#aaa`.
+* Utilice comillas simples o dobles pero de forma consistente. Se prefiere la utilización de comillas dobles, ejemplo `content: ""`.
+* Utilice comillas en los valores de los atributos de los selectores, ejemplo `input[type="checkbox"]`.
+* _Siempre que pueda_, evite especificar valores de 0, por ejemplo `margin: 0`.
+* Incluya un espacio luego de cada coma en las propiedades separadas por comas o en los valores de las funciones.
+* Siempre incluya un punto y coma al final de la línea de la última declaración
 en un bloque de declaraciones.
-7. Coloque la llave de cierre de un conjunto de reglas en la misma columna que
+* Coloque la llave de cierre de un conjunto de reglas en la misma columna que
 el primer carácter del conjunto.
-8. Separe cada conjunto de reglas con una línea en blanco.
+* Separe cada conjunto de reglas con una línea en blanco.
 
 ```css
 .selector-1,
 .selector-2,
-.selector-3 {
+.selector-3[type="text"] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
+    font-family: helvetica, arial, sans-serif;
     color: #333;
     background: #fff;
+    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
 }
 ```
 
 #### Orden de las declaraciones
 
 Las declaraciones deben ser ordenadas con un único principio. Mi preferencia
-es que las propiedades relacionadas sean agrupadas conjuntamente y las
-propiedades de importancia estructural (por ejemplo, de posición y box-model)
-sean declaradas antes que las de tipografía, fondo y de color.
+es que las propiedades relacionadas con la estructura (por ejemplo, de posición y box-model)
+sean declaradas antes que las demás.
 
 ```css
 .selector {
-    position: relative;
-    display: block;
-    width: 50%;
+    /* Posicionamiento */
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Display & Box Model */
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100px;
     height: 100px;
     padding: 10px;
-    border: 0;
+    border: 10px solid #333;
     margin: 10px;
-    color: #fff
+
+    /* Otras */
     background: #000;
+    color: #fff
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: right;
 }
 ```
 
@@ -193,23 +209,14 @@ Hay varios formatos que pueden ser utilizados: uno, por ejemplo, es mostrado má
 
 ```css
 .selector {
-    box-shadow:
-        1px 1px 1px #000,
-        2px 2px 1px 1px #ccc inset;
     background-image:
         linear-gradient(#fff, #ccc),
         linear-gradient(#f3c, #4ec);
+    box-shadow:
+        1px 1px 1px #000,
+        2px 2px 1px 1px #ccc inset;
 }
 ```
-
-#### Miscelánea
-
-* Utilice valores hexadecimales en minúscula, por ejemplo, `#aaa`.
-* Utilice comillas simples o dobles de forma consistente. Preferentemente utilice
-comillas dobles, por ejemplo, `content: ""`.
-* Siempre utilice las comillas para valores de atributos en los selectores, por ejemplo,
-`input[type="checkout"]`.
-* _Siempre que pueda_ evite especificar valores de cero, por ejemplo, `margin: 0`.
 
 ### Preprocesadores: consideraciones a formatos adicionales
 
@@ -236,7 +243,7 @@ de cada preprocesador en uso. La siguiente guía está referida a Sass.
     @include clearfix();
     @include box-sizing(border-box);
     width: x-grid-unit(1);
-    // otras declaraciones
+    // other declarations
 }
 ```
 
@@ -244,11 +251,12 @@ de cada preprocesador en uso. La siguiente guía está referida a Sass.
 <a name="naming"></a>
 ## 5. Nomenclatura
 
-Usted no es un compilador ni un compresor de código humano, así que no intente serlo.
+La nomenclatura es difícil, pero muy importante. Es una parte crucial del proceso de desarrollo y mantenimiento del proyecto, y le asegura a usted tener una relativamente escalable interfaz entre su código HTML y CSS.
 
-Utilice nombres claros y significativos para las clases HTML. Elija patrones
-de nombres consistentes y comprensibles que tengan sentido tanto para un archivo
-HTML como para uno CSS. 
+* Evite la _sistemática_ utilización de abreviaciones en los nombres de las clases. No haga las cosas difícil de entender.
+* Utilice nombres claros y meditados nombres para las _clases HTML_.
+* Elija un comprensible y consistente patrón de nombres que tengan sentido tanto para los archivos HTML como para los archivos CSS.
+* Los selectores para los componentes deben utilizar nombres de clases; evite la utilización de etiquetas genéricas e ids únicos.
 
 
 ```css
@@ -359,7 +367,7 @@ la tipografía, etc.
 ## 8. Construcción y distribución
 
 Los proyectos deben siempre intentar incluir algunos medios genéricos para
-que el código puede ser verificado, probado, comprimido y versionado para luego
+que el código pueda ser verificado, probado, comprimido y versionado para luego
 ser utilizado en producción. Para esta tarea, [grunt](https://github.com/cowboy/grunt),
 de Ben Alman es una excelente herramienta.
 
