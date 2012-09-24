@@ -1,4 +1,4 @@
-# Principi pisanja konzistentnog, itiomatskog CSS-a
+# Principi pisanja konzistentnog, idiomatskog CSS-a
 
 Sledeći dokument ocrtava razumne stilove za CSS razvoj. Nije namenjen da bude
 perskriptivan i ja ne želim da namećem svoje preferencije stilova na kod drugih
@@ -8,12 +8,7 @@ zajedničkih, razumnih šema.
 Ovo je "živi" dokument i nove ideje su uvek dobrodošle. Molimo Vas da
 doprinesete.
 
-
-## Prevodi
-
-* [Engleski](https://github.com/necolas/idiomatic-css)
-* [Portuguese](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
-* [Italijanski](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
+[Idiomatski CSS na Engleskom (Original)](https://github.com/necolas/idiomatic-css)
 
 
 ## Sadržaj
@@ -35,27 +30,26 @@ doprinesete.
 
 > "Deo zaduženja dobrog stjuarda za uspešan projekat je shvatanje da pisanje
 > koda za samog sebe je loša ideja™. Ako hiljade ljudi koristi tvoj kod, onda
-> piši tvj kod sa maksimalnom jasnoćom, a ne sa svojim personalnim
+> piši tvoj kod sa maksimalnom jasnoćom, a ne sa svojim personalnim
 > preferencijama o tome kako da se napraviš pametan u okviru specifikacije." -
 > Idan Gazit
 
 * Sav kod u bilo kom projektu bi trebao da izgleda kao da ga je pisala jedna
   osoba, bez obzira koliko je ljudi doprinelo razvoju projekta.
-* Striktrno primenjujte dogovoreni stil.
-* Strictly enforce the agreed upon style.
+* Striktno primenjujte dogovoreni stil.
 * Ako ste u sumnji, koristite postojeće, zajedničke šablone.
 
 
 <a name="whitespace"></a>
 ## 2. Znaci za razmake
 
-Samo jedan stil bi trebao da postojiu celom vašem projektu. Uvek budite
+Samo jedan stil bi trebao da postoji u celom vašem projektu. Uvek budite
 konzistentni u upotrebi razmaka. Koristite razmake da poboljšate čitljivost.
 
 * _Nikada_ nemojte mešati space karakter i tab za indentaciju.
 * Izaberite između mekih indentacija(space karakteri) i pravih tabova. Držite se
 vašeg izbora bez obzira na sve. (Preferencija: space karakteri)
-* Ako koristite space karaktere, izaberite broj karaktera za indetacioni nivo.
+* Ako koristite space karaktere, izaberite broj karaktera za indentacioni nivo.
 (Preferencija: 4 space karaktera)
 
 Savet: konfigurišite vaš editor da prikazuje "nevidljive karaktere". Ovo će vam
@@ -75,10 +69,10 @@ Stil komentara treba da bude jednostavan i konzistentan u celom projektu.
 
 * Postavljajte komentare na novu liniju iznad dela koda koji hoćete da
 iskomentarišete.
-* Izbegavajte kometare na kraju linije koda.
+* Izbegavajte komentare na kraju linije koda.
 * Držite dužinu linije na razumnom maksimumu, npr 80 kolona.
 * Slobodno koristite komentare da "razbijete" CSS kod na diskretne sekcije.
-* Koristite kometare dužine jedne rečenice i konzistentno indentovanje teksta.
+* Koristite komentare dužine jedne rečenice i konzistentno indentovanje teksta.
 
 
 Savet: konfigurišite vaš editor da vam omogući prečice za ispisivanje unapred
@@ -129,7 +123,7 @@ da se jasno komentariše; minimizuje šanse da se slučajno uvedu greške; i
 rezultira korisnim `diff` i `blame` komandama u vašem sistemu za kontrolu
 verzija.
 
-1. Jedan selktor na jednu liniju kada koristite više selektora u jednom setu
+1. Jedan selektor na jednu liniju kada koristite više selektora u jednom setu
    pravila.
 2. Jedan space karakter pre otvarajuće zagrade za set pravila.
 3. Jedna deklaracija na jednu liniju unutar seta pravila.
@@ -157,7 +151,7 @@ verzija.
 #### Redosled deklaracija
 
 Deklaracije bi trebale biti poređane u skladu sa jednim principom. Moje
-preferencije su da slična svojstva budu grupisana zajedno i da strukturno bitne
+preferencije su da slična svojstva budu grupisana zajedno i da strukturno bitna
 svojstva (npr pozicioniranje i box-model) budu deklarisana pre svojstava
 za tipografiju, pozadine i boje.
 
@@ -191,7 +185,7 @@ postavlja posle otvarajuće i pre zatvarajuće zagrade.
 .selektor-3 { width: 30%; }
 ```
 
-Dugačka svojstva koja su razdvojena zarezon, kao što su na primer kolekcija
+Dugačka svojstva koja su razdvojena zarezom, kao što su na primer kolekcija
 gradijenta ili senka, mogu biti raspoređena preko više linija sve sa ciljem
 poboljšanja čitljivosti, a takođe da može da proizvede bolji `diff`. Postoje
 razni formati koji bi mogli biti korišćeni, jedan primer je prikazan ispod.
@@ -213,13 +207,13 @@ razni formati koji bi mogli biti korišćeni, jedan primer je prikazan ispod.
 * Koristite jedan ili dupli apostrof konzistentno. Preferencija je da se
   koriste dupli apostrofi, npr `content: ""`.
 * Vrednosti atributa u selektorima uvek stavljajte između apostrofa, npr
-  `input[type="checkout"]`.
+  `input[type="checkbox"]`.
 * _Gde je moguće_ izbegavajte specifiranje jedinica za nula vrednosti, npr
   `margin: 0`.
 
 ### Preprocesori: dodatna razmatranja za formatiranje
 
-Različiti CSS preprocesori imaju drugačije karakteristika, funkcionalnosti i
+Različiti CSS preprocesori imaju drugačije karakteristike, funkcionalnosti i
 sintaksu. Vaše konvencije bi trebale biti proširene da prime specifičnosti
 preprocesora u upotrebi. Sledeće smernice su napomene za Sass.
 
@@ -227,7 +221,7 @@ preprocesora u upotrebi. Sledeće smernice su napomene za Sass.
   dublja od 2 nivoa. Ovo sprečava previše specifične CSS selektore.
 * Izbegavajte preveliki boj ugneždenih pravila.  Razbijte ih na manje delove
   kada to počne da utiče na čitljivost. Preferencije su da izbegavate gnežđenja
-  koja se rasporostiru na više od 20 linija.
+  koja se rasprostiru na više od 20 linija.
 * Uvek postavite `@extend` izjave na prvu liniju deklarativnog bloka.
 * Gde je moguće, grupišite `@include` izjave na vrhu deklarativnog bloka, nakon
   svih `@extend` izjava.
@@ -252,8 +246,8 @@ preprocesora u upotrebi. Sledeće smernice su napomene za Sass.
 
 Ti nisi ljudski kompajler/kompresor za kod, tako da ne pokušavaj da budeš to.
 
-Koristi jasna i pažljivo izabrana imena za HTML klase. Izaberi razumljiva i
-konzistentne šeme za imenovanje koja imaju smisla za korišćenje i u HTML
+Koristi jasna i pažljivo izabrana imena za HTML klase. Izaberi razumljive i
+konzistentne šeme za imenovanje koje imaju smisla za korišćenje i u HTML
 fajlovima i u CSS fajlovima.
 
 ```css
@@ -282,7 +276,7 @@ fajlovima i u CSS fajlovima.
 <a name="practical-example"></a>
 ## 6. Praktični primeri
 
-Primeri raznih konvecija.
+Primeri raznih konvencija.
 
 ```css
 /* ==========================================================================
@@ -351,13 +345,13 @@ cell.is-animating {
 <a name="organization"></a>
 ## 7. Organizacija
 
-Organizacija koda je važan deo za svaki bazu CSS koda i krucijalan za velike
+Organizacija koda je važan deo za svaku bazu CSS koda i krucijalan za velike
 baze koda.
 
 * Logična separacija posebnih delova koda.
 * Koristite odvojene fajlove(spojene u delu izgradnje za produkciju) da vam
   pomogne da razbijete kod u više posebnih komponenti.
-* Ako koristite preprocesor, abstraktujte uobičaje delove koda u promenjvie,
+* Ako koristite preprocesor, abstraktujte uobičajene delove koda u promenljive,
   npr boje, tipografiju, itd.
 
 

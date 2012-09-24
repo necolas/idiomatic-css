@@ -8,12 +8,7 @@ fortemente o uso de existentes, comuns e sensatos padrões.
 Esse é um documento vivo e novas ideias são sempre bem-vindas. Por favor
 contribua.
 
-
-## Traduções
-
-* [Inglês](https://github.com/necolas/idiomatic-css/)
-* [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [Sérvio](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
+[Idiomatic CSS em Inglês (Original)](https://github.com/necolas/idiomatic-css)
 
 
 ## Índice
@@ -213,8 +208,8 @@ vários formatos que poderiam ser usados; um exemplo é mostrado abaixo.
 * Use aspas simples ou duplas de forma consistente. Preferência por aspas
   duplas, por exemplo: `content: ""`.
 * Sempre coloque aspas em valores de atributos nos seletores, por exemplo:
-  `input[type="checkout"]`.
-* _Onde perimitido_, evite especificar unidades para valores-zero, por exemplo:
+  `input[type="checkbox"]`.
+* _Onde permitido_, evite especificar unidades para valores-zero, por exemplo:
   `margin: 0`.
 
 ### Pré-processadores: considerações de formatação adicionais

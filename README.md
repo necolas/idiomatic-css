@@ -11,9 +11,18 @@ contribute.
 
 ## Translations
 
-* [Italian](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [Portuguese](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
-* [Serbian](https://github.com/necolas/idiomatic-css/tree/master/translations/sr)
+* [Deutsch](https://github.com/necolas/idiomatic-css/tree/master/translations/de-DE)
+* [Français](https://github.com/necolas/idiomatic-css/tree/master/translations/fr-FR)
+* [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
+* [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
+* [한국어](https://github.com/necolas/idiomatic-css/tree/master/translations/ko-KR)
+* [Nederlands](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)
+* [Polski](https://github.com/necolas/idiomatic-css/tree/master/translations/pl-PL)
+* [Português (Brasil)](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
+* [Русский](https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU)
+* [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr-SR)
+* [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
+* [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
 
 
 ## Table of contents
@@ -38,17 +47,19 @@ contribute.
 > your code, then write your code for maximum clarity, not your personal
 > preference of how to get clever within the spec." - Idan Gazit
 
+* You are not a human code compiler/compressor, so don't try to be one.
 * All code in any code-base should look like a single person typed it, no
   matter how many people contributed.
 * Strictly enforce the agreed upon style.
-* If in doubt use existing, common patterns.
+* If in doubt when deciding upon a style, use existing, common patterns.
 
 
 <a name="whitespace"></a>
 ## 2. Whitespace
 
-Only one style should exist across the entire source of your project. Always be
-consistent in your use of whitespace. Use whitespace to improve readability.
+Only one style should exist across the entire source of your code-base. Always
+be consistent in your use of whitespace. Use whitespace to improve
+readability.
 
 * _Never_ mix spaces and tabs for indentation.
 * Choose between soft indents (spaces) or real tabs. Stick to your choice
@@ -59,6 +70,10 @@ consistent in your use of whitespace. Use whitespace to improve readability.
 Tip: configure your editor to "show invisibles". This will allow you to
 eliminate end of line whitespace, eliminate unintended blank line whitespace,
 and avoid polluting commits.
+
+Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to
+help maintain the basic whitespace conventions that have been agreed for your
+code-base.
 
 
 <a name="comments"></a>
@@ -80,7 +95,7 @@ Comment style should be simple and consistent within a single code base.
 Tip: configure your editor to provide you with shortcuts to output agreed-upon
 comment patterns.
 
-#### CSS example:
+#### Example:
 
 ```css
 /* ==========================================================================
@@ -90,30 +105,24 @@ comment patterns.
 /* Sub-section comment block
    ========================================================================== */
 
-/*
- * Group comment block.
- * Ideal for multi-line explanations and documentation.
+/**
+ * Short description using Doxygen-style comment format
+ *
+ * Long description first sentence starts here and continues on this line for a
+ * while finally concluding here at the end of this paragraph.
+ *
+ * The long description is ideal for more detailed explanations and
+ * documentation. It can include example HTML, URLs, or any other information
+ * that is deemed necessary or useful.
+ *
+ * @tag This is a tag named 'tag'
+ *
+ * @todo This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
  */
 
 /* Basic comment */
-```
-
-#### SCSS example:
-
-```scss
-// ==========================================================================
-// Section comment block
-// ==========================================================================
-
-// Sub-section comment block
-// ==========================================================================
-
-//
-// Group comment block
-// Ideal for multi-line explanations and documentation.
-//
-
-// Basic comment
 ```
 
 
@@ -124,55 +133,78 @@ The chosen code format must ensure that code is: easy to read; easy to clearly
 comment; minimizes the chance of accidentally introducing errors; and results
 in useful diffs and blames.
 
-1. One discrete selector per line in multi-selector rulesets.
-2. A single space before the opening brace of a ruleset.
-3. One declaration per line in a declaration block.
-4. One level of indentation for each declaration.
-5. A single space after the colon of a declaration.
-6. Always include a semi-colon at the end of the last declaration in a
-   declaration block.
-7. Place the closing brace of a ruleset in the same column as the first
-   character of the ruleset.
-8. Separate each ruleset by a blank line.
+* Use one discrete selector per line in multi-selector rulesets.
+* Include a single space before the opening brace of a ruleset.
+* Include one declaration per line in a declaration block.
+* Use one level of indentation for each declaration.
+* Include single space after the colon of a declaration.
+* Use lowercase and shorthand hex values, e.g., `#aaa`.
+* Use single or double quotes consistently. Preference is for double quotes,
+  e.g., `content: ""`.
+* Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
+* _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
+* Include a space after each comma in comma-separated property or function
+  values.
+* Include a semi-colon at the end of the last declaration in a declaration
+  block.
+* Place the closing brace of a ruleset in the same column as the first
+  character of the ruleset.
+* Separate each ruleset by a blank line.
 
 ```css
 .selector-1,
 .selector-2,
-.selector-3 {
+.selector-3[type="text"] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
+    font-family: helvetica, arial, sans-serif;
     color: #333;
     background: #fff;
+    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
 }
 ```
 
 #### Declaration order
 
 Declarations should be ordered in accordance with a single principle. My
-preference is for related properties to be grouped together and for
-structurally important properties (e.g. positioning and box-model) to be
-declared prior to typographic, background, and color properties.
+preference is for structurally important properties (e.g. positioning and
+box-model) to be declared prior to all others.
 
 ```css
 .selector {
-    position: relative;
-    display: block;
-    width: 50%;
+    /* Positioning */
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Display & Box Model */
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100px;
     height: 100px;
     padding: 10px;
-    border: 0;
+    border: 10px solid #333;
     margin: 10px;
-    color: #fff
+
+    /* Other */
     background: #000;
+    color: #fff
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: right;
 }
 ```
 
-Alphabetical ordering is also popular, but the drawback is that it separates
-related properties. For example, position offsets are no longer grouped
-together and box-model properties can end up spread throughout a declaration
-block.
+Strict alphabetical ordering is also relatively popular, but the drawback is
+that it separates related properties. For example, position offsets are no
+longer grouped together and box-model properties can end up spread throughout a
+declaration block.
 
 #### Exceptions and slight deviations
 
@@ -186,29 +218,21 @@ before the closing brace.
 .selector-3 { width: 30%; }
 ```
 
-Long, comma separated property values - such as collections of gradients or
+Long, comma-separated property values - such as collections of gradients or
 shadows - can be arranged across multiple lines in an effort to improve
 readability and produce more useful diffs. There are various formats that could
 be used; one example is shown below.
 
 ```css
 .selector {
-    box-shadow:
-        1px 1px 1px #000,
-        2px 2px 1px 1px #ccc inset;
     background-image:
         linear-gradient(#fff, #ccc),
         linear-gradient(#f3c, #4ec);
+    box-shadow:
+        1px 1px 1px #000,
+        2px 2px 1px 1px #ccc inset;
 }
 ```
-
-#### Misc
-
-* Use lowercase hex values, e.g., `#aaa`.
-* Use single or double quotes consistently. Preference is for double quotes,
-  e.g., `content: ""`.
-* Always quote attribute values in selectors, e.g., `input[type="checkout"]`.
-* _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
 
 ### Preprocessors: additional format considerations
 
@@ -243,11 +267,17 @@ preprocessor in use. The following guidelines are in reference to Sass.
 <a name="naming"></a>
 ## 5. Naming
 
-You are not a human code compiler/compressor, so don't try to be one.
+Naming is hard, but very important. It's a crucial part of the process of
+developing a maintainable code base, and ensuring that you have a relatively
+scalable interface between your HTML and CSS.
 
-Use clear and thoughtful names for HTML classes. Pick an understandable and
-consistent naming pattern that makes sense both within HTML files and CSS
-files.
+* Avoid _systematic_ use of abbreviated class names. Don't make things
+  difficult to understand.
+* Use clear, thoughtful, and appropriate names for _HTML classes_.
+* Pick an understandable and consistent naming pattern that makes sense both
+  within HTML files and CSS files.
+* Selectors for components should uses class names; avoid the use of generic
+  tags and unique ids.
 
 ```css
 /* Example of code with bad names */
@@ -282,7 +312,7 @@ An example of various conventions.
    Grid layout
    ========================================================================== */
 
-/*
+/**
  * Example HTML:
  *
  * <div class="grid">
@@ -301,9 +331,10 @@ An example of various conventions.
 }
 
 .cell {
-    box-sizing: border-box;
     position: relative;
+    display: inline-block;
     overflow: hidden;
+    box-sizing: border-box;
     width: 20%;
     height: 100%;
     /* Set the inter-cell spacing */
