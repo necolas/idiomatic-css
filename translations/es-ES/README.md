@@ -8,9 +8,7 @@ a que se utilicen los patrones existentes, que son de sentido común.
 Este es un documento vivo y nuevas ideas son siempre bienvenidas. Por favor
 contribuya.
 
-## Traducciones
-
-* [Inglés (Original)](https://github.com/necolas/idiomatic-css/)
+[CSS idiomático en inglés (Original)](https://github.com/necolas/idiomatic-css/)
 
 ## Tabla de contenido
 
