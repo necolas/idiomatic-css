@@ -179,7 +179,7 @@ sépare les propriétés liées. Par exemple, les décalages de positionnement n
 sont plus regroupés ensemble et les propriétés du modèle de boîte se retrouvent
 éparpillées dans le bloc de déclaration.
 
-#### Exceptions et légèrs écarts
+#### Exceptions et légers écarts
 
 De gros blocs de déclarations uniques peuvent utiliser un format légèrement
 différent, regroupées sur une seule ligne. Dans ce cas, il faut insérer un
