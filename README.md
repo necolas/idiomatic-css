@@ -39,6 +39,7 @@ contribute.
 8. [Build and deployment](#build-and-deployment)
 
 [Acknowledgements](#acknowledgements)
+[License](#license)
 
 
 <a name="general-principles"></a>
@@ -402,3 +403,11 @@ excellent tool.
 Thanks to everyone who has contributed to
 [idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a source of
 inspiration, quotations, and guidelines.
+
+
+<a name="license"></a>
+## License
+
+_Principles of writing consistent, idiomatic CSS_ by Nicolas Gallagher is licensed under the [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/). This applies to all documents and translations in this repository.
+
+Based on a work at [github.com/necolas/idiomatic-css](https://github.com/necolas/idiomatic-css).
