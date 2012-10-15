@@ -9,24 +9,6 @@ This is a living document and new ideas are always welcome. Please
 contribute.
 
 
-## Translations
-
-* [Česky](https://github.com/necolas/idiomatic-css/tree/master/translations/cs-CZ)
-* [Dansk](https://github.com/necolas/idiomatic-css/tree/master/translations/da-DK)
-* [Deutsch](https://github.com/necolas/idiomatic-css/tree/master/translations/de-DE)
-* [Français](https://github.com/necolas/idiomatic-css/tree/master/translations/fr-FR)
-* [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
-* [한국어](https://github.com/necolas/idiomatic-css/tree/master/translations/ko-KR)
-* [Nederlands](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)
-* [Polski](https://github.com/necolas/idiomatic-css/tree/master/translations/pl-PL)
-* [Português (Brasil)](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
-* [Русский](https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU)
-* [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr-SR)
-* [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
-* [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
-
-
 ## Table of contents
 
 1. [General principles](#general-principles)
@@ -39,6 +21,7 @@ contribute.
 8. [Build and deployment](#build-and-deployment)
 
 [Acknowledgements](#acknowledgements)
+
 [License](#license)
 
 
@@ -397,12 +380,30 @@ use. For this task, [grunt](https://github.com/cowboy/grunt) by Ben Alman is an
 excellent tool.
 
 
+## Translations
+
+* [Česky](https://github.com/necolas/idiomatic-css/tree/master/translations/cs-CZ)
+* [Dansk](https://github.com/necolas/idiomatic-css/tree/master/translations/da-DK)
+* [Deutsch](https://github.com/necolas/idiomatic-css/tree/master/translations/de-DE)
+* [Français](https://github.com/necolas/idiomatic-css/tree/master/translations/fr-FR)
+* [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
+* [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
+* [한국어](https://github.com/necolas/idiomatic-css/tree/master/translations/ko-KR)
+* [Nederlands](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)
+* [Polski](https://github.com/necolas/idiomatic-css/tree/master/translations/pl-PL)
+* [Português (Brasil)](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
+* [Русский](https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU)
+* [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr-SR)
+* [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
+* [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
+
+
 <a name="acknowledgements"></a>
 ## Acknowledgements
 
-Thanks to everyone who has contributed to
-[idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a source of
-inspiration, quotations, and guidelines.
+Thanks to everyone who has provided translations and to all those who
+contributed to [idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a
+source of inspiration, quotations, and guidelines.
 
 
 <a name="license"></a>
