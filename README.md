@@ -15,10 +15,7 @@ contribute.
 2. [Whitespace](#whitespace)
 3. [Comments](#comments)
 4. [Format](#format)
-5. [Naming](#naming)
-6. [Practical example](#example)
-7. [Organization](#organization)
-8. [Build and deployment](#build-and-deployment)
+5. [Practical example](#example)
 
 [Acknowledgements](#acknowledgements)
 
@@ -250,46 +247,8 @@ preprocessor in use. The following guidelines are in reference to Sass.
 ```
 
 
-<a name="naming"></a>
-## 5. Naming
-
-Naming is hard, but very important. It's a crucial part of the process of
-developing a maintainable code base, and ensuring that you have a relatively
-scalable interface between your HTML and CSS.
-
-* Avoid _systematic_ use of abbreviated class names. Don't make things
-  difficult to understand.
-* Use clear, thoughtful, and appropriate names for _HTML classes_.
-* Pick an understandable and consistent naming pattern that makes sense both
-  within HTML files and CSS files.
-* Selectors for components should uses class names; avoid the use of generic
-  tags and unique ids.
-
-```css
-/* Example of code with bad names */
-
-.s-scr {
-    overflow: auto;
-}
-
-.cb {
-    background: #000;
-}
-
-/* Example of code with better names */
-
-.is-scrollable {
-    overflow: auto;
-}
-
-.column-body {
-    background: #000;
-}
-```
-
-
 <a name="example"></a>
-## 6. Practical example
+## 5. Practical example
 
 An example of various conventions.
 
@@ -358,28 +317,6 @@ An example of various conventions.
 ```
 
 
-<a name="organization"></a>
-## 7. Organization
-
-Code organization is an important part of any CSS code base, and crucial for
-large code bases.
-
-* Logically separate distinct pieces of code.
-* Use separate files (concatenated by a build step) to help break up code for
-  distinct components.
-* If using a preprocessor, abstract common code into variables for color,
-  typography, etc.
-
-
-<a name="build-and-deployment"></a>
-## 8. Build and deployment
-
-Projects should always attempt to include some generic means by which source
-can be linted, tested, compressed, and versioned in preparation for production
-use. For this task, [grunt](https://github.com/cowboy/grunt) by Ben Alman is an
-excellent tool.
-
-
 ## Translations
 
 * [Česky](https://github.com/necolas/idiomatic-css/tree/master/translations/cs-CZ)
@@ -410,6 +347,10 @@ source of inspiration, quotations, and guidelines.
 <a name="license"></a>
 ## License
 
-_Principles of writing consistent, idiomatic CSS_ by Nicolas Gallagher is licensed under the [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/). This applies to all documents and translations in this repository.
+_Principles of writing consistent, idiomatic CSS_ by Nicolas Gallagher is
+licensed under the [Creative Commons Attribution 3.0 Unported
+License](http://creativecommons.org/licenses/by/3.0/). This applies to all
+documents and translations in this repository.
 
-Based on a work at [github.com/necolas/idiomatic-css](https://github.com/necolas/idiomatic-css).
+Based on a work at
+[github.com/necolas/idiomatic-css](https://github.com/necolas/idiomatic-css).
