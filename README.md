@@ -76,7 +76,7 @@ Comment style should be simple and consistent within a single code base.
 Tip: configure your editor to provide you with shortcuts to output agreed-upon
 comment patterns.
 
-#### Example:
+Example:
 
 ```css
 /* ==========================================================================
@@ -144,6 +144,11 @@ in useful diffs and blames.
     color: #333;
     background: #fff;
     background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+}
+
+.selector-a,
+.selector-b {
+  padding: 10px;
 }
 ```
 
@@ -257,29 +262,43 @@ An example of various conventions.
    ========================================================================== */
 
 /**
+ * Column layout with horizontal scroll.
+ *
+ * This creates a single row of full-height, non-wrapping columns that can
+ * be browsed horizontally within their parent.
+ *
  * Example HTML:
  *
  * <div class="grid">
- *     <div class="cell cell-5"></div>
- *     <div class="cell cell-5"></div>
+ *     <div class="cell cell-3"></div>
+ *     <div class="cell cell-3"></div>
+ *     <div class="cell cell-3"></div>
  * </div>
  */
 
+/**
+ * Grid container
+ * Must only contain `.cell` children.
+ */
+
 .grid {
-    overflow: visible;
     height: 100%;
-    /* Prevent inline-block cells wrapping */
-    white-space: nowrap;
     /* Remove inter-cell whitespace */
     font-size: 0;
+    /* Prevent inline-block cells wrapping */
+    white-space: nowrap;
 }
+
+/**
+ * Grid cells
+ * No explicit width by default. Extend with `.cell-n` classes.
+ */
 
 .cell {
     position: relative;
     display: inline-block;
     overflow: hidden;
     box-sizing: border-box;
-    width: 20%;
     height: 100%;
     /* Set the inter-cell spacing */
     padding: 0 10px;
