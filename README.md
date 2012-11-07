@@ -1,9 +1,8 @@
 # Principles of writing consistent, idiomatic CSS
 
 The following document outlines a reasonable style guide for CSS development.
-It is not meant to be prescriptive and I do not wish to impose my style
-preferences on other people's code. However, these guidelines do strongly
-encourage the use of existing, common, sensible patterns.
+These guidelines strongly encourage the use of existing, common, sensible
+patterns. They should be adapted as needed to create your own style guide.
 
 This is a living document and new ideas are always welcome. Please
 contribute.
@@ -70,7 +69,6 @@ code.
 Comment style should be simple and consistent within a single code base.
 
 * Place comments on a new line above their subject.
-* Avoid end of line comments.
 * Keep line-length to a sensible maximum, e.g., 80 columns.
 * Make liberal use of comments to break CSS code into discrete sections.
 * Use "sentence case" comments and consistent text indentation.
@@ -91,8 +89,8 @@ comment patterns.
 /**
  * Short description using Doxygen-style comment format
  *
- * Long description first sentence starts here and continues on this line for a
- * while finally concluding here at the end of this paragraph.
+ * The first sentence of the long description starts here and continues on this
+ * line for a while finally concluding here at the end of this paragraph.
  *
  * The long description is ideal for more detailed explanations and
  * documentation. It can include example HTML, URLs, or any other information
@@ -151,9 +149,10 @@ in useful diffs and blames.
 
 #### Declaration order
 
-Declarations should be ordered in accordance with a single principle. My
-preference is for structurally important properties (e.g. positioning and
-box-model) to be declared prior to all others.
+If declarations are to be consistently ordered, it should be in accordance with
+a single, simple principle. My preference is for structurally important
+properties (e.g. positioning and box-model) to be declared prior to all
+others.
 
 ```css
 .selector {
