@@ -148,7 +148,7 @@ in useful diffs and blames.
 
 .selector-a,
 .selector-b {
-  padding: 10px;
+    padding: 10px;
 }
 ```
 
