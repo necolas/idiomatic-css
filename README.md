@@ -8,11 +8,6 @@ This is a living document and new ideas are always welcome. Please
 contribute.
 
 
-## Translations
-
-* [Italian](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-
-
 ## Table of contents
 
 1. [General principles](#general-principles)
@@ -186,7 +181,7 @@ others.
 
     /* Other */
     background: #000;
-    color: #fff
+    color: #fff;
     font-family: sans-serif;
     font-size: 16px;
     text-align: right;
