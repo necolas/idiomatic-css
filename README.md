@@ -181,7 +181,7 @@ others.
 
     /* Other */
     background: #000;
-    color: #fff
+    color: #fff;
     font-family: sans-serif;
     font-size: 16px;
     text-align: right;
