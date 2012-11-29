@@ -32,7 +32,7 @@ contribute.
 * You are not a human code compiler/compressor, so don't try to be one.
 * All code in any code-base should look like a single person typed it, no
   matter how many people contributed.
-* Strictly enforce the agreed upon style.
+* Strictly enforce the agreed-upon style.
 * If in doubt when deciding upon a style, use existing, common patterns.
 
 
@@ -50,7 +50,7 @@ readability.
   (Preference: 4 spaces)
 
 Tip: configure your editor to "show invisibles". This will allow you to
-eliminate end of line whitespace, eliminate unintended blank line whitespace,
+eliminate end-of-line whitespace, eliminate unintended blank-line whitespace,
 and avoid polluting commits.
 
 Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to
@@ -118,7 +118,7 @@ in useful diffs and blames.
 * Include a single space before the opening brace of a ruleset.
 * Include one declaration per line in a declaration block.
 * Use one level of indentation for each declaration.
-* Include single space after the colon of a declaration.
+* Include a single space after the colon of a declaration.
 * Use lowercase and shorthand hex values, e.g., `#aaa`.
 * Use single or double quotes consistently. Preference is for double quotes,
   e.g., `content: ""`.
@@ -228,7 +228,7 @@ Your conventions should be extended to accommodate the particularities of any
 preprocessor in use. The following guidelines are in reference to Sass.
 
 * Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
-  This prevents overly specific CSS selectors.
+  This prevents overly-specific CSS selectors.
 * Avoid large numbers of nested rules. Break them up when readability starts to
   be affected. Preference to avoid nesting that spreads over more than 20
   lines.
