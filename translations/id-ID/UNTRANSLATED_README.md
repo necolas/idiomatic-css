@@ -1,109 +1,105 @@
-# Principles of writing consistent, idiomatic CSS
+# Prinsip Penulisan CSS yang Konsisten, Idiomatic
 
-The following document outlines a reasonable style guide for CSS development.
-These guidelines strongly encourage the use of existing, common, sensible
-patterns. They should be adapted as needed to create your own style guide.
+Dokumen dibawah ini menjelaskan petunjuk umum dalam pengembangan CSS.
+Petunjuk ini sangat mengutamakan penggunaan pola umum yang ada.
+Dan sebaiknya digunakan dalam Penulisan CSS sesuai kebutuhan anda.
 
-This is a living document and new ideas are always welcome. Please
-contribute.
+Dokumen ini sedang digunakan oleh banyak orang, dan sangat terbuka
+dengan saran yang masuk. Silahkan berpartisipasi.
 
-
-## Table of contents
-
-1. [General principles](#general-principles)
+## Daftar Isi
+1. [Prinsip Umum](#general-principles)
 2. [Whitespace](#whitespace)
-3. [Comments](#comments)
+3. [Komentas](#comments)
 4. [Format](#format)
-5. [Practical example](#example)
+5. [Contoh Penggunaan](#example)
 
-[Acknowledgements](#acknowledgements)
+[Terima Kasih](#acknowledgements)
 
-[License](#license)
+[Lisensi](#license)
 
 
 <a name="general-principles"></a>
-## 1. General principles
+## 1. Prinsip Umum
 
-> "Part of being a good steward to a successful project is realizing that
-> writing code for yourself is a Bad Idea™. If thousands of people are using
-> your code, then write your code for maximum clarity, not your personal
-> preference of how to get clever within the spec." - Idan Gazit
+> "Salah satu bagian untuk menjadi staf yang baik dalam Proyek adalah memahami
+> bahwa menulis kode untuk diri sendiri adalah hal yang buruk. Jika ribuan
+> sedang menggunakan kode anda, maka tulislah kode anda dengan jelas dan
+> objektif, jangan menggunakan cara pribadi dalam memahami kode." - Idan Gazit
 
-* You are not a human code compiler/compressor, so don't try to be one.
-* All code in any code-base should look like a single person typed it, no
-  matter how many people contributed.
-* Strictly enforce the agreed-upon style.
-* If in doubt when deciding upon a style, use existing, common patterns.
+* Jangan mencoba menjadi manusia Compiler.
+* Semua kode harus tampak seperti ditulis oleh satu orang, walaupun ada banyak
+orang yang berpartisipasi.
+* Melaksanakan pola yang disepakati dengan ketat.
+* Jika ragu dengan pola tersebut, gunakan pola yang ada dan umum.
 
 
 <a name="whitespace"></a>
 ## 2. Whitespace
 
-Only one style should exist across the entire source of your code-base. Always
-be consistent in your use of whitespace. Use whitespace to improve
-readability.
+Anda disarankan menggunakan satu pola dalam seluruh kode. Harap konsisten
+dengan penggunaan whitespace pada kode. Gunakan Whitespace untuk memudahkan
+pembacaan kode.
 
-* _Never_ mix spaces and tabs for indentation.
-* Choose between soft indents (spaces) or real tabs. Stick to your choice
-  without fail. (Preference: spaces)
-* If using spaces, choose the number of characters used per indentation level.
-  (Preference: 4 spaces)
+* _Hindari_ membaurkan Spasi dan Tab untuk indentasi.
+* Pilih salah satu antara _Soft Indents_ (Spasi) atau Tab original. Yakinlah
+akan pilihan anda. (Disarankan: Spasi)
+* Jika menggunakan Spasi, pilih jumlah karakter yang digunakan ditiap
+indentasi. (Disarankan: 4 Spasi)
 
-Tip: configure your editor to "show invisibles". This will allow you to
-eliminate end-of-line whitespace, eliminate unintended blank-line whitespace,
-and avoid polluting commits.
+Tip: Setting Editor anda untuk mengaktifkan "show invisibles". Hal ini
+meperbolehkan anda menghapus whitespace yang tidak diinginkan.
 
-Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to
-help maintain the basic whitespace conventions that have been agreed for your
-code-base.
+Tip: Gunakan File [EditorConfig](http://editorconfig.org) (atau yang sejenis)
+untuk membantu pengaturan Whitespace yang anda gunakan pada kode anda.
 
 
 <a name="comments"></a>
-## 3. Comments
+## 3. Komentar
 
-Well commented code is extremely important. Take time to describe components,
-how they work, their limitations, and the way they are constructed. Don't leave
-others in the team guessing as to the purpose of uncommon or non-obvious
-code.
+Kode yang dikomentari dengan baik sangatlah penting. Sisihkan waktu untuk
+menjelaskan komponen, bagaimana mereka bekerja, dan cara penggunaannya. Jangan
+membiarkan staf di Tim anda untuk menduga-duga atau menebak-nebak karena kode
+yang kurang jelas.
 
-Comment style should be simple and consistent within a single code base.
+Pola Komentar harus sederhana dan konsisten di setiap kode anda.
 
-* Place comments on a new line above their subject.
-* Keep line-length to a sensible maximum, e.g., 80 columns.
-* Make liberal use of comments to break CSS code into discrete sections.
-* Use "sentence case" comments and consistent text indentation.
+* Tempatkan Komentar di atas subjeknya.
+* Tetapkan standar panjang karakter ditiap Komentar. Contoh: 80 Karakter
+* Anda bebas untuk menentukan Komentar sebagai pemecah kode CSS menjadi
+beberapa bagian.
+* Gunakan "Sentence Case" pada Komentar dan penggunaan indentasi yang konsisten
 
-Tip: configure your editor to provide you with shortcuts to output agreed-upon
-comment patterns.
+Tip: Buat snippet pada Editor anda sebagai shortcut untuk Komentar yang akan
+anda gunakan.
 
-Example:
-
+Contoh:
 ```css
 /* ==========================================================================
-   Section comment block
+   Blok Bagian
    ========================================================================== */
 
-/* Sub-section comment block
+/* Blok Sub-Bagian
    ========================================================================== */
 
 /**
- * Short description using Doxygen-style comment format
+ * Deskripsi Singkat menggunakan format Komentar Doxygen-style
  *
- * The first sentence of the long description starts here and continues on this
- * line for a while finally concluding here at the end of this paragraph.
+ * Kalimat pertama dari Deskripsi Detail dimulai di sini dan berlanjut di baris
+ * selanjutnya hingga sampai kepada kesimpulan pada akhir paragraf.
  *
- * The long description is ideal for more detailed explanations and
- * documentation. It can include example HTML, URLs, or any other information
- * that is deemed necessary or useful.
+ * Deskripsi Detail sangat ideal untuk Penjelasan yang lebih lengkap dan
+ * sebagai Dokumentasi. Disini anda dapat memasukkan contoh HTML, URL, atau
+ * informas-informasi lain yang berguna untuk penjelasan.
  *
- * @tag This is a tag named 'tag'
+ * @tag Tag ini dinamakan 'tag'
  *
- * @todo This is a todo statement that describes an atomic task to be completed
- *   at a later date. It wraps after 80 characters and following lines are
- *   indented by 2 spaces.
+ * @todo Ini adalah Statemen Todo yang mendeskripsikan tugas-tugas yang harus
+ *   anda selesaikan di waktu yang akan datang. Bagian ini memilik panjang
+ *   maksimal 80 karakter dan baris dibawahnya di indentasi menggunakan 2 spasi
  */
 
-/* Basic comment */
+/* Komentar standar */
 ```
 
 
@@ -249,6 +245,9 @@ preprocessor in use. The following guidelines are in reference to Sass.
     // other declarations
 }
 ```
+
+
+
 
 
 <a name="example"></a>
