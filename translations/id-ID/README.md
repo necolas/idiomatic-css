@@ -1,136 +1,134 @@
-# Principles of writing consistent, idiomatic CSS
+# Prinsip Penulisan CSS yang Konsisten, Idiomatic
 
-The following document outlines a reasonable style guide for CSS development.
-These guidelines strongly encourage the use of existing, common, sensible
-patterns. They should be adapted as needed to create your own style guide.
+Dokumen dibawah ini menjelaskan petunjuk umum dalam pengembangan CSS.
+Petunjuk ini sangat mengutamakan penggunaan pola umum yang ada.
+Dan sebaiknya digunakan dalam Penulisan CSS sesuai kebutuhan anda.
 
-This is a living document and new ideas are always welcome. Please
-contribute.
+Dokumen ini sedang digunakan oleh banyak orang, dan sangat terbuka
+dengan saran yang masuk. Silahkan berpartisipasi.
 
-
-## Table of contents
-
-1. [General principles](#general-principles)
+## Daftar Isi
+1. [Prinsip Umum](#general-principles)
 2. [Whitespace](#whitespace)
-3. [Comments](#comments)
+3. [Komentas](#comments)
 4. [Format](#format)
-5. [Practical example](#example)
+5. [Contoh Penggunaan](#example)
 
-[Acknowledgements](#acknowledgements)
+[Lisensi](#license)
 
-[License](#license)
+[Kontribusi & Saran](#contribute)
 
 
 <a name="general-principles"></a>
-## 1. General principles
+## 1. Prinsip Umum
 
-> "Part of being a good steward to a successful project is realizing that
-> writing code for yourself is a Bad Idea™. If thousands of people are using
-> your code, then write your code for maximum clarity, not your personal
-> preference of how to get clever within the spec." - Idan Gazit
+> "Salah satu bagian untuk menjadi staf yang baik dalam Proyek adalah memahami
+> bahwa menulis kode untuk diri sendiri adalah hal yang buruk. Jika ribuan
+> sedang menggunakan kode anda, maka tulislah kode anda dengan jelas dan
+> objektif, jangan menggunakan cara pribadi dalam memahami kode." - Idan Gazit
 
-* You are not a human code compiler/compressor, so don't try to be one.
-* All code in any code-base should look like a single person typed it, no
-  matter how many people contributed.
-* Strictly enforce the agreed-upon style.
-* If in doubt when deciding upon a style, use existing, common patterns.
+* Jangan mencoba menjadi manusia Compiler.
+* Semua kode harus tampak seperti ditulis oleh satu orang, walaupun ada banyak
+orang yang berpartisipasi.
+* Melaksanakan pola yang disepakati dengan ketat.
+* Jika ragu dengan pola tersebut, gunakan pola yang ada dan umum.
 
 
 <a name="whitespace"></a>
 ## 2. Whitespace
 
-Only one style should exist across the entire source of your code-base. Always
-be consistent in your use of whitespace. Use whitespace to improve
-readability.
+Anda disarankan menggunakan satu pola dalam seluruh kode. Harap konsisten
+dengan penggunaan whitespace pada kode. Gunakan Whitespace untuk memudahkan
+pembacaan kode.
 
-* _Never_ mix spaces and tabs for indentation.
-* Choose between soft indents (spaces) or real tabs. Stick to your choice
-  without fail. (Preference: spaces)
-* If using spaces, choose the number of characters used per indentation level.
-  (Preference: 4 spaces)
+* _Hindari_ membaurkan Spasi dan Tab untuk indentasi.
+* Pilih salah satu antara _Soft Indents_ (Spasi) atau Tab original. Yakinlah
+akan pilihan anda. (Disarankan: Spasi)
+* Jika menggunakan Spasi, pilih jumlah karakter yang digunakan ditiap
+indentasi. (Disarankan: 4 Spasi)
 
-Tip: configure your editor to "show invisibles". This will allow you to
-eliminate end-of-line whitespace, eliminate unintended blank-line whitespace,
-and avoid polluting commits.
+Tip: Setting Editor anda untuk mengaktifkan "show invisibles". Hal ini
+meperbolehkan anda menghapus whitespace yang tidak diinginkan.
 
-Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to
-help maintain the basic whitespace conventions that have been agreed for your
-code-base.
+Tip: Gunakan File [EditorConfig](http://editorconfig.org) (atau yang sejenis)
+untuk membantu pengaturan Whitespace yang anda gunakan pada kode anda.
 
 
 <a name="comments"></a>
-## 3. Comments
+## 3. Komentar
 
-Well commented code is extremely important. Take time to describe components,
-how they work, their limitations, and the way they are constructed. Don't leave
-others in the team guessing as to the purpose of uncommon or non-obvious
-code.
+Kode yang dikomentari dengan baik sangatlah penting. Sisihkan waktu untuk
+menjelaskan komponen, bagaimana mereka bekerja, dan cara penggunaannya. Jangan
+membiarkan staf di Tim anda untuk menduga-duga atau menebak-nebak karena kode
+yang kurang jelas.
 
-Comment style should be simple and consistent within a single code base.
+Pola Komentar harus sederhana dan konsisten di setiap kode anda.
 
-* Place comments on a new line above their subject.
-* Keep line-length to a sensible maximum, e.g., 80 columns.
-* Make liberal use of comments to break CSS code into discrete sections.
-* Use "sentence case" comments and consistent text indentation.
+* Tempatkan Komentar di atas subjeknya.
+* Tetapkan standar panjang karakter ditiap Komentar. Contoh: 80 Karakter
+* Anda bebas untuk menentukan Komentar sebagai pemecah kode CSS menjadi
+beberapa bagian.
+* Gunakan "Sentence Case" pada Komentar dan penggunaan indentasi yang konsisten
 
-Tip: configure your editor to provide you with shortcuts to output agreed-upon
-comment patterns.
+Tip: Buat snippet pada Editor anda sebagai shortcut untuk Komentar yang akan
+anda gunakan.
 
-Example:
-
+Contoh:
 ```css
 /* ==========================================================================
-   Section comment block
+   Blok Bagian
    ========================================================================== */
 
-/* Sub-section comment block
+/* Blok Sub-Bagian
    ========================================================================== */
 
 /**
- * Short description using Doxygen-style comment format
+ * Deskripsi Singkat menggunakan format Komentar Doxygen-style
  *
- * The first sentence of the long description starts here and continues on this
- * line for a while finally concluding here at the end of this paragraph.
+ * Kalimat pertama dari Deskripsi Detail dimulai di sini dan berlanjut di baris
+ * selanjutnya hingga sampai kepada kesimpulan pada akhir paragraf.
  *
- * The long description is ideal for more detailed explanations and
- * documentation. It can include example HTML, URLs, or any other information
- * that is deemed necessary or useful.
+ * Deskripsi Detail sangat ideal untuk Penjelasan yang lebih lengkap dan
+ * sebagai Dokumentasi. Disini anda dapat memasukkan contoh HTML, URL, atau
+ * informas-informasi lain yang berguna untuk penjelasan.
  *
- * @tag This is a tag named 'tag'
+ * @tag Tag ini dinamakan 'tag'
  *
- * @todo This is a todo statement that describes an atomic task to be completed
- *   at a later date. It wraps after 80 characters and following lines are
- *   indented by 2 spaces.
+ * @todo Ini adalah Statemen Todo yang mendeskripsikan tugas-tugas yang harus
+ *   anda selesaikan di waktu yang akan datang. Bagian ini memilik panjang
+ *   maksimal 80 karakter dan baris dibawahnya di indentasi menggunakan 2 spasi
  */
 
-/* Basic comment */
+/* Komentar standar */
 ```
 
 
 <a name="format"></a>
 ## 4. Format
 
-The chosen code format must ensure that code is: easy to read; easy to clearly
-comment; minimizes the chance of accidentally introducing errors; and results
-in useful diffs and blames.
+Format kode yang anda gunakan harus memastikan bahwa kode tersebut: mudah
+dibaca; mudah di-Komentari; meminimalkan kemungkinan kesalahan penggunaan;
+dan menghasil _diff_ dan _blame_ yang berguna.
 
-* Use one discrete selector per line in multi-selector rulesets.
-* Include a single space before the opening brace of a ruleset.
-* Include one declaration per line in a declaration block.
-* Use one level of indentation for each declaration.
-* Include a single space after the colon of a declaration.
-* Use lowercase and shorthand hex values, e.g., `#aaa`.
-* Use single or double quotes consistently. Preference is for double quotes,
-  e.g., `content: ""`.
-* Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
-* _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
-* Include a space after each comma in comma-separated property or function
-  values.
-* Include a semi-colon at the end of the last declaration in a declaration
-  block.
-* Place the closing brace of a ruleset in the same column as the first
-  character of the ruleset.
-* Separate each ruleset by a blank line.
+* Gunakan satu baris per selector, dalam deklarasi rule multi-selector.
+* Masukkan satu Spasi sebelum Buka Kurung dalam deklarasi rule.
+* Gunakan deklarasi per baris dalam blok deklarasi.
+* Gunakan satu level indentasi di tiap blok deklarasi.
+* Masukkan satu Spasi setelah tanda Titik Koma dalam deklarasi.
+* Gunakan _lowercase_ untuk Short Nilai Hex. Contoh: `#aaa`.
+* Gunakan salah satu dari tanda Kutip Satu atau Kutip Dua secara konsisten.
+Disarankan Tanda Kutip Dua. Contoh: `content: ""`.
+* Gunakan tanda kutip pada Nilai dari Attribute Selector. Contoh:
+`input[type="checkbox"]`.
+* _Jika Memungkinkan_ hindari memberi satuan unit pada Nilai Nol. Contoh:
+`margin: 0`.
+* Masukkan satu Spasi setelah Koma dalam Comma-Separated properti atau nilai
+function.
+* Tetap ikutkan Titik Koma setelah deklarasi properti akhir di dalam blok
+deklarasi.
+* Tempatkan tanda Tutup Kurung `}` pada blok deklarasi sesuai dengan posisi
+kolom tanda Buka Kurung `{`.
+* Pisahkan tiap blok deklarasi dengan Baris Kosong.
 
 ```css
 .selector-1,
@@ -152,12 +150,11 @@ in useful diffs and blames.
 }
 ```
 
-#### Declaration order
+#### Urutan Deklarasi
 
-If declarations are to be consistently ordered, it should be in accordance with
-a single, simple principle. My preference is for structurally important
-properties (e.g. positioning and box-model) to be declared prior to all
-others.
+Jika anda mengurutkan deklarasi properti, maka anda harus menggunakan aturan
+sederhana. Saran saya anda harus mendahulukan properti yang lebih penting
+seperti Positioning, Box Model.
 
 ```css
 .selector {
@@ -188,16 +185,16 @@ others.
 }
 ```
 
-Strict alphabetical ordering is also relatively popular, but the drawback is
-that it separates related properties. For example, position offsets are no
-longer grouped together and box-model properties can end up spread throughout a
-declaration block.
+Pengurutan propery berdasarkan Huruf juga cukup populer, tetapi kekurangannya
+adalah dia memisahkan properti yang berhubungan. Contoh properti pendukung
+dari position tidak lagi dikelompokkan bersama-sama dan akan menyebar di
+seluruh blok deklarasi.
 
-#### Exceptions and slight deviations
+#### Pengecualian
 
-Large blocks of single declarations can use a slightly different, single-line
-format. In this case, a space should be included after the opening brace and
-before the closing brace.
+Blok panjang dari deklarasi tunggal dapat ditulis secara berbeda, format satu
+baris. Dalam kasus ini, satu Spasi dimasukkan setelah tanda Buka Kurung `{` dan
+sebelum tanda Tutup Kurung `}`.
 
 ```css
 .selector-1 { width: 10%; }
@@ -205,10 +202,10 @@ before the closing brace.
 .selector-3 { width: 30%; }
 ```
 
-Long, comma-separated property values - such as collections of gradients or
-shadows - can be arranged across multiple lines in an effort to improve
-readability and produce more useful diffs. There are various formats that could
-be used; one example is shown below.
+Nilai yang cukup panjang, Comma-separated seperti Nilai font-family, gradient,
+dan box shadow dapat ditulis dengan memisahkan per baris dengan tujuan
+memudahkan cara pembacaan dan menghasilkan diff yang berkualitas. Banyak format
+yang dapat digunakan, berikut adalah salah satu contoh.
 
 ```css
 .selector {
@@ -221,24 +218,25 @@ be used; one example is shown below.
 }
 ```
 
-### Preprocessors: additional format considerations
+### Preprocessor: Tambahan Pertimbangan Format
 
-Different CSS preprocessors have different features, functionality, and syntax.
-Your conventions should be extended to accommodate the particularities of any
-preprocessor in use. The following guidelines are in reference to Sass.
+CSS Preprocessor Berbeda juga mempunyai fitur, fungsi, dan syntax yang berbeda.
+Aturan pola kode anda harus memadai dan cocok di tiap CSS Preprocessor.
+Petunjuk di bawah ini di adaptasi dari petunjuk SASS.
 
-* Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
-  This prevents overly-specific CSS selectors.
-* Avoid large numbers of nested rules. Break them up when readability starts to
-  be affected. Preference to avoid nesting that spreads over more than 20
-  lines.
-* Always place `@extend` statements on the first lines of a declaration
-  block.
-* Where possible, group `@include` statements at the top of a declaration
-  block, after any `@extend` statements.
-* Consider prefixing custom functions with `x-` or another namespace. This
-  helps to avoid any potential to confuse your function with a native CSS
-  function, or to clash with functions from libraries.
+* Batasi sarang _(nesting)_ satu level lebih dalam. Deklarasi kan deklarasi
+blok yang melebihi dua level sarang. Hal ini mencegah selector menjadi terlalu
+spesifik.
+* Hindari menggunakan deklarasi rule bersarang yang berlebihan. Pisahkan
+secepatnya ketika sudah mulai mengurangi tingkat kemudahan pembacaan kode.
+Saran, hindari menggunakan deklarasi rule bersarang jika rulenya melebihi dari
+20 baris.
+* Selalu tempatkan statemen `@extend` pada baris pertama dari blok deklarasi.
+* Jika memungkinkan, tempatkan `@include` statemen pada baris awal setelah
+`@extend` statemen.
+* Pertimbangkan menggunakan prefix `x-` atau prefix lainnya jika menggunakan
+fungsi buatan. Hal ini membantu menghindari kebingungan menggunakan fungsi
+asli dari CSS atau konflik dengan fungsi dari librari yang anda gunakan.
 
 ```scss
 .selector-1 {
@@ -252,9 +250,9 @@ preprocessor in use. The following guidelines are in reference to Sass.
 
 
 <a name="example"></a>
-## 5. Practical example
+## 5. Contoh Penggunaan
 
-An example of various conventions.
+Sebuah contoh dari aturan kode yang beragam.
 
 ```css
 /* ==========================================================================
@@ -262,12 +260,12 @@ An example of various conventions.
    ========================================================================== */
 
 /**
- * Column layout with horizontal scroll.
+ * Column layout dengan horizontal scroll.
  *
- * This creates a single row of full-height, non-wrapping columns that can
- * be browsed horizontally within their parent.
+ * Ini membuat satu baris full-height, non-wrap kolom yang bisa digunakan
+ * horizontal dengan parent mereka.
  *
- * Example HTML:
+ * Contoh HTML:
  *
  * <div class="grid">
  *     <div class="cell cell-3"></div>
@@ -278,20 +276,20 @@ An example of various conventions.
 
 /**
  * Grid container
- * Must only contain `.cell` children.
+ * Harus diisi oleh `.cell`
  */
 
 .grid {
     height: 100%;
-    /* Remove inter-cell whitespace */
+    /* Hilangkan inter-cell whitespace */
     font-size: 0;
-    /* Prevent inline-block cells wrapping */
+    /* Cegah wrapping inline-block */
     white-space: nowrap;
 }
 
 /**
  * Grid cells
- * No explicit width by default. Extend with `.cell-n` classes.
+ * Tidak ada spesifik width secara default. Extend dengan `.cell-n` class
  */
 
 .cell {
@@ -300,7 +298,7 @@ An example of various conventions.
     overflow: hidden;
     box-sizing: border-box;
     height: 100%;
-    /* Set the inter-cell spacing */
+    /* Set inter-cell spasi */
     padding: 0 10px;
     border: 2px solid #333;
     vertical-align: top;
@@ -316,7 +314,7 @@ An example of various conventions.
     background-color: #fffdec;
 }
 
-/* Cell dimensions
+/* Dimensi Cell
    ========================================================================== */
 
 .cell-1 { width: 10%; }
@@ -325,7 +323,7 @@ An example of various conventions.
 .cell-4 { width: 40%; }
 .cell-5 { width: 50%; }
 
-/* Cell modifiers
+/* Cell Pengubah
    ========================================================================== */
 
 .cell--detail,
@@ -335,40 +333,25 @@ An example of various conventions.
 ```
 
 
-## Translations
-
-* [Česky](https://github.com/necolas/idiomatic-css/tree/master/translations/cs-CZ)
-* [Dansk](https://github.com/necolas/idiomatic-css/tree/master/translations/da-DK)
-* [Deutsch](https://github.com/necolas/idiomatic-css/tree/master/translations/de-DE)
-* [Español](https://github.com/necolas/idiomatic-css/tree/master/translations/es-ES)
-* [Français](https://github.com/necolas/idiomatic-css/tree/master/translations/fr-FR)
-* [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
-* [한국어](https://github.com/necolas/idiomatic-css/tree/master/translations/ko-KR)
-* [Nederlands](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)
-* [Polski](https://github.com/necolas/idiomatic-css/tree/master/translations/pl-PL)
-* [Português (Brasil)](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
-* [Русский](https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU)
-* [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr-SR)
-* [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
-* [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
-
-
-<a name="acknowledgements"></a>
-## Acknowledgements
-
-Thanks to everyone who has provided translations and to all those who
-contributed to [idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a
-source of inspiration, quotations, and guidelines.
-
-
 <a name="license"></a>
-## License
+## Lisensi
 
-_Principles of writing consistent, idiomatic CSS_ by Nicolas Gallagher is
-licensed under the [Creative Commons Attribution 3.0 Unported
-License](http://creativecommons.org/licenses/by/3.0/). This applies to all
-documents and translations in this repository.
+_Principles of writing consistent, idiomatic CSS_ oleh Nicolas Gallagher
+dirilis dengan lisensi [Creative Commons Attribution 3.0 Unported
+License](http://creativecommons.org/licenses/by/3.0/). Lisensi ini berlaku
+untuk semua dokumen dan terjemahan di repository.
 
-Based on a work at
+Dibuat berdasarkan proyek di 
 [github.com/necolas/idiomatic-css](https://github.com/necolas/idiomatic-css).
+
+
+<a name="contribute"></a>
+## Kontribusi & Saran
+
+Jika anda ingin berpartisipasi dalam Proyek Penerjemahan ini, silahkan fork
+[Idiomatic](http://github.com/novrian/idiomatic_id-ID).
+
+Jika ada Saran dan Kritik, silahkan mention [@nono_gallankz]
+(http://www.twitter.com/nono_gallankz) di Twitter.
+
+**INDONESIA BISA!!!!**

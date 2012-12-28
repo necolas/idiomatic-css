@@ -337,6 +337,7 @@ An example of various conventions.
 
 ## Translations
 
+* [Bahasa Indonesia](https://github.com/necolas/idiomatic-css/tree/master/translations/id-ID)
 * [Česky](https://github.com/necolas/idiomatic-css/tree/master/translations/cs-CZ)
 * [Dansk](https://github.com/necolas/idiomatic-css/tree/master/translations/da-DK)
 * [Deutsch](https://github.com/necolas/idiomatic-css/tree/master/translations/de-DE)
