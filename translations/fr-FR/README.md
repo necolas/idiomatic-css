@@ -179,7 +179,7 @@ sépare les propriétés liées. Par exemple, les décalages de positionnement n
 sont plus regroupés ensemble et les propriétés du modèle de boîte se retrouvent
 éparpillées dans le bloc de déclaration.
 
-#### Exceptions et légèrs écarts
+#### Exceptions et légers écarts
 
 De gros blocs de déclarations uniques peuvent utiliser un format légèrement
 différent, regroupées sur une seule ligne. Dans ce cas, il faut insérer un
@@ -214,7 +214,7 @@ ci-dessous :
 * Utilisez toujours le même type de guillemets. Ma préférence va aux doubles
   guillemets, exemple : `content: ""` ;
 * Utilisez toujours des guillemets pour les valeurs dans les sélecteurs,
-  exemple :  `input[type="checkout"]` ;
+  exemple :  `input[type="checkbox"]` ;
 * _Lorsque c'est autorisé_, évitez de spécifier les unités pour les valeurs
   nulles, exemple : `margin: 0`.
 

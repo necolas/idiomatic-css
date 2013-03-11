@@ -210,7 +210,7 @@ gebruikt zouden kunnen worden; een voorbeeld is hieronder getoond.
 * Gebruik consistent enkele of dubbele aanhalingstekens. Dubbele
   aanhalingstekens hebben de voorkeur, b.v. `content: ""`.
 * Gebruik altijd aanhalingstekens bij attribuutwaarden in selectors, b.v.
-  `input[type="checkout"]`.
+  `input[type="checkbox"]`.
 * Vermijd, _indien toegestaan_, specifieke eenheden voor nulwaarden b.v.
   `margin: 0`.
 

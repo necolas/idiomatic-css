@@ -28,11 +28,11 @@ trage bei.
 <a name="general-principles"></a>
 ## 1. Allgemeine Grundlagen
 
-> „Ein Teil der Aufgabe eines guten Verwalters eines erfolgreichen Projekts
-> ist es, zu realisieren, dass Code für sich selbst zu schreiben eine schlechte
+> „Ein Teil der Aufgabe eines guten Verwalters eines erfolgreichen Projekts ist
+> es, zu realisieren, dass Code für sich selbst zu schreiben eine schlechte
 > Idee™ ist. Wenn tausende Leute deinen Code verwenden, dann schreibe deinen
-> Code für maximale Klarheit, nicht nach deinen persönlichen Vorlieben, wie
-> man innerhalb der Spezifikation gerissen sein kann.“ - Idan Gazit
+> Code für maximale Klarheit, nicht nach deinen persönlichen Vorlieben, wie man
+> innerhalb der Spezifikation gerissen sein kann.“ - Idan Gazit
 
 * Der gesamte Code in jeder Code-Basis soll aussehen wie von einer einzigen
   Person eingegeben, unabhängig davon wieviele Leute beigetragen haben.
@@ -43,9 +43,9 @@ trage bei.
 <a name="whitespace"></a>
 ## 2. Leerraum
 
-Nur ein Stil soll in den vollständigen Quellen deines Projekts existieren.
-Sei stets konsistent beim Einsatz von Leerraum. Verwende Leerraum, um
-die Lesbarkeit zu erhöhen.
+Nur ein Stil soll in den vollständigen Quellen deines Projekts existieren.  Sei
+stets konsistent beim Einsatz von Leerraum. Verwende Leerraum, um die
+Lesbarkeit zu erhöhen.
 
 * Mische niemals Leerzeichen und Tabs zur Einrückung.
 * Wähle zwischen weicher Einrückung (Leerzeichen) oder wirklichen Tabs. Bleibe
@@ -54,17 +54,17 @@ die Lesbarkeit zu erhöhen.
   (Vorzug: 4 Leerzeichen)
 
 Tip: Richte deinen Editor so ein, dass er unsichtbare Zeichen zeigt. Das
-erlaubt dir, Leerzeichen am Zeilenende zu entfernen, unbeabsichtigte Leerzeichen
-in leeren Zeilen und Commits zu verschmutzen.
+erlaubt dir, Leerzeichen am Zeilenende zu entfernen, unbeabsichtigte
+Leerzeichen in leeren Zeilen und Commits zu verschmutzen.
 
 
 <a name="comments"></a>
 ## 3. Kommentare
 
-Gut kommentierter Code ist extrem wichtig. Nimm dir Zeit, Komponenten zu beschreiben,
-wie sie arbeiten, welche Beschränkungen sie haben und wie sie gebaut sind.
-Lass andere im Team nicht raten, was den Zweck von ungewöhnlichem oder nicht
-offensichtlichem Code betrifft.
+Gut kommentierter Code ist extrem wichtig. Nimm dir Zeit, Komponenten zu
+beschreiben, wie sie arbeiten, welche Beschränkungen sie haben und wie sie
+gebaut sind.  Lass andere im Team nicht raten, was den Zweck von ungewöhnlichem
+oder nicht offensichtlichem Code betrifft.
 
 Der Kommentarstil soll einfach und konsistent innerhalb einer einzelnen
 Code-Basis sein.
@@ -113,9 +113,10 @@ ausgemachten Kommentar-Mustern anbietet.
 <a name="format"></a>
 ## 4. Formatierung
 
-Die gewählte Codeformatierung muss gewährleisten, dass der Code: leicht zu lesen
-ist; leicht kar zu kommentieren ist; nicht dazu verleitet, unabsichtlich Fehler
-einzuführen; und zu nützlichen Diffs und Blames der Versionsverwaltung führt.
+Die gewählte Codeformatierung muss gewährleisten, dass der Code: leicht zu
+lesen ist; leicht kar zu kommentieren ist; nicht dazu verleitet, unabsichtlich
+Fehler einzuführen; und zu nützlichen Diffs und Blames der Versionsverwaltung
+führt.
 
 1. Ein einzelner Selektor pro Zeile in Multi-Selektor-Regelsets.
 2. Ein einzelnes Leerzeichen vor der öffnenden Klammer eines Regelsets.
@@ -147,10 +148,10 @@ einzuführen; und zu nützlichen Diffs und Blames der Versionsverwaltung führt.
 
 #### Deklarations-Reihenfolge
 
-Deklarationen sollen nach einem einzelnen Prinzip sortiert werden. Ich bevorzuge es,
-verwandte Eigenschaften zusammen zu gruppieren und strukturell wichtige Eigenschaften
-(z.B. Positionierung und Box-Modell) vor typografischen, Hintergrund- oder
-Farbanweisungen zu notieren.
+Deklarationen sollen nach einem einzelnen Prinzip sortiert werden. Ich
+bevorzuge es, verwandte Eigenschaften zusammen zu gruppieren und strukturell
+wichtige Eigenschaften (z.B. Positionierung und Box-Modell) vor typografischen,
+Hintergrund- oder Farbanweisungen zu notieren.
 
 ```css
 .selektor {
@@ -185,8 +186,9 @@ einzeiliges Format verwenden. In diesem Fall wird ein Leerzeichen nach der
 
 Lange, komma-getrennte Eigenschaftswerte - wie Sammlungen von Gradienten oder
 Schatten - können über mehrere Zeilen angeordnet werden, um die Lesbarkeit zu
-erhöhen und nützlichere Diffs zu produzieren. Es gibt verschiedene Formatierungen,
-die verwendet werden können; ein Beispiel ist im Folgenden gezeigt.
+erhöhen und nützlichere Diffs zu produzieren. Es gibt verschiedene
+Formatierungen, die verwendet werden können; ein Beispiel ist im Folgenden
+gezeigt.
 
 ```css
 .selektor {
@@ -211,17 +213,17 @@ die verwendet werden können; ein Beispiel ist im Folgenden gezeigt.
 
 ### Präprozessoren: Zusätzliche Formatier-Überlegungen
 
-Verschiedene CSS-Präprozessoren haben verschiedene Besonderheiten, Funktionalität
-und Syntax. Deine Konventionen sollen so erweitert werden, dass sie den
-Eigenheiten jedes verwendeten Präprozessors Rechnung tragen. Die folgenden
-Richtlinien beziehen sich auf Sass.
+Verschiedene CSS-Präprozessoren haben verschiedene Besonderheiten,
+Funktionalität und Syntax. Deine Konventionen sollen so erweitert werden, dass
+sie den Eigenheiten jedes verwendeten Präprozessors Rechnung tragen. Die
+folgenden Richtlinien beziehen sich auf Sass.
 
 * Beschränke Verschachtelungen auf eine Ebene Tiefe. Überprüfe jede
   Verschachtelung tiefer als 2 Ebenen. Das verhindert übermäßg spezifische
   CSS-Selektoren.
 * Vermeide große Mengen verschachtelter Regeln. Brich sie in Teile auf, wenn
-  Lesbarkeit beeinträchtigt wird. Der Vorzug gilt dem Vermeiden von verschachtelten
-  Anweisungen mit mehr als 20 Zeilen Länge.
+  Lesbarkeit beeinträchtigt wird. Der Vorzug gilt dem Vermeiden von
+  verschachtelten Anweisungen mit mehr als 20 Zeilen Länge.
 * Setze `@extend`-Angaben immer in die erste Zeile eines Deklarationsblocks.
 * Wo möglich gruppiere `@include`-Angaben am Anfang eines Deklarationsblocks,
   nach jedem `@extend`.
@@ -359,10 +361,11 @@ für große Projekte.
 <a name="build-and-deployment"></a>
 ## 8. Bauen und Einsetzen
 
-Projekte sollen stets versuchen, generische Methoden zu verwenden, um
-Quelltext im Vorfeld des Produktiveinsatzes zu bereinigen, testen, packen und
-versionieren. Für diesen Zweck bietet sich [grunt](https://github.com/cowboy/grunt)
-von Ben Alman als exzellentes Werkzeug an.
+Projekte sollen stets versuchen, generische Methoden zu verwenden, um Quelltext
+im Vorfeld des Produktiveinsatzes zu bereinigen, testen, packen und
+versionieren. Für diesen Zweck bietet sich
+[grunt](https://github.com/cowboy/grunt) von Ben Alman als exzellentes Werkzeug
+an.
 
 
 <a name="acknowledgements"></a>
