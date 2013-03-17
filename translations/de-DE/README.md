@@ -1,14 +1,14 @@
 # Grundlagen zum Schreiben von einheitlichem, idiomatischem CSS
 
 Das folgende Dokument legt einen vernünftige Gestaltungsrichtlinie für die
-CSS-Entwicklung dar. Es soll nicht verordnend sein, und ich möchte meine
-Stil-Vorlieben nicht dem Code anderer Leute aufzwängen. Allerdings ermutigen
-diese Richtlinien zum Einsatz von bestehenden, üblichen, sinnvollen Mustern.
+CSS-Entwicklung dar. Diese Richtlinien ermutigen zur Verwendung existierender,
+üblicher und sinnvoller Muster. Sie sollten nach Bedarf angepasst werden, um
+eine eigene Gestaltungsrichtlinie zu erstellen.
 
 Dies ist ein lebendiges Dokument, und neue Ideen sind immer willkommen. Bitte
 trage bei.
 
-[Idiomatic CSS auf englisch](https://github.com/necolas/idiomatic-css/)
+[Idiomatic CSS auf englisch](https://github.com/necolas/idiomatic-css/).
 
 
 ## Inhaltsverzeichnis
@@ -17,12 +17,11 @@ trage bei.
 2. [Leerraum](#whitespace)
 3. [Kommentare](#comments)
 4. [Formatierung](#format)
-5. [Benennung](#naming)
-6. [Praktisches Beispiel](#example)
-7. [Organisierung](#organization)
-8. [Bauen und Einsetzen](#build-and-deployment)
+5. [Praktisches Beispiel](#example)
 
 [Danksagung](#acknowledgements)
+
+[Lizenz](#license)
 
 
 <a name="general-principles"></a>
@@ -31,31 +30,37 @@ trage bei.
 > „Ein Teil der Aufgabe eines guten Verwalters eines erfolgreichen Projekts ist
 > es, zu realisieren, dass Code für sich selbst zu schreiben eine schlechte
 > Idee™ ist. Wenn tausende Leute deinen Code verwenden, dann schreibe deinen
-> Code für maximale Klarheit, nicht nach deinen persönlichen Vorlieben, wie man
-> innerhalb der Spezifikation gerissen sein kann.“ - Idan Gazit
+> Code für maximale Klarheit, nicht nach deinen persönlichen Vorlieben, wie
+> man innerhalb der Spezifikation gerissen sein kann.“ - Idan Gazit
 
+* Du bist kein menschlicher Code-Compiler/Kompressor, versuche also nicht,
+  einer zu sein.
 * Der gesamte Code in jeder Code-Basis soll aussehen wie von einer einzigen
   Person eingegeben, unabhängig davon wieviele Leute beigetragen haben.
 * Erzwinge den vereinbarten Stil streng.
-* Im Zweifel verwende bestehende, übliche Muster.
+* Im Zweifel bei einer Stilentscheidung verwende bestehende, übliche Muster.
 
 
 <a name="whitespace"></a>
 ## 2. Leerraum
 
-Nur ein Stil soll in den vollständigen Quellen deines Projekts existieren.  Sei
+Nur ein Stil soll in den gesamten Quellen deines Projekts existieren. Sei
 stets konsistent beim Einsatz von Leerraum. Verwende Leerraum, um die
 Lesbarkeit zu erhöhen.
 
-* Mische niemals Leerzeichen und Tabs zur Einrückung.
+* Mische _niemals_ Leerzeichen und Tabs zur Einrückung.
 * Wähle zwischen weicher Einrückung (Leerzeichen) oder wirklichen Tabs. Bleibe
   bei deiner Wahl ohne Abweichung. (Vorzug: Leerzeichen)
 * Beim Einsatz von Leerzeichen wähle die Anzahl Zeichen pro Einrückebene.
   (Vorzug: 4 Leerzeichen)
 
-Tip: Richte deinen Editor so ein, dass er unsichtbare Zeichen zeigt. Das
+Tipp: Richte deinen Editor so ein, dass er unsichtbare Zeichen zeigt. Das
 erlaubt dir, Leerzeichen am Zeilenende zu entfernen, unbeabsichtigte
 Leerzeichen in leeren Zeilen und Commits zu verschmutzen.
+
+Tipp: Verwende eine [EditorConfig](http://editorconfig.org/)-Datei (oder
+entsprechend), um die grundlegenden Leerraum-Konventionen, die vereinbart
+wurden, verwalten zu helfen.
 
 
 <a name="comments"></a>
@@ -70,7 +75,6 @@ Der Kommentarstil soll einfach und konsistent innerhalb einer einzelnen
 Code-Basis sein.
 
 * Platziere Kommentare auf neuen Zeilen über ihrem Gegenstand.
-* Vermeide Kommentare am Zeilenende
 * Behalte die Zeilenlänge bei einem sinnvollen Maximum, z.B. 80 Spalten.
 * Mache freigebig Gebrauch von Kommentaren, um CSS in einzelne Abschnitte zu
   unterteilen.
@@ -79,7 +83,7 @@ Code-Basis sein.
 Tip: Konfiguriere deinen Editor so, dass er Kürzel für die Ausgabe von
 ausgemachten Kommentar-Mustern anbietet.
 
-#### Beispiel:
+Beispiel:
 
 ```css
 /* ==========================================================================
@@ -92,8 +96,8 @@ ausgemachten Kommentar-Mustern anbietet.
 /**
  * Kurze Beschreibung im Doxygen-Stilformat
  *
- * Lange Beschreibung erster Satz beginnt hier und wird auf dieser Zeile für
- * eine Weile fortgeführt bis er schließlich hier endet.
+ * Der erste Satz der langen Beschreibung beginnt hier und wird auf dieser
+ * Zeile für eine Weile fortgeführt, bis er schließlich hier endet.
  *
  * Die lange Beschreibung ist ideal für detailliertere Erläuterungen und
  * Dokumentation. Sie kann Beispiel-HTML, URLs und andere Information
@@ -118,23 +122,30 @@ lesen ist; leicht kar zu kommentieren ist; nicht dazu verleitet, unabsichtlich
 Fehler einzuführen; und zu nützlichen Diffs und Blames der Versionsverwaltung
 führt.
 
-1. Ein einzelner Selektor pro Zeile in Multi-Selektor-Regelsets.
-2. Ein einzelnes Leerzeichen vor der öffnenden Klammer eines Regelsets.
-3. Eine Deklaration pro Zeile in einem Deklarationsblock.
-4. Eine Einrückungsebene für jede Deklaration.
-5. Ein einzelnes Leerzeichen nach dem Doppelpunkt jeder Deklaration.
-6. Wenn Eigenschaften oder Funktionen mehrere komma-getrennte Werte haben
-   können, füge ein Leerzeichen nach jedem Komma ein.
-7. Füge immer einen Strichpunkt nach der letzten Deklaration in einem
-   Deklarationsblock ein.
-8. Platziere die schließende Klammer eines Regelsets in derselben Spalte wie
-   das erste Zeichen des Regelsets.
-9. Trenne jedes Regelset mit einer Leerzeile.
+* Verwende einen einzelnen Selektor pro Zeile in Multi-Selektor-Regelsets.
+* Füge ein einzelnes Leerzeichen vor der öffnenden Klammer eines Regelsets ein.
+* Füge eine Deklaration pro Zeile in einem Deklarationsblock ein.
+* Verwende eine Einrückungsebene für jede Deklaration.
+* Füge ein einzelnes Leerzeichen nach dem Doppelpunkt jeder Deklaration ein.
+* Verwende Kleinbuchstaben und Kurzschreibweise bei Hexwerten, z. B. `#aaa`.
+* Verwende einfache oder doppelte Anführungszeichen konsistent. Doppelte
+  Anführungszeichen werden bevorzugt, z. B. `content: ""`.
+* Setze Attributwerte in Selektoren in Anführungszeichen, z. B.
+  `input[type="checkbox"]`.
+* _Wo es erlaubt ist,_ vermeide die Angabe von Einheiten für Nullwerte, z. B.
+  `margin: 0`.
+* Füge ein Leerzeichen nach jedem Komma ein bei komma-getrennten Eigenschaften
+  oder Funktionswerten.
+* Füge einen Strichpunkt nach der letzten Deklaration in einem
+  Deklarationsblock ein.
+* Platziere die schließende Klammer eines Regelsets in derselben Spalte wie
+  das erste Zeichen des Regelsets.
+* Trenne jedes Regelset mit einer Leerzeile.
 
 ```css
 .selektor-1,
 .selektor-2,
-.selektor-3 {
+.selektor-3[type="text"] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -143,34 +154,54 @@ führt.
     color: #333;
     background: #fff;
     background: linear-gradient(#fff, #bbb);
+    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+}
+
+.selektor-a,
+.selektor-b {
+  padding: 10px;
 }
 ```
 
 #### Deklarations-Reihenfolge
 
-Deklarationen sollen nach einem einzelnen Prinzip sortiert werden. Ich
-bevorzuge es, verwandte Eigenschaften zusammen zu gruppieren und strukturell
-wichtige Eigenschaften (z.B. Positionierung und Box-Modell) vor typografischen,
-Hintergrund- oder Farbanweisungen zu notieren.
+Deklarationen sollen nach einem einzelnen, einfachen Prinzip sortiert werden,
+wenn sie geordnet werden. Ich bevorzuge es, strukturell wichtige Eigenschaften
+(z.B. Positionierung und Box-Modell) vor allen anderen zu notieren.
 
 ```css
 .selektor {
-    position: relative;
-    display: block;
-    width: 50%;
+    /* Positionierung */
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Anzeige & Box-Modell */
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100px;
     height: 100px;
     padding: 10px;
-    border: 0;
+    border: 10px solid #333;
     margin: 10px;
-    color: #fff
+
+    /* Andere */
     background: #000;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: right;
 }
 ```
 
-Alphabetische Sortierung ist ebenfalls populär, hat aber den Nachteil, dass
-sie verwandte Eigenschaften trennt. Zum Beispiel sind Positions-Versätze nicht
-mehr zusammen gruppiert und Box-Modell-Eigenschaften können sich über einen
-ganzen Deklarationsblock verteilt wiederfinden.
+Streng alphabetische Sortierung ist ebenfalls populär, hat aber den Nachteil,
+dass sie verwandte Eigenschaften trennt. Zum Beispiel sind Positions-Versätze
+nicht mehr zusammen gruppiert und Box-Modell-Eigenschaften können sich über
+einen ganzen Deklarationsblock verteilt wiederfinden.
 
 #### Ausnahmen und leichte Abweichungen
 
@@ -192,24 +223,14 @@ gezeigt.
 
 ```css
 .selektor {
-    box-shadow:
-        1px 1px 1px #000,
-        2px 2px 1px 1px #ccc inset;
     background-image:
         linear-gradient(#fff, #ccc),
         linear-gradient(#f3c, #4ec);
+    box-shadow:
+        1px 1px 1px #000,
+        2px 2px 1px 1px #ccc inset;
 }
 ```
-
-#### Verschiedenes
-
-* Verwende kleingeschriebene Hexwerte, z.B. `#aaa`.
-* Verwende einfache oder doppelte Anführungszeichen konsistent. Der Vorzug gilt
-  doppelten Anführungszeichen, z.B. `content: ""`.
-* Setze Attributswerte in Selektoren immer in Anführungszeichen, z.B.
-  `input[type="checkbox"]`.
-* _Wo es erlaubt ist_, vermeide es, Einheiten für 0-Werte anzugeben, z.B.
-  `margin: 0`.
 
 ### Präprozessoren: Zusätzliche Formatier-Überlegungen
 
@@ -243,41 +264,8 @@ folgenden Richtlinien beziehen sich auf Sass.
 ```
 
 
-<a name="naming"></a>
-## 5. Benennung
-
-Du bist kein menschlicher Code-Compiler/-Kompressor, also versuche nicht, einer
-zu sein.
-
-Verwende klare und durchdachte Namen für HTML-Klassen. Wähle ein verständliches
-und konsistentes Namensschema, das sowohl in HTML- als auch in CSS-Dateien
-sinnvoll ist.
-
-```css
-/* Beispiel von Code mit schlechten Namen */
-
-.s-scr {
-    overflow: auto;
-}
-
-.cb {
-    background: #000;
-}
-
-/* Beispiel von Code mit besseren Namen */
-
-.ist-scrollbar {
-    overflow: auto;
-}
-
-.spalten-körper {
-    background: #000;
-}
-```
-
-
 <a name="example"></a>
-## 6. Praktisches Beispiel
+## 5. Praktisches Beispiel
 
 Ein Beispiel verschiedener Konventionen.
 
@@ -287,28 +275,43 @@ Ein Beispiel verschiedener Konventionen.
    ========================================================================== */
 
 /**
+ * Beispiel-Layout mit horizontalem Scrollen.
+ *
+ * Dies erzeugt eine Reihe von voll-hohen,nicht umbrechenden Spalten, die
+ * horizontal innerhalb ihres Elternelements durchsucht werden können.
+ *
  * Beispiel-HTML:
  *
  * <div class="grid">
- *     <div class="cell cell-5"></div>
- *     <div class="cell cell-5"></div>
+ *     <div class="cell cell-3"></div>
+ *     <div class="cell cell-3"></div>
+ *     <div class="cell cell-3"></div>
  * </div>
  */
 
+/**
+ * Grid-Container
+ * Darf nur `.cell`-Kinder enthalten.
+ */
+
 .grid {
-    overflow: visible;
     height: 100%;
-    /* Hindere inline-block-Zellen am Umbruch */
-    white-space: nowrap;
     /* Verhindere Leerraum in Zellen */
     font-size: 0;
+    /* Hindere inline-block-Zellen am Umbruch */
+    white-space: nowrap;
 }
 
+/**
+ * Grid-Zellen
+ * Keine vorgegebene Breite. Erweitere mit `.cell-n`-Klassen.
+ */
+
 .cell {
-    box-sizing: border-box;
     position: relative;
+    display: inline-block;
     overflow: hidden;
-    width: 20%;
+    box-sizing: border-box;
     height: 100%;
     /* Setze den Avstand zwischen Zellen */
     padding: 0 10px;
@@ -345,32 +348,21 @@ Ein Beispiel verschiedener Konventionen.
 ```
 
 
-<a name="organization"></a>
-## 7. Organisierung
-
-Code-Organisation ist ein wichtiger Teil jeder CSS-Code-Basis und wesentlich
-für große Projekte.
-
-* Teile eigenständige Code-Teile logisch auf.
-* Verwende einzelne Dateien (in einem Bau-Schritt zusammengesetzt) als Hilfe
-  zur Aufteilung des Codes in eigenständige Komponenten.
-* Lagere beim Einsatz eines Präprozessors oft verwendeten Code in Variablen
-  für Farbe, Typografie usw. aus.
-
-
-<a name="build-and-deployment"></a>
-## 8. Bauen und Einsetzen
-
-Projekte sollen stets versuchen, generische Methoden zu verwenden, um Quelltext
-im Vorfeld des Produktiveinsatzes zu bereinigen, testen, packen und
-versionieren. Für diesen Zweck bietet sich
-[grunt](https://github.com/cowboy/grunt) von Ben Alman als exzellentes Werkzeug
-an.
-
-
 <a name="acknowledgements"></a>
 ## Danksagung
 
-Danke an alle, die zu [idiomatic.js](https://github.com/rwldrn/idiomatic.js)
-beigetragen haben. Es war eine Quelle der Inspiration, von Zitaten und
-Richtlinien.
+Danke an alle, die Übersetzungen erstellt haben und all jene, die zu
+[idiomatic.js](https://github.com/rwldrn/idiomatic.js) beigetragen haben.Es
+war eine Quelle der Inspiration, von Zitaten und Richtlinien.
+
+
+<a name="license"></a>
+## Lizenz
+
+_Grundlagen zum Schreiben von einheitlichem, idiomatischem CSS_ von Nicolas
+Gallagherist lizenziert unter der [Creative Commons Attribution 3.0
+Unported-License](http://creativecommons.org/licenses/by/3.0/). Dies trifft
+auf alle Dokumente und Übersetzungen in diesem Repository zu.
+
+Basierend auf einer Arbeit auf
+[github.com/necolas/idiomatic-css](https://github.com/necolas/idiomatic-css).
