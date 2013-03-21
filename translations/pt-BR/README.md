@@ -56,6 +56,8 @@ Dica: configure seu editor para "mostrar invisíveis". Isso irá permitir que
 você elimine espaços em branco da quebra de linha, elimine espaços em branco de
 linhas vazias sem indentação e evite commits poluídos.
 
+Dica: use um [EditorConfig](http://editorconfig.org/) arquivo (ou equivalente) para ajudar a menter a convenção básica de espaços em branco que você aceitou para sua base de código.
+
 
 <a name="comments"></a>
 ## 3. Comentários
@@ -93,6 +95,23 @@ comentários acordado.
  * Bloco de comentário de grupo
  * Ideal para explicações em múltiplas linhas e documentação.
  */
+ 
+/**
+ * Breve descrição usando o estilo de formato de comentário Doxygen
+ *
+ * A primeira frase da descrição longa começa aqui e continua
+ * nesta linha por um tempo finalmente concluindo aqui no final deste parágrafo.
+ *
+ * A descrição longa é ideal para explicações mais detalhadas e documentação.
+ * Ele pode incluir HTML exemplo, URLs, ou qualquer outra informação
+ * que seja considerada necessária ou útil.
+ *
+ * @tag Esta é uma tag chamada 'tag'
+ *
+ * @todo Esta é uma declaração de tarefas que descreve uma tarefa atômica para ser 
+ * concluída numa data posterior. Ela envolve depois de 80 caracteres e as linhas a
+ * seguir são Recuado por dois espaços.
+ */
 
 /* Comentário básico */
 ```
@@ -123,17 +142,22 @@ O formato de código escolhido deve garantir que o código seja: fácil de ler;
 fácil de comentar claramente; minimize a chance de introduzir erros
 acidentalmente; e resulte em úteis visualizações de diferença.
 
-1. Um seletor discreto por linha em um conjunto de regras com
-   multi-seletores.
-2. Um único espaço antes da abertura das chaves em um conjunto de regras.
-3. Uma única declaração por linha em um bloco de declarativo.
-4. Um nível de indentação para cada declaração.
-5. Um único espaço depois dos dois pontos de uma declaração.
-6. Sempre inclua um ponto-e-vírgula no fim da última declaração em um bloco
+* Um seletor discreto por linha em um conjunto de regras com multi-seletores.
+* Um único espaço antes da abertura das chaves em um conjunto de regras.
+* Uma única declaração por linha em um bloco de declarativo.
+* Um nível de indentação para cada declaração.
+* Um único espaço depois dos dois pontos de uma declaração.
+* Use valores minúsculos e abreviações hexadecimais, por exemplo, `#aaa`.
+* Use aspas simples ou duplas de forma consistente. Preferência é por aspas duplas,
+   por exemplo, `conteúdo:" "`.
+* Citação valores de atributos em seletores, por exemplo, `input [type="checkbox"]`.
+* _Onde for permitido_, evitar especificar unidades para zero valores, por exemplo, `margin: 0`.
+* Inclua um espaço após cada vírgula em propriedades separadas por vírgula ou valores de funções.
+* Sempre inclua um ponto-e-vírgula no fim da última declaração em um bloco
    declarativo.
-7. Coloque o fechamento das chaves na mesma coluna que o primeiro caracter do
+* Coloque o fechamento das chaves na mesma coluna que o primeiro caracter do
    conjunto de regras.
-8. Separe cada conjunto de regras por uma linha em branco.
+* Separe cada conjunto de regras por uma linha em branco.
 
 ```css
 .selector-1,
@@ -157,15 +181,30 @@ serem declaradas antes de propriedades tipográficas, fundo ou cor.
 
 ```css
 .selector {
-    position: relative;
-    display: block;
-    width: 50%;
+    /* Posicionamento */
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Display & Modelo de Caixa */
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100px;
     height: 100px;
     padding: 10px;
-    border: 0;
+    border: 10px solid #333;
     margin: 10px;
-    color: #fff
+
+    /* Outros */
     background: #000;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: right;
 }
 ```
 
@@ -193,12 +232,12 @@ vários formatos que poderiam ser usados; um exemplo é mostrado abaixo.
 
 ```css
 .selector {
-    box-shadow:
-        1px 1px 1px #000,
-        2px 2px 1px 1px #ccc inset;
     background-image:
         linear-gradient(#fff, #ccc),
         linear-gradient(#f3c, #4ec);
+    box-shadow:
+        1px 1px 1px #000,
+        2px 2px 1px 1px #ccc inset;
 }
 ```
 
@@ -243,7 +282,6 @@ são em referência ao Sass.
 }
 ```
 
-
 <a name="naming"></a>
 ## 5. Nomeando
 
@@ -287,12 +325,22 @@ Um exemplo de várias convenções.
    ========================================================================== */
 
 /*
+ * Layout da coluna com scroll horizontal.
+ *
+ * Isso cria uma única linha de altura completa, não-envolvendo colunas que podem
+ * ser navegadas na horizontal dentro de seu pai.
+ *
  * Exemplo de HTML:
  *
  * <div class="grid">
  *     <div class="cell cell-5"></div>
  *     <div class="cell cell-5"></div>
  * </div>
+ */
+ 
+/**
+ * Grid container
+ * Deve conter apenas filhos de `.cell`
  */
 
 .grid {
@@ -303,6 +351,11 @@ Um exemplo de várias convenções.
     /* Remove inter-cell whitespace */
     font-size: 0;
 }
+
+/**
+ * Grid cells
+ * Largura não-explícita por padrão. Extenda com classes `.cell-n`.
+ */
 
 .cell {
     box-sizing: border-box;
