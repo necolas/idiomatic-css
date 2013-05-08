@@ -277,20 +277,27 @@ An example of various conventions.
 
 /**
  * Grid container
+ *
  * Must only contain `.cell` children.
+ *
+ * 1. Remove inter-cell whitespace
+ * 2. Prevent inline-block cells wrapping
  */
 
 .grid {
     height: 100%;
-    /* Remove inter-cell whitespace */
-    font-size: 0;
-    /* Prevent inline-block cells wrapping */
-    white-space: nowrap;
+    font-size: 0; /* 1 */
+    white-space: nowrap; /* 2 */
 }
 
 /**
  * Grid cells
+ *
  * No explicit width by default. Extend with `.cell-n` classes.
+ *
+ * 1. Set the inter-cell spacing
+ * 2. Reset white-space inherited from `.grid`
+ * 3. Reset font-size inherited from `.grid`
  */
 
 .cell {
@@ -299,14 +306,11 @@ An example of various conventions.
     overflow: hidden;
     box-sizing: border-box;
     height: 100%;
-    /* Set the inter-cell spacing */
-    padding: 0 10px;
+    padding: 0 10px; /* 1 */
     border: 2px solid #333;
     vertical-align: top;
-    /* Reset white-space */
-    white-space: normal;
-    /* Reset font-size */
-    font-size: 16px;
+    white-space: normal; /* 2 */
+    font-size: 16px; /* 3 */
 }
 
 /* Cell states */
