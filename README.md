@@ -29,11 +29,12 @@ contribute.
 > your code, then write your code for maximum clarity, not your personal
 > preference of how to get clever within the spec." - Idan Gazit
 
-* You are not a human code compiler/compressor, so don't try to be one.
-* All code in any code-base should look like a single person typed it, no
-  matter how many people contributed.
+* Don't try to prematurely optimize your code; keep it readable and
+  understandable.
+* All code in any code-base should look like a single person typed it, even
+  when many people are contributing to it.
 * Strictly enforce the agreed-upon style.
-* If in doubt when deciding upon a style, use existing, common patterns.
+* If in doubt when deciding upon a style use existing, common patterns.
 
 
 <a name="whitespace"></a>
@@ -49,9 +50,8 @@ readability.
 * If using spaces, choose the number of characters used per indentation level.
   (Preference: 4 spaces)
 
-Tip: configure your editor to "show invisibles". This will allow you to
-eliminate end-of-line whitespace, eliminate unintended blank-line whitespace,
-and avoid polluting commits.
+Tip: configure your editor to "show invisibles" or to automatically remove
+end-of-line whitespace.
 
 Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to
 help maintain the basic whitespace conventions that have been agreed for your
@@ -98,7 +98,7 @@ Example:
  *
  * @tag This is a tag named 'tag'
  *
- * @todo This is a todo statement that describes an atomic task to be completed
+ * TODO: This is a todo statement that describes an atomic task to be completed
  *   at a later date. It wraps after 80 characters and following lines are
  *   indented by 2 spaces.
  */
