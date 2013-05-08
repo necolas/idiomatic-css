@@ -155,9 +155,10 @@ in useful diffs and blames.
 #### Declaration order
 
 If declarations are to be consistently ordered, it should be in accordance with
-a single, simple principle. My preference is for structurally important
-properties (e.g. positioning and box-model) to be declared prior to all
-others.
+a single, simple principle.
+
+Smaller teams may prefer to cluster related properties (e.g. positioning and
+box-model) together.
 
 ```css
 .selector {
@@ -188,10 +189,8 @@ others.
 }
 ```
 
-Strict alphabetical ordering is also relatively popular, but the drawback is
-that it separates related properties. For example, position offsets are no
-longer grouped together and box-model properties can end up spread throughout a
-declaration block.
+Larger teams may prefer the simplicity and ease-of-mainteance that comes with
+alphabetical ordering.
 
 #### Exceptions and slight deviations
 
