@@ -34,10 +34,10 @@ accette. Per favore contribuite.
 > che abbia la massima chiarezza, e non seguendo i tuoi gusti personali su come
 > renderlo chiaro all'interno delle specifiche" - Idan Gazit
 
-* Non siete un compilatore/compressore umano di codice, quindi non cercate di
-  esserlo.
+* Non cercare di ottimizzare in anticipo il tuo codice; cerca di mantenerlo
+  leggibile e comprensibile.
 * Tutto il codice, in qualsiasi linguaggio sia, dovrebbe sembrare come scritto
-  da un'unica persona, non importa quante persone vi abbiano contribuito.
+  da un'unica persona, anche quando molte persone vi stanno contribuendo.
 * Rispettate al massimo lo stile prescelto.
 * Nel dubbio, usate pattern comuni già esistenti e collaudati.
 
@@ -56,8 +56,7 @@ migliorare la leggibilità.
   rientro (preferenza: 4 spazi).
 
 Suggerimento: configurate il vostro editor in modo da "visualizzare i caratteri
-invisibili". Questo vi permetterà di eliminare spazi vuoti di fine linea e
-linee vuote indesiderate, ed evitare commit pasticciati.
+invisibili" o rimuovere automaticamente gli spazio vuoti a fine linea.
 
 Suggerimento: usate un file [EditorConfig](http://editorconfig.org/) (o
 equivalente) per aiutarvi a mantenere le convenzioni di base relative allo
@@ -108,7 +107,7 @@ Esempio:
  *
  * @tag Questo è un 'tag'
  *
- * @todo Questa è una dichiarazione 'todo' che descrive un'attività necessaria
+ * TODO: Questa è una dichiarazione 'todo' che descrive un'attività necessaria
  *   che dovrà essere completata in un momento successivo. Essa va a capo dopo
  *   80 caratteri e le linee successive vengono rientrare di 2 spazi.
  */
@@ -134,7 +133,7 @@ accidentalmente errori; dia risultati utili nei diff e blame.
 * Usate apici e doppi apici in modo uniforme. La preferenza è per i doppi
   apici, es. `content: ""`.
 * Racchiudete in doppi apici i valori nei selettori, es.
-  `input[type="checkbox"].
+  `input[type="checkbox"]`.
 * _Dove possibile_, evitate di specificare l'unità di misura per valori uguali
   a zero, es. `margin: 0`.
 * Includete uno spazio dopo ogni virgola, per le liste di proprietà separate da
@@ -168,9 +167,10 @@ accidentalmente errori; dia risultati utili nei diff e blame.
 #### Ordine di dichiarazione
 
 Se le dichiarazioni devono essere ordinate in modo logico, esse dovrebbero
-seguire un semplice ed unico criterio. Io preferisco che la dichiarazione di
-proprietà strutturalmente importanti (cioè, posizionamento e box-model) avvenga
-prima di tutto il resto.
+seguire un semplice ed unico criterio.
+
+I piccoli team potrebbero preferire il raggruppamento delle proprietà (es.
+posizionamento e box-model) per categoria.
 
 ```css
 .selector {
@@ -201,10 +201,9 @@ prima di tutto il resto.
 }
 ```
 
-Piuttosto popolare è anche l'ordinamento alfabetico, ma lo svantaggio è che
-così facendo si vanno a separare proprietà in relazione tra di loro. Ad
-esempio, gli offset di posizionamento non sono più raggruppati, e le proprietà
-del box-model possono finire spalmate lungo tutto il blocco dichiarativo.
+I grossi team potrebbero preferire la semplicità e facilità di manutenzione che
+deriva dall'ordinamento alfabetico.
+
 
 #### Eccezioni e piccole deviazioni
 
@@ -297,20 +296,27 @@ Un esempio di varie convenzioni.
 
 /**
  * Contenitore griglia
+ *
  * Deve contenere solo figli `.cell`.
+ *
+ * 1. Rimuove lo spazio tra le celle
+ * 2. Previene che le celle inline-block vadano a capo
  */
 
 .grid {
     height: 100%;
-    /* Rimuove lo spazio tra le celle */
-    font-size: 0;
-    /* Previene che le celle inline-block vadano a capo */
-    white-space: nowrap;
+    font-size: 0; /* 1 */
+    white-space: nowrap; /* 2 */
 }
 
 /**
  * Celle della griglia
+ *
  * Di default, nessuna larghezza esplicita. Estendible con le classi `.cell-n`.
+ *
+ * 1. Imposta la spaziatura tra le celle
+ * 2. Ripristina il white-space ereditato da `.grid`
+ * 3. Ripristina la dimensione del font ereditata da `.grid`
  */
 
 .cell {
@@ -319,14 +325,11 @@ Un esempio di varie convenzioni.
     overflow: hidden;
     box-sizing: border-box;
     height: 100%;
-    /* Imposta la spaziatura tra le celle */
-    padding: 0 10px;
+    padding: 0 10px; /* 1 */
     border: 2px solid #333;
     vertical-align: top;
-    /* Ripristina il white-space */
-    white-space: normal;
-    /* Ripristina la dimensione del font */
-    font-size: 16px;
+    white-space: normal; /* 2 */
+    font-size: 16px; /* 3 */
 }
 
 /* Stati delle celle */
