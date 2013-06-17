@@ -354,6 +354,7 @@ An example of various conventions.
 * [Русский](https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU)
 * [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr-SR)
 * [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
+* [正體中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-TW)
 * [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
 
 
