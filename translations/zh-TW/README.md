@@ -84,8 +84,11 @@
  *
  * @tag 這是一個命名為'tag'的標籤
  *
+ * TODO: This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
  * TODO: 這是描述一個要在稍後完成的簡單任務的待辦事項。
- *   它在80個字元長度後斷行（譯註：中文沒有）且以下每行
+ *   它在80個字元長度後斷行（譯註：翻成中文後在這裡並非如此）且以下每行
  *   都使用兩個空白縮進。
  */
 
@@ -94,29 +97,24 @@
 
 
 <a name="format"></a>
-## 4. Format
+## 4. 格式
 
-The chosen code format must ensure that code is: easy to read; easy to clearly
-comment; minimizes the chance of accidentally introducing errors; and results
-in useful diffs and blames.
+指定的代碼格式必須要確保的是：易於閱讀；易於清晰地註解；減少意外引入錯誤的機會；
+而且可以產生實用的diff以及blame。
 
-* Use one discrete selector per line in multi-selector rulesets.
-* Include a single space before the opening brace of a ruleset.
-* Include one declaration per line in a declaration block.
-* Use one level of indentation for each declaration.
-* Include a single space after the colon of a declaration.
-* Use lowercase and shorthand hex values, e.g., `#aaa`.
-* Use single or double quotes consistently. Preference is for double quotes,
-  e.g., `content: ""`.
-* Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
-* _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
-* Include a space after each comma in comma-separated property or function
-  values.
-* Include a semi-colon at the end of the last declaration in a declaration
-  block.
-* Place the closing brace of a ruleset in the same column as the first
-  character of the ruleset.
-* Separate each ruleset by a blank line.
+* 在有許多選擇器的樣式集中，讓每個單獨的選擇器單獨成行。
+* 在樣式集的開始括號前保留一個空格。
+* 在樣式區塊中保持每個樣式至少一行。
+* 在每個樣式前使用一個段落的縮進。
+* 在每個樣式的冒號後保留一個空格。
+* 使用小寫以及縮略的HEX數值，例如：`#aaa`。
+* 一致地使用單引號或是雙引號。推薦使用雙引號，例如：`#aaa`。
+* 在選擇器中以引號夾注屬性值，例如： `input[type="checkbox"]`。
+* _可以的話_，避免在值為零時指定單位，例如：`margin: 0`。
+* 在每一個以逗號分隔的屬性的逗號或是函式值後面保留一個空格。
+* 在樣式區塊的最後一個樣式結尾保留分號。
+* 樣式集的結束括號應該擺放在與樣式集的第一個字元同樣位置。
+* 以一個空白行分隔每個樣式集。
 
 ```css
 .selector-1,
@@ -138,17 +136,15 @@ in useful diffs and blames.
 }
 ```
 
-#### Declaration order
+#### 宣告順序
 
-If declarations are to be consistently ordered, it should be in accordance with
-a single, simple principle.
+如果宣告按照順序一貫地排列下來，應當要符合一個簡單的原則。
 
-Smaller teams may prefer to cluster related properties (e.g. positioning and
-box-model) together.
+比較小的團隊們也許會偏好將有關聯的屬性（例如位置和容器模型）群組在一起。
 
 ```css
 .selector {
-    /* Positioning */
+    /* 位置 */
     position: absolute;
     z-index: 10;
     top: 0;
@@ -156,7 +152,7 @@ box-model) together.
     bottom: 0;
     left: 0;
 
-    /* Display & Box Model */
+    /* 顯示 & 區塊模型 */
     display: inline-block;
     overflow: hidden;
     box-sizing: border-box;
@@ -166,7 +162,7 @@ box-model) together.
     border: 10px solid #333;
     margin: 10px;
 
-    /* Other */
+    /* 其它 */
     background: #000;
     color: #fff;
     font-family: sans-serif;
@@ -175,14 +171,12 @@ box-model) together.
 }
 ```
 
-Larger teams may prefer the simplicity and ease-of-mainteance that comes with
-alphabetical ordering.
+比較大的團隊們也許會偏好以字母排序所帶來的簡潔性以及易於維護。
 
-#### Exceptions and slight deviations
+#### 例外與細微偏差
 
-Large blocks of single declarations can use a slightly different, single-line
-format. In this case, a space should be included after the opening brace and
-before the closing brace.
+對於大量只包含單條樣式宣告的區塊，可以採用一種稍微不同的單行格式。
+在這種情況下，應在開始括號之後以及結束括號之前都保留一個空格。
 
 ```css
 .selector-1 { width: 10%; }
@@ -190,10 +184,8 @@ before the closing brace.
 .selector-3 { width: 30%; }
 ```
 
-Long, comma-separated property values - such as collections of gradients or
-shadows - can be arranged across multiple lines in an effort to improve
-readability and produce more useful diffs. There are various formats that could
-be used; one example is shown below.
+對於很長且以逗號分隔的屬性值——例如漸層或是陰影的集合——可以整理成多行達到改善可讀性以及產生更有用diff的效果，這時有許多種格式可以使用。
+底下有個例子。
 
 ```css
 .selector {
@@ -206,24 +198,16 @@ be used; one example is shown below.
 }
 ```
 
-### Preprocessors: additional format considerations
+### 預處理器: 額外的格式考量
 
-Different CSS preprocessors have different features, functionality, and syntax.
-Your conventions should be extended to accommodate the particularities of any
-preprocessor in use. The following guidelines are in reference to Sass.
+不同的 CSS 預處理器有不同的特色、功能、以及語法。
+你們的慣例應該去考慮到使用中的不同預處理器的特點而隨著擴充。以下是關於 Sass 的守則。
 
-* Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
-  This prevents overly-specific CSS selectors.
-* Avoid large numbers of nested rules. Break them up when readability starts to
-  be affected. Preference to avoid nesting that spreads over more than 20
-  lines.
-* Always place `@extend` statements on the first lines of a declaration
-  block.
-* Where possible, group `@include` statements at the top of a declaration
-  block, after any `@extend` statements.
-* Consider prefixing custom functions with `x-` or another namespace. This
-  helps to avoid any potential to confuse your function with a native CSS
-  function, or to clash with functions from libraries.
+* 將嵌套深度限制在一個階層。對於任何兩階以上的深度重新評估。這將避免寫出過於針對性的 CSS 選擇器。
+* 避免大量的嵌套規則。當可讀性開始受到影響時將它們打散。盡量避免超過20行的嵌套。
+* 永遠將 `@extend` 宣告擺在樣式區塊的第一行。
+* 可能的話，將 `@include` 宣告群組置於樣式區塊的頂部，緊接著任何 `@extend` 宣告之後。
+* 考慮在自訂函式的前面加上`x-`或是其他的命名空間。這有助於避免與原生的 CSS 函式混淆，或是與其它函式庫衝突。
 
 ```scss
 .selector-1 {
@@ -237,22 +221,21 @@ preprocessor in use. The following guidelines are in reference to Sass.
 
 
 <a name="example"></a>
-## 5. Practical example
+## 5. 實例
 
-An example of various conventions.
+這是遵循上述那些規範的範例。
 
 ```css
 /* ==========================================================================
-   Grid layout
+   格線佈局
    ========================================================================== */
 
 /**
- * Column layout with horizontal scroll.
+ * 帶有橫向捲軸的欄位佈局。
  *
- * This creates a single row of full-height, non-wrapping columns that can
- * be browsed horizontally within their parent.
+ * 這會產生一個由全高且不斷開的多欄區塊組成的單列，可以在它的上層容器中橫向瀏覽。
  *
- * Example HTML:
+ * 範例 HTML:
  *
  * <div class="grid">
  *     <div class="cell cell-3"></div>
@@ -262,12 +245,12 @@ An example of various conventions.
  */
 
 /**
- * Grid container
+ * 格線容器
  *
- * Must only contain `.cell` children.
+ * 必須只包含 `.cell` 子元素.
  *
- * 1. Remove inter-cell whitespace
- * 2. Prevent inline-block cells wrapping
+ * 1. 移除網格間的空白
+ * 2. 避免 inline-block 網格斷開
  */
 
 .grid {
@@ -277,13 +260,13 @@ An example of various conventions.
 }
 
 /**
- * Grid cells
+ * 系統網格
  *
- * No explicit width by default. Extend with `.cell-n` classes.
+ * 不預設固定的寬度. 用 `.cell-n` 類別來變化。
  *
- * 1. Set the inter-cell spacing
- * 2. Reset white-space inherited from `.grid`
- * 3. Reset font-size inherited from `.grid`
+ * 1. 設定網格內間距
+ * 2. 重設自 `.grid` 串接來的 white-space 屬性
+ * 3. 重設自 `.grid` 串接來的 font-size 屬性
  */
 
 .cell {
@@ -299,13 +282,13 @@ An example of various conventions.
     font-size: 16px; /* 3 */
 }
 
-/* Cell states */
+/* 網格狀態 */
 
 .cell.is-animating {
     background-color: #fffdec;
 }
 
-/* Cell dimensions
+/* 網格維度
    ========================================================================== */
 
 .cell-1 { width: 10%; }
@@ -314,7 +297,7 @@ An example of various conventions.
 .cell-4 { width: 40%; }
 .cell-5 { width: 50%; }
 
-/* Cell modifiers
+/* 網格修飾
    ========================================================================== */
 
 .cell--detail,
