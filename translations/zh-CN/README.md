@@ -1,7 +1,6 @@
-# 编写统一、符合习惯的CSS的原则
+# 编写如一、符合习惯的CSS的原则
 
-以下文档将提供一个合理的风格指导，用于CSS开发。
-这个文档并不是规范，我也不希望将自己的风格喜好强加在其他人身上。但是这个指导手册确实强烈鼓励使用现有的、通用的、合理的模式。
+以下文档将概述一个合理的CSS开发风格指导。本指导文件强烈鼓励开发者使用已经存在了的、常见的、合力的文风。您应该有选择地吸纳一些内容来创造您自己的风格指南。
 
 这个文档将持续更新，欢迎提出新的想法。还请多多贡献。
 
@@ -28,9 +27,10 @@
 > “作为成功的项目的一员，很重要的一点是意识到只为自己写代码是很糟糕的行为。如果将有成千上万人使用你的代码，
 > 那么你需要编写最具明确性的代码，而不是以自我的喜好来彰显自己的智商。” - Idan Gazit
 
+* 别想着过早地优化代码。先得保证它们可读又可理解才行。
 * 在任何代码库中，无论有多少人参与及贡献，所有代码都应该如同一个人编写的一样。
 * 严格执行一致认可的风格。
-* 如果有疑义，则使用现有的、通用的模式。
+* 如果有疑议，则使用现有的、通用的模式。
 
 
 <a name="whitespace"></a>
@@ -38,12 +38,13 @@
 
 在项目的所有代码中，应该只有一个风格。在空格的使用上，必须始终保持一致。使用空格来提高可读性。
 
-* *永远不要*在缩进时混用空格和TAB。
-* 在软缩进（使用空格）和真正的TAB间选择其一。并始终坚持这一选择。（推荐使用空格）
+* *永远不要*在缩进时混用空格和制表符（又称TAB符号）。
+* 在软缩进（使用空格）和真正的制表符间选择其一，并始终坚持这一选择。（推荐使用空格）
 * 如果使用空格进行缩进，选择每个缩进所使用的空格数。（推荐：4个空格）
 
 提示：将编辑器配置为“显示不可见内容”。这使你可以清除行尾的空格和不需要缩进的空行里的空格，同时可以避免对注释的污染。
 
+提示：确定好一种空格格式后，您可以用一个[EditorConfig](http://editorconfig.org/)文件（或者其他相同的东西）来帮助在代码库之间维持这种基本的空格约定。
 
 <a name="comments"></a>
 ## 3. 注释
@@ -54,7 +55,6 @@
 注释的风格应当简洁，并在代码库中保持统一。
 
 * 将注释放在主题上方并独占一行。
-* 避免在行未放置注释。
 * 控制每行长度在合理的范围内，比如80个字符。
 * 使用注释从字面上将CSS代码分隔为独立的部分。
 * 注释的大小写应当与普通句子相同，并且使用一致的文本缩进。
@@ -65,38 +65,31 @@
 
 ```css
 /* ==========================================================================
-   区块注释段
+   区块代码注释
    ========================================================================== */
 
-/* 子区块注释段
+/* 次级区块代码注释
    ========================================================================== */
 
-/*
- * 分组注释段
- * 用于多行的释义或文档。
+/**
+ * “Doxygen式注释格式”的简短介绍
+ *
+ * 较长的说明文本从这里开始，这是这段文字的第一句话，而且这句话还
+ * 没结束，过了好一会儿，我了个去终于结束了，烦不烦啊。
+ *
+ * 当需要进行更细致的解释说明、提供文档文本时，较长的说明文本就很
+ * 有用了。这种长长的说明文本，可以包括示例HTML啦、链接啦等等其
+ * 他你认为重要或者有用的东西。
+ *
+ * @tag 这是一个叫做“tag”的标签。
+ *
+ * TODO: 这个“‘需做’陈述”描述了一个接下来要去做的小工作。这种文本，
+ *   如果超长了的话，应该在80个半角字符（如英文）或40个全角字符（
+ *   如中文）后便换行，并（在“ * ”的基础上）再在后面缩进两个空格。
  */
 
-/* 基本注释 */
+/* 一般的注释 */
 ```
-
-#### SCSS示例：
-
-```scss
-// ==========================================================================
-// 区块注释段
-// ==========================================================================
-
-// 子区块注释段
-// ==========================================================================
-
-//
-// 分组注释段
-// 用于多行的释义或文档。
-//
-
-// 基本注释
-```
-
 
 <a name="format"></a>
 ## 4. 格式
@@ -115,13 +108,20 @@
 ```css
 .selector-1,
 .selector-2,
-.selector-3 {
+.selector-3[type="text"] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
+    font-family: helvetica, arial, sans-serif;
     color: #333;
     background: #fff;
+    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+}
+
+.selector-a,
+.selector-b {
+    padding: 10px;
 }
 ```
 
@@ -130,21 +130,38 @@
 样式声明的顺序应当遵守一个单一的原则。我的倾向是将相关的属性组合在一起，并且将对结构来说比较重要的属性（如定位或者盒模型）
 放在前面，先于排版、背景及颜色等属性。
 
+小型的开发团体，可能会想要把相关的属性声明（比如说定位和箱模型）摆在一起。
+
 ```css
 .selector {
-    position: relative;
-    display: block;
-    width: 50%;
+    /* Positioning */
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Display & Box Model */
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100px;
     height: 100px;
     padding: 10px;
-    border: 0;
+    border: 10px solid #333;
     margin: 10px;
-    color: #fff
+
+    /* Other */
     background: #000;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: right;
 }
 ```
 
-按字母排序也非常流行，但是这种做法存在一个缺点，即会将相关的属性分开。例如定位偏移量会无法放在一起，盒模型相关的属性会四散分布在一个声明块中。
+大型团队，则可能更喜欢按字母排序，因为这样做起来很方便，而且维护起来很容易。
 
 #### 例外及细微偏移原则的情况
 
@@ -234,38 +251,57 @@ html文件和css文件中的代码，尽量采用一致的命名规则。
    Grid layout
    ========================================================================== */
 
-/*
- * HTML代码示例:
+/**
+ * Column layout with horizontal scroll.
+ *
+ * This creates a single row of full-height, non-wrapping columns that can
+ * be browsed horizontally within their parent.
+ *
+ * Example HTML:
  *
  * <div class="grid">
- *     <div class="cell cell-5"></div>
- *     <div class="cell cell-5"></div>
+ *     <div class="cell cell-3"></div>
+ *     <div class="cell cell-3"></div>
+ *     <div class="cell cell-3"></div>
  * </div>
  */
 
+/**
+ * Grid container
+ *
+ * Must only contain `.cell` children.
+ *
+ * 1. Remove inter-cell whitespace
+ * 2. Prevent inline-block cells wrapping
+ */
+
 .grid {
-    overflow: visible;
     height: 100%;
-    /* Prevent inline-block cells wrapping */
-    white-space: nowrap;
-    /* Remove inter-cell whitespace */
-    font-size: 0;
+    font-size: 0; /* 1 */
+    white-space: nowrap; /* 2 */
 }
 
+/**
+ * Grid cells
+ *
+ * No explicit width by default. Extend with `.cell-n` classes.
+ *
+ * 1. Set the inter-cell spacing
+ * 2. Reset white-space inherited from `.grid`
+ * 3. Reset font-size inherited from `.grid`
+ */
+
 .cell {
-    box-sizing: border-box;
     position: relative;
+    display: inline-block;
     overflow: hidden;
-    width: 20%;
+    box-sizing: border-box;
     height: 100%;
-    /* Set the inter-cell spacing */
-    padding: 0 10px;
+    padding: 0 10px; /* 1 */
     border: 2px solid #333;
     vertical-align: top;
-    /* Reset white-space */
-    white-space: normal;
-    /* Reset font-size */
-    font-size: 16px;
+    white-space: normal; /* 2 */
+    font-size: 16px; /* 3 */
 }
 
 /* Cell states */
@@ -315,3 +351,8 @@ html文件和css文件中的代码，尽量采用一致的命名规则。
 ## 致谢
 
 感谢所有对[idiomatic.js](https://github.com/rwldrn/idiomatic.js)作出贡献的网友。
+
+##许可
+_Principles of writing consistent, idiomatic CSS_ 是Nicolas Gallagher发布在[Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/)许可证下的作品。该许可证适用于本代码栈中的所有文档，包括翻译文本。
+
+本作品基于[github.com/necolas/idiomatic-css](https://github.com/necolas/idiomatic-css)著就。
