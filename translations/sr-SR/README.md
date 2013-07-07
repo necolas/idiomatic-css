@@ -47,7 +47,7 @@ Samo jedan stil bi trebao da postoji u celom vašem projektu. Uvek budite
 konzistentni u upotrebi razmaka. Koristite razmake da poboljšate čitljivost.
 
 * _Nikada_ nemojte mešati space karakter i tab za indentaciju.
-* Izaberite između mekih indentacija(space karakteri) i pravih tabova. Držite se
+* Izaberite između mekih indentacija (space karakteri) i pravih tabova. Držite se
 vašeg izbora bez obzira na sve. (Preferencija: space karakteri)
 * Ako koristite space karaktere, izaberite broj karaktera za indentacioni nivo.
 (Preferencija: 4 space karaktera)
@@ -62,7 +62,7 @@ karaktere praznim linijama i da izbegnete "zagađivanje" komitova.
 
 Dobro komentarisan kod je ekstremno bitan. Uzmite vremena da opišete komponente,
 kako rade, njihove limite, i način na koji su konstruisani. Nemojte ostavljati
-drugim članovima tima da nagađaju svrhu neuobičajenih i ne očiglednih delova
+drugim članovima tima da nagađaju svrhu neuobičajenih i neočiglednih delova
 koda.
 
 Stil komentara treba da bude jednostavan i konzistentan u celom projektu.
@@ -70,7 +70,7 @@ Stil komentara treba da bude jednostavan i konzistentan u celom projektu.
 * Postavljajte komentare na novu liniju iznad dela koda koji hoćete da
 iskomentarišete.
 * Izbegavajte komentare na kraju linije koda.
-* Držite dužinu linije na razumnom maksimumu, npr 80 kolona.
+* Držite dužinu linije na razumnom maksimumu, npr. 80 kolona.
 * Slobodno koristite komentare da "razbijete" CSS kod na diskretne sekcije.
 * Koristite komentare dužine jedne rečenice i konzistentno indentovanje teksta.
 
@@ -203,12 +203,12 @@ razni formati koji bi mogli biti korišćeni, jedan primer je prikazan ispod.
 
 #### Razno
 
-* Koristite heksadecimalne vrednosti sa malim slovim, npr `#aaa`.
+* Koristite heksadecimalne vrednosti sa malim slovim, npr. `#aaa`.
 * Koristite jedan ili dupli apostrof konzistentno. Preferencija je da se
   koriste dupli apostrofi, npr `content: ""`.
 * Vrednosti atributa u selektorima uvek stavljajte između apostrofa, npr
   `input[type="checkbox"]`.
-* _Gde je moguće_ izbegavajte specifiranje jedinica za nula vrednosti, npr
+* _Gde je moguće_ izbegavajte specifiranje nultih vrednosti, npr.
   `margin: 0`.
 
 ### Preprocesori: dodatna razmatranja za formatiranje
@@ -352,7 +352,7 @@ baze koda.
 * Koristite odvojene fajlove(spojene u delu izgradnje za produkciju) da vam
   pomogne da razbijete kod u više posebnih komponenti.
 * Ako koristite preprocesor, abstraktujte uobičajene delove koda u promenljive,
-  npr boje, tipografiju, itd.
+  npr. boje, tipografiju, itd.
 
 
 <a name="build-and-deployment"></a>
