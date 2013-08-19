@@ -189,7 +189,7 @@ box-model) together.
 }
 ```
 
-Larger teams may prefer the simplicity and ease-of-mainteance that comes with
+Larger teams may prefer the simplicity and ease-of-maintenance that comes with
 alphabetical ordering.
 
 #### Exceptions and slight deviations
