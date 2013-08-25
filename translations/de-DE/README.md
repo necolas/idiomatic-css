@@ -1,6 +1,6 @@
 # Grundlagen zum Schreiben von einheitlichem, idiomatischem CSS
 
-Das folgende Dokument legt einen vernünftige Gestaltungsrichtlinie für die
+Das folgende Dokument legt eine vernünftige Gestaltungsrichtlinie für die
 CSS-Entwicklung dar. Diese Richtlinien ermutigen zur Verwendung existierender,
 üblicher und sinnvoller Muster. Sie sollten nach Bedarf angepasst werden, um
 eine eigene Gestaltungsrichtlinie zu erstellen.
@@ -76,7 +76,7 @@ Code-Basis sein.
 
 * Platziere Kommentare auf neuen Zeilen über ihrem Gegenstand.
 * Behalte die Zeilenlänge bei einem sinnvollen Maximum, z.B. 80 Spalten.
-* Mache freigebig Gebrauch von Kommentaren, um CSS in einzelne Abschnitte zu
+* Mache großzügigen Gebrauch von Kommentaren, um CSS in einzelne Abschnitte zu
   unterteilen.
 * Beginne mit einem Großbuchstaben und verwende konsistente Einrückung.
 
@@ -118,7 +118,7 @@ Beispiel:
 ## 4. Formatierung
 
 Die gewählte Codeformatierung muss gewährleisten, dass der Code: leicht zu
-lesen ist; leicht kar zu kommentieren ist; nicht dazu verleitet, unabsichtlich
+lesen ist; leicht klar zu kommentieren ist; nicht dazu verleitet, unabsichtlich
 Fehler einzuführen; und zu nützlichen Diffs und Blames der Versionsverwaltung
 führt.
 
@@ -277,7 +277,7 @@ Ein Beispiel verschiedener Konventionen.
 /**
  * Beispiel-Layout mit horizontalem Scrollen.
  *
- * Dies erzeugt eine Reihe von voll-hohen,nicht umbrechenden Spalten, die
+ * Dies erzeugt eine Reihe von maximal-hohen, nicht umbrechenden Spalten, die
  * horizontal innerhalb ihres Elternelements durchsucht werden können.
  *
  * Beispiel-HTML:
@@ -313,23 +313,23 @@ Ein Beispiel verschiedener Konventionen.
     overflow: hidden;
     box-sizing: border-box;
     height: 100%;
-    /* Setze den Avstand zwischen Zellen */
+    /* Setzt den Abstand zwischen Zellen */
     padding: 0 10px;
     border: 2px solid #333;
     vertical-align: top;
-    /* Stelle Leerraum wieder her */
+    /* Stellt Leerraum wieder her */
     white-space: normal;
-    /* Stelle Schriftgröße wieder her */
+    /* Stellt Schriftgröße wieder her */
     font-size: 16px;
 }
 
-/* Zellen-Zustände */
+/* Zell-Zustände */
 
 .cell.is-animating {
     background-color: #fffdec;
 }
 
-/* Zellen-Abmessungen
+/* Zell-Abmessungen
    ========================================================================== */
 
 .cell-1 { width: 10%; }
@@ -338,7 +338,7 @@ Ein Beispiel verschiedener Konventionen.
 .cell-4 { width: 40%; }
 .cell-5 { width: 50%; }
 
-/* Zellen-Modifikatoren
+/* Zell-Modifikatoren
    ========================================================================== */
 
 .cell--detail,
@@ -352,7 +352,7 @@ Ein Beispiel verschiedener Konventionen.
 ## Danksagung
 
 Danke an alle, die Übersetzungen erstellt haben und all jene, die zu
-[idiomatic.js](https://github.com/rwldrn/idiomatic.js) beigetragen haben.Es
+[idiomatic.js](https://github.com/rwldrn/idiomatic.js) beigetragen haben. Es
 war eine Quelle der Inspiration, von Zitaten und Richtlinien.
 
 
