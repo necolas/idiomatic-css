@@ -152,6 +152,7 @@ acidentalmente; e resulte em úteis visualizações de diferença.
    por exemplo, `conteúdo:" "`.
 * Citação valores de atributos em seletores, por exemplo, `input [type="checkbox"]`.
 * _Onde for permitido_, evitar especificar unidades para zero valores, por exemplo, `margin: 0`.
+* Evitar o número zero se este estiver no fim da casa decimal, por exemplo, `1.6em` em vez de `1.60em`.
 * Inclua um espaço após cada vírgula em propriedades separadas por vírgula ou valores de funções.
 * Sempre inclua um ponto-e-vírgula no fim da última declaração em um bloco
    declarativo.
