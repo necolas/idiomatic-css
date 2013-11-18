@@ -149,7 +149,7 @@ acidentalmente; e resulte em úteis visualizações de diferença.
 * Um único espaço depois dos dois pontos de uma declaração.
 * Use valores minúsculos e abreviações hexadecimais, por exemplo, `#aaa`.
 * Use aspas simples ou duplas de forma consistente. Preferência é por aspas duplas,
-   por exemplo, `conteúdo:" "`.
+   por exemplo, `content: ""`.
 * Citação valores de atributos em seletores, por exemplo, `input [type="checkbox"]`.
 * _Onde for permitido_, evitar especificar unidades para zero valores, por exemplo, `margin: 0`.
 * Evitar o número zero se este estiver no fim da casa decimal, por exemplo, `1.6em` em vez de `1.60em`.
