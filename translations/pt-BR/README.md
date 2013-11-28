@@ -150,13 +150,13 @@ acidentalmente; e resulte em úteis visualizações de diferença.
 * Use valores minúsculos e abreviações hexadecimais, por exemplo, `#aaa`.
 * Use aspas simples ou duplas de forma consistente. Preferência é por aspas duplas,
    por exemplo, `content: ""`.
-* Citação valores de atributos em seletores, por exemplo, `input [type="checkbox"]`.
+* Use aspas em valores de atributos em seletores, por exemplo, `input [type="checkbox"]`.
 * _Onde for permitido_, evitar especificar unidades para zero valores, por exemplo, `margin: 0`.
 * Evitar o número zero se este estiver no fim da casa decimal, por exemplo, `1.6em` em vez de `1.60em`.
 * Inclua um espaço após cada vírgula em propriedades separadas por vírgula ou valores de funções.
 * Sempre inclua um ponto-e-vírgula no fim da última declaração em um bloco
    declarativo.
-* Coloque o fechamento das chaves na mesma coluna que o primeiro caracter do
+* Coloque o fechamento das chaves na mesma coluna que o primeiro carácter do
    conjunto de regras.
 * Separe cada conjunto de regras por uma linha em branco.
 
@@ -405,7 +405,7 @@ Um exemplo de várias convenções.
 Organização de código é uma importante parte de qualquer base de código CSS, e
 crucial para grandes bases de código.
 
-* Separar logicamente distintas partes do código.
+* Separar logicamente partes distintas do código.
 * Usar arquivos separados (concatenados por um processo de build) para ajudar a
   dividir código para componentes distintos.
 * Se estiver usando um pré-processador, abstrair partes comuns de código em
