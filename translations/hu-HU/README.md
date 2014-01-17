@@ -2,8 +2,8 @@
 
 A következő dokumentum egy célszerű formaszabályzatot vázol fel CSS
 fejlesztéshez. Ezek az irányelvek erősen javasolják már meglévő, gyakori
-és ésszerű minták használatát. Ezeket javasolt szükség szerint átdolgozni,
-ha saját formaszabályzatot írsz.
+és ésszerű minták használatát. Saját formaszabályzat kialakítása esetén
+ezeket érdemes szükség szerint átdolgozni.
 
 Ez egy élő dokumentum, mindig szívesen fogadunk új ötleteket. Működj
 közre te is.
@@ -134,9 +134,9 @@ egyszerűen lehet érthetően kommentálni; minimalizálja a hibalehetőségeket
 * Minden CSS meghatározás blokk után hagyj ki egy sort.
 
 ```css
-.kiválasztó-1,
-.kiválasztó-2,
-.kiválasztó-3[type="text"] {
+.kivalaszto-1,
+.kivalaszto-2,
+.kivalaszto-3[type="text"] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -147,8 +147,8 @@ egyszerűen lehet érthetően kommentálni; minimalizálja a hibalehetőségeket
     background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
 }
 
-.kiválasztó-a,
-.kiválasztó-b {
+.kivalaszto-a,
+.kivalaszto-b {
     padding: 10px;
 }
 ```
@@ -162,7 +162,7 @@ Kisebb csapatoknál előnyösebb lehet az összefüggő tulajdonságokat
 (pl. pozicionálás és dobozmodell) egybevenni.
 
 ```css
-.kiválasztó {
+.kivalaszto {
     /* Pozicionálás */
     position: absolute;
     z-index: 10;
@@ -200,9 +200,9 @@ ezeket lehet közvetlen egymás alá írni. Ebben az esetben hagyj egy szóközt
 a nyitó kapcsos zárójel után, és a záró kapcsos zárójel előtt.
 
 ```css
-.kiválasztó-1 { width: 10%; }
-.kiválasztó-2 { width: 20%; }
-.kiválasztó-3 { width: 30%; }
+.kivalaszto-1 { width: 10%; }
+.kivalaszto-2 { width: 20%; }
+.kivalaszto-3 { width: 30%; }
 ```
 
 Hosszú, vesszővel elválasztott tulajdonságértékeknél – mint több színátmenet
@@ -211,7 +211,7 @@ legyenek és hasznosabb diff-eket kapjunk. Többféle formázás
 is használható; itt egy lehetséges megoldás.
 
 ```css
-.kiválasztó {
+.kivalaszto {
     background-image:
         linear-gradient(#fff, #ccc),
         linear-gradient(#f3c, #4ec);
@@ -241,7 +241,7 @@ sajátosságait. A következő irányelvek a Sass nyelvre vonatkoznak.
   függvényekkel, és nem fognak ütközni más könyvtárak függvényeivel sem.
 
 ```scss
-.kiválasztó-1 {
+.kivalaszto-1 {
     @extend .other-rule;
     @include clearfix();
     @include box-sizing(border-box);
