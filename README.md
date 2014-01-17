@@ -349,6 +349,7 @@ An example of various conventions.
 * [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
 * [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
 * [한국어](https://github.com/necolas/idiomatic-css/tree/master/translations/ko-KR)
+* [Magyar](https://github.com/necolas/idiomatic-css/tree/master/translations/hu-HU)
 * [Nederlands](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)
 * [Polski](https://github.com/necolas/idiomatic-css/tree/master/translations/pl-PL)
 * [Português (Brasil)](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
