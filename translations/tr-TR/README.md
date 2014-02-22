@@ -37,7 +37,6 @@ katkıda bulunun.
 * Geliştirme esnasında kodu okunabilir ve anlaşılabilir tutun, kod optimizasyonunu düşünmeyin.
 * Herhangi bir kod tababındaki tüm kod, kaç kişi katkıda bulunumuş olursa olsun
   sanki tek bir kişi tarafından yazılmış gibi görünmelidir.
-* Strictly enforce the agreed upon style.
 * Karar verilen stili katı bir şekilde uygula.
 * Eğer şüphen varsa yaygın olarak kullanılan yönergeleri uygula.
 
