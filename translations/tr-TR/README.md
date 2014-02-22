@@ -34,11 +34,11 @@ katkıda bulunun.
 > akıllılık yapacağın kişisel seçimlere göre değil maksimum açıklık için yaz."
 > - Idan Gazit
 
-* Geliştirme esnasında kodu okunabilir ve anlaşılabilir tutun, kod optimizasyonunu düşünmeyin.
+* Geliştirme esnasında kodu okunabilir ve anlaşılabilir tut, kod optimizasyonunu düşünme.
 * Herhangi bir kod tababındaki tüm kod, kaç kişi katkıda bulunumuş olursa olsun
   sanki tek bir kişi tarafından yazılmış gibi görünmelidir.
 * Karar verilen stili katı bir şekilde uygula.
-* Eğer şüphen varsa yaygın olarak kullanılan yönergeleri uygula.
+* Eğer şüphen varsa, yaygın olarak kullanılan yönergeleri uygula.
 
 
 <a name="whitespace"></a>
@@ -207,7 +207,7 @@ satıra yayılabilirler. Bunun için kullanılabilecek çeşitli biçemler var. 
   `content: ""`.
 * Seçicilerdeki özellik değerlerini her zaman tırnak içine alın, ör.,
   `input[type="checkbox"]`.
-* _Mümkün olduğu durumlarda_, sıfır değerler için ünite kullanmayın, ör.,
+* _Mümkün olduğu durumlarda_, sıfır değeri için birim (px, em vb.) kullanmayın, ör.,
   `margin: 0`.
 
 ### Preprocessors (Önderleyiciler) : dikkate alınacak ek formatlar (biçem)
@@ -244,10 +244,10 @@ alarak verilmiştir.
 <a name="naming"></a>
 ## 5. İsimlendirme
 
-Sen bir insan kod derleyicisi/sıkıştırıcı değilsin, dolayısı ile olmaya da
+Bir insan kod derleyicisi/sıkıştırıcı değilsin, olmayada
 çalışma.
 
-HTML sınıfları için açık ve iyi düşünülmüş isimler kullan. He HTML hem de CSS
+HTML sınıfları için açık ve iyi düşünülmüş isimler kullan. Hem HTML hem de CSS
 dosyalarında anlamı olan tutarlı bir isimlendirme şekli seç.
 
 ```css
