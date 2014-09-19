@@ -1,82 +1,74 @@
-# Principles of writing consistent, idiomatic CSS
+# Принципи за писане на консистентен, идиоматичен CSS код
 
-The following document outlines a reasonable style guide for CSS development.
-These guidelines strongly encourage the use of existing, common, sensible
-patterns. They should be adapted as needed to create your own style guide.
+Този документ описва разумен наръчник за стил на писане, при разработката на CSS код.
+Тези насоки горещо насърчават използването на вече съществуващи, общи, разумни модели.
+Адаптирайте ги както се наложи за да създадете свой собствен наръчник за стил.
 
-This is a living document and new ideas are always welcome. Please
-contribute.
+Този документ подлежи на промяна и новите идеи са добре дошли. Моля, допринасяйте към него.
 
 
-## Table of contents
+## Съдържание
 
-1. [General principles](#general-principles)
-2. [Whitespace](#whitespace)
-3. [Comments](#comments)
-4. [Format](#format)
-5. [Practical example](#example)
+1. [Общи положения](#general-principles)
+2. [Празни символи (whitespace)](#whitespace)
+3. [Коментари](#comments)
+4. [Формат](#format)
+5. [Практически пример](#example)
 
-[Acknowledgements](#acknowledgements)
+[Благодарности](#acknowledgements)
 
-[License](#license)
+[Лиценз](#license)
 
 
 <a name="general-principles"></a>
-## 1. General principles
+## 1. Общи положения
 
-> "Part of being a good steward to a successful project is realizing that
-> writing code for yourself is a Bad Idea™. If thousands of people are using
-> your code, then write your code for maximum clarity, not your personal
-> preference of how to get clever within the spec." - Idan Gazit
+> "Част от това да бъдеш добър участник в успешен проект е осъзнаването,
+> че писането на код за себе си е Лоша Идея™. Ако хиляди хора ще ползват твоя код,
+> тогава го пиши, така че да бъде максимално четим, не намесвай своите предпочитания
+> за това как да хитрувате в рамките на спецификацията. " - Idan Gazit
 
-* Don't try to prematurely optimize your code; keep it readable and
-  understandable.
-* All code in any code-base should look like a single person typed it, even
-  when many people are contributing to it.
-* Strictly enforce the agreed-upon style.
-* If in doubt when deciding upon a style use existing, common patterns.
+* Не се опитвайте предварително да пре-оптимизирате своя код; старайте се да е четим и разбираем.
+* Целият код трябва да изглежда така, все едно един единствен човек го е написал,
+дори и много хора да са допринесли за него.
+* Стриктно налагайте стилът за който сте се разбрали.
+* Ако се съмнявате кой е удачния в конкретна ситуация стил - използвайте общовалидни правила.
 
 
 <a name="whitespace"></a>
-## 2. Whitespace
+## 2. Празни символи (whitespace)
 
-Only one style should exist across the entire source of your code-base. Always
-be consistent in your use of whitespace. Use whitespace to improve
-readability.
+Използвайте само един стил за целия код на проекта. Винаги бъдете консистентни в употребата на празни символи
+(интервал, табулация и нов ред). Използвайте ги за да подобрите четимостта на кода.
 
-* _Never_ mix spaces and tabs for indentation.
-* Choose between soft indents (spaces) or real tabs. Stick to your choice
-  without fail. (Preference: spaces)
-* If using spaces, choose the number of characters used per indentation level.
-  (Preference: 4 spaces)
+* _Никога_ не смесвайте интервали и табулация за индентация.
+* Изберете между 'мека' индентация (интервали) и истински табове. Придържайте се към избора си навсякъде.
+(Предпочитано: интервали)
+* Ако използвате интервали, изберете броя символи, за базово ниво на индентация. (Предпочитано: 4 интервала)
 
-Tip: configure your editor to "show invisibles" or to automatically remove
-end-of-line whitespace.
+Идея: конфигурирайте редактора си да показва невидимите символи, или автоматично да премахва празните символи на края на реда.
 
-Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to
-help maintain the basic whitespace conventions that have been agreed for your
-code-base.
+Идея: използвайте конфигурационен файл за [EditorConfig](http://editorconfig.org/) (или еквивалент),
+за да спомогнете за поддържането на единнатa конвенция при употребата на празни символи във вашия код.
 
 
 <a name="comments"></a>
-## 3. Comments
+## 3. Коментари
 
-Well commented code is extremely important. Take time to describe components,
-how they work, their limitations, and the way they are constructed. Don't leave
-others in the team guessing as to the purpose of uncommon or non-obvious
-code.
+Добре коментираният код е изключително важен. Отделете време да опишете компонентите, начина на работа с тях,
+техните ограничения и това как са конструирани. Не оставяйте останалите в екипа,
+да се опитват да познаят предназначението на код, който не е очевиден.
 
-Comment style should be simple and consistent within a single code base.
+Стилът на коментарите трябва да бъде лесен и консистентен за единна база от код.
 
-* Place comments on a new line above their subject.
-* Keep line-length to a sensible maximum, e.g., 80 columns.
-* Make liberal use of comments to break CSS code into discrete sections.
-* Use "sentence case" comments and consistent text indentation.
+* Поставяйте коментарите на нов ред, над това което поясняват.
+* Поддържайте разумна дължина на реда, напр. 80 символа.
+* Използвайте коментари за да разбиете CSS кода на обособени секции.
+* Нека всяко изречение от коментара започва с главна буква и използвайте консистентна индентация.
 
-Tip: configure your editor to provide you with shortcuts to output agreed-upon
-comment patterns.
+Идея: конфигурирайте своя редактор, така че чрез клавишни комбинации да въвеждате темплейти за коментари.
 
-Example:
+Пример:
 
 ```css
 /* ==========================================================================
@@ -108,29 +100,24 @@ Example:
 
 
 <a name="format"></a>
-## 4. Format
+## 4. Формат
 
-The chosen code format must ensure that code is: easy to read; easy to clearly
-comment; minimizes the chance of accidentally introducing errors; and results
-in useful diffs and blames.
+Избрания от вас формат за кода трябва да поддържа кода: четим; лесен за коментари;
+намалява възможносттите за грешки; да резултира в полезни diff-ове и blame-ове.
 
-* Use one discrete selector per line in multi-selector rulesets.
-* Include a single space before the opening brace of a ruleset.
-* Include one declaration per line in a declaration block.
-* Use one level of indentation for each declaration.
-* Include a single space after the colon of a declaration.
-* Use lowercase and shorthand hex values, e.g., `#aaa`.
-* Use single or double quotes consistently. Preference is for double quotes,
-  e.g., `content: ""`.
-* Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
-* _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
-* Include a space after each comma in comma-separated property or function
-  values.
-* Include a semi-colon at the end of the last declaration in a declaration
-  block.
-* Place the closing brace of a ruleset in the same column as the first
-  character of the ruleset.
-* Separate each ruleset by a blank line.
+* Използвайте по един селектор на линия при CSS правила за повече от един селектор.
+* Поставяйте интервал преди отварящата скоба на правилото.
+* Във всеки блок от декларации, дефиницията на атрибутите трябва да бъде на отделен ред.
+* Използвайте едно ниво на индентация за всяка дефиниция на стойност.
+* Поставяйте интервал след двоеточието на атрибута.
+* Използвайте lowercase (малки букви) и краткия синтаксис за деклариране на шестнадесетични стойности, напр. `#aaa`
+* Използвайте консистентни кавички. Предпочитат се двойните кавички, напр. `content: ""`.
+* Ограждайте в кавички стойностите на атрибути в селектори, напр. `input[type="checkbox"]`.
+* _Когато може_, избягвайте да включвате мерните единици за за стойности равни на нула, напр. `margin: 0`.
+* Поставяйте интервал след всяка запетая, в стойности или функции, разделяни от запетаи.
+* Поставяйте точка и запетая на края на последната дефиниция от блок.
+* Поставяйте затварящата скоба за дадено правил на същата колона като отварящата.
+* Разделяйте всеки блок от правила с нов ред.
 
 ```css
 .selector-1,
@@ -152,13 +139,13 @@ in useful diffs and blames.
 }
 ```
 
-#### Declaration order
+#### Ред на атрибутите
 
-If declarations are to be consistently ordered, it should be in accordance with
-a single, simple principle.
+Ако атрибутите са консистентно подредени, то това трябва да се случва на един и същ,
+лесен принцип.
 
-Smaller teams may prefer to cluster related properties (e.g. positioning and
-box-model) together.
+Малките екипи ще предпочетат да обособяват свързаните помежду им атрибути
+(напр. позициониране и box-model).
 
 ```css
 .selector {
@@ -189,14 +176,12 @@ box-model) together.
 }
 ```
 
-Larger teams may prefer the simplicity and ease-of-maintenance that comes with
-alphabetical ordering.
+По-големите екипи могат да предпочетат лесната подръжка, които носи азбучния ред.
 
-#### Exceptions and slight deviations
+#### Изключения и леки отклонения
 
-Large blocks of single declarations can use a slightly different, single-line
-format. In this case, a space should be included after the opening brace and
-before the closing brace.
+Големи блокове с дефиниции от един ред използват по-различен, едноредов формат.
+В такива случаи, трябва да се поставя интервал след отварящата скоба и преди затварящата.
 
 ```css
 .selector-1 { width: 10%; }
@@ -204,10 +189,10 @@ before the closing brace.
 .selector-3 { width: 30%; }
 ```
 
-Long, comma-separated property values - such as collections of gradients or
-shadows - can be arranged across multiple lines in an effort to improve
-readability and produce more useful diffs. There are various formats that could
-be used; one example is shown below.
+Дълги, разделени от запетая стойности за атрибути - например няколко CSS градиента,
+или множество сенки - могат да бъдат подреждани на няколко реда, за да се по-добра четимост,
+както на кода, така и в diff. Съществуват няколко формата, които могат да бъдат използвани,
+по-долу можете да намерите един от тях.
 
 ```css
 .selector {
@@ -220,24 +205,20 @@ be used; one example is shown below.
 }
 ```
 
-### Preprocessors: additional format considerations
+### CSS препроцесори: допълнителни уточнения по форматирането
 
-Different CSS preprocessors have different features, functionality, and syntax.
-Your conventions should be extended to accommodate the particularities of any
-preprocessor in use. The following guidelines are in reference to Sass.
+Различните CSS препроцесори имат различни възможности, функционалности и синтаксис.
+Вашите конвенции трябва да бъдат разширени така, че да позволят особеностите на всеки използван препроцесор.
+Следните правила са адаптирани за Sass.
 
-* Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
-  This prevents overly-specific CSS selectors.
-* Avoid large numbers of nested rules. Break them up when readability starts to
-  be affected. Preference to avoid nesting that spreads over more than 20
-  lines.
-* Always place `@extend` statements on the first lines of a declaration
-  block.
-* Where possible, group `@include` statements at the top of a declaration
-  block, after any `@extend` statements.
-* Consider prefixing custom functions with `x-` or another namespace. This
-  helps to avoid any potential to confuse your function with a native CSS
-  function, or to clash with functions from libraries.
+* Ограничете дълбочината на вмъкване до 1 ниво. Премислете всичко по-дълбоко от 2 нива навътре.
+  Това предотвратява появата на прекалено специфични CSS селектори.
+* Избягвайте големи бройки вмъкнати правила. Разбийте ги когато четимоста започва страда.
+  Предпочита се да се избягва вмъкнат навътре код, което се разпростира на повече от 20 линии.
+* Винаги поставяйте `@extend` дефинициите на първите редове от даден блок.
+* Когато е възможно, групирайте `@include` дефинициите в началото на блок, или след `@extend`.
+* Помислете, дали да не сложите префикс (`x-`, или друго) на дефинираните от вас функции,
+  за да избегнете тяхното объркване с чист CSS код, или проблеми с функции от други библиотеки.
 
 ```scss
 .selector-1 {
@@ -251,9 +232,9 @@ preprocessor in use. The following guidelines are in reference to Sass.
 
 
 <a name="example"></a>
-## 5. Practical example
+## 5. Практически пример
 
-An example of various conventions.
+Пример, показващ различните конвенции.
 
 ```css
 /* ==========================================================================
@@ -338,9 +319,10 @@ An example of various conventions.
 ```
 
 
-## Translations
+## Преводи
 
 * [Bahasa Indonesia](https://github.com/necolas/idiomatic-css/tree/master/translations/id-ID)
+* [Български](https://github.com/necolas/idiomatic-css/tree/master/translations/bg-BG)
 * [Česky](https://github.com/necolas/idiomatic-css/tree/master/translations/cs-CZ)
 * [Dansk](https://github.com/necolas/idiomatic-css/tree/master/translations/da-DK)
 * [Deutsch](https://github.com/necolas/idiomatic-css/tree/master/translations/de-DE)
@@ -360,20 +342,19 @@ An example of various conventions.
 
 
 <a name="acknowledgements"></a>
-## Acknowledgements
+## Благодарности
 
-Thanks to everyone who has provided translations and to all those who
-contributed to [idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a
-source of inspiration, quotations, and guidelines.
+Благодаря на всички, които предоставиха преводи,
+както и на тези, които допринесоха към [idiomatic.js](https://github.com/rwldrn/idiomatic.js).
+Idiomatic.js бе извор на вдъхновение, цитати и правила
 
 
 <a name="license"></a>
-## License
+## Лиценз
 
-_Principles of writing consistent, idiomatic CSS_ by Nicolas Gallagher is
-licensed under the [Creative Commons Attribution 3.0 Unported
-License](http://creativecommons.org/licenses/by/3.0/). This applies to all
-documents and translations in this repository.
+_Principles of writing consistent, idiomatic CSS_ от Nicolas Gallagher,
+е лицензирано като [Creative Commons Attribution 3.0 Unported
+License](http://creativecommons.org/licenses/by/3.0/). Същото се отнася за всички документи и преводи в това хранилище.
 
-Based on a work at
+Базирано на труд от
 [github.com/necolas/idiomatic-css](https://github.com/necolas/idiomatic-css).
