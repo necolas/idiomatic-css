@@ -149,13 +149,14 @@ acidentalmente; e resulte em úteis visualizações de diferença.
 * Um único espaço depois dos dois pontos de uma declaração.
 * Use valores minúsculos e abreviações hexadecimais, por exemplo, `#aaa`.
 * Use aspas simples ou duplas de forma consistente. Preferência é por aspas duplas,
-   por exemplo, `conteúdo:" "`.
-* Citação valores de atributos em seletores, por exemplo, `input [type="checkbox"]`.
+   por exemplo, `content: ""`.
+* Use aspas em valores de atributos em seletores, por exemplo, `input [type="checkbox"]`.
 * _Onde for permitido_, evitar especificar unidades para zero valores, por exemplo, `margin: 0`.
+* Evitar o número zero se este estiver no fim da casa decimal, por exemplo, `1.6em` em vez de `1.60em`.
 * Inclua um espaço após cada vírgula em propriedades separadas por vírgula ou valores de funções.
 * Sempre inclua um ponto-e-vírgula no fim da última declaração em um bloco
    declarativo.
-* Coloque o fechamento das chaves na mesma coluna que o primeiro caracter do
+* Coloque o fechamento das chaves na mesma coluna que o primeiro carácter do
    conjunto de regras.
 * Separe cada conjunto de regras por uma linha em branco.
 
@@ -278,7 +279,7 @@ são em referência ao Sass.
     @include clearfix();
     @include box-sizing(border-box);
     width: x-grid-unit(1);
-    // other declarations
+    // outras declarações
 }
 ```
 
@@ -321,7 +322,7 @@ Um exemplo de várias convenções.
 
 ```css
 /* ==========================================================================
-   Grid layout
+   Layout do grid
    ========================================================================== */
 
 /*
@@ -339,21 +340,21 @@ Um exemplo de várias convenções.
  */
  
 /**
- * Grid container
+ * Container do grid
  * Deve conter apenas filhos de `.cell`
  */
 
 .grid {
     overflow: visible;
     height: 100%;
-    /* Prevent inline-block cells wrapping */
+    /* Evitar quebra do texto em células inline-block */
     white-space: nowrap;
-    /* Remove inter-cell whitespace */
+    /* Remover espaço interno em branco das células */
     font-size: 0;
 }
 
 /**
- * Grid cells
+ * Células do grid
  * Largura não-explícita por padrão. Extenda com classes `.cell-n`.
  */
 
@@ -363,23 +364,23 @@ Um exemplo de várias convenções.
     overflow: hidden;
     width: 20%;
     height: 100%;
-    /* Set the inter-cell spacing */
+    /* Determinar espaço interno das células */
     padding: 0 10px;
     border: 2px solid #333;
     vertical-align: top;
-    /* Reset white-space */
+    /* Normalizar white-space */
     white-space: normal;
-    /* Reset font-size */
+    /* Normalizar font-size */
     font-size: 16px;
 }
 
-/* Cell states */
+/* Estados da célula */
 
 .cell.is-animating {
     background-color: #fffdec;
 }
 
-/* Cell dimensions
+/* Dimensões das células
    ========================================================================== */
 
 .cell-1 { width: 10%; }
@@ -388,7 +389,7 @@ Um exemplo de várias convenções.
 .cell-4 { width: 40%; }
 .cell-5 { width: 50%; }
 
-/* Cell modifiers
+/* Modifiers (exceção) das células
    ========================================================================== */
 
 .cell--detail,
@@ -404,7 +405,7 @@ Um exemplo de várias convenções.
 Organização de código é uma importante parte de qualquer base de código CSS, e
 crucial para grandes bases de código.
 
-* Separar logicamente distintas partes do código.
+* Separar logicamente partes distintas do código.
 * Usar arquivos separados (concatenados por um processo de build) para ajudar a
   dividir código para componentes distintos.
 * Se estiver usando um pré-processador, abstrair partes comuns de código em

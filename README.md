@@ -124,6 +124,7 @@ in useful diffs and blames.
   e.g., `content: ""`.
 * Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
 * _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
+* Avoid zero number if this is the end of the decimal, eg., `1.6em` instead of `1.60em`.
 * Include a space after each comma in comma-separated property or function
   values.
 * Include a semi-colon at the end of the last declaration in a declaration
