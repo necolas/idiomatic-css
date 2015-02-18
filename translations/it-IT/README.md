@@ -1,10 +1,7 @@
 # Princìpi per la scrittura di CSS consistente ed idiomatico
 
-L'intento di questo documento è quello di esporre una ragionevole guida allo
-stile per lo sviluppo del CSS. Queste linee guida incoraggiano al riutilizzo di
-pattern già esistenti ed ampiamente testati dalla comunità. Si dovrebbe
-cercare, infine, di adattare questi pattern alle proprie necessità in modo da
-creare proprie regole ed un proprio stile.
+Questo documento delinea una ragionevole guida di stile per lo sviluppo del CSS.
+Queste linee guida incoraggiano fortemente all'uso di pattern comuni e preesistenti. Questi dovrebbero essere poi adattati secondo le necessità per creare una propria guida di stile.
 
 Questo è un documento in continua evoluzione e nuove idee sono sempre bene
 accette. Per favore contribuite.
