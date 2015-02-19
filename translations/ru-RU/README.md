@@ -370,5 +370,5 @@
 ## Благодарности
 
 Спасибо всем, кто внёс вклад в проект
-[idiomatic.js](https://github.com/rwldrn/idiomatic.js). Это мой источник
+[idiomatic.css](https://github.com/necolas/idiomatic-css). Это мой источник
 вдохновения, цитат и общих рекомендаций.
