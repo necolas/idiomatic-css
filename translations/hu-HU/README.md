@@ -1,23 +1,22 @@
 # A következetes és formakövető CSS alapjai
 
-A következő dokumentum egy célszerű formaszabályzatot vázol fel CSS
-fejlesztéshez. Ezek az irányelvek erősen javasolják már meglévő, gyakori
-és ésszerű minták használatát. Saját formaszabályzat kialakítása esetén
-ezeket érdemes szükség szerint átdolgozni.
+Ez a dokumentum egy praktikus CSS formázási szabályzatot vázol fel.
+Erősen javasoljuk már meglévő irányelvek, bevett, gyakori szokások használatát.
+Ha valaki saját formaszabályzatot készít, ezeket érdemes szükség szerint átdolgozni.
 
-Ez egy élő dokumentum, mindig szívesen fogadunk új ötleteket. Működj
-közre te is.
+Ez a leírás folyamatosan változik, bővül, így szívesen várjuk
+bárki közreműködését, ötleteit, kiegészítéseit. Tegyél hozzá bátran te is!
 
 
 ## Tárgymutató
 
 1. [Általános alapelvek](#general-principles)
 2. [Térköz](#whitespace)
-3. [Kommentálás](#comments)
+3. [Megjegyzések](#comments)
 4. [Formázás](#format)
 5. [Gyakorlati példa](#example)
 
-[Köszönetnyilvánítás](#acknowledgements)
+[Köszönet](#acknowledgements)
 
 [Licenc](#license)
 
@@ -25,113 +24,111 @@ közre te is.
 <a name="general-principles"></a>
 ## 1. Általános alapelvek
 
-> „Ha jó csapatjátékos akarsz lenni egy sikeres projekten belül, fel kell
-> ismerned azt, hogy Rossz ötlet™, ha magad számára írod a kódot. Ha emberek
-> ezrei használják azt, amit írsz, törekedj a maximális érthetőségre, ne pedig
-> a személyes preferenciádat tarts szem előtt, hogy mennyire vagy
-> jártas a specifikáción belül.” - Idan Gazit
+> „Ha jó csapatjátékos akarsz lenni egy sikeres projekten belül, rá kell jönnöd
+> arra, hogy Rossz ötlet™ magad számára írni a kódot. Ha emberek ezrei használják
+> amit írsz, kiváltképp törekedj az érthetőségre, és ne a megszokásaidat
+> tartsd szem előtt, meg azt, hogy milyen jól tudsz lavírozni a specifikáción belül.”
+> - Idan Gazit
 
-* Ne próbáld idő előtt optimalizálni a kódot; legyen átlátható és érthető.
-* Egy kódbázison belül minden kód úgy nézzen ki, mintha egy ember munkája
-  lenne, még akkor is, ha rengeteg ember dolgozik rajta.
-* Szigorúan tartasd be a közösen megegyezett formát.
-* Ha a formát illetően kétségeid akadnak, használj már meglévő, gyakori
-  mintákat.
+* Ne akard idő előtt optimalizálni a kódot; legyen átlátható és világos.
+* Egy kódbázison belül minden úgy nézzen ki, mintha egy ember írta volna,
+  még akkor is, ha máskülönben rengetegen dolgoztak rajta.
+* Mindenki tartsa be a közösen megbeszélt, előre lefektetett formázást.
+* Ha valamit nem tudod hogyan formázz, mindenképp már meglévő mintákhoz fordulj.
 
 <a name="whitespace"></a>
 ## 2. Térköz
 
-Kizárólag egy fajta formázás éljen a kódbázison belül. A térközökkel tedd
-átláthatóbbá a kódot és használd őket következetesen.
+Kizárólag egy formázás legyen egy projekten belül. Használj térközöket, és
+használd ezeket következetesen, hogy átláthatóbb legyen a a munkád.
 
-* Indentálásnál _soha_ ne használj együtt szóközt és tabulátort.
-* Válaszd a puha indentálást (szóközök), vagy a rendes tabulátorokat.
-  Hűen tartsd magad a választásodhoz. (Ajánlott: szóközök)
-* Ha szóközöket használsz, válaszd meg az indentálási szint karakterszámát.
+* Beljebbezésnél (indent) _soha_ ne használj vegyesen szóközt és tabulátort.
+* Mi a szóközt javasoljuk, de rendes tabulátorokat is használhatsz.
+  A lényeg, hogy tartsd magad ahhoz, amelyiket választottad.
+* Ha szóközöket használsz, döntsd el, hogy hány szóköz lesz egy beljebbezés.
   (Ajánlott: 4 szóköz)
 
-Tipp: állítsd be a szerkesztőt, hogy mutassa a rejtett karaktereket,
-vagy, hogy automatikusan törölje a sor végi szóközöket.
+Tipp: állítsd be a szövegszerkesztőt, hogy mutassa a rejtett karaktereket,
+illetve, hogy automatikusan törölje a sor végi szóközöket.
 
 Tipp: használj egy [EditorConfig](http://editorconfig.org/) fájlt
-(vagy egy ennek megfelelőt), hogy segítsen egységben tartani a térközöket
-az egész kódbázison belül.
+(vagy ennek egy másik megfelelőjét), hogy egységben tartsd a térközöket
+az egész projekten belül.
 
 
 <a name="comments"></a>
-## 3. Kommentálás
+## 3. Megjegyzések
 
 A jól kommentált kód rendkívül fontos. Vedd a fáradtságot, hogy leírást adj a
 kódrészekről, azok működéséről, korlátjairól és felépítéséről. Ne hagyd,
-hogy a csoporton belül mások találgatásra szoruljanak a szabályostól
-eltérő, vagy nem világos kód célját illetően.
+hogy a csoporton belül másoknak találgatni kelljen, hogy egy adott kódrészlet
+pontosan mit és hogyan csinál.
 
-A kódbázison belül a megjegyzések formázása legyen egyszerű és következetes.
+A projekten belül a megjegyzések formázása legyen egyszerű és következetes.
 
-* A megjegyzéseket külön sorba írd, a hozzájuk tartozó kód fölé.
-* A sorhosszúságnak szabj meg egy ésszerű felső határt, pl., 80 karakter.
-* Fordítsd hasznodra a megjegyzéseket, és tagold a kódot külön bekezdésekre.
-* A megjegyzéseket mondatok formájában írd, és egységesen indentáld.
+* A megjegyzéseket külön sorba, a hozzájuk tartozó kód fölé írd.
+* A sorhosszúságot szabd meg ésszerűen, pl., 80 karakter.
+* A megjegyzésekkel tagold a kódot különálló bekezdésekre.
+* A megjegyzéseket mondatokban írd, és egységesen beljebbezd.
 
-Tipp: állítsd be a szerkesztődet, hogy gyors elérést nyújtson a megegyezett
-kommentálási mintákhoz.
+Tipp: állítsd be a szövegszerkesztőt, hogy érzékelje a megjegyzések formázását
+és automatikusan odaugorjon ezekhez, illetve váltani tudjon közöttük.
 
 Példa:
 
 ```css
 /* ==========================================================================
-   Bekezdés komment blokk
+   Bekezdés
    ========================================================================== */
 
-/* Albekezdés komment blokk
+/* Albekezdés
    ========================================================================== */
 
 /**
- * Rövid leírás, ami a Doxygen féle kommentformázást veszi alapul
+ * Rövid leírás Doxygen féle kommentformázással
  *
- * A hosszú leírás első mondata itt kezdődik, folytatódik ezen a soron
- * egy darabig, amíg végül be nem fejeződik ennek a bekezdésnek a végén.
+ * Ennek a hosszabb leírásnak az első mondata itt kezdődik, folytatódik
+ * egy darabig, amíg végül be nem fejeződik ennek a sornak a végén.
  *
- * A hosszú leírás ideális részletesebb magyarázatokhoz és
+ * Egy ilyen formázás ideális részletesebb magyarázatokhoz és
  * dokumentációkhoz. Tartalmazhat HTML példakódot, URL-eket, vagy bármilyen
- * szükséges, vagy hasznos információt.
+ * szükséges, hasznos információt.
  *
  * @tag Ez egy 'tag', ami a 'tag' elnevezést kapta
  *
- * TODO: Ez egy todo megjegyzés, ami leír egy részfeladatot, amit majd később
- *   kell megcsinálni. 80 karakter után sortörés következik, és az utána lévő
+ * TODO: Ez egy todo megjegyzés, amiben feladatok leírásai vannak, amit később
+ *   el kell végezni. 80 karakter után sortörés jön. Az utána lévő
  *   sorok 2 szóközzel beljebb kezdődnek.
  */
 
-/* Alap komment */
+/* Sima, alap megjegyzés */
 ```
 
 
 <a name="format"></a>
 ## 4. Formázás
 
-A választott kódformázásnak biztosítania kell, hogy a kód: könnyen átlátható;
-egyszerűen lehet érthetően kommentálni; minimalizálja a hibalehetőségeket;
-és hasznos diff-eket és blame-eket eredményez.
+A választott formázás legyen: könnyen átlátható; egyszerűen lehessen
+megjegyzéseket írni hozzá; minimalizálja a hibák lehetőségét;
+végül pedig érthető, átlátható git diff-eket és blame-eket ad ki.
 
-* Több egymást követő kiválasztó esetén minden kiválasztót külön sorba írj.
+* Több egymás utáni kiválasztónál (selector) mindegyiket külön sorba írd.
 * Hagyj egy szóközt a nyitó kapcsos zárójel előtt.
-* Minden egyes tulajdonságot külön sorba írj.
-* Minden tulajdonságot egy indentálási szinttel beljebb kezdj.
-* A tulajdonságot követő kettőspont után hagyj egy szóközt.
-* Használj kisbetűs és rövidített hexadecimális értékeket, pl., `#aaa`.
-* Használj egységesen szimpla, vagy dupla idézőjeleket.
-  Ajánlott a dupla idézőjel, pl., `content: ""`.
+* Minden egyes tulajdonságot (declaration) külön sorba írj.
+* Minden tulajdonságot egy szinttel beljebb kezdj.
+* A tulajdonság utáni kettőspont mögött hagyj egy szóközt.
+* Használj kisbetűket és rövidített hexadecimális értékeket, pl., `#aaa`.
+* Használj egységesen sima vagy dupla idézőjelet.
+  A dupla idézőjelet javasoljuk, pl., `content: ""`.
 * Kiválasztóknál rakd idézőjelbe az attribútumok értékeit,
   pl., `input[type="checkbox"]`.
-* _Ahol szabad_, a nulla értékek után hagyd el a mértékegységet,
+* _Ahol lehetséges_, a nulla értékek után ne tedd ki a mértékegységet,
   pl., `margin: 0`.
-* Minden vessző után rakj szóközt a vesszővel elválasztott tulajdonságok és
-  függvények értékeinél.
-* Egymás után több tulajdonság megadásánál rakj pontosvesszőt az utolsó
-  tulajdonság után.
-* A tulajdonságokat lezáró kapcsos zárójel a kiválasztók elejével essen egybe.
-* Minden CSS meghatározás blokk után hagyj ki egy sort.
+* Minden vessző után tegyél szóközt.
+* Ne hagyd le a pontosvesszőt az utolsó tulajdonságnál.
+* A tulajdonságokat lezáró kapcsos zárójel a kiválasztóval függőlegesen
+  essen egybe.
+* Minden nagyobb rész után hagyj ki egy sort.
 
 ```css
 .kivalaszto-1,
@@ -155,11 +152,11 @@ egyszerűen lehet érthetően kommentálni; minimalizálja a hibalehetőségeket
 
 #### Tulajdonságok sorrendje
 
-Ha a tulajdonságokat következetesen akarjuk sorba rendezni, ezt egyetlen egy,
-egyszerű szisztéma alapján tegyük.
+Ha a tulajdonságokat következetesen akarod sorba rakni, ezt egy
+egyszerű elgondolás alapján tedd.
 
-Kisebb csapatoknál előnyösebb lehet az összefüggő tulajdonságokat
-(pl. pozicionálás és dobozmodell) egybevenni.
+Kisebb csapatoknál, cégeknél könnyebb lehet az összefüggő tulajdonságokat
+(pl. pozicionálás és dobozmodell) egymás mellé tenni.
 
 ```css
 .kivalaszto {
@@ -190,14 +187,14 @@ Kisebb csapatoknál előnyösebb lehet az összefüggő tulajdonságokat
 }
 ```
 
-Nagyobb csapatok lehet ábécé sorrend mellett döntenek annak egyszerűsége
-és könnyű karbantarthatósága miatt.
+Nagyobb csapatoknál, cégeknél az ábécé sorrend lehet a célrvezetőbb, mivel
+ebben az esetben egyetlen egy logika érvényesül.
 
 #### Kivételek és apróbb szabályszegések
 
-Abban az esetben, ha egymás után sok kiválasztónak csak egy tulajdonsága van,
-ezeket lehet közvetlen egymás alá írni. Ebben az esetben hagyj egy szóközt
-a nyitó kapcsos zárójel után, és a záró kapcsos zárójel előtt.
+Abban az esetben, ha egymás után több kiválasztó csak egy tulajdonsággal
+rendelkezik, ezeket lehet egymás alá írni. Ebben az esetben rakj egy szóközt
+a nyitó kapcsos zárójel után, és a záró kapcsos zárójel elé.
 
 ```css
 .kivalaszto-1 { width: 10%; }
@@ -205,10 +202,10 @@ a nyitó kapcsos zárójel után, és a záró kapcsos zárójel előtt.
 .kivalaszto-3 { width: 30%; }
 ```
 
-Hosszú, vesszővel elválasztott tulajdonságértékeknél – mint több színátmenet
-vagy árnyék esetében – ezeket rendezhetjük több sorba, hogy átláthatóbbak
+A hosszabb, vesszővel elválasztott tulajdonságok értékeit – színátmenetek,
+árnyékok – rendezhetjük több sorba, hogy átláthatóbbak
 legyenek és hasznosabb diff-eket kapjunk. Többféle formázás
-is használható; itt egy lehetséges megoldás.
+is használható; itt egy lehetséges példa.
 
 ```css
 .kivalaszto {
@@ -224,21 +221,21 @@ is használható; itt egy lehetséges megoldás.
 ### Előfeldolgozók: további formázási szempontok
 
 A különböző CSS előfeldolgozók más funkciókkal, működéssel és szintaxissal
-rendelkeznek. A formázás kialakításánál mindenképpen vegyük figyelembe ezek
-sajátosságait. A következő irányelvek a Sass nyelvre vonatkoznak.
+rendelkeznek. A formázás kialakításánál ezeket vegyük figyelembe.
+A következő irányelvek a Sass nyelvre vonatkoznak.
 
 * Korlátozd az egymásba ágyazást 1 szintre. Gondolj újra mindent, ami 2
-  szintél mélyebbre van ágyazva. Ezzel elejét veszed a túlspecifikált
-  kiválasztóknak.
+  szintél mélyebbre van ágyazva. Ezzel megelőzöd a túlspecifikált
+  kiválasztókat.
 * Kerüld a nagyszámú egymásba ágyazást. Válaszd szét őket, amikor már
-  kezdenek átláthatatlanná válni. Ajánlatos elkerülni a 20 sornál hosszabb
-  egymásba ágyazást.
-* Mindig az `@extend` hivatkozások szerepeljenek legelöl.
+  kezdenek átláthatatlanná válni. Javasolt elkerülni midnent, ami
+  20 sornál hosszabb.
+* Mindig az `@extend` hivatkozások szerepeljenek először.
 * Ahol lehetséges, csoportosítsd az `@include` hivatkozásokat a
   tulajdonságblokk elején, közvetlen az `@extend` hivatkozások után.
-* Érdemes ellátni a saját függvényeidet `x-` vagy valami egyéb előjellel.
-  Így sosem fogod összekeverni a saját függvényeidet a natív CSS
-  függvényekkel, és nem fognak ütközni más könyvtárak függvényeivel sem.
+* Érdemes ellátni a saját függvényeidet `x-` vagy valami egyéb jelzéssel.
+  Így sosem fogod összekeverni a saját függvényeidet a CSS beépített
+  függvényeivel, és ezek nem fognak ütközni más könyvtárak függvényeivel sem.
 
 ```scss
 .kivalaszto-1 {
@@ -254,7 +251,7 @@ sajátosságait. A következő irányelvek a Sass nyelvre vonatkoznak.
 <a name="example"></a>
 ## 5. Gyakorlati példa
 
-Egy példa a különböző konvenciókra.
+Végül itt egy példa a felsorolt javaslatokra.
 
 ```css
 /* ==========================================================================
@@ -344,7 +341,7 @@ Egy példa a különböző konvenciókra.
 
 Köszönet minden fordítónak, és mindazoknak, akik hozzájárultak az
 [idiomatic.js](https://github.com/rwldrn/idiomatic.js) dokumentumhoz.
-Rengeteg inspirációnak, hivatkozásnak és irányelvnek lett ez a szülőhelye.
+Rengeteg inspirációnak, hivatkozásnak és irányelvnek lett ez a forrása.
 
 
 <a name="license"></a>
@@ -355,5 +352,5 @@ licenc alatt áll: [Creative Commons Attribution 3.0 Unported License]
 (http://creativecommons.org/licenses/by/3.0/). Ez érvényes a repóban
 lévő összes dokumentumra és fordításra.
 
-Jelen írás a következő munkán alapszik:
+Ez a fordítás a következő munkán alapszik:
 [github.com/necolas/idiomatic-css](https://github.com/necolas/idiomatic-css).
