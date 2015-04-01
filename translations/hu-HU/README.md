@@ -27,8 +27,8 @@ bárki közreműködését, ötleteit, kiegészítéseit. Tegyél hozzá bátran
 > „Ha jó csapatjátékos akarsz lenni egy sikeres projekten belül, rá kell jönnöd
 > arra, hogy Rossz ötlet™ magad számára írni a kódot. Ha emberek ezrei használják
 > amit írsz, kiváltképp törekedj az érthetőségre, és ne a megszokásaidat
-> tartsd szem előtt, meg azt, hogy milyen jól tudsz lavírozni a specifikáción belül.”
-> - Idan Gazit
+> tartsd szem előtt, meg azt, hogy milyen jól tudsz lavírozni
+> a specifikáción belül.” - Idan Gazit
 
 * Ne akard idő előtt optimalizálni a kódot; legyen átlátható és világos.
 * Egy kódbázison belül minden úgy nézzen ki, mintha egy ember írta volna,
@@ -337,7 +337,7 @@ Végül itt egy példa a felsorolt javaslatokra.
 
 
 <a name="acknowledgements"></a>
-## Köszönetnyilvánítás
+## Köszönet
 
 Köszönet minden fordítónak, és mindazoknak, akik hozzájárultak az
 [idiomatic.js](https://github.com/rwldrn/idiomatic.js) dokumentumhoz.
