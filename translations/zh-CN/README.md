@@ -17,6 +17,7 @@
 
 [致谢](#acknowledgements)
 
+[许可](#license)
 
 <a name="general-principles"></a>
 ## 1. 通用原则
@@ -319,9 +320,9 @@
 <a name="acknowledgements"></a>
 ## 致谢
 
-感谢所有对[idiomatic.js](https://github.com/rwldrn/idiomatic.js)作出贡献的网友。
+感谢所有对[idiomatic.js](https://github.com/rwldrn/idiomatic.js)提供翻译和对其贡献代码的每一个人。
 
-##许可
+## 许可
 _Principles of writing consistent, idiomatic CSS_ 是Nicolas Gallagher发布在[Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/)许可证下的作品。该许可证适用于本代码栈中的所有文档，包括翻译文本。
 
 本作品基于[github.com/necolas/idiomatic-css](https://github.com/necolas/idiomatic-css)著就。
