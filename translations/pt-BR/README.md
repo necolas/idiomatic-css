@@ -262,15 +262,15 @@ são em referência ao Sass.
   que tenha mais de 2 níveis de profundidade. Isso impede que existam seletores
   CSS muito específicos.
 * Evite um grande número de regras aninhadas. Quebre-os para quando a
-  legibilidade começar a ser afetada. Preferência por evitar aninhamentos que
+  legibilidade começa a ser afetada. Preferência por evitar aninhamentos que
   se espalhem por mais de 20 linhas.
 * Sempre coloque as declarações `@extend` nas primeiras linhas de um bloco
   declarativo.
 * Quando possível, agrupe declarações `@include` no topo de blocos
   declarativos, depois de qualquer declaração `@extend`.
 * Considere funções customizadas para prefixos com `x-` ou qualquer namespace.
-  Isso ajuda a evitar qualquer potencial confusão na sua função com a função de
-  CSS nativo ou de colidir com funções de bibliotecas.
+  Isso ajuda a evitar qualquer possível confusão da função com uma função nativa do
+  CSS ou de colidir com funções de bibliotecas.
 
 ```scss
 .selector-1 {
