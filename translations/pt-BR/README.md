@@ -56,7 +56,7 @@ Dica: configure seu editor para "mostrar invisíveis". Isso irá permitir que
 você elimine espaços em branco da quebra de linha, elimine espaços em branco de
 linhas vazias sem indentação e evite commits poluídos.
 
-Dica: use um [EditorConfig](http://editorconfig.org/) arquivo (ou equivalente) para ajudar a menter a convenção básica de espaços em branco que você aceitou para sua base de código.
+Dica: use um [EditorConfig](http://editorconfig.org/) arquivo (ou equivalente) para ajudar a manter a convenção básica de espaços em branco que você aceitou para sua base de código.
 
 
 <a name="comments"></a>
