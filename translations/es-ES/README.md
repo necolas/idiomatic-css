@@ -18,13 +18,11 @@ contribuya.
 2. [Espacios en blanco](#whitespace)
 3. [Comentarios](#comments)
 4. [Formato](#format)
-5. [Nomenclatura](#naming)
-6. [Ejemplos prácticos](#example)
-7. [Organización](#organization)
-8. [Construcción y distribución](#build-and-deployment)
+5. [Ejemplos prácticos](#example)
 
 [Agradecimientos](#acknowledgements)
 
+[Licencia](#license)
 
 <a name="general-principles"></a>
 ## 1. Principios generales
@@ -35,6 +33,7 @@ contribuya.
 > claridad, no con tus preferencias personales de cómo ser inteligente con la
 > especificación." - Idan Gazit
 
+* No trate de optimizar prematuramente su código, siga siendo legible y comprensible.
 * Todo el código en una aplicación debe parecer como si sólo una persona lo
   hubiese escrito, no importa cuántas personas hayan contribuido.
 * Fuerce a que se respete el estilo acordado.
@@ -75,7 +74,6 @@ El estilo de los comentarios debe ser siempre simple y consistente con un mismo
 código base.
 
 * Coloque los comentarios en una línea nueva sobre cada objeto.
-* Evite los comentarios al final de las líneas.
 * Mantenga el largo de cada línea con un máximo razonable, por ejemplo, 80
   columnas.
 * Haga un uso libre de los comentarios para separar código CSS en secciones
@@ -86,7 +84,7 @@ código base.
 Consejo: configure su editor para que le ofrezca atajos para la creación de
 comentarios comunes.
 
-#### Ejemplo de CSS:
+Ejemplos:
 
 ```css
 /* ==========================================================================
@@ -96,7 +94,7 @@ comentarios comunes.
 /* Bloque de comentario de sub-sección
    ========================================================================== */
 
-/*
+/**
  * Pequeña descripción utilizando el formato de comentario Doxygen.
  *
  * La primer oración de una descripción larga comienza aquí y continúa en
@@ -109,7 +107,7 @@ comentarios comunes.
  *
  * @tag Esto es una etiqueta llamada 'tag'
  *
- * @todo Esto es una declaración 'todo' ("a realizar") que describe una tarea
+ * TODO: Esto es una declaración 'todo' ("a realizar") que describe una tarea
  *   atómica (específica) a realizar posteriormente. Continua luego de 80
  *   caracteres por lo que las lineas consecutivas son indentadas con dos
  *   espacios adicionales.
@@ -161,6 +159,11 @@ responsabilidades.
     color: #333;
     background: #fff;
     background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+}
+
+.selector-a,
+.selector-b {
+    padding: 10px;
 }
 ```
 
@@ -265,47 +268,8 @@ a Sass.
 ```
 
 
-<a name="naming"></a>
-## 5. Nomenclatura
-
-La nomenclatura es difícil, pero muy importante. Es una parte crucial del
-proceso de desarrollo y mantenimiento del proyecto, y le asegura a usted tener
-una relativamente escalable interfaz entre su código HTML y CSS.
-
-* Evite la _sistemática_ utilización de abreviaciones en los nombres de las
-  clases. No haga las cosas difíciles de entender.
-* Utilice nombres claros y meditados para las _clases HTML_.
-* Elija un comprensible y consistente patrón de nombres que tengan sentido
-  tanto para los archivos HTML como para los archivos CSS.
-* Los selectores para los componentes deben utilizar nombres de clases; evite
-  la utilización de etiquetas genéricas e ids únicos.
-
-
-```css
-/* Ejemplo de código con nombres incorrectos */
-
-.s-scr {
-    overflow: auto;
-}
-
-.cb {
-    background: #000;
-}
-
-/* Ejemplo de código con nombres correctos */
-
-.is-scrollable {
-    overflow: auto;
-}
-
-.column-body {
-    background: #000;
-}
-```
-
-
 <a name="example"></a>
-## 6. Ejemplos prácticos
+## 5. Ejemplos prácticos
 
 Un ejemplo de varias convenciones.
 
@@ -314,38 +278,57 @@ Un ejemplo de varias convenciones.
    Grid layout
    ========================================================================== */
 
-/*
+/**
+ * Diseño de columna con desplazamiento horizontal.
+ *
+ * Esto crea una sola fila de altura completa, culumnas en linea que
+ * pueden navegarse horizontalmente dentro de su padre.
+ *
  * Ejemplo HTML:
  *
  * <div class="grid">
- *     <div class="cell cell-5"></div>
- *     <div class="cell cell-5"></div>
+ *     <div class="cell cell-3"></div>
+ *     <div class="cell cell-3"></div>
+ *     <div class="cell cell-3"></div>
  * </div>
  */
 
+/**
+ * Contenedor de grilla
+ *
+ * Solo debe contener hijos `.cell`.
+ *
+ * 1. Elimina los espacios en blanco entre celdas
+ * 2. Previene que las celdas salten de linea
+ */
+
 .grid {
-    overflow: visible;
     height: 100%;
-    /* Prevent inline-block cells wrapping */
-    white-space: nowrap;
-    /* Remove inter-cell whitespace */
-    font-size: 0;
+    font-size: 0; /* 1 */
+    white-space: nowrap; /* 2 */
 }
 
+/**
+ * Celdas de grilla
+ *
+ * No tienen un ancho definido por defecto. Usar junto con clases `.cell-n`.
+ *
+ * 1. Define el espacio entre celdas
+ * 2. Restablece los espacios en blanco heredado de `.grid`
+ * 3. Restablece el tamaño de fuente heredado de `.grid`
+ */
+
 .cell {
-    box-sizing: border-box;
     position: relative;
+    display: inline-block;
     overflow: hidden;
-    width: 20%;
+    box-sizing: border-box;
     height: 100%;
-    /* Set the inter-cell spacing */
-    padding: 0 10px;
+    padding: 0 10px; /* 1 */
     border: 2px solid #333;
     vertical-align: top;
-    /* Reset white-space */
-    white-space: normal;
-    /* Reset font-size */
-    font-size: 16px;
+    white-space: normal; /* 2 */
+    font-size: 16px; /* 3 */
 }
 
 /* Estados de las celdas */
@@ -373,32 +356,40 @@ Un ejemplo de varias convenciones.
 ```
 
 
-<a name="organization"></a>
-## 7. Organización
+## Translations
 
-La organización del código es una parte importante en cualquier base de código
-CSS, y crucial para grandes bases de código.
-
-* Separe las distintas partes de código de forma lógica.
-* Utilice archivos independientes (unidos por un proceso de construcción) para
-  ayudar a separar código para distintos componentes.
-* Si utiliza un preprocesador, abstraiga código común en variables para el
-  color, la tipografía, etc.
-
-
-<a name="build-and-deployment"></a>
-## 8. Construcción y distribución
-
-Los proyectos deben siempre intentar incluir algunos medios genéricos para que
-el código pueda ser verificado, probado, comprimido y versionado para luego ser
-utilizado en producción. Para esta tarea,
-[grunt](https://github.com/cowboy/grunt), de Ben Alman es una excelente
-herramienta.
+* [English](https://github.com/necolas/idiomatic-css/tree/master)
+* [Bahasa Indonesia](https://github.com/necolas/idiomatic-css/tree/master/translations/id-ID)
+* [Česky](https://github.com/necolas/idiomatic-css/tree/master/translations/cs-CZ)
+* [Dansk](https://github.com/necolas/idiomatic-css/tree/master/translations/da-DK)
+* [Deutsch](https://github.com/necolas/idiomatic-css/tree/master/translations/de-DE)
+* [Español](https://github.com/necolas/idiomatic-css/tree/master/translations/es-ES)
+* [Français](https://github.com/necolas/idiomatic-css/tree/master/translations/fr-FR)
+* [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
+* [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
+* [한국어](https://github.com/necolas/idiomatic-css/tree/master/translations/ko-KR)
+* [Nederlands](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)
+* [Polski](https://github.com/necolas/idiomatic-css/tree/master/translations/pl-PL)
+* [Português (Brasil)](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
+* [Русский](https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU)
+* [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr-SR)
+* [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
+* [正體中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-TW)
+* [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
 
 
 <a name="acknowledgements"></a>
 ## Agradecimientos
 
-Gracias a todos los que han contribuido en
+Gracias a todos los que han proporcionado traducciones y contribuido en
 [idiomatic.js](https://github.com/rwldrn/idiomatic.js).
 Ha sido fuente de inspiración, referencia y guía.
+
+<a name="license"></a>
+## Licencia
+
+_Principios para escribir CSS idiomático y consistente_ por Nicolas Gallagher está licenciado bajo [Creative Commons Attribution 3.0 Unported
+License](http://creativecommons.org/licenses/by/3.0/). Esto se aplica a todos los documentos y traducciones en este repositorio.
+
+Basado en un trabajo de
+[github.com/necolas/idiomatic-css](https://github.com/necolas/idiomatic-css).
