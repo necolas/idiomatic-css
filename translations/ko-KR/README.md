@@ -216,7 +216,7 @@ HTML 클래스는 명확하고 심사숙고하여 만든 이름을 사용하여�
     background: #000;
 }
 
-/* 좀 더 낳은 명명규칙의 예 */
+/* 좀 더 나은 명명규칙의 예 */
 
 .is-scrollable {
     overflow: auto;
