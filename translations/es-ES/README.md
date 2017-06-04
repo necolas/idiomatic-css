@@ -270,12 +270,12 @@ a Sass.
 
 La nomenclatura es difícil, pero muy importante. Es una parte crucial del
 proceso de desarrollo y mantenimiento del proyecto, y le asegura a usted tener
-una relativamente escalable interfaz entre su código HTML y CSS.
+una interfaz relativamente escalable entre su código HTML y CSS.
 
 * Evite la _sistemática_ utilización de abreviaciones en los nombres de las
   clases. No haga las cosas difíciles de entender.
 * Utilice nombres claros y meditados para las _clases HTML_.
-* Elija un comprensible y consistente patrón de nombres que tengan sentido
+* Elija un patrón comprensible y consistente de nombres que tengan sentido
   tanto para los archivos HTML como para los archivos CSS.
 * Los selectores para los componentes deben utilizar nombres de clases; evite
   la utilización de etiquetas genéricas e ids únicos.
