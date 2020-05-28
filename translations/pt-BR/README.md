@@ -56,7 +56,7 @@ Dica: configure seu editor para "mostrar invisíveis". Isso irá permitir que
 você elimine espaços em branco da quebra de linha, elimine espaços em branco de
 linhas vazias sem indentação e evite commits poluídos.
 
-Dica: use um [EditorConfig](http://editorconfig.org/) arquivo (ou equivalente) para ajudar a menter a convenção básica de espaços em branco que você aceitou para sua base de código.
+Dica: use um [EditorConfig](http://editorconfig.org/) arquivo (ou equivalente) para ajudar a manter a convenção básica de espaços em branco que você aceitou para sua base de código.
 
 
 <a name="comments"></a>
@@ -155,7 +155,7 @@ acidentalmente; e resulte em úteis visualizações de diferença.
 * Inclua um espaço após cada vírgula em propriedades separadas por vírgula ou valores de funções.
 * Sempre inclua um ponto-e-vírgula no fim da última declaração em um bloco
    declarativo.
-* Coloque o fechamento das chaves na mesma coluna que o primeiro caracter do
+* Coloque o fechamento das chaves na mesma coluna que o primeiro caractere do
    conjunto de regras.
 * Separe cada conjunto de regras por uma linha em branco.
 
@@ -254,7 +254,7 @@ vários formatos que poderiam ser usados; um exemplo é mostrado abaixo.
 ### Pré-processadores: considerações de formatação adicionais
 
 Diferentes pré-processadores de CSS possuem diferentes características,
-funcionalidades e sintaxe. Suas convenções devem ser extendidas para acomodar
+funcionalidades e sintaxe. Suas convenções devem ser estendidas para acomodar
 as particularidades de qualquer pré-processador em uso. As seguintes diretrizes
 são em referência ao Sass.
 
@@ -353,7 +353,7 @@ Um exemplo de várias convenções.
 }
 
 /**
- * Grid cells
+ * Células de grade
  * Largura não-explícita por padrão. Extenda com classes `.cell-n`.
  */
 
@@ -373,13 +373,14 @@ Um exemplo de várias convenções.
     font-size: 16px;
 }
 
-/* Cell states */
+/* Estados da célula */
 
 .cell.is-animating {
     background-color: #fffdec;
 }
 
-/* Cell dimensions
+/* Dimensões da célula
+
    ========================================================================== */
 
 .cell-1 { width: 10%; }
@@ -388,7 +389,7 @@ Um exemplo de várias convenções.
 .cell-4 { width: 40%; }
 .cell-5 { width: 50%; }
 
-/* Cell modifiers
+/* Modificadores da célula
    ========================================================================== */
 
 .cell--detail,
