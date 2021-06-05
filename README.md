@@ -339,7 +339,7 @@ An example of various conventions.
 
 
 ## Translations
-
+* * [العربية/Arabic](https://github.com/Yuniac/idiomatic-css/tree/master/translations/ar-AR)
 * [Bahasa Indonesia](https://github.com/necolas/idiomatic-css/tree/master/translations/id-ID)
 * [Bulgarian](https://github.com/vestimir/idiomatic-css)
 * [Česky](https://github.com/necolas/idiomatic-css/tree/master/translations/cs-CZ)
