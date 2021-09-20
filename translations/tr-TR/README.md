@@ -1,14 +1,14 @@
-# Tutarlı, İdiomatic CSS yazma prensipleri
+# Tutarlı, Idiomatic CSS yazma prensipleri
 
 Aşağıdaki döküman CSS geliştirme konusunda makul bir stil rehberini içerir.
-Kuralcı olması ve düşünülmedi ve kendi stil seçimlerini diğer kişilerin koduna
-empose etmek istemiyorum. Ama bu yönergeler varolan yaygın ve mantıklı
-kalıpların kullanımını teşvik etmektedir.
+Bu yönergeler, mevcut, yaygın, mantıklı kalıpların kullanımını kuvvetle teşvik 
+etmektedir. Kendi stil rehberinizi oluşturmak için gerektiği gibi 
+uyarlanmalıdırlar.
 
 Bu yaşayan bir dökümandır ve yeni fikirler daima hoş karşılanacak. Lütfen
 katkıda bulunun.
 
-[İngilizce İdiomatik CSS (Orijinal)](https://github.com/necolas/idiomatic-css)
+[İngilizce Idiomatic CSS (Orijinal)](https://github.com/necolas/idiomatic-css)
 
 
 ## İçindekiler
@@ -54,9 +54,9 @@ kullan.
 * Eğer boşluk kullanıyorsan girinti bölümü için kullanılan karakter saysını
   seç.  (Tercih: 4 boşluk)
 
-İpucu: Editörünü "görünmezleri göster" şeklinde ayarla. Bu, satır sonu
-boşluklarının ve kasıtsız boş satırların önüne geçmeni ve "commit"lerin
-kirlenmemesini sağlayacaktır.
+İpucu: Editörünü "görünmezleri göster" (show invisibles) şeklinde ayarla. 
+Bu, satır sonu boşluklarının ve kasıtsız boş satırların önüne geçmeni ve 
+"commit"lerin kirlenmemesini sağlayacaktır.
 
 
 <a name="comments"></a>
@@ -128,7 +128,7 @@ indirdiğinden ve faydalı "diff" ve hatalar ürettiğinden emin olmalıdır.
 3. Her deklarasyon bloğunda her satırda tek bir deklarasyon.
 4. Her bir deklarasyon için bir girinti seviyesi.
 5. Deklarasyondaki iki noktadan sonra tek bir boşluk.
-6. Her deklarayon bloğundaki son deklarasyondan sonra mutlaka bir noktalı
+6. Her deklarasyon bloğundaki son deklarasyondan sonra mutlaka bir noktalı
    virgül kullan
 7. Bir kural setinin sonundaki parantezi o kural setindeki ilk karakter ile
    aynı sütuna koy.
