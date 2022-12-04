@@ -36,7 +36,7 @@ trage bei.
 * Du bist kein menschlicher Code-Compiler/Kompressor, versuche also nicht,
   einer zu sein.
 * Der gesamte Code in jeder Code-Basis soll aussehen wie von einer einzigen
-  Person eingegeben, unabhängig davon wieviele Leute beigetragen haben.
+  Person eingegeben, unabhängig davon, wie viele Leute beigetragen haben.
 * Erzwinge den vereinbarten Stil streng.
 * Im Zweifel bei einer Stilentscheidung verwende bestehende, übliche Muster.
 
@@ -66,7 +66,7 @@ wurden, verwalten zu helfen.
 <a name="comments"></a>
 ## 3. Kommentare
 
-Gut kommentierter Code ist extrem wichtig. Nimm dir Zeit, Komponenten zu
+Gut kommentierter Code ist essenziell. Nimm dir Zeit, Komponenten zu
 beschreiben, wie sie arbeiten, welche Beschränkungen sie haben und wie sie
 gebaut sind.  Lass andere im Team nicht raten, was den Zweck von ungewöhnlichem
 oder nicht offensichtlichem Code betrifft.
@@ -75,12 +75,12 @@ Der Kommentarstil soll einfach und konsistent innerhalb einer einzelnen
 Code-Basis sein.
 
 * Platziere Kommentare auf neuen Zeilen über ihrem Gegenstand.
-* Behalte die Zeilenlänge bei einem sinnvollen Maximum, z.B. 80 Spalten.
+* Behalte die Zeilenlänge bei einem sinnvollen Maximum, z. B. 80 Spalten.
 * Mache großzügigen Gebrauch von Kommentaren, um CSS in einzelne Abschnitte zu
   unterteilen.
 * Beginne mit einem Großbuchstaben und verwende konsistente Einrückung.
 
-Tip: Konfiguriere deinen Editor so, dass er Kürzel für die Ausgabe von
+Tipp: Konfiguriere deinen Editor so, dass er Kürzel für die Ausgabe von
 ausgemachten Kommentar-Mustern anbietet.
 
 Beispiel:
@@ -127,14 +127,14 @@ führt.
 * Füge eine Deklaration pro Zeile in einem Deklarationsblock ein.
 * Verwende eine Einrückungsebene für jede Deklaration.
 * Füge ein einzelnes Leerzeichen nach dem Doppelpunkt jeder Deklaration ein.
-* Verwende Kleinbuchstaben und Kurzschreibweise bei Hexwerten, z. B. `#aaa`.
+* Verwende Kleinbuchstaben und Kurzschreibweise bei Hexwerten, z. B. `#aaa`.
 * Verwende einfache oder doppelte Anführungszeichen konsistent. Doppelte
-  Anführungszeichen werden bevorzugt, z. B. `content: ""`.
-* Setze Attributwerte in Selektoren in Anführungszeichen, z. B.
+  Anführungszeichen werden bevorzugt, z. B. `content: ""`.
+* Setze Attributwerte in Selektoren in Anführungszeichen, z. B.
   `input[type="checkbox"]`.
-* _Wo es erlaubt ist,_ vermeide die Angabe von Einheiten für Nullwerte, z. B.
+* _Wo es erlaubt ist,_ vermeide die Angabe von Einheiten für Nullwerte, z. B.
   `margin: 0`.
-* Füge ein Leerzeichen nach jedem Komma ein bei komma-getrennten Eigenschaften
+* Füge ein Leerzeichen nach jedem Komma ein bei kommagetrennten Eigenschaften
   oder Funktionswerten.
 * Füge einen Strichpunkt nach der letzten Deklaration in einem
   Deklarationsblock ein.
@@ -167,7 +167,7 @@ führt.
 
 Deklarationen sollen nach einem einzelnen, einfachen Prinzip sortiert werden,
 wenn sie geordnet werden. Ich bevorzuge es, strukturell wichtige Eigenschaften
-(z.B. Positionierung und Box-Modell) vor allen anderen zu notieren.
+(z. B. Positionierung und Box-Modell) vor allen anderen zu notieren.
 
 ```css
 .selektor {
@@ -215,7 +215,7 @@ einzeiliges Format verwenden. In diesem Fall wird ein Leerzeichen nach der
 .selektor-3 { width: 30%; }
 ```
 
-Lange, komma-getrennte Eigenschaftswerte - wie Sammlungen von Gradienten oder
+Lange, kommagetrennte Eigenschaftswerte - wie Sammlungen von Gradienten oder
 Schatten - können über mehrere Zeilen angeordnet werden, um die Lesbarkeit zu
 erhöhen und nützlichere Diffs zu produzieren. Es gibt verschiedene
 Formatierungen, die verwendet werden können; ein Beispiel ist im Folgenden
@@ -240,7 +240,7 @@ sie den Eigenheiten jedes verwendeten Präprozessors Rechnung tragen. Die
 folgenden Richtlinien beziehen sich auf Sass.
 
 * Beschränke Verschachtelungen auf eine Ebene Tiefe. Überprüfe jede
-  Verschachtelung tiefer als 2 Ebenen. Das verhindert übermäßg spezifische
+  Verschachtelung tiefer als 2 Ebenen. Das verhindert übermäßig spezifische
   CSS-Selektoren.
 * Vermeide große Mengen verschachtelter Regeln. Brich sie in Teile auf, wenn
   Lesbarkeit beeinträchtigt wird. Der Vorzug gilt dem Vermeiden von
