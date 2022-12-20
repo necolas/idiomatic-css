@@ -22,14 +22,14 @@ contribute.
 ## სარჩევი
 
 1. [ზოგადი პრინციპები](#general-principles)
-2. [Whitespace](#whitespace)
-3. [Comments](#comments)
-4. [Format](#format)
-5. [Practical example](#example)
+2. [ინტერვალი](#whitespace)
+3. [კომენტარები](#comments)
+4. [ფორმატი](#format)
+5. [პრაქტიკული მაგალითი](#example)
 
-[Acknowledgements](#acknowledgements)
+[მადლობა](#acknowledgements)
 
-[License](#license)
+[ლიცენზია](#license)
 
 
 <a name="general-principles"></a>
