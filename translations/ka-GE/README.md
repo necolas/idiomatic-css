@@ -199,9 +199,15 @@ Example:
 <a name="format"></a>
 ## 4. Format
 
+## 4. ფორმატი
+
 The chosen code format must ensure that code is: easy to read; easy to clearly
 comment; minimizes the chance of accidentally introducing errors; and results
 in useful diffs and blames.
+
+თქვენ მიერ შერჩეული კოდის ჩაწერის ფორმატი უნდა იძლეოდეს გარანტიას, რომ კოდი არის
+მარტივად წაკითხვადი, შედგება მარტივად გასაგები კომენტარებისგან, მინიმუმამდე ამცირებს
+შეცდომების დაშვების შანსს და იძლევა გამოსადეგ შეტყობინებებს ვერსიების კონტროლის კონტექსტში.
 
 * Use one discrete selector per line in multi-selector rulesets.
 * Include a single space before the opening brace of a ruleset.
@@ -220,6 +226,24 @@ in useful diffs and blames.
 * Place the closing brace of a ruleset in the same column as the first
   character of the ruleset.
 * Separate each ruleset by a blank line.
+
+* რამდენიმე სელექტორისგან შემდგარი წესების ნაკრების ჩაწერისას, ყოველი ცალკეული სელექტორი განათავსეთ ცალკე ხაზზე.
+* წესების ნაკრების გამხსნელი ფიგურული ფრჩხილის წინ განათავსეთ ერთი ინტერვალი.
+* დეკლარაციათა ბლოკში შემავალი ყოველი დეკლარაცია განათავსეთ ცალკე ხაზზე.
+* თითოეული დეკლარაციისთვის გამოიყენეთ ერთდონიანი აბზაცი (_ერთი ტაბი_).
+* დეკლარაციაში, ორწერტილის შემდეგ განათავსეთ ერთი ინტერვალი.
+* გამოიყენეთ პატარა ასოებით ჩაწერილი შემოკლებული თექვსმეტობითი მნიშვნელობები. მაგალითად: `#aaa`.
+* მუდმივად გამოიყენეთ ერთმაგი ან ორმაგი ბრჭყალები (_ნუ მოახდენთ მათ შერევას_). სასურველია ორმაგი ბრჭყალების გამოყენება,
+  მაგალითად: `content: ""`.
+* სელექტორებში, ატრიბუტების მნიშვნელობები ჩასვით ბრჭყალებში. მაგალითად: `input[type="checkbox"]`.
+* _დასაშვებ შემთხვევებში_, მოერიდეთ ნულოვანი მნიშვნელობებისათვის ერთეულების განსაზღვრას. მაგალითად: `margin: 0`.
+* მძიმით გამოყოფილ თვისებათა ან ფუნქციათა მნიშვნელობებში,
+  ყოველი მძიმის შემდეგ განათავსეთ ერთი ინტერვალი.
+* დეკლარაციათა ბლოკის უკანასკნელი დეკლარაციის ბოლოში(_ც_) განათავსეთ
+  წერტილ-მძიმე.
+* წესების ნაკრების დამხურავი ფრჩხილი განათავსეთ იმავე სვეტზე, რომელზედაც წესების ნაკრების პირველი
+  სიმბოლოა განთავსებული.
+* გამოყავით წესების თითოეული ნაკრები ცარიელი ხაზით.
 
 ```css
 .selector-1,
@@ -243,15 +267,24 @@ in useful diffs and blames.
 
 #### Declaration order
 
+#### დეკლარაციათა თანმიმდევრობა
+
 If declarations are to be consistently ordered, it should be in accordance with
 a single, simple principle.
+
+თუ დეკლარაციების თანმიმდევრობით დალაგებაა საჭირო, ეს უნდა მოხდეს ერთი მარტივი
+პრინციპის შესაბამისად.
 
 Smaller teams may prefer to cluster related properties (e.g. positioning and
 box-model) together.
 
+შედარებით პატარა გუნდებმა შესაძლოა უპირატესობა მიანიჭონ ურთიერთდაკავშირებულ თვისებათა (მაგ. პოზიციონირება და ბლოკის მოდელი (_box-model_)) ერთად თავმოყრას.
+
 ```css
 .selector {
     /* Positioning */
+
+    /* პოზიციონირება */
     position: absolute;
     z-index: 10;
     top: 0;
@@ -260,6 +293,8 @@ box-model) together.
     left: 0;
 
     /* Display & Box Model */
+
+    /* ვიზუალიზაცია (Display) და ბლოკის მოდელი */
     display: inline-block;
     overflow: hidden;
     box-sizing: border-box;
@@ -270,6 +305,8 @@ box-model) together.
     margin: 10px;
 
     /* Other */
+
+    /* სხვა */
     background: #000;
     color: #fff;
     font-family: sans-serif;
@@ -281,11 +318,20 @@ box-model) together.
 Larger teams may prefer the simplicity and ease-of-maintenance that comes with
 alphabetical ordering.
 
+უფრო დიდმა გუნდებმა კი შესაძლოა სიმარტივესა და მოხერხებულად მოვლის შესაძლებლობაზე გააკეთონ არჩევანი,
+რაც ანბანური თანმიმდევრობით დალაგების პრინციპისთვის არის დამახასიათებელი.
+
 #### Exceptions and slight deviations
+
+#### გამონაკლისები და მცირედი გადახვევები
 
 Large blocks of single declarations can use a slightly different, single-line
 format. In this case, a space should be included after the opening brace and
 before the closing brace.
+
+ერთი დეკლარაციისგან შემდგარი დიდი ბლოკებისთვის შეიძლება გამოყენებულ იქნეს ოდნავ განსხვავებული, ერთხაზიანი
+ფორმატი. ამ შემთხვევაში, ინტერვალი გამხსნელი ფრჩხილის შემდეგ და დამხურავი ფრჩხილის წინ უნდა
+განთავსდეს.
 
 ```css
 .selector-1 { width: 10%; }
@@ -297,6 +343,11 @@ Long, comma-separated property values - such as collections of gradients or
 shadows - can be arranged across multiple lines in an effort to improve
 readability and produce more useful diffs. There are various formats that could
 be used; one example is shown below.
+
+გრძელი, მძიმით გამოყოფილი თვისებათა მნიშვნელობები — როგორიცაა გრადიენტთა ან ჩრდილთა
+კრებული — შეიძლება განლაგებულ იქნეს მრავალ სტრიქონზე, რათა გაუმჯობესდეს
+წაკითხვადობა და წარმოიქმნას მეტად გამოსადეგი diff-ები. არსებობს სხვადასხვა ჩაწერის ფორმატები;
+ერთ-ერთი ვარიანტი ქვემოთ არის მოცემული.
 
 ```css
 .selector {
@@ -311,9 +362,15 @@ be used; one example is shown below.
 
 ### Preprocessors: additional format considerations
 
+### პრეპროცესორები: დამატებითი მოსაზრებები ფორმატის თაობაზე
+
 Different CSS preprocessors have different features, functionality, and syntax.
 Your conventions should be extended to accommodate the particularities of any
 preprocessor in use. The following guidelines are in reference to Sass.
+
+სხვადასხვა CSS-პრეპროცესორს განსხვავებული ფუნქციონალი და სინტაქსი აქვს.
+თქვენი მიდგომები უნდა მოერგოს თქენ მიერ გამოყენებული ამა თუ იმ პრეპროცესორის
+თავისებურებებს. ქვემოთ მოცემული მითითებები Sass-ზე ვრცელდება.
 
 * Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.
   This prevents overly-specific CSS selectors.
@@ -328,6 +385,19 @@ preprocessor in use. The following guidelines are in reference to Sass.
   helps to avoid any potential to confuse your function with a native CSS
   function, or to clash with functions from libraries.
 
+* შეზღუდეთ (სელექტორთა) ჩადგმის სიღრმე ერთამდე. მოახდინეთ კოდის ნებისმიერი ფრაგმენტის გადაფასება,
+  სადაც ჩადგმის სიღრმე ერთს აღემატება. ეს ზედმეტად სპეციფიკური CSS-სელექტორების აღმოფხვრას შეუწყობს ხელს.
+* მოერიდეთ ჩადგმული წესის დეკლარაციების დიდი რაოდენობით გამოყენებას. როგორც კი შეატყობთ,
+  რომ ისინი წაკითხვადობაზე ცუდად ზემოქმედებენ, დაყავით ისინი პატარა, ლოგიკურ ფრაგმენტებად.
+  უმჯობესია, ჩადგმული კოდი ვრცელდებოდეს არაუმეტეს 20 ხაზის მასშტაბით.
+* `@extend` განცხადებები ყოველთვის განათავსეთ დეკლარაციის ბლოკის პირველ
+  ხაზებში.
+* სადაც ამის შესაძლებლობა გექნებათ, `@include` განცხადებებს თავი მოუყარეთ დეკლარაციის ბლოკის პირველ ხაზებში,
+  `@extend` განცხადებების შემდეგ.
+* განიხილეთ თქვენ მიერ შექმნილი (_custom_) ფუნქციებისათვის `x-` ან სხვა _namespace_-ის დამატება თავსართის სახით.
+  ეს დაგეხმარებათ თავიდან აირიდოთ ყველანაირი შესაძლებლობა იმისა, რომ თქვენ მიერ შექმნილ და CSS-ში ჩაშენებულ ფუნქციებს შორის, —
+  ასევე თქვენ მიერ შექმნილ და ბიბლიოთეკების მიერ უზრუნველყოფილ ფუნქციებს შორის, — მოხდება კონფლიქტი.
+
 ```scss
 .selector-1 {
     @extend .other-rule;
@@ -335,6 +405,8 @@ preprocessor in use. The following guidelines are in reference to Sass.
     @include box-sizing(border-box);
     width: x-grid-unit(1);
     // other declarations
+
+    // სხვა დეკლარაციები
 }
 ```
 
