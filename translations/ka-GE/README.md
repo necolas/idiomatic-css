@@ -65,9 +65,15 @@ contribute.
 <a name="whitespace"></a>
 ## 2. Whitespace
 
+## 2. ინტერვალი
+
 Only one style should exist across the entire source of your code-base. Always
 be consistent in your use of whitespace. Use whitespace to improve
 readability.
+
+მთელი კოდის მასშტაბით მხოლოდ ერთი სტილი უნდა ვრცელდებოდეს. მუდამ იყავით თანმიმდევრული
+ინტერვალის გამოყენებისას. გამოიყენეთ ინტერვალი წაკითხვადობის
+გასაუმჯობესებლად.
 
 * _Never_ mix spaces and tabs for indentation.
 * Choose between soft indents (spaces) or real tabs. Stick to your choice
@@ -75,12 +81,25 @@ readability.
 * If using spaces, choose the number of characters used per indentation level.
   (Preference: 4 spaces)
 
+* _არასოდეს_ აურიოთ ერთმანეთში ინტერვალები და ტაბულაციები.
+* გააკეთეთ არჩევანი რბილ აბზაცებსა (ინტერვალები) და ნამდვილ ტაბულაციას შორის (სასურველია ინტერვალები)
+  და დაიცავით თქვენი არჩევანი უშეცდომოდ.
+* თუ ინტერვალებს იყენებთ, შეარჩიეთ სიმბოლოთა ფიქსირებული რაოდენობა ყოველი აბზაცისათვის
+  (სასურველია 4 ინტერვალი).
+
 Tip: configure your editor to "show invisibles" or to automatically remove
 end-of-line whitespace.
+
+რჩევა: მოახდინეთ თქვენი რედაქტორის კონფიგურირება ისე, რომ „გიჩვენოთ უხილავი სიმბოლოები“ ან
+ავტომატურად წაშალოს [არასაჭირო] ინტერვალი ხაზის ბოლოში.
 
 Tip: use an [EditorConfig](http://editorconfig.org/) file (or equivalent) to
 help maintain the basic whitespace conventions that have been agreed for your
 code-base.
+
+რჩევა: გამოიყენეთ [EditorConfig](http://editorconfig.org/) ფაილი (ან მისი ეკვივალენტი),
+რომელიც დაგეხმარებათ შეინარჩუნოთ ინტერვალის ის ძირითადი კანონზომიერებები, რომლებიც თქვენი
+კოდისთვის შეარჩიეთ.
 
 
 <a name="comments"></a>
