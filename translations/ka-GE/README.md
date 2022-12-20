@@ -553,9 +553,15 @@ An example of various conventions.
 <a name="acknowledgements"></a>
 ## Acknowledgements
 
+## მადლობა
+
 Thanks to everyone who has provided translations and to all those who
 contributed to [idiomatic.js](https://github.com/rwldrn/idiomatic.js). It was a
 source of inspiration, quotations, and guidelines.
+
+მადლობა ყველას, ვინც მონაწილეობა მიიღო თარგმანების შემუშავების პროცესში,
+ასევე ყველა იმ ადამიანს, ვინც წვლილი შეიტანა [idiomatic.js](https://github.com/rwldrn/idiomatic.js)-ის
+შედგენაში. სწორედ ეს გახლდათ შთაგონების, ციტატებისა და სახელმძღვანელო მითითებების წყარო.
 
 
 <a name="license"></a>
