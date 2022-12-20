@@ -29,8 +29,6 @@ contribute.
 
 [მადლობა](#acknowledgements)
 
-[ლიცენზია](#license)
-
 
 <a name="general-principles"></a>
 ## 1. General principles
