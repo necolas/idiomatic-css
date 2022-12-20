@@ -1,16 +1,27 @@
 # Principles of writing consistent, idiomatic CSS
 
+# თანმიმდევრული, იდიომატური CSS-ის წერის პრინციპები
+
 The following document outlines a reasonable style guide for CSS development.
 These guidelines strongly encourage the use of existing, common, sensible
 patterns. They should be adapted as needed to create your own style guide.
 
+წინამდებარე დოკუმენტი წარმოადგენს CSS-ის სტილისტიკის ზოგად სახელმძღვანელოს.
+მოცემული მითითებები ძლიერ წაახალისებს არსებული, ფართოდ გავრცელებული, გონივრული ნიმუშების გამოყენებას.
+საჭიროებისამებრ, თქვენ მიერ უნდა მოხდეს მათი გადაკეთება, რათა შექმნათ თქვენი საკუთარი მიდგომები.
+
 This is a living document and new ideas are always welcome. Please
 contribute.
+
+წინამდებარე დოკუმენტი მუდმივი განვითარების პროცესშია და ახალი იდეები ყოველთვის მისასალმებელია.
+გთხოვთ, შეიტანეთ თქვენი წვლილი.
 
 
 ## Table of contents
 
-1. [General principles](#general-principles)
+## სარჩევი
+
+1. [ზოგადი პრინციპები](#general-principles)
 2. [Whitespace](#whitespace)
 3. [Comments](#comments)
 4. [Format](#format)
