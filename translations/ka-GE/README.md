@@ -562,15 +562,3 @@ source of inspiration, quotations, and guidelines.
 მადლობა ყველას, ვინც მონაწილეობა მიიღო თარგმანების შემუშავების პროცესში,
 ასევე ყველა იმ ადამიანს, ვინც წვლილი შეიტანა [idiomatic.js](https://github.com/rwldrn/idiomatic.js)-ის
 შედგენაში. სწორედ ეს გახლდათ შთაგონების, ციტატებისა და სახელმძღვანელო მითითებების წყარო.
-
-
-<a name="license"></a>
-## License
-
-_Principles of writing consistent, idiomatic CSS_ by Nicolas Gallagher is
-licensed under the [Creative Commons Attribution 3.0 Unported
-License](http://creativecommons.org/licenses/by/3.0/). This applies to all
-documents and translations in this repository.
-
-Based on a work at
-[github.com/necolas/idiomatic-css](https://github.com/necolas/idiomatic-css).
