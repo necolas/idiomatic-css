@@ -550,28 +550,6 @@ An example of various conventions.
 ```
 
 
-## Translations
-
-* [Bahasa Indonesia](https://github.com/necolas/idiomatic-css/tree/master/translations/id-ID)
-* [Bulgarian](https://github.com/vestimir/idiomatic-css)
-* [Česky](https://github.com/necolas/idiomatic-css/tree/master/translations/cs-CZ)
-* [Dansk](https://github.com/necolas/idiomatic-css/tree/master/translations/da-DK)
-* [Deutsch](https://github.com/necolas/idiomatic-css/tree/master/translations/de-DE)
-* [Español](https://github.com/necolas/idiomatic-css/tree/master/translations/es-ES)
-* [Français](https://github.com/necolas/idiomatic-css/tree/master/translations/fr-FR)
-* [Italiano](https://github.com/necolas/idiomatic-css/tree/master/translations/it-IT)
-* [日本語](https://github.com/necolas/idiomatic-css/tree/master/translations/ja-JP)
-* [한국어](https://github.com/necolas/idiomatic-css/tree/master/translations/ko-KR)
-* [Nederlands](https://github.com/necolas/idiomatic-css/tree/master/translations/nl-NL)
-* [Polski](https://github.com/necolas/idiomatic-css/tree/master/translations/pl-PL)
-* [Português (Brasil)](https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR)
-* [Русский](https://github.com/necolas/idiomatic-css/tree/master/translations/ru-RU)
-* [Srpski](https://github.com/necolas/idiomatic-css/tree/master/translations/sr-SR)
-* [Türkçe](https://github.com/necolas/idiomatic-css/tree/master/translations/tr-TR)
-* [正體中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-TW)
-* [简体中文](https://github.com/necolas/idiomatic-css/tree/master/translations/zh-CN)
-
-
 <a name="acknowledgements"></a>
 ## Acknowledgements
 
